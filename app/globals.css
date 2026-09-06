@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'themify';
+  src: url('/fonts/themify.woff') format('woff'),
+       url('/fonts/themify.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+[class^="ti-"], [class*=" ti-"] {
+  font-family: 'themify' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ti-angle-down {
+  display: inline-block;
+  transform-origin: center center;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.group:hover .ti-angle-down {
+  transform: rotate(180deg);
+}
+
+.ti-angle-down:before {
+  content: "\e64b";
+}
+
+:root {
+  --font-manrope: 'Manrope', sans-serif;
+  --font-mulish: 'Mulish', sans-serif;
+}
+
+body {
+  font-family: var(--font-manrope);
+  color: #212121;
+  background-color: #ffffff;
+  overflow-x: clip;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 14px rgba(220, 38, 38, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+  }
+}
+
+.pulse-call {
+  animation: pulse-ring 2s infinite cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/* Thanh cuộn tàng hình - Không chiếm size hay diện tích trong page */
+html,
+body,
+* {
+  scrollbar-width: none !important; /* Firefox, Chrome 121+, Safari 18.2+ */
+  -ms-overflow-style: none !important; /* IE, Edge */
+}
+
+*::-webkit-scrollbar {
+  width: 0px !important;
+  height: 0px !important;
+  display: none !important;
+  background: transparent !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent !important;
+}
+
