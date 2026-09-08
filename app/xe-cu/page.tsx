@@ -133,40 +133,47 @@ export default function UsedCarsPage() {
       {/* ============================================================
           1. SHOWROOM HERO BACKGROUND (matching Thịnh Cường 1:1)
          ============================================================ */}
-      <section className="relative w-full h-[280px] sm:h-[340px] md:h-[400px] overflow-hidden bg-black">
+      <section className="relative w-full h-[460px] sm:h-[540px] md:h-[620px] lg:h-[680px] xl:h-[720px] overflow-hidden bg-[#eef2f6]">
         <Image
-          src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/thinhcuong-vinfast.jpg"
+          src="/images/thinhcuong-vinfast.jpg"
           alt="VinFast Thịnh Cường - Xe cũ Green Future"
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-top"
         />
-        <div className="absolute inset-0 bg-black/40" />
       </section>
 
       {/* ============================================================
           2. BỘ LỌC TÌM KIẾM XE ĐA NĂNG (OVERLAPPING SEARCH BOX)
          ============================================================ */}
-      <section className="relative z-20 max-w-[1200px] mx-auto px-4 -mt-24 sm:-mt-32">
-        <div className="bg-white rounded-2xl shadow-[0_10px_35px_rgba(0,0,0,0.12)] p-6 sm:p-8 border border-gray-100">
-          <h2 className="text-center text-[18px] sm:text-[22px] md:text-[26px] font-black font-mulish uppercase text-[#0C0C0C] tracking-tight mb-6">
+      <section className="relative z-20 max-w-[1360px] mx-auto px-4 sm:px-6 -mt-24 sm:-mt-32 md:-mt-40">
+        <div className="bg-white rounded-2xl md:rounded-[22px] shadow-[0_15px_45px_rgba(0,0,0,0.12)] p-6 sm:p-8 md:p-10 border border-gray-100">
+          <h2 className="text-center text-[20px] sm:text-[24px] md:text-[28px] font-black font-mulish uppercase text-[#0C0C0C] tracking-tight mb-6 sm:mb-8">
             BẠN ĐANG MUỐN TÌM MỘT CHIẾC XE NHƯ THẾ NÀO?
           </h2>
 
-          {/* 4 Type Tabs with clean icons */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 border-b border-gray-200 pb-4 mb-6">
+          {/* 4 Type Tabs with Car Sketch Images matching Thịnh Cường 1:1 */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 border-b border-gray-200 mb-6 sm:mb-8">
             <button
               type="button"
               onClick={() => setVehicleTypeTab("all")}
-              className={`flex flex-col items-center justify-center p-3 rounded-lg transition-all cursor-pointer ${
+              className={`flex flex-col items-center justify-center pb-3 transition-all cursor-pointer border-b-[3px] ${
                 vehicleTypeTab === "all"
-                  ? "text-[#3AB3FF] border-b-2 border-[#3AB3FF] bg-blue-50/50"
-                  : "text-gray-600 hover:text-black hover:bg-gray-50"
+                  ? "border-[#3AB3FF] text-[#3AB3FF]"
+                  : "border-transparent text-gray-700 hover:text-black"
               }`}
             >
-              <Car className="w-8 h-8 mb-1.5" />
-              <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider">
+              <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
+                <Image
+                  src="/images/used-cars/car1.jpg"
+                  alt="Tất cả các loại"
+                  fill
+                  className="object-contain"
+                  sizes="145px"
+                />
+              </div>
+              <span className="text-xs sm:text-[13px] md:text-[14px] font-bold uppercase tracking-wider">
                 TẤT CẢ CÁC LOẠI
               </span>
             </button>
@@ -174,14 +181,22 @@ export default function UsedCarsPage() {
             <button
               type="button"
               onClick={() => setVehicleTypeTab("electric")}
-              className={`flex flex-col items-center justify-center p-3 rounded-lg transition-all cursor-pointer ${
+              className={`flex flex-col items-center justify-center pb-3 transition-all cursor-pointer border-b-[3px] ${
                 vehicleTypeTab === "electric"
-                  ? "text-[#3AB3FF] border-b-2 border-[#3AB3FF] bg-blue-50/50"
-                  : "text-gray-600 hover:text-black hover:bg-gray-50"
+                  ? "border-[#3AB3FF] text-[#3AB3FF]"
+                  : "border-transparent text-gray-700 hover:text-black"
               }`}
             >
-              <Zap className="w-8 h-8 mb-1.5" />
-              <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider">
+              <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
+                <Image
+                  src="/images/used-cars/car2.jpg"
+                  alt="Xe động cơ điện"
+                  fill
+                  className="object-contain"
+                  sizes="145px"
+                />
+              </div>
+              <span className="text-xs sm:text-[13px] md:text-[14px] font-bold uppercase tracking-wider">
                 XE ĐỘNG CƠ ĐIỆN
               </span>
             </button>
@@ -189,14 +204,22 @@ export default function UsedCarsPage() {
             <button
               type="button"
               onClick={() => setVehicleTypeTab("gasoline")}
-              className={`flex flex-col items-center justify-center p-3 rounded-lg transition-all cursor-pointer ${
+              className={`flex flex-col items-center justify-center pb-3 transition-all cursor-pointer border-b-[3px] ${
                 vehicleTypeTab === "gasoline"
-                  ? "text-[#3AB3FF] border-b-2 border-[#3AB3FF] bg-blue-50/50"
-                  : "text-gray-600 hover:text-black hover:bg-gray-50"
+                  ? "border-[#3AB3FF] text-[#3AB3FF]"
+                  : "border-transparent text-gray-700 hover:text-black"
               }`}
             >
-              <Fuel className="w-8 h-8 mb-1.5" />
-              <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider">
+              <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
+                <Image
+                  src="/images/used-cars/car3.jpg"
+                  alt="Xe động cơ xăng"
+                  fill
+                  className="object-contain"
+                  sizes="145px"
+                />
+              </div>
+              <span className="text-xs sm:text-[13px] md:text-[14px] font-bold uppercase tracking-wider">
                 XE ĐỘNG CƠ XĂNG
               </span>
             </button>
@@ -204,21 +227,29 @@ export default function UsedCarsPage() {
             <button
               type="button"
               onClick={() => setVehicleTypeTab("commercial")}
-              className={`flex flex-col items-center justify-center p-3 rounded-lg transition-all cursor-pointer ${
+              className={`flex flex-col items-center justify-center pb-3 transition-all cursor-pointer border-b-[3px] ${
                 vehicleTypeTab === "commercial"
-                  ? "text-[#3AB3FF] border-b-2 border-[#3AB3FF] bg-blue-50/50"
-                  : "text-gray-600 hover:text-black hover:bg-gray-50"
+                  ? "border-[#3AB3FF] text-[#3AB3FF]"
+                  : "border-transparent text-gray-700 hover:text-black"
               }`}
             >
-              <Truck className="w-8 h-8 mb-1.5" />
-              <span className="text-xs sm:text-[13px] font-bold uppercase tracking-wider">
+              <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
+                <Image
+                  src="/images/used-cars/car4.jpg"
+                  alt="Xe dịch vụ"
+                  fill
+                  className="object-contain"
+                  sizes="145px"
+                />
+              </div>
+              <span className="text-xs sm:text-[13px] md:text-[14px] font-bold uppercase tracking-wider">
                 XE DỊCH VỤ
               </span>
             </button>
           </div>
 
           {/* Filter Dropdowns Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5 mb-6 text-xs sm:text-[13px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 sm:gap-4 mb-6 text-xs sm:text-[13px]">
             {/* Keyword */}
             <div>
               <input
@@ -226,16 +257,16 @@ export default function UsedCarsPage() {
                 placeholder="Nhập từ khóa"
                 value={keyword}
                 onChange={(e) => setKeyword(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded focus:border-[#3AB3FF] outline-none text-gray-800"
+                className="w-full h-[44px] px-3.5 bg-[#fbfbfb] border border-gray-300 rounded-[4px] focus:bg-white focus:border-[#3AB3FF] outline-none text-gray-800 placeholder:text-gray-400 shadow-sm transition-colors"
               />
             </div>
 
             {/* Model */}
-            <div>
+            <div className="relative">
               <select
                 value={selectedModel}
                 onChange={(e) => setSelectedModel(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded focus:border-[#3AB3FF] outline-none text-gray-800 cursor-pointer"
+                className="w-full h-[44px] px-3.5 pr-8 bg-[#fbfbfb] border border-gray-300 rounded-[4px] focus:bg-white focus:border-[#3AB3FF] outline-none text-gray-800 cursor-pointer appearance-none shadow-sm transition-colors"
               >
                 <option value="all">Tên dòng xe</option>
                 <option value="VF 8">VinFast VF 8</option>
@@ -245,58 +276,66 @@ export default function UsedCarsPage() {
                 <option value="VF 5">VinFast VF 5</option>
                 <option value="VF 3">VinFast VF 3</option>
               </select>
+              <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
 
             {/* Year */}
-            <div>
+            <div className="relative">
               <select
                 value={selectedYear}
                 onChange={(e) => setSelectedYear(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded focus:border-[#3AB3FF] outline-none text-gray-800 cursor-pointer"
+                className="w-full h-[44px] px-3.5 pr-8 bg-[#fbfbfb] border border-gray-300 rounded-[4px] focus:bg-white focus:border-[#3AB3FF] outline-none text-gray-800 cursor-pointer appearance-none shadow-sm transition-colors"
               >
                 <option value="all">Năm sản xuất</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
                 <option value="2024">2024</option>
                 <option value="2023">2023</option>
                 <option value="2022">2022</option>
+                <option value="2021">2021</option>
               </select>
+              <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
 
             {/* Seats */}
-            <div>
+            <div className="relative">
               <select
                 value={selectedSeats}
                 onChange={(e) => setSelectedSeats(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded focus:border-[#3AB3FF] outline-none text-gray-800 cursor-pointer"
+                className="w-full h-[44px] px-3.5 pr-8 bg-[#fbfbfb] border border-gray-300 rounded-[4px] focus:bg-white focus:border-[#3AB3FF] outline-none text-gray-800 cursor-pointer appearance-none shadow-sm transition-colors"
               >
                 <option value="all">Số chỗ ngồi</option>
                 <option value="4">4 chỗ</option>
                 <option value="5">5 chỗ</option>
                 <option value="7">7 chỗ</option>
               </select>
+              <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
 
             {/* Province */}
-            <div>
+            <div className="relative">
               <select
                 value={selectedProvince}
                 onChange={(e) => setSelectedProvince(e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-gray-50 border border-gray-300 rounded focus:border-[#3AB3FF] outline-none text-gray-800 cursor-pointer"
+                className="w-full h-[44px] px-3.5 pr-8 bg-[#fbfbfb] border border-gray-300 rounded-[4px] focus:bg-white focus:border-[#3AB3FF] outline-none text-gray-800 cursor-pointer appearance-none shadow-sm transition-colors"
               >
                 <option value="all">Tỉnh thành</option>
                 <option value="Hà Nội">Hà Nội</option>
                 <option value="Quảng Ninh">Quảng Ninh</option>
                 <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                <option value="Hải Phòng">Hải Phòng</option>
               </select>
+              <ChevronDown className="w-4 h-4 text-gray-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
             </div>
           </div>
 
           {/* Sliders row + Search Button */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center pt-2">
             {/* Price Slider */}
-            <div className="md:col-span-4 space-y-1.5">
-              <div className="flex justify-between text-xs text-gray-600 font-medium">
-                <span>Khoảng giá:</span>
-                <span className="text-[#3AB3FF] font-bold">
+            <div className="md:col-span-5 space-y-1.5">
+              <div className="flex justify-between text-xs sm:text-[13px] text-gray-800 font-bold">
+                <span>Khoảng giá</span>
+                <span className="text-[#3AB3FF] font-semibold text-xs">
                   {maxPrice >= 2300 ? "Tối đa 2.3 tỷ" : `Đến ${maxPrice} triệu`}
                 </span>
               </div>
@@ -307,19 +346,19 @@ export default function UsedCarsPage() {
                 step="50"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(Number(e.target.value))}
-                className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#3AB3FF]"
+                className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-[#555555] bg-[#fcdede]"
               />
-              <div className="flex justify-between text-[11px] text-gray-400">
+              <div className="flex justify-between text-[11px] text-gray-500 font-medium">
                 <span>0 triệu</span>
                 <span>2.3 tỷ</span>
               </div>
             </div>
 
             {/* ODO Slider */}
-            <div className="md:col-span-5 space-y-1.5">
-              <div className="flex justify-between text-xs text-gray-600 font-medium">
-                <span>Số km đã đi:</span>
-                <span className="text-[#3AB3FF] font-bold">
+            <div className="md:col-span-4 space-y-1.5">
+              <div className="flex justify-between text-xs sm:text-[13px] text-gray-800 font-bold">
+                <span>Số km đã đi</span>
+                <span className="text-[#3AB3FF] font-semibold text-xs">
                   {maxOdo >= 200000 ? "Tối đa 200.000km" : `Dưới ${maxOdo.toLocaleString()} km`}
                 </span>
               </div>
@@ -330,11 +369,11 @@ export default function UsedCarsPage() {
                 step="5000"
                 value={maxOdo}
                 onChange={(e) => setMaxOdo(Number(e.target.value))}
-                className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#3AB3FF]"
+                className="w-full h-2 rounded-lg appearance-none cursor-pointer accent-[#555555] bg-[#fcdede]"
               />
-              <div className="flex justify-between text-[11px] text-gray-400">
+              <div className="flex justify-between text-[11px] text-gray-500 font-medium">
                 <span>0km</span>
-                <span>200.000km</span>
+                <span>200000km</span>
               </div>
             </div>
 
@@ -343,10 +382,10 @@ export default function UsedCarsPage() {
               <button
                 type="button"
                 onClick={() => {}}
-                className="w-full sm:w-auto bg-[#3AB3FF] hover:bg-[#1863dc] text-white font-bold text-xs sm:text-sm uppercase tracking-wider py-3 px-8 rounded-lg transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto h-[44px] bg-[#28a8f0] hover:bg-[#1a95dc] text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-8 rounded-[4px] shadow-sm flex items-center justify-center gap-1.5 transition-all cursor-pointer"
               >
                 <span>TÌM KIẾM XE</span>
-                <ChevronDown className="w-4 h-4 -rotate-90" />
+                <span className="text-base font-bold leading-none">&gt;</span>
               </button>
             </div>
           </div>
@@ -356,9 +395,9 @@ export default function UsedCarsPage() {
       {/* ============================================================
           3. RESULT TOOLBAR & QUICK FILTERS
          ============================================================ */}
-      <section className="max-w-[1240px] mx-auto px-4 sm:px-6 pt-12 pb-6">
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 pt-6 pb-6">
         {/* Top bar: Compare & Sorting */}
-        <div className="bg-[#f0f0f0] p-3 sm:px-6 rounded-lg flex flex-wrap items-center justify-between gap-4 text-xs sm:text-[13px] text-gray-700 mb-6">
+        <div className="bg-[#f0f0f0] p-3.5 sm:px-6 rounded-[6px] flex flex-wrap items-center justify-between gap-4 text-xs sm:text-[13px] text-gray-700 mb-6">
           <div className="flex items-center gap-2 font-bold cursor-pointer hover:text-black">
             <Scale className="w-4 h-4 text-gray-600" />
             <span>So sánh xe</span>
@@ -438,7 +477,7 @@ export default function UsedCarsPage() {
       {/* ============================================================
           4. DANH SÁCH 6 THẺ XE CŨ GREEN FUTURE (GRID)
          ============================================================ */}
-      <section className="max-w-[1240px] mx-auto px-4 sm:px-6 pb-16">
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 pb-16">
         {filteredCars.length === 0 ? (
           <div className="text-center py-16 bg-gray-50 rounded-xl border border-dashed border-gray-300">
             <Car className="w-12 h-12 text-gray-400 mx-auto mb-3" />
@@ -542,7 +581,7 @@ export default function UsedCarsPage() {
         />
         <div className="absolute inset-0 bg-black/75 z-0" />
 
-        <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6">
           <div className="max-w-[760px] mx-auto text-white">
             <h2 className="text-center text-[22px] sm:text-[28px] md:text-[32px] font-black font-mulish uppercase tracking-tight text-white mb-2">
               ĐỊNH GIÁ XE CỦA QUÝ KHÁCH
@@ -699,7 +738,7 @@ export default function UsedCarsPage() {
           6. CAM KẾT CỦA GREEN FUTURE (4 PILLARS)
          ============================================================ */}
       <section className="py-14 sm:py-20 bg-white">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-[#0C0C0C] text-[24px] sm:text-[30px] md:text-[34px] font-black font-mulish uppercase tracking-tight leading-tight">
               Cam kết của Green Future
@@ -738,7 +777,7 @@ export default function UsedCarsPage() {
           7. TIN TỨC MỚI NHẤT TỪ VINFAST THỊNH CƯỜNG
          ============================================================ */}
       <section className="py-14 sm:py-20 bg-[#fafafa] border-t border-gray-100">
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2 className="text-[#0C0C0C] text-[24px] sm:text-[30px] md:text-[34px] font-black font-mulish uppercase tracking-tight leading-tight">
               TIN TỨC MỚI NHẤT TỪ Vinfast THỊNH CƯỜNG
