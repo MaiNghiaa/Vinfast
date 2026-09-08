@@ -61,7 +61,6 @@ export default function VehicleDetailPage() {
   const [activeThumbIndex, setActiveThumbIndex] = useState(0);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [selectedTrimIndex, setSelectedTrimIndex] = useState<number | null>(null);
-  const [activeTab, setActiveTab] = useState<"desc" | "additional">("desc");
   const [videoModalOpen, setVideoModalOpen] = useState(false);
 
   // Pre-exterior photo slider index
@@ -143,40 +142,7 @@ export default function VehicleDetailPage() {
       </div>
 
       {/* Main Container */}
-      <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-6 sm:py-8">
-        {/* Top Bar: Breadcrumb + Prev/Next model arrows */}
-        <div className="flex items-center justify-between border-b border-gray-100 pb-3 mb-6">
-          <nav className="flex items-center gap-1.5 text-[13px] text-gray-500">
-            <Link href="/" className="hover:text-[#1863dc] transition-colors">
-              Trang chủ
-            </Link>
-            <span className="text-gray-300">/</span>
-            <Link href="/xe-moi" className="hover:text-[#1863dc] transition-colors">
-              Xe mới
-            </Link>
-            <span className="text-gray-300">/</span>
-            <span className="text-gray-900 font-semibold">{vehicle.name}</span>
-          </nav>
-
-          {/* Quick Prev / Next Vehicle arrows */}
-          <div className="flex items-center gap-2">
-            <Link
-              href={`/san-pham/${prevVehicle.slug}`}
-              title={`Xe trước: ${prevVehicle.name}`}
-              className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#1863dc] hover:border-[#1863dc] transition-all bg-white"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </Link>
-            <Link
-              href={`/san-pham/${nextVehicle.slug}`}
-              title={`Xe tiếp theo: ${nextVehicle.name}`}
-              className="w-8 h-8 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:text-[#1863dc] hover:border-[#1863dc] transition-all bg-white"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          </div>
-        </div>
-
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {/* 2. Hero Product Details (Gallery Left, Summary Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Left Column: Thumbnails + Main View with Watermark */}
@@ -187,10 +153,11 @@ export default function VehicleDetailPage() {
                 <button
                   key={idx}
                   onClick={() => setActiveThumbIndex(idx)}
-                  className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-md border-2 overflow-hidden shrink-0 bg-white transition-all ${activeThumbIndex === idx
+                  className={`relative w-16 h-16 sm:w-20 sm:h-20 rounded-md border-2 overflow-hidden shrink-0 bg-white transition-all ${
+                    activeThumbIndex === idx
                       ? "border-[#1863dc] shadow-sm ring-1 ring-[#1863dc]"
                       : "border-gray-200 hover:border-gray-300 opacity-75 hover:opacity-100"
-                    }`}
+                  }`}
                 >
                   <Image
                     src={thumb}
@@ -246,12 +213,30 @@ export default function VehicleDetailPage() {
             </div>
           </div>
 
-          {/* Right Column: Title, Price, Commitments, Animated CTA, Actions, Colors */}
-          <div className="lg:col-span-5 flex flex-col space-y-4">
-            {/* Title */}
-            <h1 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-gray-900 tracking-tight leading-tight">
-              {vehicle.name}
-            </h1>
+          {/* Right Column: Title with ⯇ ⯈ arrows, Price, Commitments, Animated CTA, Actions, Colors */}
+          <div className="lg:col-span-5 flex flex-col space-y-3.5">
+            {/* Title + Nav Arrows */}
+            <div className="flex items-center justify-between">
+              <h1 className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-gray-900 tracking-tight leading-tight">
+                {vehicle.name}
+              </h1>
+              <div className="flex items-center gap-1.5 text-gray-400">
+                <Link
+                  href={`/san-pham/${prevVehicle.slug}`}
+                  title={`Xe trước: ${prevVehicle.name}`}
+                  className="w-6 h-6 border border-gray-300 rounded flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
+                >
+                  <ChevronLeft className="w-3.5 h-3.5" />
+                </Link>
+                <Link
+                  href={`/san-pham/${nextVehicle.slug}`}
+                  title={`Xe tiếp theo: ${nextVehicle.name}`}
+                  className="w-6 h-6 border border-gray-300 rounded flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
+                >
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
 
             {/* Price Range in Cyan Blue */}
             <div className="text-xl sm:text-2xl font-bold text-[#0284c7] tracking-tight">
@@ -260,24 +245,22 @@ export default function VehicleDetailPage() {
 
             {/* Commitment Box */}
             <div className="bg-white pt-1">
-              <h4 className="text-sm font-black text-gray-900 uppercase tracking-wide mb-2.5">
+              <h4 className="text-sm font-black text-gray-900 uppercase tracking-wide mb-2">
                 {vehicle.commitmentsTitle || `CAM KẾT GIÁ XE ${vehicle.name.toUpperCase()} 2026 TỐT NHẤT`}
               </h4>
-              <ol className="list-decimal list-inside space-y-1.5 text-[13px] text-gray-800 leading-relaxed marker:font-bold marker:text-gray-900">
-                {(
-                  vehicle.commitments || [
-                    "Công an, quân đội giảm 5%",
-                    "Cán bộ nhân viên hoặc lãnh đạo VNPOST giảm 3-5%",
-                    "Chương trình tri ân khách hàng xe xăng Vinfast lên đến 80 triệu đồng",
-                    "Miễn thuế trước bạ 100%",
-                    "Miễn phí sạc điện đến 10/02/2029",
-                    "Lãi suất cố định từ 5%/năm trong 3 năm",
-                    "Hỗ trợ miễn phí thủ tục đăng ký đăng kiểm, miễn phí gửi xe tại các Khu đô thị, TTTM VinGroup.",
-                    "Bảo hành xe 7 năm hoặc 160.000 km, bảo hành pin 8 năm hoặc 160.000 km.",
-                    "Tặng kèm gói phụ kiện chính hãng",
-                    "Hỗ trợ giao xe tại nhà miễn phí",
-                  ]
-                ).map((com, i) => (
+              <ol className="list-decimal list-inside space-y-1 text-[13px] text-gray-800 leading-relaxed marker:font-bold marker:text-gray-900">
+                {(vehicle.commitments || [
+                  "Công an, quân đội giảm 5%",
+                  "Cán bộ nhân viên hoặc lãnh đạo VNPOST giảm 3-5%",
+                  "Chương trình tri ân khách hàng xe xăng Vinfast lên đến 80 triệu đồng",
+                  "Miễn thuế trước bạ 100%",
+                  "Miễn phí sạc điện đến 10/02/2029",
+                  "Lãi suất cố định từ 5%/năm trong 3 năm",
+                  "Hỗ trợ miễn phí thủ tục đăng ký đăng kiểm, miễn phí gửi xe tại các Khu đô thị, TTTM VinGroup.",
+                  "Bảo hành xe 7 năm hoặc 160.000 km, bảo hành pin 8 năm hoặc 160.000 km.",
+                  "Tặng kèm gói phụ kiện chính hãng",
+                  "Hỗ trợ giao xe tại nhà miễn phí",
+                ]).map((com, i) => (
                   <li key={i} className="pl-1">
                     <span dangerouslySetInnerHTML={{ __html: com }} />
                   </li>
@@ -285,65 +268,81 @@ export default function VehicleDetailPage() {
               </ol>
             </div>
 
+            {/* Animated CTA Button "Nhận Bảng Giá" */}
+            <div className="py-1 text-center">
+              <button
+                type="button"
+                onClick={() => leadFormRef.current?.scrollIntoView({ behavior: "smooth" })}
+                className="inline-block hover:opacity-95 transition-opacity cursor-pointer"
+              >
+                <Image
+                  src="/images/icon_nhan_bang_gia.gif"
+                  alt="Nhận Bảng Giá VinFast"
+                  width={250}
+                  height={93}
+                  className="mx-auto"
+                />
+              </button>
+            </div>
 
             {/* 3 Outline Action Buttons */}
-            <div className="grid grid-cols-3 gap-2 pt-1">
+            <div className="grid grid-cols-3 gap-2">
               <Link
                 href="/du-toan-lan-banh"
-                className="border border-gray-400 hover:border-[#1863dc] hover:text-[#1863dc] py-2 px-1 text-center rounded text-[12px] sm:text-[13px] font-medium text-gray-800 transition-colors flex items-center justify-center"
+                className="border border-black hover:bg-black hover:text-white py-1.5 px-2 text-center rounded-[4px] text-xs font-semibold text-gray-900 transition-colors flex items-center justify-center"
               >
                 Dự toán lăn bánh
               </Link>
               <Link
                 href="/so-sanh-xe"
-                className="border border-gray-400 hover:border-[#1863dc] hover:text-[#1863dc] py-2 px-1 text-center rounded text-[12px] sm:text-[13px] font-medium text-gray-800 transition-colors flex items-center justify-center"
+                className="border border-black hover:bg-black hover:text-white py-1.5 px-2 text-center rounded-[4px] text-xs font-semibold text-gray-900 transition-colors flex items-center justify-center"
               >
                 So sánh xe
               </Link>
               <button
                 onClick={() => openBooking(vehicle.slug, "lai-thu")}
-                className="border border-gray-400 hover:border-[#1863dc] hover:text-[#1863dc] py-2 px-1 text-center rounded text-[12px] sm:text-[13px] font-medium text-gray-800 transition-colors flex items-center justify-center"
+                className="border border-black hover:bg-black hover:text-white py-1.5 px-2 text-center rounded-[4px] text-xs font-semibold text-gray-900 transition-colors flex items-center justify-center cursor-pointer"
               >
                 Đăng kí lái thử
               </button>
             </div>
 
-            {/* Color Swatch Circles */}
-            <div className="pt-3">
-              <div className="text-[12px] font-bold text-gray-700 mb-2">
-                Màu sắc:{" "}
-                <span className="text-[#1863dc] font-semibold">
-                  {vehicle.colors[selectedColorIndex]?.name}
-                </span>
-              </div>
-              <div className="flex items-center gap-3">
+            {/* Color Swatches */}
+            <div className="pt-2">
+              <div className="flex items-center gap-2.5">
                 {vehicle.colors.map((color, idx) => (
                   <button
                     key={idx}
                     onClick={() => handleColorSelect(idx)}
-                    style={{ backgroundColor: color.hex }}
-                    className={`w-7 h-7 rounded-full border transition-all shadow-xs ${selectedColorIndex === idx
-                        ? "ring-2 ring-offset-2 ring-[#1863dc] scale-110"
-                        : "border-gray-300 hover:scale-105"
-                      }`}
+                    className={`w-7 h-7 rounded-full border flex items-center justify-center transition-all ${
+                      selectedColorIndex === idx
+                        ? "border-[#1863dc] ring-2 ring-[#1863dc] ring-offset-1"
+                        : "border-gray-300 hover:border-gray-400"
+                    }`}
                     title={color.name}
-                  />
+                  >
+                    <span
+                      className="w-5 h-5 rounded-full border border-black/10 block"
+                      style={{ backgroundColor: color.hex }}
+                    />
+                  </button>
                 ))}
               </div>
             </div>
 
             {/* Version Selector Pills */}
-            <div className="pt-2 flex items-center gap-2.5 flex-wrap">
+            <div className="pt-1 flex items-center gap-2 flex-wrap">
               {vehicle.trims.map((trim, idx) => (
                 <button
                   key={idx}
                   onClick={() =>
                     setSelectedTrimIndex(selectedTrimIndex === idx ? null : idx)
                   }
-                  className={`px-4 py-1.5 rounded-md border text-[12px] font-bold transition-all ${selectedTrimIndex === idx
-                      ? "border-[#1863dc] bg-blue-50 text-[#1863dc] shadow-xs"
-                      : "border-gray-300 text-gray-700 hover:border-gray-400 bg-white"
-                    }`}
+                  className={`px-4 py-1 rounded-full border text-xs font-semibold transition-all cursor-pointer ${
+                    selectedTrimIndex === idx
+                      ? "border-black bg-black text-white"
+                      : "border-gray-300 text-gray-700 hover:border-black bg-white"
+                  }`}
                 >
                   {trim.name}
                 </button>
@@ -353,9 +352,9 @@ export default function VehicleDetailPage() {
         </div>
 
         {/* 3. Horizontal Lead Form Bar */}
-        <div ref={leadFormRef} className="mt-12 bg-[#f3f4f6] rounded-xl p-5 sm:p-6 border border-gray-200 shadow-xs">
+        <div ref={leadFormRef} className="mt-8 bg-[#f5f5f5] p-4 sm:p-5 border border-gray-200">
           {formSubmitted ? (
-            <div className="p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-lg text-center flex items-center justify-center gap-2 text-sm font-semibold">
+            <div className="p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded text-center flex items-center justify-center gap-2 text-sm font-semibold">
               <Check className="w-5 h-5 text-emerald-600" />
               Cảm ơn bạn! Thông tin tư vấn xe {vehicle.name} đã được gửi thành công. Chuyên viên VinFast Thịnh Cường sẽ liên hệ sớm nhất!
             </div>
@@ -368,7 +367,7 @@ export default function VehicleDetailPage() {
                   value={formName}
                   onChange={(e) => setFormName(e.target.value)}
                   required
-                  className="w-full bg-white border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#0284c7] focus:ring-1 focus:ring-[#0284c7]"
+                  className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#3AB3FF]"
                 />
                 <input
                   type="tel"
@@ -376,12 +375,12 @@ export default function VehicleDetailPage() {
                   value={formPhone}
                   onChange={(e) => setFormPhone(e.target.value)}
                   required
-                  className="w-full bg-white border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#0284c7] focus:ring-1 focus:ring-[#0284c7]"
+                  className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#3AB3FF]"
                 />
                 <select
                   value={formTime}
                   onChange={(e) => setFormTime(e.target.value)}
-                  className="w-full bg-white border border-gray-300 rounded px-3.5 py-2.5 text-sm text-gray-700 focus:outline-hidden focus:border-[#0284c7] focus:ring-1 focus:ring-[#0284c7]"
+                  className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-700 focus:outline-hidden focus:border-[#3AB3FF] cursor-pointer"
                 >
                   <option value="">Thời gian dự kiến lấy xe</option>
                   <option value="Tháng này">Tháng này</option>
@@ -390,23 +389,23 @@ export default function VehicleDetailPage() {
                 </select>
                 <button
                   type="submit"
-                  className="w-full bg-[#0284c7] hover:bg-[#0369a1] text-white font-bold py-2.5 px-4 rounded text-sm transition-colors shadow-sm uppercase tracking-wide"
+                  className="w-full bg-[#3AB3FF] hover:bg-[#1fa1ef] text-white font-bold py-2 px-4 rounded-[3px] text-xs sm:text-[13px] transition-colors shadow-xs uppercase tracking-wide cursor-pointer"
                 >
                   Gửi thông tin
                 </button>
               </div>
 
-              <div className="flex items-center gap-2 pt-1 text-xs text-gray-600">
+              <div className="flex items-center justify-center gap-2 pt-1 text-xs text-gray-600">
                 <input
                   type="checkbox"
                   id="agree-term"
                   checked={formAgreed}
                   onChange={(e) => setFormAgreed(e.target.checked)}
-                  className="rounded border-gray-300 text-[#0284c7] focus:ring-[#0284c7]"
+                  className="rounded border-gray-300 text-[#3AB3FF] focus:ring-[#3AB3FF] cursor-pointer"
                 />
-                <label htmlFor="agree-term" className="cursor-pointer">
+                <label htmlFor="agree-term" className="cursor-pointer text-[11px] sm:text-xs text-gray-600">
                   Tôi đã đọc và đồng ý với các{" "}
-                  <Link href="/chinh-sach-bao-mat" className="text-[#0284c7] hover:underline">
+                  <Link href="/chinh-sach-bao-mat" className="text-[#3AB3FF] hover:underline">
                     quy định và chính sách
                   </Link>{" "}
                   của VinFast Thịnh Cường!
@@ -416,172 +415,146 @@ export default function VehicleDetailPage() {
           )}
         </div>
 
-        {/* 4. WooCommerce Tabs */}
-        <div className="mt-14 border-t border-gray-200 pt-8">
-          <div className="flex items-center gap-6 border-b border-gray-200 mb-8">
-            <button
-              onClick={() => setActiveTab("desc")}
-              className={`pb-3 text-base sm:text-lg font-bold transition-all relative ${activeTab === "desc"
-                  ? "text-gray-900 border-b-2 border-[#dc2626]"
-                  : "text-gray-500 hover:text-gray-800"
-                }`}
-            >
-              Mô tả
-            </button>
-            <button
-              onClick={() => setActiveTab("additional")}
-              className={`pb-3 text-base sm:text-lg font-bold transition-all relative ${activeTab === "additional"
-                  ? "text-gray-900 border-b-2 border-[#dc2626]"
-                  : "text-gray-500 hover:text-gray-800"
-                }`}
-            >
-              Thông tin bổ sung
-            </button>
-          </div>
+        {/* 4. Specs & Northern Market Best Price (Direct 2-Column Section matching Thịnh Cường 1:1) */}
+        <div className="mt-12 space-y-16">
+          {/* SECTION A: 2-Column Specs & Northern Market Best Price */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+            {/* Left: Specs Table */}
+            <div className="lg:col-span-5">
+              <div className="border-b-2 border-black pb-2 mb-6">
+                <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight">
+                  THÔNG SỐ KỸ THUẬT {vehicle.name.toUpperCase()}
+                </h3>
+              </div>
 
-          {/* TAB 1: MÔ TẢ */}
-          {activeTab === "desc" && (
-            <div className="space-y-16">
-              {/* SECTION A: 2-Column Specs & Northern Market Best Price */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-                {/* Left: Specs Table */}
-                <div className="lg:col-span-5">
-                  <div className="relative pb-2 mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 uppercase">
-                      THÔNG SỐ KỸ THUẬT {vehicle.name.toUpperCase()}
-                    </h3>
-                    <div className="w-16 h-1 bg-[#dc2626] mt-2" />
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-x-4 gap-y-3.5 text-xs text-gray-800 border-t border-gray-100 pt-4">
-                    <div>
-                      <span className="text-gray-500 block mb-0.5 font-semibold">Kích thước tổng thể</span>
-                      <strong className="text-gray-900 text-[13px]">{vehicle.specs.dimensions}</strong>
-                    </div>
-                    <div>
-                      <span className="text-gray-500 block mb-0.5 font-semibold">Chiều dài cơ sở</span>
-                      <strong className="text-gray-900 text-[13px]">{vehicle.specs.wheelbase}</strong>
-                    </div>
-                    <div>
-                      <span className="text-gray-500 block mb-0.5 font-semibold">Hộp số</span>
-                      <strong className="text-gray-900 text-[13px]">{vehicle.specs.gearbox || "Số tự động (AT)"}</strong>
-                    </div>
-                    <div>
-                      <span className="text-gray-500 block mb-0.5 font-semibold">Loại động cơ</span>
-                      <strong className="text-gray-900 text-[13px]">{vehicle.specs.engineType || "Điện"}</strong>
-                    </div>
-                    <div>
-                      <span className="text-gray-500 block mb-0.5 font-semibold">Khoảng sáng gầm</span>
-                      <strong className="text-gray-900 text-[13px]">{vehicle.specs.groundClearance}</strong>
-                    </div>
-                    <div>
-                      <span className="text-gray-500 block mb-0.5 font-semibold">Loại Pin</span>
-                      <strong className="text-gray-900 text-[13px]">{vehicle.specs.batteryCapacity}</strong>
-                    </div>
-                    <div className="col-span-2">
-                      <span className="text-gray-500 block mb-0.5 font-semibold">Quãng đường tối đa</span>
-                      <strong className="text-gray-900 text-[13px]">{vehicle.specs.range}</strong>
-                    </div>
-                  </div>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-4 text-xs text-gray-800">
+                <div>
+                  <span className="text-gray-900 font-bold block mb-1">Kích thước tổng thể</span>
+                  <span className="text-gray-600 text-xs">{vehicle.specs.dimensions}</span>
                 </div>
-
-                {/* Right: Northern Market Best Price */}
-                <div className="lg:col-span-7 space-y-4">
-                  <div className="relative pb-2 mb-2">
-                    <h3 className="text-xl font-bold text-gray-900 uppercase">
-                      {vehicle.name.toUpperCase()}: GIÁ TỐT MIỀN BẮC
-                    </h3>
-                    <div className="w-16 h-1 bg-[#dc2626] mt-2" />
-                  </div>
-
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-semibold">
-                    VinFast Thịnh Cường bán {vehicle.name} – 2026 giá cạnh tranh, tốt nhất thị trường. Các phiên bản với mức giá và ưu đãi như sau:
-                  </p>
-
-                  {/* Table 1: Price List */}
-                  {vehicle.pricingTable && vehicle.pricingTable.length > 0 && (
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-xs border border-gray-300">
-                        <tbody>
-                          {vehicle.pricingTable.map((row, i) => (
-                            <tr key={i} className="border-b border-gray-200">
-                              <td className="p-2.5 font-bold text-gray-900 bg-gray-50/70 border-r border-gray-200">
-                                {row.version}
-                              </td>
-                              <td className="p-2.5 text-gray-700 border-r border-gray-200 whitespace-nowrap">
-                                {row.originalPrice}
-                              </td>
-                              <td className="p-2.5 font-bold text-gray-900 whitespace-nowrap">
-                                {row.promoPrice}
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  )}
-
-                  {/* Table 2: Feature Comparison */}
-                  {vehicle.comparisonTable && vehicle.comparisonTable.length > 0 && (
-                    <div className="overflow-x-auto pt-1">
-                      <table className="w-full text-xs border border-gray-300">
-                        <thead>
-                          <tr className="bg-gray-100/80 border-b border-gray-300 font-bold text-gray-800">
-                            <th className="p-2 text-left border-r border-gray-300">Dòng xe</th>
-                            <th className="p-2 text-left border-r border-gray-300">Tính năng</th>
-                            <th className="p-2 text-center border-r border-gray-300">Tiêu chuẩn 1</th>
-                            <th className="p-2 text-center">Tiêu chuẩn 2</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {vehicle.comparisonTable.map((row, i) => (
-                            <tr key={i} className="border-b border-gray-200">
-                              <td className="p-2.5 font-bold text-gray-900 border-r border-gray-200 align-top">
-                                {row.model}
-                              </td>
-                              <td className="p-2.5 text-gray-700 border-r border-gray-200">
-                                <ul className="list-disc list-inside space-y-0.5">
-                                  {row.features.map((f, fi) => (
-                                    <li key={fi}>{f}</li>
-                                  ))}
-                                </ul>
-                              </td>
-                              <td className="p-2.5 text-center text-gray-600 border-r border-gray-200 align-top">
-                                {row.std1}
-                              </td>
-                              <td className="p-2.5 text-center font-bold text-gray-900 align-top">
-                                {row.std2}
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  )}
-
-                  {/* Exclusive Monthly Offer */}
-                  {vehicle.monthlyOffer && (
-                    <p className="text-xs text-gray-800 leading-relaxed pt-1">
-                      <strong className="text-gray-900">Ưu đãi riêng độc quyền Khách hàng mua xe trong tháng:</strong>{" "}
-                      {vehicle.monthlyOffer}
-                    </p>
-                  )}
-
-                  {/* Contact Line & Red Pill Button */}
-                  <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                    <p className="text-xs text-gray-800">
-                      Liên hệ <strong className="text-[#15803d] text-base font-bold">090 242 25 22</strong> (zalo) để nhận giá cực nét, đủ màu sẵn xe, giao ngay.
-                    </p>
-                    <a
-                      href="tel:0902422522"
-                      className="inline-flex items-center justify-center gap-1.5 bg-[#dc2626] hover:bg-[#b91c1c] text-white text-xs font-black px-4 py-2 rounded-full uppercase tracking-wider transition-colors shrink-0 shadow-sm"
-                    >
-                      <span>LIÊN HỆ</span>
-                      <span>&gt;&gt;</span>
-                    </a>
-                  </div>
+                <div>
+                  <span className="text-gray-900 font-bold block mb-1">Chiều dài cơ sở</span>
+                  <span className="text-gray-600 text-xs">{vehicle.specs.wheelbase}</span>
+                </div>
+                <div>
+                  <span className="text-gray-900 font-bold block mb-1">Hộp số</span>
+                  <span className="text-gray-600 text-xs">{vehicle.specs.gearbox || "Số tự động (AT)"}</span>
+                </div>
+                <div>
+                  <span className="text-gray-900 font-bold block mb-1">Loại động cơ</span>
+                  <span className="text-gray-600 text-xs">{vehicle.specs.engineType || "Điện"}</span>
+                </div>
+                <div>
+                  <span className="text-gray-900 font-bold block mb-1">Khoảng sáng gầm</span>
+                  <span className="text-gray-600 text-xs">{vehicle.specs.groundClearance}</span>
+                </div>
+                <div>
+                  <span className="text-gray-900 font-bold block mb-1">Loại Pin</span>
+                  <span className="text-gray-600 text-xs">{vehicle.specs.batteryCapacity}</span>
+                </div>
+                <div className="col-span-2">
+                  <span className="text-gray-900 font-bold block mb-1">Quãng đường tối đa</span>
+                  <span className="text-gray-600 text-xs">{vehicle.specs.range}</span>
                 </div>
               </div>
+            </div>
+
+            {/* Right: Northern Market Best Price */}
+            <div className="lg:col-span-7 space-y-4">
+              <div>
+                <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight mb-2">
+                  {vehicle.name.toUpperCase()}: GIÁ TỐT MIỀN BẮC
+                </h3>
+              </div>
+
+              <p className="text-xs sm:text-[13px] text-gray-800 leading-relaxed">
+                <strong>VinFast Thịnh Cường bán {vehicle.name} – 2026</strong> giá cạnh tranh, tốt nhất thị trường. Các phiên bản với mức giá và ưu đãi như sau:
+              </p>
+
+              {/* Table 1: Price List */}
+              {vehicle.pricingTable && vehicle.pricingTable.length > 0 && (
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs border border-gray-300">
+                    <tbody>
+                      {vehicle.pricingTable.map((row, i) => (
+                        <tr key={i} className="border-b border-gray-200">
+                          <td className="p-2.5 font-bold text-gray-900 bg-gray-50/50 border-r border-gray-200">
+                            {row.version}
+                          </td>
+                          <td className="p-2.5 text-gray-900 font-semibold border-r border-gray-200 whitespace-nowrap">
+                            {row.originalPrice}
+                          </td>
+                          <td className="p-2.5 text-gray-900 whitespace-nowrap">
+                            Ưu đãi chỉ từ: <strong className="font-bold">{row.promoPrice}</strong>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* Table 2: Feature Comparison */}
+              {vehicle.comparisonTable && vehicle.comparisonTable.length > 0 && (
+                <div className="overflow-x-auto pt-1">
+                  <table className="w-full text-xs border border-gray-300">
+                    <thead>
+                      <tr className="bg-gray-50 border-b border-gray-300 font-semibold text-gray-800">
+                        <th className="p-2 text-left border-r border-gray-300 font-bold">Dòng xe</th>
+                        <th className="p-2 text-left border-r border-gray-300 font-bold">Tính năng</th>
+                        <th className="p-2 text-center border-r border-gray-300 font-bold">Tiêu chuẩn 1</th>
+                        <th className="p-2 text-center font-bold">Tiêu chuẩn 2</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {vehicle.comparisonTable.map((row, i) => (
+                        <tr key={i} className="border-b border-gray-200">
+                          <td className="p-2.5 font-bold text-gray-900 border-r border-gray-200 align-top">
+                            {row.model}
+                          </td>
+                          <td className="p-2.5 text-gray-700 border-r border-gray-200">
+                            <ul className="list-disc list-inside space-y-0.5">
+                              {row.features.map((f, fi) => (
+                                <li key={fi}>{f}</li>
+                              ))}
+                            </ul>
+                          </td>
+                          <td className="p-2.5 text-center text-gray-600 border-r border-gray-200 align-top">
+                            {row.std1}
+                          </td>
+                          <td className="p-2.5 text-center font-bold text-gray-900 align-top">
+                            {row.std2}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {/* Exclusive Monthly Offer */}
+              {vehicle.monthlyOffer && (
+                <p className="text-xs text-gray-800 leading-relaxed pt-1">
+                  <strong>Ưu đãi riêng độc quyền Khách hàng mua xe trong tháng:</strong>{" "}
+                  {vehicle.monthlyOffer}
+                </p>
+              )}
+
+              {/* Contact Line & Green Pill Button */}
+              <div className="pt-2 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <p className="text-xs text-gray-800">
+                  Liên hệ <strong className="text-[#16a34a] text-base font-black">090 242 25 22</strong> (zalo) để nhận giá cực nét, đủ màu sẵn xe, giao ngay.
+                </p>
+                <a
+                  href="tel:0902422522"
+                  className="inline-flex items-center justify-center gap-1.5 bg-[#28a745] hover:bg-[#218838] text-white text-xs font-black px-5 py-2 rounded-full uppercase tracking-wider transition-colors shrink-0 shadow-sm"
+                >
+                  <span>LIÊN HỆ</span>
+                  <span>&gt;&gt;</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
               {/* SECTION B: Pre-Exterior Dynamic Photo Slider (4 Slides) */}
               {sliderPhotos.length > 0 && (
@@ -966,40 +939,6 @@ export default function VehicleDetailPage() {
                   </div>
                 </div>
               )}
-            </div>
-          )}
-
-          {/* TAB 2: THÔNG TIN BỔ SUNG */}
-          {activeTab === "additional" && (
-            <div className="max-w-2xl bg-white border border-gray-200 rounded-lg overflow-hidden shadow-xs">
-              <table className="w-full text-xs">
-                <tbody>
-                  {(
-                    vehicle.additionalAttributes || [
-                      {
-                        label: "color",
-                        value: vehicle.colors.map((c) => c.name).join(", "),
-                      },
-                      {
-                        label: "Phiên bản xe",
-                        value: vehicle.trims.map((t) => t.name).join(", "),
-                      },
-                    ]
-                  ).map((attr, i) => (
-                    <tr
-                      key={i}
-                      className={i % 2 === 0 ? "bg-gray-50" : "bg-white"}
-                    >
-                      <th className="p-3 text-left font-bold text-gray-900 border-r border-gray-200 w-1/3">
-                        {attr.label}
-                      </th>
-                      <td className="p-3 text-gray-700">{attr.value}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
         </div>
       </div>
 
