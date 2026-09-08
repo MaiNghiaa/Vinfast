@@ -37,10 +37,10 @@ export default function CustomerCulturePage() {
         style={{
           backgroundImage: `url("https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/banner-web-TVBH-web1-1.jpg")`,
         }}
-        aria-label="Văn hóa Phục vụ Khách hàng VinFast Thịnh Cường"
+        aria-label="Văn hóa Phục vụ Khách hàng VinFast Phương Đông"
       >
         <div className="sr-only">
-          <h1>Văn hóa Phục vụ Khách hàng tại Tập đoàn VinFast Thịnh Cường</h1>
+          <h1>Văn hóa Phục vụ Khách hàng tại Tập đoàn VinFast Phương Đông</h1>
         </div>
       </section>
 
@@ -62,7 +62,7 @@ export default function CustomerCulturePage() {
               <div className="group relative w-full h-[360px] sm:h-[420px] lg:h-[485px] overflow-hidden rounded-lg shadow-sm">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/web-TVBH-web-o-duoi1-1.jpg"
-                  alt="VinFast Thịnh Cường - Tư vấn bán hàng tận tâm"
+                  alt="VinFast Phương Đông - Tư vấn bán hàng tận tâm"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
@@ -96,7 +96,7 @@ export default function CustomerCulturePage() {
               {/* Body Text */}
               <div className="space-y-3.5 text-black text-[14px] sm:text-[15px] leading-relaxed text-justify sm:text-left">
                 <p>
-                  Tại VinFast Thịnh Cường, mỗi dịch vụ không chỉ đơn thuần là một quy trình, mà là{" "}
+                  Tại VinFast Phương Đông, mỗi dịch vụ không chỉ đơn thuần là một quy trình, mà là{" "}
                   <strong>một hành trình gắn kết cảm xúc giữa thương hiệu và khách hàng</strong>.
                 </p>
 
@@ -109,7 +109,7 @@ export default function CustomerCulturePage() {
                 </p>
 
                 <p>
-                  Ở mỗi điểm chạm trong hành trình trải nghiệm, đội ngũ VinFast Thịnh Cường luôn:
+                  Ở mỗi điểm chạm trong hành trình trải nghiệm, đội ngũ VinFast Phương Đông luôn:
                 </p>
 
                 <ul className="list-disc pl-6 space-y-1.5 font-bold text-black text-left">
@@ -125,7 +125,7 @@ export default function CustomerCulturePage() {
 
                 <p>
                   Đối với chúng tôi,{" "}
-                  <strong>sự hài lòng của khách hàng chính là nền tảng cho thành công bền vững</strong>, đồng thời là nguồn cảm hứng để VinFast Thịnh Cường{" "}
+                  <strong>sự hài lòng của khách hàng chính là nền tảng cho thành công bền vững</strong>, đồng thời là nguồn cảm hứng để VinFast Phương Đông{" "}
                   <strong>không ngừng sáng tạo, cải tiến và phát triển mạnh mẽ hơn mỗi ngày</strong>.
                 </p>
               </div>
@@ -211,8 +211,8 @@ export default function CustomerCulturePage() {
 
           <div className="pt-2 space-y-3.5 text-black text-[15px] sm:text-[16px] leading-relaxed">
             <p>
-              VinFast Thịnh Cường hướng tới mục tiêu trở thành{" "}
-              <strong>nhà phân phối ô tô điện VinFast số 1 Việt Nam</strong>, được khách hàng tin tưởng và lựa chọn. Đến với Thịnh Cường, khách hàng không chỉ tìm thấy:
+              VinFast Phương Đông hướng tới mục tiêu trở thành{" "}
+              <strong>nhà phân phối ô tô điện VinFast số 1 Việt Nam</strong>, được khách hàng tin tưởng và lựa chọn. Đến với Phương Đông, khách hàng không chỉ tìm thấy:
             </p>
 
             <p className="font-[800] text-[16px] sm:text-[18px] text-black">
@@ -246,7 +246,7 @@ export default function CustomerCulturePage() {
               <div className="group relative w-[72%] aspect-[1280/1920] max-h-[500px] overflow-hidden rounded-md shadow-md border border-gray-100 z-10">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/09/album-omotenashi-toyota-thai-hoa-tu-liem113.webp"
-                  alt="Showroom đón tiếp khách hàng VinFast Thịnh Cường"
+                  alt="Showroom đón tiếp khách hàng VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 70vw, 35vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
@@ -282,11 +282,11 @@ export default function CustomerCulturePage() {
 
               <div className="space-y-4 text-black text-[14px] sm:text-[15px] leading-relaxed text-justify sm:text-left">
                 <p>
-                  Với tâm niệm: “Những gì xuất phát từ trái tim sẽ chạm đến trái tim”, VinFast Thịnh Cường luôn áp dụng văn hóa phục vụ khách hàng bằng cả tấm lòng ngay từ lần đầu tiên Quý khách hàng tham quan xe tại Đại lý.
+                  Với tâm niệm: “Những gì xuất phát từ trái tim sẽ chạm đến trái tim”, VinFast Phương Đông luôn áp dụng văn hóa phục vụ khách hàng bằng cả tấm lòng ngay từ lần đầu tiên Quý khách hàng tham quan xe tại Đại lý.
                 </p>
 
                 <p>
-                  Để đề cao tinh thần tận tâm phục vụ, VinFast Thịnh Cường luôn chú trọng đào tạo cho nhân viên các tính năng sản phẩm cùng phong cách phục vụ chuyên nghiệp với mong muốn làm hài lòng tối đa nhất tất cả khách hàng khi đến tìm hiểu và sử dụng dịch vụ tại VinFast Thịnh Cường.
+                  Để đề cao tinh thần tận tâm phục vụ, VinFast Phương Đông luôn chú trọng đào tạo cho nhân viên các tính năng sản phẩm cùng phong cách phục vụ chuyên nghiệp với mong muốn làm hài lòng tối đa nhất tất cả khách hàng khi đến tìm hiểu và sử dụng dịch vụ tại VinFast Phương Đông.
                 </p>
               </div>
 
@@ -325,18 +325,18 @@ export default function CustomerCulturePage() {
 
               <div className="space-y-4 text-black text-[14px] sm:text-[15px] leading-relaxed text-justify sm:text-left">
                 <p>
-                  VinFast Thịnh Cường thấu hiểu, mỗi chiếc xe đều là một người bạn tri kỷ, người đồng hành cùng Quý khách trên mọi nẻo đường. Do vậy, đối với chúng tôi, việc chăm sóc một chiếc xe có ý nghĩa giống như chăm sóc người thân quay trở về nhà sau mỗi hành trình dài!
+                  VinFast Phương Đông thấu hiểu, mỗi chiếc xe đều là một người bạn tri kỷ, người đồng hành cùng Quý khách trên mọi nẻo đường. Do vậy, đối với chúng tôi, việc chăm sóc một chiếc xe có ý nghĩa giống như chăm sóc người thân quay trở về nhà sau mỗi hành trình dài!
                 </p>
 
                 <p>
-                  Mỗi khách hàng đến VinFast Thịnh Cường là điều trân quý, chăm sóc xe VinFast không chỉ là bảo dưỡng thông thường, mà đó là cả tinh thần phục vụ khách hàng như người nhà, chuyên nghiệp, chân thành. Từ những dịch vụ như: Bảo dưỡng, chăm sóc làm đẹp xe, vệ sinh điều hòa, vệ sinh động cơ, vệ sinh nội thất… cho tới việc sửa chữa phục hồi vết móp, sơn sửa vết xước trên thân xe đều được chăm sóc tỉ mỉ, cẩn thận bởi những kỹ thuật viên lành nghề theo tiêu chuẩn VinFast Thịnh Cường, cùng với đó là sự chuẩn bị kĩ càng, tuyển chọn phụ tùng chính hãng, phù hợp cho chiếc xe, nhằm đem lại cho chiếc xe chất lượng tốt nhất khi vận hành!
+                  Mỗi khách hàng đến VinFast Phương Đông là điều trân quý, chăm sóc xe VinFast không chỉ là bảo dưỡng thông thường, mà đó là cả tinh thần phục vụ khách hàng như người nhà, chuyên nghiệp, chân thành. Từ những dịch vụ như: Bảo dưỡng, chăm sóc làm đẹp xe, vệ sinh điều hòa, vệ sinh động cơ, vệ sinh nội thất… cho tới việc sửa chữa phục hồi vết móp, sơn sửa vết xước trên thân xe đều được chăm sóc tỉ mỉ, cẩn thận bởi những kỹ thuật viên lành nghề theo tiêu chuẩn VinFast Phương Đông, cùng với đó là sự chuẩn bị kĩ càng, tuyển chọn phụ tùng chính hãng, phù hợp cho chiếc xe, nhằm đem lại cho chiếc xe chất lượng tốt nhất khi vận hành!
                 </p>
               </div>
 
               {/* Slogan */}
               <div className="pt-3">
                 <h5 className="text-center font-bold text-black text-[15px] sm:text-[16px] leading-snug">
-                  Phục vụ khách hàng bằng cả trái tim và sự chuyên nghiệp chính là niềm tự hào của VinFast Thịnh Cường!
+                  Phục vụ khách hàng bằng cả trái tim và sự chuyên nghiệp chính là niềm tự hào của VinFast Phương Đông!
                 </h5>
               </div>
             </div>
@@ -346,7 +346,7 @@ export default function CustomerCulturePage() {
               <div className="group relative w-full h-[320px] sm:h-[362px] lg:h-[386px] overflow-hidden rounded-lg shadow-sm">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/10/557643152_122103037797044175_747372450738561641_n.jpg"
-                  alt="Kỹ thuật viên lành nghề tại Xưởng dịch vụ VinFast Thịnh Cường"
+                  alt="Kỹ thuật viên lành nghề tại Xưởng dịch vụ VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
@@ -362,7 +362,7 @@ export default function CustomerCulturePage() {
         </div>
       </section>
 
-      {/* 8. VIDEO BANNER PARALLAX: TẬP ĐOÀN VINFAST THỊNH CƯỜNG (Elementor f32dd12) */}
+      {/* 8. VIDEO BANNER PARALLAX: TẬP ĐOÀN VINFAST PHƯƠNG ĐÔNG (Elementor f32dd12) */}
       <section
         className="relative w-full min-h-[55vh] sm:min-h-[65vh] flex items-center justify-center bg-cover bg-center bg-no-repeat lg:bg-fixed overflow-hidden"
         style={{
@@ -374,7 +374,7 @@ export default function CustomerCulturePage() {
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center text-white space-y-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-[800] uppercase tracking-wide leading-tight drop-shadow-md">
-            TẬP ĐOÀN VINFAST THỊNH CƯỜNG
+            TẬP ĐOÀN VINFAST PHƯƠNG ĐÔNG
           </h2>
 
           <div className="flex justify-center pt-2">
@@ -410,7 +410,7 @@ export default function CustomerCulturePage() {
             </button>
             <iframe
               src="https://www.youtube.com/embed/CHs3CMu4EVY?autoplay=1&rel=0"
-              title="Tập đoàn VinFast Thịnh Cường Video"
+              title="Tập đoàn VinFast Phương Đông Video"
               className="w-full h-full border-0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

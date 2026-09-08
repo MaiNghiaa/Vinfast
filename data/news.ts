@@ -4,20 +4,20 @@ export const POSTS: Post[] = [
   {
     id: "post-1",
     slug: "lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-thu-7-hanh-phuc",
-    title: "LỊCH LÁI THỬ VINFAST THỊNH CƯỜNG THÁNG 9/2026 – THỨ 7 HẠNH PHÚC",
+    title: "LỊCH LÁI THỬ VINFAST PHƯƠNG ĐÔNG THÁNG 9/2026 – THỨ 7 HẠNH PHÚC",
     category: "su-kien",
     categoryName: "Tin sự kiện",
-    excerpt: "Chuỗi sự kiện 'Thứ 7 Hạnh Phúc' tháng 9/2026 tại Hệ thống 09 Showroom VinFast Thịnh Cường mang đến cơ hội trải nghiệm thực tế trọn bộ dải xe điện thông minh VF 3, VF 6, VF 7, VF 8 All New cùng vô vàn phần quà hấp dẫn.",
+    excerpt: "Chuỗi sự kiện 'Thứ 7 Hạnh Phúc' tháng 9/2026 tại Hệ thống 09 Showroom VinFast Phương Đông mang đến cơ hội trải nghiệm thực tế trọn bộ dải xe điện thông minh VF 3, VF 6, VF 7, VF 8 All New cùng vô vàn phần quà hấp dẫn.",
     content: `
-      <h2>Lịch lái thử VinFast Thịnh Cường tháng 9/2026 – Trải nghiệm xe điện, nhận ưu đãi hấp dẫn</h2>
-      <p>Tháng 9/2026, <strong>VinFast Thịnh Cường</strong> tiếp tục tổ chức chuỗi sự kiện <strong>“THỨ 7 HẠNH PHÚC”</strong> tại nhiều địa điểm ở Hà Nội, Vĩnh Phúc và Quảng Ninh.</p>
+      <h2>Lịch lái thử VinFast Phương Đông tháng 9/2026 – Trải nghiệm xe điện, nhận ưu đãi hấp dẫn</h2>
+      <p>Tháng 9/2026, <strong>VinFast Phương Đông</strong> tiếp tục tổ chức chuỗi sự kiện <strong>“THỨ 7 HẠNH PHÚC”</strong> tại nhiều địa điểm ở Hà Nội, Vĩnh Phúc và Quảng Ninh.</p>
       <p>Đây là cơ hội để khách hàng <strong>trực tiếp trải nghiệm, lái thử các dòng ô tô điện VinFast</strong>, tìm hiểu sản phẩm, chính sách bán hàng và các chương trình ưu đãi đang được áp dụng trong tháng 9.</p>
-      <p>Không chỉ đơn thuần là một buổi lái thử xe, <strong>“THỨ 7 HẠNH PHÚC”</strong> còn mang đến không gian giao lưu, thưởng thức cà phê và được đội ngũ tư vấn VinFast Thịnh Cường hỗ trợ lựa chọn mẫu xe phù hợp với nhu cầu và ngân sách.</p>
+      <p>Không chỉ đơn thuần là một buổi lái thử xe, <strong>“THỨ 7 HẠNH PHÚC”</strong> còn mang đến không gian giao lưu, thưởng thức cà phê và được đội ngũ tư vấn VinFast Phương Đông hỗ trợ lựa chọn mẫu xe phù hợp với nhu cầu và ngân sách.</p>
 
-      <p><img src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-1-1-1024x576.jpg" alt="Lịch lái thử VinFast Thịnh Cường tháng 9/2026" /></p>
+      <p><img src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-1-1-1024x576.jpg" alt="Lịch lái thử VinFast Phương Đông tháng 9/2026" /></p>
 
-      <h2>Lịch lái thử VinFast Thịnh Cường tháng 9/2026</h2>
-      <p>Trong tháng 9, chương trình được tổ chức tại <strong>9 khu vực/showroom của VinFast Thịnh Cường</strong>, với nhiều thời gian và địa điểm khác nhau.</p>
+      <h2>Lịch lái thử VinFast Phương Đông tháng 9/2026</h2>
+      <p>Trong tháng 9, chương trình được tổ chức tại <strong>9 khu vực/showroom của VinFast Phương Đông</strong>, với nhiều thời gian và địa điểm khác nhau.</p>
 
       <div class="table-responsive">
         <table>
@@ -72,17 +72,17 @@ export const POSTS: Post[] = [
             <tr>
               <td><strong>Vĩnh Phúc</strong></td>
               <td>19/09/2026</td>
-              <td>Showroom VinFast Thịnh Cường Vĩnh Phúc</td>
+              <td>Showroom VinFast Phương Đông Vĩnh Phúc</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
               <td>26/09/2026</td>
-              <td>Showroom VinFast Thịnh Cường Vĩnh Phúc</td>
+              <td>Showroom VinFast Phương Đông Vĩnh Phúc</td>
             </tr>
             <tr>
               <td><strong>Hạ Long</strong></td>
               <td>12/09/2026</td>
-              <td>SR VinFast Thịnh Cường Hạ Long, Vincom Hạ Long, khu Cột Đồng Hồ, P. Bạch Đằng, TP. Hạ Long, Quảng Ninh</td>
+              <td>SR VinFast Phương Đông Hạ Long, Vincom Hạ Long, khu Cột Đồng Hồ, P. Bạch Đằng, TP. Hạ Long, Quảng Ninh</td>
             </tr>
             <tr>
               <td>&nbsp;</td>
@@ -124,10 +124,10 @@ export const POSTS: Post[] = [
       </div>
 
       <blockquote>
-        <p><strong>Lưu ý:</strong> Thời gian và địa điểm tổ chức có thể được VinFast Thịnh Cường điều chỉnh tùy theo tình hình thực tế. Khách hàng nên đăng ký trước để được xác nhận thông tin sự kiện.</p>
+        <p><strong>Lưu ý:</strong> Thời gian và địa điểm tổ chức có thể được VinFast Phương Đông điều chỉnh tùy theo tình hình thực tế. Khách hàng nên đăng ký trước để được xác nhận thông tin sự kiện.</p>
       </blockquote>
 
-      <p><img src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-2-1.jpg" alt="Lịch lái thử VinFast Thịnh Cường tháng 9 2026" /></p>
+      <p><img src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-2-1.jpg" alt="Lịch lái thử VinFast Phương Đông tháng 9 2026" /></p>
 
       <h2>Trải nghiệm trực tiếp các dòng xe điện VinFast</h2>
       <p>Tham gia chương trình lái thử VinFast tháng 9/2026, khách hàng có cơ hội trực tiếp trải nghiệm khả năng vận hành và những trang bị trên các mẫu xe điện VinFast.</p>
@@ -142,7 +142,7 @@ export const POSTS: Post[] = [
       </ul>
 
       <h2>Những quyền lợi khi tham gia “THỨ 7 HẠNH PHÚC”</h2>
-      <p>Khi tham gia sự kiện, khách hàng được đội ngũ VinFast Thịnh Cường tư vấn và hỗ trợ trong quá trình tìm hiểu, lựa chọn xe.</p>
+      <p>Khi tham gia sự kiện, khách hàng được đội ngũ VinFast Phương Đông tư vấn và hỗ trợ trong quá trình tìm hiểu, lựa chọn xe.</p>
       <h3>Trực tiếp lái thử xe VinFast</h3>
       <p>Khách hàng được trải nghiệm thực tế khả năng vận hành, cảm giác lái, không gian nội thất và các trang bị trên xe.</p>
       <h3>Tư vấn sản phẩm</h3>
@@ -155,28 +155,28 @@ export const POSTS: Post[] = [
       <p>Các địa điểm tổ chức được lựa chọn nhằm mang đến không gian thoải mái để khách hàng và gia đình vừa trải nghiệm xe, vừa giao lưu và tìm hiểu sản phẩm.</p>
 
       <h2>Lái thử VinFast tại Hà Nội, Vĩnh Phúc và Quảng Ninh</h2>
-      <p>Chuỗi sự kiện “THỨ 7 HẠNH PHÚC” tháng 9/2026 được VinFast Thịnh Cường tổ chức tại nhiều khu vực, giúp khách hàng thuận tiện lựa chọn địa điểm gần nơi sinh sống.</p>
+      <p>Chuỗi sự kiện “THỨ 7 HẠNH PHÚC” tháng 9/2026 được VinFast Phương Đông tổ chức tại nhiều khu vực, giúp khách hàng thuận tiện lựa chọn địa điểm gần nơi sinh sống.</p>
       <p>Tại <strong>Hà Nội</strong>, chương trình được tổ chức ở Long Biên, Ocean Park, Smart City, Sơn Tây và Xuân Mai.</p>
-      <p>Tại <strong>Vĩnh Phúc</strong>, khách hàng có thể tham gia tại Showroom VinFast Thịnh Cường Vĩnh Phúc.</p>
+      <p>Tại <strong>Vĩnh Phúc</strong>, khách hàng có thể tham gia tại Showroom VinFast Phương Đông Vĩnh Phúc.</p>
       <p>Tại <strong>Quảng Ninh</strong>, chương trình diễn ra tại Hạ Long, Cẩm Phả và Uông Bí.</p>
       <p>Việc tổ chức nhiều điểm lái thử giúp khách hàng tiết kiệm thời gian di chuyển và dễ dàng trải nghiệm xe điện VinFast ngay tại khu vực của mình.</p>
 
       <h2>Cách đăng ký lái thử VinFast tháng 9/2026</h2>
-      <p>Khách hàng có nhu cầu tham gia chương trình có thể đăng ký trước với VinFast Thịnh Cường để được xác nhận lịch và địa điểm.</p>
+      <p>Khách hàng có nhu cầu tham gia chương trình có thể đăng ký trước với VinFast Phương Đông để được xác nhận lịch và địa điểm.</p>
       <p><strong>Bước 1:</strong> Để lại họ tên và số điện thoại.</p>
       <p><strong>Bước 2:</strong> Lựa chọn khu vực và thời gian muốn tham gia.</p>
-      <p><strong>Bước 3:</strong> Nhận thông tin xác nhận từ đội ngũ VinFast Thịnh Cường.</p>
+      <p><strong>Bước 3:</strong> Nhận thông tin xác nhận từ đội ngũ VinFast Phương Đông.</p>
       <p><strong>Bước 4:</strong> Đến địa điểm tổ chức và trực tiếp trải nghiệm xe.</p>
       <p><strong>Bước 5:</strong> Nhận tư vấn về giá xe, chính sách ưu đãi và phương án tài chính nếu có nhu cầu mua xe.</p>
 
       <h2>Đăng ký lái thử VinFast tháng 9/2026</h2>
       <p>Nếu bạn đang tìm hiểu xe điện VinFast, chưa biết lựa chọn mẫu xe nào hoặc muốn trực tiếp trải nghiệm trước khi mua, chương trình <strong>“THỨ 7 HẠNH PHÚC” tháng 9/2026</strong> là cơ hội để bạn tìm hiểu và lái thử xe thực tế.</p>
-      <p>Khách hàng có thể <strong>đăng ký lái thử VinFast</strong> bằng cách để lại số điện thoại hoặc nhắn tin trực tiếp cho VinFast Thịnh Cường. Đội ngũ tư vấn sẽ liên hệ, hỗ trợ lựa chọn địa điểm phù hợp và cung cấp thông tin chi tiết về chương trình.</p>
-      <p><strong>VinFast Thịnh Cường – Đồng hành cùng khách hàng trên hành trình trải nghiệm và sở hữu ô tô điện VinFast.</strong></p>
+      <p>Khách hàng có thể <strong>đăng ký lái thử VinFast</strong> bằng cách để lại số điện thoại hoặc nhắn tin trực tiếp cho VinFast Phương Đông. Đội ngũ tư vấn sẽ liên hệ, hỗ trợ lựa chọn địa điểm phù hợp và cung cấp thông tin chi tiết về chương trình.</p>
+      <p><strong>VinFast Phương Đông – Đồng hành cùng khách hàng trên hành trình trải nghiệm và sở hữu ô tô điện VinFast.</strong></p>
     `,
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-1.jpg",
     publishedDate: "31/08/2026",
-    author: "VinFast Thịnh Cường",
+    author: "VinFast Phương Đông",
     isFeatured: true,
   },
   {
@@ -195,7 +195,7 @@ export const POSTS: Post[] = [
     `,
     thumbnail: "/images/news/adas-vf8-all-new.png",
     publishedDate: "28/08/2026",
-    author: "Chuyên viên Kỹ thuật Thịnh Cường",
+    author: "Chuyên viên Kỹ thuật Phương Đông",
     isFeatured: true,
   },
   {
@@ -230,7 +230,7 @@ export const POSTS: Post[] = [
     `,
     thumbnail: "/images/news/limo-green-thang-8.png",
     publishedDate: "15/08/2026",
-    author: "Phòng Kinh Doanh Thịnh Cường",
+    author: "Phòng Kinh Doanh Phương Đông",
     isFeatured: true,
   },
   {
@@ -239,13 +239,13 @@ export const POSTS: Post[] = [
     title: "VF MPV7 THÁNG 8 GIÁ BAO NHIÊU? CẬP NHẬT GIÁ BÁN VÀ ƯU ĐÃI MỚI NHẤT",
     category: "uu-dai",
     categoryName: "Tin khuyến mại",
-    excerpt: "Chi tiết giá lăn bánh và chính sách ưu đãi dòng xe MPV 7 chỗ thông minh của VinFast trong tháng 8/2026 tại hệ thống VinFast Thịnh Cường.",
+    excerpt: "Chi tiết giá lăn bánh và chính sách ưu đãi dòng xe MPV 7 chỗ thông minh của VinFast trong tháng 8/2026 tại hệ thống VinFast Phương Đông.",
     content: `
       <p>VinFast VF MPV7 sở hữu thiết kế hiện đại, nội thất tối ưu cho 7 người lớn cùng động cơ điện mạnh mẽ và tiết kiệm chi phí tối đa.</p>
     `,
     thumbnail: "/images/news/vf-mpv7-thang-8.png",
     publishedDate: "12/08/2026",
-    author: "Phòng Kinh Doanh Thịnh Cường",
+    author: "Phòng Kinh Doanh Phương Đông",
     isFeatured: true,
   },
   {
@@ -256,22 +256,22 @@ export const POSTS: Post[] = [
     categoryName: "Tin tức vinfast",
     excerpt: "Bài toán so sánh chi tiết giữa hai lựa chọn xe điện 7 chỗ hàng đầu phân khúc với ngân sách từ 500 đến 600 triệu đồng.",
     content: `
-      <p>Với mức tài chính khoảng 500 - 600 triệu, khách hàng có thể dễ dàng tiếp cận các dòng xe điện 7 chỗ của VinFast thông qua các gói hỗ trợ trả góp lãi suất thấp độc quyền từ VinFast Thịnh Cường.</p>
+      <p>Với mức tài chính khoảng 500 - 600 triệu, khách hàng có thể dễ dàng tiếp cận các dòng xe điện 7 chỗ của VinFast thông qua các gói hỗ trợ trả góp lãi suất thấp độc quyền từ VinFast Phương Đông.</p>
     `,
     thumbnail: "/images/news/tai-chinh-500-600-trieu.png",
     publishedDate: "05/08/2026",
-    author: "Ban Tư Vấn Thịnh Cường",
+    author: "Ban Tư Vấn Phương Đông",
     isFeatured: true,
   },
   {
     id: "post-7",
     slug: "tong-ket-quy-ii-2026-tap-doan-thinh-cuong-ghi-nhan-thanh-tuu-san-sang-but-pha-quy-iii",
-    title: "TỔNG KẾT QUÝ II/2026: TẬP ĐOÀN THỊNH CƯỜNG GHI NHẬN THÀNH TỰU, SẴN SÀNG BỨT PHÁ QUÝ III",
+    title: "TỔNG KẾT QUÝ II/2026: TẬP ĐOÀN PHƯƠNG ĐÔNG GHI NHẬN THÀNH TỰU, SẴN SÀNG BỨT PHÁ QUÝ III",
     category: "tin-noi-bo",
     categoryName: "Tin nội bộ",
-    excerpt: "Tập đoàn Thịnh Cường tiếp tục giữ vững vị trí Nhà phân phối xe ô tô điện VinFast Số 1 Việt Nam với hơn 5.000 xe được bàn giao trong nửa đầu năm 2026.",
+    excerpt: "Tập đoàn Phương Đông tiếp tục giữ vững vị trí Nhà phân phối xe ô tô điện VinFast Số 1 Việt Nam với hơn 5.000 xe được bàn giao trong nửa đầu năm 2026.",
     content: `
-      <p>Tại buổi lễ sơ kết hoạt động kinh doanh Quý II/2026, Ban Lãnh đạo <strong>Tập đoàn Thịnh Cường</strong> đã tuyên dương các tập thể Showroom Long Biên, Ocean Park và Hạ Long đạt thành tích xuất sắc trong công tác bán hàng và chăm sóc khách hàng.</p>
+      <p>Tại buổi lễ sơ kết hoạt động kinh doanh Quý II/2026, Ban Lãnh đạo <strong>Tập đoàn Phương Đông</strong> đã tuyên dương các tập thể Showroom Long Biên, Ocean Park và Hạ Long đạt thành tích xuất sắc trong công tác bán hàng và chăm sóc khách hàng.</p>
     `,
     thumbnail: "/images/awards/vinh-danh-long-bien.png",
     publishedDate: "10/08/2026",
@@ -281,12 +281,12 @@ export const POSTS: Post[] = [
   {
     id: "post-8",
     slug: "vinfast-thinh-cuong-dao-tao-ky-thuat-vien-dat-chuan-dich-vu-5-sao-toan-dien",
-    title: "VINFAST THỊNH CƯỜNG ĐÀO TẠO KỸ THUẬT VIÊN ĐẠT CHUẨN DỊCH VỤ 5 SAO TOÀN DIỆN",
+    title: "VINFAST PHƯƠNG ĐÔNG ĐÀO TẠO KỸ THUẬT VIÊN ĐẠT CHUẨN DỊCH VỤ 5 SAO TOÀN DIỆN",
     category: "tin-noi-bo",
     categoryName: "Tin nội bộ",
     excerpt: "Chương trình nâng cao tay nghề và chứng chỉ chuyên sâu về sửa chữa Pin và Động cơ điện công nghệ cao dành cho đội ngũ kỹ sư 13 Xưởng dịch vụ.",
     content: `
-      <p>Nhằm đảm bảo chất lượng dịch vụ đồng bộ tại 13 Xưởng dịch vụ chuẩn quốc tế, VinFast Thịnh Cường tổ chức khóa huấn luyện định kỳ với các chuyên gia kỹ thuật hàng đầu của VinFast.</p>
+      <p>Nhằm đảm bảo chất lượng dịch vụ đồng bộ tại 13 Xưởng dịch vụ chuẩn quốc tế, VinFast Phương Đông tổ chức khóa huấn luyện định kỳ với các chuyên gia kỹ thuật hàng đầu của VinFast.</p>
     `,
     thumbnail: "/images/awards/vinh-danh-xuong-son-tay.jpg",
     publishedDate: "02/08/2026",

@@ -30,13 +30,13 @@ export const GREEN_FUTURE_COMMITMENTS = [
 export const USED_CARS_NEWS = [
   {
     id: "vf-mpv-7",
-    title: "VF MPV 7: GIÁ, THÔNG SỐ & ƯU ĐÃI MỚI NHẤT | VINFAST THỊNH CƯỜNG",
+    title: "VF MPV 7: GIÁ, THÔNG SỐ & ƯU ĐÃI MỚI NHẤT | VINFAST PHƯƠNG ĐÔNG",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/09/khuyen-mai-vf-mpv-7-thang-9-2026--1024x576.jpg",
     slug: "vf-mpv-7-gia-thong-so-uu-dai-moi-nhat-vinfast-thinh-cuong",
   },
   {
     id: "lai-thu-xe-tai-nha",
-    title: "LÁI THỬ XE VINFAST TẠI NHÀ: TRẢI NGHIỆM THỰC TẾ CÙNG VINFAST THỊNH CƯỜNG",
+    title: "LÁI THỬ XE VINFAST TẠI NHÀ: TRẢI NGHIỆM THỰC TẾ CÙNG VINFAST PHƯƠNG ĐÔNG",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/xuong-dich-vu-vinfast-thinhcuong-11888.jpg",
     slug: "lai-thu-xe-vinfast-tai-nha-trai-nghiem-thuc-te-cung-vinfast-thinh-cuong",
   },

@@ -63,7 +63,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
       <section className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] overflow-hidden bg-neutral-900">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/07/toyota-thai-hoa-tu-liem-car-detail-breadcum-all.webp"
-          alt="VinFast Thịnh Cường - Xe cũ Green Future"
+          alt="VinFast Phương Đông - Xe cũ Green Future"
           fill
           priority
           sizes="100vw"
@@ -214,7 +214,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
       </section>
 
       {/* ============================================================
-          3. BẢNG THÔNG TIN XE CHI TIẾT (Matching Thịnh Cường 1:1)
+          3. BẢNG THÔNG TIN XE CHI TIẾT (Matching Phương Đông 1:1)
          ============================================================ */}
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
@@ -223,7 +223,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
               THÔNG TIN XE {car.name}
             </h2>
             <p className="text-sm sm:text-[15px] text-[#444444] leading-relaxed">
-              VinFast Thịnh Cường xin gửi tới Quý khách hàng thông tin chi tiết về chiếc{" "}
+              VinFast Phương Đông xin gửi tới Quý khách hàng thông tin chi tiết về chiếc{" "}
               <strong className="text-black font-bold">{car.name}</strong> thuộc nguồn xe GF chính hãng, đã được phân bổ về{" "}
               <strong className="text-black font-bold">{car.allocatedTo}</strong> trong tháng 3/2026.
             </p>
@@ -353,7 +353,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
               ĐĂNG KÝ TƯ VẤN &amp; XEM XE TRỰC TIẾP
             </h3>
             <p className="text-center text-xs sm:text-sm text-gray-500 mb-6">
-              Để lại thông tin, chuyên viên tư vấn xe cũ Green Future Thịnh Cường sẽ liên hệ ngay trong 15 phút.
+              Để lại thông tin, chuyên viên tư vấn xe cũ Green Future Phương Đông sẽ liên hệ ngay trong 15 phút.
             </p>
 
             {submitted ? (
@@ -361,7 +361,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
                 <CheckCircle className="w-10 h-10 text-green-600 mx-auto" />
                 <h4 className="font-bold text-base">Gửi yêu cầu thành công!</h4>
                 <p className="text-xs">
-                  Cảm ơn Quý khách <strong className="text-green-950">{fullName}</strong> ({phone}). Chuyên viên Thịnh Cường sẽ sớm liên hệ tư vấn chiếc {car.name}.
+                  Cảm ơn Quý khách <strong className="text-green-950">{fullName}</strong> ({phone}). Chuyên viên Phương Đông sẽ sớm liên hệ tư vấn chiếc {car.name}.
                 </p>
               </div>
             ) : (

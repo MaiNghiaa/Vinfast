@@ -14,7 +14,7 @@ export default function ShowroomVideoBanner() {
         <div className="absolute inset-0 w-full h-full">
           <Image
             src="/images/home/video-showroom-bg.jpg"
-            alt="VinFast Thịnh Cường Showroom"
+            alt="VinFast Phương Đông Showroom"
             fill
             className="object-cover object-center"
             priority
@@ -27,7 +27,7 @@ export default function ShowroomVideoBanner() {
         {/* Content Centered */}
         <div className="relative z-10 max-w-[1300px] mx-auto px-4 sm:px-6 text-center flex flex-col items-center">
           <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-black uppercase tracking-wide leading-tight drop-shadow-md">
-            VINFAST THỊNH CƯỜNG
+            VINFAST PHƯƠNG ĐÔNG
             <span className="block text-sm sm:text-base md:text-xl font-bold tracking-normal mt-2.5 text-gray-100">
               NHÀ PHÂN PHỐI XE Ô TÔ ĐIỆN VINFAST SỐ 1 VIỆT NAM
             </span>
@@ -38,7 +38,7 @@ export default function ShowroomVideoBanner() {
             type="button"
             onClick={() => setIsVideoOpen(true)}
             className="mt-8 sm:mt-10 group relative flex items-center justify-center w-18 h-18 sm:w-22 sm:h-22 rounded-full bg-white/90 hover:bg-white text-gray-900 shadow-[0_0_30px_rgba(255,255,255,0.4)] transition-all duration-300 hover:scale-110 cursor-pointer"
-            aria-label="Xem video VinFast Thịnh Cường"
+            aria-label="Xem video VinFast Phương Đông"
           >
             {/* Ripple pulse ring */}
             <span className="absolute inset-0 rounded-full bg-white/40 animate-ping duration-1000"></span>
@@ -68,7 +68,7 @@ export default function ShowroomVideoBanner() {
 
             <iframe
               src="https://www.youtube.com/embed/bCNs58XOsiY?autoplay=1"
-              title="VinFast Thịnh Cường - Nhà phân phối xe ô tô điện số 1 Việt Nam"
+              title="VinFast Phương Đông - Nhà phân phối xe ô tô điện số 1 Việt Nam"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="w-full h-full"

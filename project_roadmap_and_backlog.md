@@ -1,6 +1,6 @@
 # Bảng Kế Hoạch & Các Đầu Mục Còn Lại (Project Backlog & Roadmap)
 
-Tài liệu này tổng hợp toàn bộ các hạng mục công việc còn lại của dự án website **VinFast Thịnh Cường**, được phân chia theo mức độ ưu tiên, phân hệ giao diện (Frontend), các trang chi tiết và hệ thống xử lý Backend (BE).
+Tài liệu này tổng hợp toàn bộ các hạng mục công việc còn lại của dự án website **VinFast Phương Đông**, được phân chia theo mức độ ưu tiên, phân hệ giao diện (Frontend), các trang chi tiết và hệ thống xử lý Backend (BE).
 
 ---
 
@@ -78,7 +78,7 @@ Tài liệu này tổng hợp toàn bộ các hạng mục công việc còn l�
   - Cấu trúc layout blog/news chuẩn: Bài viết tiêu điểm (Featured Post) lớn ở trên đầu, lưới các bài viết mới nhất ở dưới.
 - [ ] **2. Các Trang Chuyên Mục Con (`/tin-tuc/chuyen-muc/[category]`):**
   - `tin-khuyen-mai` (Live: `/chuyen-muc/uu-dai/`): Khuyến mại, quà tặng khi mua xe điện.
-  - `tin-noi-bo` (Live: `/chuyen-muc/tin-noi-bo/`): Hoạt động tập đoàn Thịnh Cường, bàn giao xe cho khách hàng.
+  - `tin-noi-bo` (Live: `/chuyen-muc/tin-noi-bo/`): Hoạt động tập đoàn Phương Đông, bàn giao xe cho khách hàng.
   - `tin-su-kien` (Live: `/chuyen-muc/su-kien/`): Các ngày hội trải nghiệm lái thử xe tại Vincom.
 - [ ] **3. Trang Đọc Chi Tiết Bài Viết (`/tin-tuc/[slug]`):**
   - Giao diện đọc bài viết chuẩn: Tiêu đề, Tác giả, Ngày đăng, Thời gian đọc.
@@ -119,7 +119,7 @@ Hiện tại các form trên trang mới chỉ có giao diện (UI) và state t�
 - [ ] **1. Tự động sinh `sitemap.xml` và `robots.txt`.**
 - [ ] **2. Thẻ Meta OpenGraph & Twitter Cards:** Hiển thị thumbnail đẹp mắt khi chia sẻ link lên Zalo, Facebook, iMessage.
 - [ ] **3. Cấu trúc Schema Markup (JSON-LD):**
-  - `AutoDealer`: Khai báo địa chỉ các showroom Thịnh Cường (Hà Nội, Quảng Ninh, Vĩnh Phúc), giờ mở cửa, hotline.
+  - `AutoDealer`: Khai báo địa chỉ các showroom Phương Đông (Hà Nội, Quảng Ninh, Vĩnh Phúc), giờ mở cửa, hotline.
   - `Product` & `Car`: Khai báo thông tin xe cho Google Rich Snippets.
   - `JobPosting`: Giúp các tin tuyển dụng hiển thị trực tiếp trên Google Jobs.
 - [ ] **4. Tối ưu hình ảnh & Core Web Vitals:** Đảm bảo tốc độ tải trang dưới 1.5 giây.

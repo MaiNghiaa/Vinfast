@@ -35,7 +35,7 @@ export default function NewsSection({ className = "" }: NewsSectionProps) {
   return (
     <section className={`bg-white ${className || "py-12 md:py-16"} overflow-hidden`}>
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-        {/* Title Centered matching Thịnh Cường */}
+        {/* Title Centered matching Phương Đông */}
         <div className="text-center mb-6 sm:mb-8">
           <h2 className="text-[26px] sm:text-[32px] md:text-[36px] font-black uppercase text-[#0c0c0c] tracking-tight font-mulish">
             TIN TỨC MỚI NHẤT

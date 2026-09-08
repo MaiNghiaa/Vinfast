@@ -232,7 +232,7 @@ export default function VehicleTabsShowcase() {
   return (
     <section className="bg-white py-12 md:py-16 overflow-hidden">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-        {/* 1. Header Title & Accent Divider matching Thịnh Cường */}
+        {/* 1. Header Title & Accent Divider matching Phương Đông */}
         <div className="text-center mb-6">
           <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-black uppercase text-[#0c0c0c] tracking-tight font-['Mulish',sans-serif]">
             KHÁM PHÁ CÁC DÒNG XE
@@ -241,7 +241,7 @@ export default function VehicleTabsShowcase() {
           <div className="w-12 h-[3px] bg-[#3AB3FF] mx-auto mt-3 mb-6"></div>
         </div>
 
-        {/* 2. Clean Text Tabs matching Thịnh Cường */}
+        {/* 2. Clean Text Tabs matching Phương Đông */}
         <div className="flex justify-center items-center gap-6 sm:gap-10 mb-8 border-b border-transparent">
           {SHOWCASE_TABS.map((tab) => {
             const isActive = tab.id === activeTabId;

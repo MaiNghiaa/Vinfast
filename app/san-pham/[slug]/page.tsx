@@ -23,9 +23,17 @@ import { USED_CARS } from "@/data/usedCars";
 import UsedCarDetailPage from "@/components/UsedCarDetailPage";
 import { useModal } from "@/components/ClientLayout";
 
-export default function VehicleDetailPage() {
-  const params = useParams();
-  const slug = params?.slug as string;
+export default function VehicleDetailPage({
+  params,
+}: {
+  params?: Promise<{ slug: string }> | { slug: string };
+}) {
+  const routerParams = useParams();
+  const unwrappedParams =
+    params && typeof (params as any).then === "function"
+      ? React.use(params as Promise<{ slug: string }>)
+      : (params as { slug?: string });
+  const slug = (unwrappedParams?.slug || routerParams?.slug) as string;
   const { openBooking } = useModal();
 
   const vehicleIndex = VEHICLES.findIndex((v) => v.slug === slug);
@@ -58,6 +66,7 @@ export default function VehicleDetailPage() {
       ];
 
   // State
+  const [activeTab, setActiveTab] = useState<"description" | "additional_information">("description");
   const [activeThumbIndex, setActiveThumbIndex] = useState(0);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [selectedTrimIndex, setSelectedTrimIndex] = useState<number | null>(null);
@@ -130,7 +139,7 @@ export default function VehicleDetailPage() {
 
   return (
     <div className="w-full bg-white text-[#333333] font-sans antialiased">
-      {/* 1. Top Asphalt Highway Banner */}
+      {/* 1. Top Asphalt Highway Banner with Breadcrumbs */}
       <div className="relative w-full h-36 sm:h-48 md:h-56 lg:h-64 overflow-hidden bg-zinc-900">
         <Image
           src={vehicle.bannerImage || "https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/07/toyota-thai-hoa-tu-liem-car-detail-breadcum-all.webp"}
@@ -139,6 +148,24 @@ export default function VehicleDetailPage() {
           priority
           className="object-cover object-bottom"
         />
+        {/* Breadcrumbs matching Phương Đông 1:1 */}
+        <div className="absolute top-4 left-4 sm:left-8 lg:left-12 z-20">
+          <ol className="flex items-center gap-1.5 text-xs text-white/90 font-medium drop-shadow-md">
+            <li>
+              <Link href="/" className="hover:text-white hover:underline transition-colors">
+                Trang chủ
+              </Link>
+            </li>
+            <li className="text-white/60">/</li>
+            <li>
+              <Link href="/xe-moi" className="hover:text-white hover:underline transition-colors">
+                Xe mới
+              </Link>
+            </li>
+            <li className="text-white/60">/</li>
+            <li className="text-white font-bold">{vehicle.name}</li>
+          </ol>
+        </div>
       </div>
 
       {/* Main Container */}
@@ -268,22 +295,7 @@ export default function VehicleDetailPage() {
               </ol>
             </div>
 
-            {/* Animated CTA Button "Nhận Bảng Giá" */}
-            <div className="py-1 text-center">
-              <button
-                type="button"
-                onClick={() => leadFormRef.current?.scrollIntoView({ behavior: "smooth" })}
-                className="inline-block hover:opacity-95 transition-opacity cursor-pointer"
-              >
-                <Image
-                  src="/images/icon_nhan_bang_gia.gif"
-                  alt="Nhận Bảng Giá VinFast"
-                  width={250}
-                  height={93}
-                  className="mx-auto"
-                />
-              </button>
-            </div>
+
 
             {/* 3 Outline Action Buttons */}
             <div className="grid grid-cols-3 gap-2">
@@ -351,72 +363,150 @@ export default function VehicleDetailPage() {
           </div>
         </div>
 
-        {/* 3. Horizontal Lead Form Bar */}
-        <div ref={leadFormRef} className="mt-8 bg-[#f5f5f5] p-4 sm:p-5 border border-gray-200">
-          {formSubmitted ? (
-            <div className="p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded text-center flex items-center justify-center gap-2 text-sm font-semibold">
-              <Check className="w-5 h-5 text-emerald-600" />
-              Cảm ơn bạn! Thông tin tư vấn xe {vehicle.name} đã được gửi thành công. Chuyên viên VinFast Thịnh Cường sẽ liên hệ sớm nhất!
-            </div>
-          ) : (
-            <form onSubmit={handleLeadSubmit} className="space-y-3">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                <input
-                  type="text"
-                  placeholder="Họ tên"
-                  value={formName}
-                  onChange={(e) => setFormName(e.target.value)}
-                  required
-                  className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#3AB3FF]"
-                />
-                <input
-                  type="tel"
-                  placeholder="Số điện thoại"
-                  value={formPhone}
-                  onChange={(e) => setFormPhone(e.target.value)}
-                  required
-                  className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#3AB3FF]"
-                />
-                <select
-                  value={formTime}
-                  onChange={(e) => setFormTime(e.target.value)}
-                  className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-700 focus:outline-hidden focus:border-[#3AB3FF] cursor-pointer"
-                >
-                  <option value="">Thời gian dự kiến lấy xe</option>
-                  <option value="Tháng này">Tháng này</option>
-                  <option value="Tháng sau">Tháng sau</option>
-                  <option value="Đang tham khảo">Đang tham khảo</option>
-                </select>
-                <button
-                  type="submit"
-                  className="w-full bg-[#3AB3FF] hover:bg-[#1fa1ef] text-white font-bold py-2 px-4 rounded-[3px] text-xs sm:text-[13px] transition-colors shadow-xs uppercase tracking-wide cursor-pointer"
-                >
-                  Gửi thông tin
-                </button>
-              </div>
-
-              <div className="flex items-center justify-center gap-2 pt-1 text-xs text-gray-600">
-                <input
-                  type="checkbox"
-                  id="agree-term"
-                  checked={formAgreed}
-                  onChange={(e) => setFormAgreed(e.target.checked)}
-                  className="rounded border-gray-300 text-[#3AB3FF] focus:ring-[#3AB3FF] cursor-pointer"
-                />
-                <label htmlFor="agree-term" className="cursor-pointer text-[11px] sm:text-xs text-gray-600">
-                  Tôi đã đọc và đồng ý với các{" "}
-                  <Link href="/chinh-sach-bao-mat" className="text-[#3AB3FF] hover:underline">
-                    quy định và chính sách
-                  </Link>{" "}
-                  của VinFast Thịnh Cường!
-                </label>
-              </div>
-            </form>
-          )}
+        {/* 3. WooCommerce Tabs Bar matching Phương Đông 1:1 */}
+        <div className="mt-10 mb-6 border-b border-gray-200">
+          <div className="flex items-center gap-8">
+            <button
+              type="button"
+              onClick={() => setActiveTab("description")}
+              className={`pb-3 text-sm sm:text-base font-bold uppercase tracking-wider transition-colors relative cursor-pointer ${
+                activeTab === "description"
+                  ? "text-[#1863dc] border-b-2 border-[#1863dc]"
+                  : "text-gray-500 hover:text-gray-800"
+              }`}
+            >
+              Mô tả
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab("additional_information")}
+              className={`pb-3 text-sm sm:text-base font-bold uppercase tracking-wider transition-colors relative cursor-pointer ${
+                activeTab === "additional_information"
+                  ? "text-[#1863dc] border-b-2 border-[#1863dc]"
+                  : "text-gray-500 hover:text-gray-800"
+              }`}
+            >
+              Thông tin bổ sung
+            </button>
+          </div>
         </div>
 
-        {/* 4. Specs & Northern Market Best Price (Direct 2-Column Section matching Thịnh Cường 1:1) */}
-        <div className="mt-12 space-y-16">
+        {/* Tab Content: Thông tin bổ sung */}
+        {activeTab === "additional_information" && (
+          <div className="py-6 space-y-4">
+            <h2 className="text-xl font-bold text-gray-900">Thông tin bổ sung</h2>
+            <div className="overflow-x-auto max-w-2xl">
+              <table className="w-full text-xs sm:text-sm border border-gray-200">
+                <tbody>
+                  {vehicle.additionalAttributes && vehicle.additionalAttributes.length > 0 ? (
+                    vehicle.additionalAttributes.map((attr, idx) => (
+                      <tr
+                        key={idx}
+                        className={`border-b border-gray-200 ${
+                          idx % 2 === 0 ? "bg-gray-50/60" : "bg-white"
+                        }`}
+                      >
+                        <th className="p-3 text-left font-bold text-gray-700 w-1/3 border-r border-gray-200">
+                          {attr.label}
+                        </th>
+                        <td className="p-3 text-gray-800">{attr.value}</td>
+                      </tr>
+                    ))
+                  ) : (
+                    <>
+                      <tr className="border-b border-gray-200 bg-gray-50/60">
+                        <th className="p-3 text-left font-bold text-gray-700 w-1/3 border-r border-gray-200">
+                          color
+                        </th>
+                        <td className="p-3 text-gray-800">
+                          {vehicle.colors.map((c) => c.name).join(", ")}
+                        </td>
+                      </tr>
+                      <tr className="border-b border-gray-200 bg-white">
+                        <th className="p-3 text-left font-bold text-gray-700 w-1/3 border-r border-gray-200">
+                          Phiên bản xe
+                        </th>
+                        <td className="p-3 text-gray-800">
+                          {vehicle.trims.map((t) => t.name).join(", ")}
+                        </td>
+                      </tr>
+                    </>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+
+        {/* Tab Content: Mô tả (Elementor Content) */}
+        {activeTab === "description" && (
+          <>
+            {/* Horizontal Lead Form Bar */}
+            <div ref={leadFormRef} className="mt-4 bg-[#f5f5f5] p-4 sm:p-5 border border-gray-200">
+              {formSubmitted ? (
+                <div className="p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded text-center flex items-center justify-center gap-2 text-sm font-semibold">
+                  <Check className="w-5 h-5 text-emerald-600" />
+                  Cảm ơn bạn! Thông tin tư vấn xe {vehicle.name} đã được gửi thành công. Chuyên viên VinFast Phương Đông sẽ liên hệ sớm nhất!
+                </div>
+              ) : (
+                <form onSubmit={handleLeadSubmit} className="space-y-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                    <input
+                      type="text"
+                      placeholder="Họ tên"
+                      value={formName}
+                      onChange={(e) => setFormName(e.target.value)}
+                      required
+                      className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#3AB3FF]"
+                    />
+                    <input
+                      type="tel"
+                      placeholder="Số điện thoại"
+                      value={formPhone}
+                      onChange={(e) => setFormPhone(e.target.value)}
+                      required
+                      className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#3AB3FF]"
+                    />
+                    <select
+                      value={formTime}
+                      onChange={(e) => setFormTime(e.target.value)}
+                      className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-700 focus:outline-hidden focus:border-[#3AB3FF] cursor-pointer"
+                    >
+                      <option value="">Thời gian dự kiến lấy xe</option>
+                      <option value="Tháng này">Tháng này</option>
+                      <option value="Tháng sau">Tháng sau</option>
+                      <option value="Đang tham khảo">Đang tham khảo</option>
+                    </select>
+                    <button
+                      type="submit"
+                      className="w-full bg-[#3AB3FF] hover:bg-[#1fa1ef] text-white font-bold py-2 px-4 rounded-[3px] text-xs sm:text-[13px] transition-colors shadow-xs uppercase tracking-wide cursor-pointer"
+                    >
+                      Gửi thông tin
+                    </button>
+                  </div>
+
+                  <div className="flex items-center justify-center gap-2 pt-1 text-xs text-gray-600">
+                    <input
+                      type="checkbox"
+                      id="agree-term"
+                      checked={formAgreed}
+                      onChange={(e) => setFormAgreed(e.target.checked)}
+                      className="rounded border-gray-300 text-[#3AB3FF] focus:ring-[#3AB3FF] cursor-pointer"
+                    />
+                    <label htmlFor="agree-term" className="cursor-pointer text-[11px] sm:text-xs text-gray-600">
+                      Tôi đã đọc và đồng ý với các{" "}
+                      <Link href="/chinh-sach-bao-mat" className="text-[#3AB3FF] hover:underline">
+                        quy định và chính sách
+                      </Link>{" "}
+                      của VinFast Phương Đông!
+                    </label>
+                  </div>
+                </form>
+              )}
+            </div>
+
+            {/* 4. Specs & Northern Market Best Price */}
+            <div className="mt-12 space-y-16">
           {/* SECTION A: 2-Column Specs & Northern Market Best Price */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Left: Specs Table */}
@@ -468,7 +558,7 @@ export default function VehicleDetailPage() {
               </div>
 
               <p className="text-xs sm:text-[13px] text-gray-800 leading-relaxed">
-                <strong>VinFast Thịnh Cường bán {vehicle.name} – 2026</strong> giá cạnh tranh, tốt nhất thị trường. Các phiên bản với mức giá và ưu đãi như sau:
+                <strong>VinFast Phương Đông bán {vehicle.name} – 2026</strong> giá cạnh tranh, tốt nhất thị trường. Các phiên bản với mức giá và ưu đãi như sau:
               </p>
 
               {/* Table 1: Price List */}
@@ -556,12 +646,12 @@ export default function VehicleDetailPage() {
             </div>
           </div>
 
-              {/* SECTION B: Pre-Exterior Dynamic Photo Slider (4 Slides) */}
+              {/* SECTION B: Pre-Exterior Dynamic Photo Slider (4 Slides matching Photo 4) */}
               {sliderPhotos.length > 0 && (
-                <div className="relative pt-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 overflow-hidden rounded-xl">
+                <div className="relative pt-6 group">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 overflow-hidden rounded-xl">
                     {sliderPhotos.slice(sliderIndex, sliderIndex + 3).map((photo, i) => (
-                      <div key={i} className="relative h-56 sm:h-64 rounded-lg overflow-hidden border border-gray-200 bg-gray-100">
+                      <div key={i} className="relative h-60 sm:h-72 lg:h-80 rounded-lg overflow-hidden bg-gray-100">
                         <Image
                           src={photo}
                           alt={`${vehicle.name} dynamic photo ${i + 1}`}
@@ -572,60 +662,67 @@ export default function VehicleDetailPage() {
                     ))}
                   </div>
 
-                  {/* Slider Controls */}
+                  {/* Slider Controls with overlay chevrons */}
                   {sliderPhotos.length > 3 && (
-                    <div className="flex items-center justify-center gap-3 mt-4">
+                    <>
                       <button
                         onClick={() => setSliderIndex((prev) => Math.max(0, prev - 1))}
                         disabled={sliderIndex === 0}
-                        className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center disabled:opacity-30 hover:border-gray-500"
+                        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center text-white drop-shadow-md hover:scale-110 transition-all disabled:opacity-0 cursor-pointer"
+                        aria-label="Previous image"
                       >
-                        <ChevronLeft className="w-4 h-4 text-gray-700" />
+                        <ChevronLeft className="w-8 h-8 stroke-[2.5]" />
                       </button>
-                      <div className="flex items-center gap-1.5">
+                      <button
+                        onClick={() => setSliderIndex((prev) => Math.min(sliderPhotos.length - 3, prev + 1))}
+                        disabled={sliderIndex >= sliderPhotos.length - 3}
+                        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center text-white drop-shadow-md hover:scale-110 transition-all disabled:opacity-0 cursor-pointer"
+                        aria-label="Next image"
+                      >
+                        <ChevronRight className="w-8 h-8 stroke-[2.5]" />
+                      </button>
+
+                      {/* Dots pagination */}
+                      <div className="flex items-center justify-center gap-2 mt-4">
                         {Array.from({ length: sliderPhotos.length - 2 }).map((_, dot) => (
                           <button
                             key={dot}
                             onClick={() => setSliderIndex(dot)}
-                            className={`w-2 h-2 rounded-full transition-all ${sliderIndex === dot ? "bg-[#dc2626] w-4" : "bg-gray-300"
-                              }`}
+                            className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
+                              sliderIndex === dot ? "bg-black w-2.5 h-2.5" : "bg-gray-300"
+                            }`}
+                            aria-label={`Slide ${dot + 1}`}
                           />
                         ))}
                       </div>
-                      <button
-                        onClick={() =>
-                          setSliderIndex((prev) =>
-                            Math.min(sliderPhotos.length - 3, prev + 1)
-                          )
-                        }
-                        disabled={sliderIndex >= sliderPhotos.length - 3}
-                        className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center disabled:opacity-30 hover:border-gray-500"
-                      >
-                        <ChevronRight className="w-4 h-4 text-gray-700" />
-                      </button>
-                    </div>
+                    </>
                   )}
                 </div>
               )}
 
-              {/* SECTION C: NGOẠI THẤT */}
+              {/* SECTION C: NGOẠI THẤT (Matching Photo 1 & Photo 4) */}
               {vehicle.exteriorData && (
                 <div className="space-y-8 pt-4">
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900 uppercase">
+                    <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight">
                       NGOẠI THẤT {vehicle.name.toUpperCase()}
                     </h2>
-                    <div className="w-20 h-1 bg-[#dc2626] mt-2" />
+                    <div className="w-24 h-1 bg-[#dc2626] mt-2 mb-6" />
                   </div>
 
                   {/* Intro 2-Column: Left Text, Right Large Image */}
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div className="lg:col-span-6 space-y-3.5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+                    <div className="lg:col-span-6 space-y-4 text-xs sm:text-[13px] md:text-sm text-gray-800 leading-relaxed">
                       {vehicle.exteriorData.intro.map((p, i) => (
                         <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                       ))}
+                      {vehicle.exteriorData.subtitle && !vehicle.exteriorData.intro.some(p => p.includes(vehicle.exteriorData!.subtitle!)) && (
+                        <p className="font-bold text-gray-900 pt-1 text-xs sm:text-[13px] md:text-sm">
+                          {vehicle.exteriorData.subtitle}
+                        </p>
+                      )}
                     </div>
-                    <div className="lg:col-span-6 relative h-64 sm:h-80 rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <div className="lg:col-span-6 relative h-64 sm:h-80 md:h-96 lg:h-[420px] overflow-hidden">
                       <Image
                         src={vehicle.exteriorData.bannerImg}
                         alt={`Ngoại thất ${vehicle.name}`}
@@ -635,49 +732,59 @@ export default function VehicleDetailPage() {
                     </div>
                   </div>
 
-                  {/* 3 Detail Cards (Đầu xe, Thân xe, Đuôi xe) */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  {/* 3 Detail Cards (Đầu xe, Thân xe, Đuôi xe - Clean 3-Column Studio Display matching Photo 1) */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
                     {vehicle.exteriorData.items.map((item, i) => (
-                      <div key={i} className="flex flex-col space-y-3">
-                        <div className="relative h-48 rounded-lg overflow-hidden border border-gray-200 bg-white">
+                      <div key={i} className="flex flex-col space-y-4">
+                        <div className="relative h-56 sm:h-64 md:h-72 w-full flex items-center justify-center">
                           <Image
                             src={item.img}
                             alt={item.title}
                             fill
-                            className="object-contain p-2 hover:scale-105 transition-transform duration-300"
+                            className="object-contain hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <h3 className="text-base font-bold text-gray-900 uppercase tracking-tight">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 uppercase tracking-tight">
                           {item.title}
                         </h3>
-                        <p
-                          className="text-xs text-gray-600 leading-relaxed whitespace-pre-line"
+                        <div
+                          className="text-xs sm:text-[13px] md:text-sm text-gray-800 leading-relaxed space-y-3"
                           dangerouslySetInnerHTML={{ __html: item.desc }}
                         />
+                        {item.subtitle && !item.desc.includes(item.subtitle) && (
+                          <p className="text-xs sm:text-[13px] font-bold text-gray-900 pt-1">
+                            {item.subtitle}
+                          </p>
+                        )}
                       </div>
                     ))}
                   </div>
                 </div>
               )}
 
-              {/* SECTION D: NỘI THẤT */}
+              {/* SECTION D: NỘI THẤT (Matching Photo 2) */}
               {vehicle.interiorData && (
-                <div className="space-y-8 pt-8 border-t border-gray-100">
+                <div className="space-y-8 pt-10 border-t border-gray-100">
                   <div>
-                    <h2 className="text-2xl font-bold text-gray-900 uppercase">
+                    <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight">
                       NỘI THẤT {vehicle.name.toUpperCase()}
                     </h2>
-                    <div className="w-20 h-1 bg-[#dc2626] mt-2" />
+                    <div className="w-24 h-1 bg-[#dc2626] mt-2 mb-6" />
                   </div>
 
                   {/* Intro 2-Column: Left Text, Right Large Image */}
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <div className="lg:col-span-6 space-y-3.5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+                    <div className="lg:col-span-6 space-y-4 text-xs sm:text-[13px] md:text-sm text-gray-800 leading-relaxed">
                       {vehicle.interiorData.intro.map((p, i) => (
                         <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
                       ))}
+                      {vehicle.interiorData.subtitle && !vehicle.interiorData.intro.some(p => p.includes(vehicle.interiorData!.subtitle!)) && (
+                        <p className="font-bold text-gray-900 pt-1 text-xs sm:text-[13px] md:text-sm">
+                          {vehicle.interiorData.subtitle}
+                        </p>
+                      )}
                     </div>
-                    <div className="lg:col-span-6 relative h-64 sm:h-80 rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-gray-50">
+                    <div className="lg:col-span-6 relative h-64 sm:h-80 md:h-96 lg:h-[420px] overflow-hidden">
                       <Image
                         src={vehicle.interiorData.bannerImg}
                         alt={`Nội thất ${vehicle.name}`}
@@ -687,11 +794,11 @@ export default function VehicleDetailPage() {
                     </div>
                   </div>
 
-                  {/* 3 Detail Cards (Khoang lái, Ghế, Khoang hành lý) */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4">
+                  {/* 3 Detail Cards (Khoang lái, Ghế, Khoang hành lý - Photo 2) */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
                     {vehicle.interiorData.items.map((item, i) => (
-                      <div key={i} className="flex flex-col space-y-3">
-                        <div className="relative h-48 rounded-lg overflow-hidden border border-gray-200 bg-white">
+                      <div key={i} className="flex flex-col space-y-4">
+                        <div className="relative aspect-[16/10] sm:h-56 md:h-64 w-full overflow-hidden">
                           <Image
                             src={item.img}
                             alt={item.title}
@@ -699,39 +806,44 @@ export default function VehicleDetailPage() {
                             className="object-cover hover:scale-105 transition-transform duration-300"
                           />
                         </div>
-                        <h3 className="text-base font-bold text-gray-900 uppercase tracking-tight">
+                        <h3 className="text-lg sm:text-xl md:text-2xl font-black text-gray-900 uppercase tracking-tight">
                           {item.title}
                         </h3>
-                        <p
-                          className="text-xs text-gray-600 leading-relaxed whitespace-pre-line"
+                        <div
+                          className="text-xs sm:text-[13px] md:text-sm text-gray-800 leading-relaxed space-y-3"
                           dangerouslySetInnerHTML={{ __html: item.desc }}
                         />
+                        {item.subtitle && !item.desc.includes(item.subtitle) && (
+                          <p className="text-xs sm:text-[13px] font-bold text-gray-900 pt-1">
+                            {item.subtitle}
+                          </p>
+                        )}
                       </div>
                     ))}
                   </div>
                 </div>
               )}
 
-              {/* SECTION E: CÔNG NGHỆ VÀ VẬN HÀNH (ADAS & Safety Carousel) */}
+              {/* SECTION E: CÔNG NGHỆ VÀ VẬN HÀNH (Matching Photo 3) */}
               {safetyItems.length > 0 && (
-                <div className="space-y-6 pt-8 border-t border-gray-100">
+                <div className="space-y-6 pt-10 border-t border-gray-100">
                   <div className="text-center">
-                    <h2 className="text-2xl font-bold text-gray-900 uppercase inline-block">
+                    <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight inline-block">
                       {vehicle.safetyTech?.title || `CÔNG NGHỆ VÀ VẬN HÀNH ${vehicle.name.toUpperCase()}`}
                     </h2>
                     <div className="w-24 h-1 bg-[#dc2626] mx-auto mt-2" />
                   </div>
 
-                  <div className="relative">
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                  <div className="relative mt-6 group">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
                       {safetyItems
                         .slice(safetyIndex, safetyIndex + 4)
                         .map((item, i) => (
                           <div
                             key={i}
-                            className="flex flex-col bg-white border border-gray-200 rounded-lg overflow-hidden shadow-xs hover:shadow-md transition-shadow"
+                            className="flex flex-col"
                           >
-                            <div className="relative h-32 sm:h-40 bg-zinc-900 overflow-hidden">
+                            <div className="relative aspect-[16/10] sm:aspect-[3/2] w-full overflow-hidden bg-gray-100">
                               <Image
                                 src={item.img}
                                 alt={item.title}
@@ -739,8 +851,8 @@ export default function VehicleDetailPage() {
                                 className="object-cover"
                               />
                             </div>
-                            <div className="p-3 text-center">
-                              <span className="text-xs font-semibold text-gray-800 line-clamp-2">
+                            <div className="py-2 px-1 text-center">
+                              <span className="text-xs sm:text-[13px] font-medium text-gray-800 line-clamp-2">
                                 {item.title}
                               </span>
                             </div>
@@ -748,41 +860,44 @@ export default function VehicleDetailPage() {
                         ))}
                     </div>
 
+                    {/* Navigation chevrons overlay on left and right */}
                     {safetyItems.length > 4 && (
-                      <div className="flex items-center justify-center gap-3 mt-4">
+                      <>
                         <button
-                          onClick={() => setSafetyIndex((prev) => Math.max(0, prev - 2))}
+                          onClick={() => setSafetyIndex((prev) => Math.max(0, prev - 1))}
                           disabled={safetyIndex === 0}
-                          className="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center disabled:opacity-30"
+                          className="absolute left-1 sm:left-2 top-1/3 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center text-white drop-shadow-md hover:scale-110 transition-all disabled:opacity-0 cursor-pointer"
+                          aria-label="Previous tech slide"
                         >
-                          <ChevronLeft className="w-4 h-4" />
+                          <ChevronLeft className="w-8 h-8 stroke-[2.5]" />
                         </button>
-                        <div className="flex items-center gap-1.5">
-                          {Array.from({
-                            length: Math.ceil((safetyItems.length - 3) / 2),
-                          }).map((_, dot) => (
-                            <button
-                              key={dot}
-                              onClick={() => setSafetyIndex(dot * 2)}
-                              className={`w-2 h-2 rounded-full transition-all ${Math.floor(safetyIndex / 2) === dot
-                                  ? "bg-[#dc2626] w-4"
-                                  : "bg-gray-300"
-                                }`}
-                            />
-                          ))}
-                        </div>
                         <button
                           onClick={() =>
                             setSafetyIndex((prev) =>
-                              Math.min(safetyItems.length - 4, prev + 2)
+                              Math.min(safetyItems.length - 4, prev + 1)
                             )
                           }
                           disabled={safetyIndex >= safetyItems.length - 4}
-                          className="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center disabled:opacity-30"
+                          className="absolute right-1 sm:right-2 top-1/3 -translate-y-1/2 z-10 w-9 h-9 flex items-center justify-center text-white drop-shadow-md hover:scale-110 transition-all disabled:opacity-0 cursor-pointer"
+                          aria-label="Next tech slide"
                         >
-                          <ChevronRight className="w-4 h-4" />
+                          <ChevronRight className="w-8 h-8 stroke-[2.5]" />
                         </button>
-                      </div>
+
+                        {/* Dots pagination */}
+                        <div className="flex items-center justify-center gap-1.5 sm:gap-2 mt-4">
+                          {Array.from({ length: safetyItems.length - 3 }).map((_, dot) => (
+                            <button
+                              key={dot}
+                              onClick={() => setSafetyIndex(dot)}
+                              className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
+                                safetyIndex === dot ? "bg-black w-2.5 h-2.5" : "bg-gray-300"
+                              }`}
+                              aria-label={`Tech slide ${dot + 1}`}
+                            />
+                          ))}
+                        </div>
+                      </>
                     )}
                   </div>
                 </div>
@@ -813,16 +928,16 @@ export default function VehicleDetailPage() {
                 </div>
               )}
 
-              {/* SECTION G: Lifestyle Photo Gallery Swiper (10 Photos) */}
+              {/* SECTION G: Lifestyle Photo Gallery Swiper (5 Desktop Columns matching Phương Đông 1:1) */}
               {lifestylePhotos.length > 0 && (
                 <div className="space-y-4 pt-4">
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
                     {lifestylePhotos
-                      .slice(galleryIndex, galleryIndex + 4)
+                      .slice(galleryIndex, galleryIndex + 5)
                       .map((photo, i) => (
                         <div
                           key={i}
-                          className="relative h-36 sm:h-48 rounded-lg overflow-hidden border border-gray-200 bg-gray-100"
+                          className="relative h-36 sm:h-44 rounded-lg overflow-hidden border border-gray-200 bg-gray-100"
                         >
                           <Image
                             src={photo}
@@ -834,39 +949,40 @@ export default function VehicleDetailPage() {
                       ))}
                   </div>
 
-                  {lifestylePhotos.length > 4 && (
+                  {lifestylePhotos.length > 5 && (
                     <div className="flex items-center justify-center gap-3 pt-2">
                       <button
                         onClick={() =>
-                          setGalleryIndex((prev) => Math.max(0, prev - 2))
+                          setGalleryIndex((prev) => Math.max(0, prev - 1))
                         }
                         disabled={galleryIndex === 0}
-                        className="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center disabled:opacity-30 hover:border-gray-500"
+                        className="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center disabled:opacity-30 hover:border-gray-500 cursor-pointer"
                       >
                         <ChevronLeft className="w-4 h-4" />
                       </button>
                       <div className="flex items-center gap-1.5">
                         {Array.from({
-                          length: Math.ceil((lifestylePhotos.length - 3) / 2),
+                          length: Math.max(1, lifestylePhotos.length - 4),
                         }).map((_, dot) => (
                           <button
                             key={dot}
-                            onClick={() => setGalleryIndex(dot * 2)}
-                            className={`w-2 h-2 rounded-full transition-all ${Math.floor(galleryIndex / 2) === dot
+                            onClick={() => setGalleryIndex(dot)}
+                            className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
+                              galleryIndex === dot
                                 ? "bg-[#dc2626] w-4"
                                 : "bg-gray-300"
-                              }`}
+                            }`}
                           />
                         ))}
                       </div>
                       <button
                         onClick={() =>
                           setGalleryIndex((prev) =>
-                            Math.min(lifestylePhotos.length - 4, prev + 2)
+                            Math.min(lifestylePhotos.length - 5, prev + 1)
                           )
                         }
-                        disabled={galleryIndex >= lifestylePhotos.length - 4}
-                        className="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center disabled:opacity-30 hover:border-gray-500"
+                        disabled={galleryIndex >= lifestylePhotos.length - 5}
+                        className="w-7 h-7 rounded-full border border-gray-300 flex items-center justify-center disabled:opacity-30 hover:border-gray-500 cursor-pointer"
                       >
                         <ChevronRight className="w-4 h-4" />
                       </button>
@@ -939,7 +1055,54 @@ export default function VehicleDetailPage() {
                   </div>
                 </div>
               )}
-        </div>
+
+              {/* SECTION I: THÔNG TIN BỔ SUNG (Bottom Specifications Table matching Phương Đông 1:1) */}
+              <div className="pt-12 border-t border-gray-200 space-y-4">
+                <h2 className="text-xl font-bold text-gray-900">Thông tin bổ sung</h2>
+                <div className="overflow-x-auto max-w-2xl">
+                  <table className="w-full text-xs sm:text-sm border border-gray-200">
+                    <tbody>
+                      {vehicle.additionalAttributes && vehicle.additionalAttributes.length > 0 ? (
+                        vehicle.additionalAttributes.map((attr, idx) => (
+                          <tr
+                            key={idx}
+                            className={`border-b border-gray-200 ${
+                              idx % 2 === 0 ? "bg-gray-50/60" : "bg-white"
+                            }`}
+                          >
+                            <th className="p-3 text-left font-bold text-gray-700 w-1/3 border-r border-gray-200">
+                              {attr.label}
+                            </th>
+                            <td className="p-3 text-gray-800">{attr.value}</td>
+                          </tr>
+                        ))
+                      ) : (
+                        <>
+                          <tr className="border-b border-gray-200 bg-gray-50/60">
+                            <th className="p-3 text-left font-bold text-gray-700 w-1/3 border-r border-gray-200">
+                              color
+                            </th>
+                            <td className="p-3 text-gray-800">
+                              {vehicle.colors.map((c) => c.name).join(", ")}
+                            </td>
+                          </tr>
+                          <tr className="border-b border-gray-200 bg-white">
+                            <th className="p-3 text-left font-bold text-gray-700 w-1/3 border-r border-gray-200">
+                              Phiên bản xe
+                            </th>
+                            <td className="p-3 text-gray-800">
+                              {vehicle.trims.map((t) => t.name).join(", ")}
+                            </td>
+                          </tr>
+                        </>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Video YouTube Modal */}

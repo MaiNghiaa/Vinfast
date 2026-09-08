@@ -81,7 +81,7 @@ export default function LamDepXePage() {
     {
       id: "B1",
       name: "B1. Đặt lịch dịch vụ",
-      desc: "Khách hàng đặt lịch hẹn trước qua điện thoại, website hoặc ứng dụng của Vinfast Thịnh Cường. Điều này giúp đảm bảo rằng khi Quý khách hàng đến, các kỹ thuật viên và dụng cụ được chọn lọc phù hợp, sẵn sàng quy trình làm đẹp xe.",
+      desc: "Khách hàng đặt lịch hẹn trước qua điện thoại, website hoặc ứng dụng của Vinfast Phương Đông. Điều này giúp đảm bảo rằng khi Quý khách hàng đến, các kỹ thuật viên và dụng cụ được chọn lọc phù hợp, sẵn sàng quy trình làm đẹp xe.",
       benefit: "Tiết kiệm thời gian, đảm bảo quy trình làm đẹp diễn ra thuận lợi và nhanh chóng.",
     },
     {
@@ -130,7 +130,7 @@ export default function LamDepXePage() {
     {
       title: "Thời gian phục vụ nhanh chóng",
       icon: Clock,
-      desc: "Vinfast Thịnh Cường đã thiết lập quy trình làm việc chuẩn mực (giảm thiểu tối đa các động tác thừa của nhân viên kỹ thuật trong thao tác làm việc), đồng thời liên tục thực hiện kaizen tăng năng suất lao động, giảm thời gian chờ đợi của Quý khách hàng.",
+      desc: "Vinfast Phương Đông đã thiết lập quy trình làm việc chuẩn mực (giảm thiểu tối đa các động tác thừa của nhân viên kỹ thuật trong thao tác làm việc), đồng thời liên tục thực hiện kaizen tăng năng suất lao động, giảm thời gian chờ đợi của Quý khách hàng.",
     },
     {
       title: "Chất lượng đảm bảo",
@@ -155,7 +155,7 @@ export default function LamDepXePage() {
       <section className="relative w-full h-[380px] sm:h-[460px] md:h-[520px] lg:h-[560px] flex items-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Sua-1.2.jpg"
-          alt="Dịch vụ làm đẹp xe VinFast Touch Thịnh Cường"
+          alt="Dịch vụ làm đẹp xe VinFast Touch Phương Đông"
           fill
           priority
           sizes="100vw"
@@ -169,7 +169,7 @@ export default function LamDepXePage() {
             <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-bold uppercase text-white leading-[1.35] tracking-wide mb-3 sm:mb-4 drop-shadow-md">
               DỊCH VỤ LÀM ĐẸP XE
               <br />
-              VINFAST THỊNH CƯỜNG
+              VINFAST PHƯƠNG ĐÔNG
             </h1>
             <h2 className="text-xs sm:text-[13px] md:text-sm font-bold uppercase tracking-wider text-white mb-2 sm:mb-2.5">
               VINFAST TOUCH – CHĂM SÓC XE TOÀN DIỆN
@@ -400,7 +400,7 @@ export default function LamDepXePage() {
                 QUY TRÌNH VINFAST TOUCH
               </h2>
               <p className="text-base sm:text-lg font-black text-gray-900 uppercase mt-1">
-                TẠI VINFAST THỊNH CƯỜNG
+                TẠI VINFAST PHƯƠNG ĐÔNG
               </p>
               <div className="w-16 h-0.5 bg-black mt-2" />
             </div>
@@ -468,7 +468,7 @@ export default function LamDepXePage() {
       <section className="relative w-full py-20 sm:py-28 flex items-center justify-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-3.jpg"
-          alt="Video dịch vụ làm đẹp xe tại VinFast Thịnh Cường"
+          alt="Video dịch vụ làm đẹp xe tại VinFast Phương Đông"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -478,7 +478,7 @@ export default function LamDepXePage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight leading-snug">
             VIDEO DỊCH VỤ LÀM ĐẸP XE VINFAST
             <br />
-            TẠI VINFAST THỊNH CƯỜNG
+            TẠI VINFAST PHƯƠNG ĐÔNG
           </h2>
           <div className="flex justify-center">
             <button
@@ -503,7 +503,7 @@ export default function LamDepXePage() {
               <div className="relative w-full flex-1 min-h-[460px] lg:min-h-full rounded-sm overflow-hidden shadow-xs border border-gray-200">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-4.jpg"
-                  alt="Dịch vụ VinFast Touch tại VinFast Thịnh Cường"
+                  alt="Dịch vụ VinFast Touch tại VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 100vw, 35vw"
                   className="object-cover object-center"
@@ -519,14 +519,14 @@ export default function LamDepXePage() {
                   TẠI SAO CHỌN DỊCH VỤ VINFAST TOUCH
                 </h2>
                 <p className="text-sm sm:text-base font-bold text-gray-900 uppercase mt-1">
-                  tại VINFAST THỊNH CƯỜNG
+                  tại VINFAST PHƯƠNG ĐÔNG
                 </p>
                 <p className="text-xs sm:text-[13px] text-gray-600 mt-3 leading-relaxed text-justify">
                   Khi nói đến việc chăm sóc và duy trì vẻ đẹp cho chiếc xe yêu quý của bạn, việc lựa
-                  chọn dịch vụ chất lượng là yếu tố quan trọng hàng đầu. Tại VinFast Thịnh Cường, dịch
+                  chọn dịch vụ chất lượng là yếu tố quan trọng hàng đầu. Tại VinFast Phương Đông, dịch
                   vụ VinFast Touch không chỉ mang đến sự hài lòng về mặt thẩm mỹ mà còn đảm bảo sự bền
                   bỉ, duy trì giá trị lâu dài cho xe. Dưới đây là 6 lý do bạn nên lựa chọn dịch vụ này
-                  tại VinFast Thịnh Cường:
+                  tại VinFast Phương Đông:
                 </p>
               </div>
 

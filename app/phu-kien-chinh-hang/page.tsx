@@ -85,7 +85,7 @@ export default function PhuKienChinhHangPage() {
           >
             <Image
               src={slide}
-              alt="Phụ kiện cho xế yêu VinFast Thịnh Cường"
+              alt="Phụ kiện cho xế yêu VinFast Phương Đông"
               fill
               priority={index === 0}
               sizes="100vw"
@@ -185,7 +185,7 @@ export default function PhuKienChinhHangPage() {
               <div className="relative w-full max-w-[420px] h-[480px] sm:h-[560px] md:h-[600px] overflow-hidden rounded-sm shadow-sm">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Sua-4.3.jpg"
-                  alt="Tại sao nên chọn phụ kiện VinFast Thịnh Cường"
+                  alt="Tại sao nên chọn phụ kiện VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-center"
@@ -244,7 +244,7 @@ export default function PhuKienChinhHangPage() {
       <section className="relative w-full py-20 md:py-28 lg:py-32 flex items-center justify-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-5.jpg"
-          alt="Phụ kiện Vinfast Chính hãng Thịnh Cường"
+          alt="Phụ kiện Vinfast Chính hãng Phương Đông"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -257,7 +257,7 @@ export default function PhuKienChinhHangPage() {
             Phụ kiện Vinfast Chính hãng
           </h2>
           <p className="text-white/90 text-sm md:text-base leading-relaxed mb-8 max-w-xl mx-auto">
-            Vinfast Thịnh Cường cung cấp đầy đủ các loại phụ kiện{" "}
+            Vinfast Phương Đông cung cấp đầy đủ các loại phụ kiện{" "}
             <br className="hidden sm:inline" />
             nội ngoại thất, hệ thống an toàn, và chăm sóc xe, đáp ứng mọi nhu cầu
             của khách hàng.

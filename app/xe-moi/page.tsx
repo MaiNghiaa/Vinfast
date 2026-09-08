@@ -43,7 +43,7 @@ export default function VehicleCatalogPage() {
       <div className="bg-[#111827] text-white py-12 px-4 sm:px-8 border-b border-gray-800">
         <div className="max-w-[1440px] mx-auto text-center space-y-2">
           <span className="text-xs font-black text-[#00d2ff] uppercase tracking-widest block">
-            HỆ THỐNG PHÂN PHỐI CHÍNH HÃNG THỊNH CƯỜNG
+            HỆ THỐNG PHÂN PHỐI CHÍNH HÃNG PHƯƠNG ĐÔNG
           </span>
           <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
             TOÀN BỘ CÁC DÒNG XE Ô TÔ ĐIỆN VINFAST

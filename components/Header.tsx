@@ -32,13 +32,13 @@ export default function Header({ onOpenBookingModal }: HeaderProps) {
     <header className="w-full bg-white border-b border-gray-100/80 sticky top-0 z-50 shadow-[0_2px_15px_rgba(0,0,0,0.06)]">
       {/* Main Navigation Bar - Exactly 90px line-height & 1300px container matching live Elementor layout */}
       <div className="max-w-[1300px] mx-auto px-4 h-[90px] flex items-stretch">
-        {/* Column 1: Logo VinFast Thịnh Cường (15% - 170px width on desktop) */}
+        {/* Column 1: Logo VinFast Phương Đông (15% - 170px width on desktop) */}
         <div className="w-[15%] min-w-[170px] flex items-center">
           <Link href="/" className="inline-block">
             <div className="relative w-[170px] h-[52px]">
               <Image
-                src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2021/02/logo1-2048x626-1.png"
-                alt="Vinfast Thịnh Cường"
+                src="/images/logo-phuong-dong.png"
+                alt="Vinfast Phương Đông"
                 fill
                 className="object-contain"
                 priority

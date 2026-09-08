@@ -48,7 +48,7 @@ export interface Vehicle {
   isFeatured?: boolean;
   category: "electric-car" | "green-mobility" | "commercial";
 
-  // Rich detail fields matching VinFast Thịnh Cường 1:1
+  // Rich detail fields matching VinFast Phương Đông 1:1
   galleryThumbnails?: string[];
   commitmentsTitle?: string;
   commitments?: string[];
@@ -66,19 +66,23 @@ export interface Vehicle {
   monthlyOffer?: string;
   sliderPhotos?: string[];
   exteriorData?: {
+    subtitle?: string;
     intro: string[];
     bannerImg: string;
     items: {
       title: string;
+      subtitle?: string;
       img: string;
       desc: string;
     }[];
   };
   interiorData?: {
+    subtitle?: string;
     intro: string[];
     bannerImg: string;
     items: {
       title: string;
+      subtitle?: string;
       img: string;
       desc: string;
     }[];
@@ -115,6 +119,7 @@ export interface Vehicle {
 
 export interface Showroom {
   id: string;
+  code?: string;
   name: string;
   type: "3S" | "Showroom" | "Workshop";
   province: "Hà Nội" | "Quảng Ninh" | "Vĩnh Phúc" | "TP. Hồ Chí Minh" | "Tuyên Quang";
@@ -164,7 +169,7 @@ export interface Charger {
   description: string;
   features: string[];
 
-  // Rich detail fields matching VinFast Thịnh Cường 1:1
+  // Rich detail fields matching VinFast Phương Đông 1:1
   quickSpecs: ChargerSpecItem[];
   introParagraph?: string;
   pillars?: ChargerPillar[];

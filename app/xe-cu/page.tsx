@@ -131,12 +131,12 @@ export default function UsedCarsPage() {
   return (
     <div className={`w-full bg-white text-[#333333] ${mulish.className}`}>
       {/* ============================================================
-          1. SHOWROOM HERO BACKGROUND (matching Thịnh Cường 1:1)
+          1. SHOWROOM HERO BACKGROUND (matching Phương Đông 1:1)
          ============================================================ */}
       <section className="relative w-full h-[460px] sm:h-[540px] md:h-[620px] lg:h-[680px] xl:h-[720px] overflow-hidden bg-[#eef2f6]">
         <Image
           src="/images/thinhcuong-vinfast.jpg"
-          alt="VinFast Thịnh Cường - Xe cũ Green Future"
+          alt="VinFast Phương Đông - Xe cũ Green Future"
           fill
           priority
           sizes="100vw"
@@ -153,7 +153,7 @@ export default function UsedCarsPage() {
             BẠN ĐANG MUỐN TÌM MỘT CHIẾC XE NHƯ THẾ NÀO?
           </h2>
 
-          {/* 4 Type Tabs with Car Sketch Images matching Thịnh Cường 1:1 */}
+          {/* 4 Type Tabs with Car Sketch Images matching Phương Đông 1:1 */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 border-b border-gray-200 mb-6 sm:mb-8">
             <button
               type="button"
@@ -570,7 +570,7 @@ export default function UsedCarsPage() {
       </section>
 
       {/* ============================================================
-          5. FORM: ĐỊNH GIÁ XE CỦA QUÝ KHÁCH (matching Thịnh Cường 1:1)
+          5. FORM: ĐỊNH GIÁ XE CỦA QUÝ KHÁCH (matching Phương Đông 1:1)
          ============================================================ */}
       <section className="relative w-full py-16 sm:py-24 overflow-hidden">
         <div
@@ -587,7 +587,7 @@ export default function UsedCarsPage() {
               ĐỊNH GIÁ XE CỦA QUÝ KHÁCH
             </h2>
             <p className="text-center text-xs sm:text-sm text-gray-300 mb-8">
-              Hãy nhập thông tin theo form bên dưới, VinFast Thịnh Cường sẽ giúp Quý khách định giá chiếc xe.
+              Hãy nhập thông tin theo form bên dưới, VinFast Phương Đông sẽ giúp Quý khách định giá chiếc xe.
             </p>
 
             {valSubmitted ? (
@@ -595,7 +595,7 @@ export default function UsedCarsPage() {
                 <CheckCircle className="w-14 h-14 text-emerald-400 mx-auto" />
                 <h3 className="text-2xl font-[900] text-white">Đăng ký thành công!</h3>
                 <p className="text-sm text-gray-200 max-w-md mx-auto">
-                  Cảm ơn Quý khách <strong className="text-white">{valName}</strong> ({valPhone}). Chuyên viên thẩm định xe cũ VinFast Thịnh Cường sẽ liên hệ định giá xe trong thời gian sớm nhất.
+                  Cảm ơn Quý khách <strong className="text-white">{valName}</strong> ({valPhone}). Chuyên viên thẩm định xe cũ VinFast Phương Đông sẽ liên hệ định giá xe trong thời gian sớm nhất.
                 </p>
                 <button
                   type="button"
@@ -697,7 +697,7 @@ export default function UsedCarsPage() {
                       className="mt-0.5 w-4 h-4 rounded text-[#1863dc] focus:ring-[#3AB3FF] cursor-pointer"
                     />
                     <span>
-                      Tôi xác nhận rằng Vinfast Thịnh Cường có thể gửi cho tôi thêm thông tin về các sản phẩm hoặc dịch vụ của Vinfast.
+                      Tôi xác nhận rằng Vinfast Phương Đông có thể gửi cho tôi thêm thông tin về các sản phẩm hoặc dịch vụ của Vinfast.
                     </span>
                   </label>
 
@@ -714,7 +714,7 @@ export default function UsedCarsPage() {
                       <Link href="/chinh-sach-bao-mat-thong-tin/" className="text-[#3AB3FF] underline">
                         Quy định và chính sách
                       </Link>{" "}
-                      của Vinfast Thịnh Cường!
+                      của Vinfast Phương Đông!
                     </span>
                   </label>
                 </div>
@@ -774,13 +774,13 @@ export default function UsedCarsPage() {
       </section>
 
       {/* ============================================================
-          7. TIN TỨC MỚI NHẤT TỪ VINFAST THỊNH CƯỜNG
+          7. TIN TỨC MỚI NHẤT TỪ VINFAST PHƯƠNG ĐÔNG
          ============================================================ */}
       <section className="py-14 sm:py-20 bg-[#fafafa] border-t border-gray-100">
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2 className="text-[#0C0C0C] text-[24px] sm:text-[30px] md:text-[34px] font-black font-mulish uppercase tracking-tight leading-tight">
-              TIN TỨC MỚI NHẤT TỪ Vinfast THỊNH CƯỜNG
+              TIN TỨC MỚI NHẤT TỪ Vinfast PHƯƠNG ĐÔNG
             </h2>
             <div className="w-20 h-1 bg-[#3AB3FF] mx-auto mt-3 rounded-full" />
           </div>

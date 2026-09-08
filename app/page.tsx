@@ -16,12 +16,12 @@ const HERO_SLIDES = [
   {
     id: 1,
     image: "/images/banners/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026.jpg",
-    alt: "Lịch lái thử VinFast Thịnh Cường tháng 9/2026",
+    alt: "Lịch lái thử VinFast Phương Đông tháng 9/2026",
   },
   {
     id: 2,
     image: "/images/banners/banner-wweb.jpg",
-    alt: "VinFast Thịnh Cường Đại Lý Số 1 Miền Bắc",
+    alt: "VinFast Phương Đông Đại Lý Số 1 Miền Bắc",
   },
   {
     id: 3,
@@ -31,17 +31,17 @@ const HERO_SLIDES = [
   {
     id: 4,
     image: "/images/banners/vinh-danh-vinfast-thinh-cuong.jpg",
-    alt: "Vinh danh VinFast Thịnh Cường Club 1000",
+    alt: "Vinh danh VinFast Phương Đông Club 1000",
   },
   {
     id: 5,
     image: "/images/banners/vinfast-thinhcuong-3.jpg",
-    alt: "Showroom VinFast Thịnh Cường Chuẩn 3S",
+    alt: "Showroom VinFast Phương Đông Chuẩn 3S",
   },
   {
     id: 6,
     image: "/images/banners/vinfast-thinh-cuong-banner-1-scaled.jpg",
-    alt: "VinFast Thịnh Cường Banner",
+    alt: "VinFast Phương Đông Banner",
   },
 ];
 
@@ -112,25 +112,25 @@ export default function HomePage() {
         </button>
       </section>
 
-      {/* 2. SHOWROOM CIRCULAR CAROUSEL (CHUẨN GỐC THỊNH CƯỜNG) */}
+      {/* 2. SHOWROOM CIRCULAR CAROUSEL (CHUẨN GỐC PHƯƠNG ĐÔNG) */}
       <ShowroomCategorySlider />
 
-      {/* 3. KHÁM PHÁ CÁC DÒNG XE (CHUẨN GỐC THỊNH CƯỜNG) */}
+      {/* 3. KHÁM PHÁ CÁC DÒNG XE (CHUẨN GỐC PHƯƠNG ĐÔNG) */}
       <VehicleTabsShowcase />
 
-      {/* BANNER ĐÔI: KHUYẾN MÃI XE & KHÁM PHÁ DỊCH VỤ (CHUẨN GỐC THỊNH CƯỜNG) */}
+      {/* BANNER ĐÔI: KHUYẾN MÃI XE & KHÁM PHÁ DỊCH VỤ (CHUẨN GỐC PHƯƠNG ĐÔNG) */}
       <PromoBannerCards />
 
-      {/* 4. SHOWROOM VIDEO BANNER (CHUẨN GỐC THỊNH CƯỜNG - ẢNH 1) */}
+      {/* 4. SHOWROOM VIDEO BANNER (CHUẨN GỐC PHƯƠNG ĐÔNG - ẢNH 1) */}
       <ShowroomVideoBanner />
 
-      {/* 5. TIỆN ÍCH DỊCH VỤ VINFAST THỊNH CƯỜNG (CHUẨN GỐC THỊNH CƯỜNG - ẢNH 2) */}
+      {/* 5. TIỆN ÍCH DỊCH VỤ VINFAST PHƯƠNG ĐÔNG (CHUẨN GỐC PHƯƠNG ĐÔNG - ẢNH 2) */}
       <UtilitiesSection />
 
-      {/* 6. VINFAST THỊNH CƯỜNG AWARDS 2025 (CHUẨN GỐC THỊNH CƯỜNG - ẢNH 3) */}
+      {/* 6. VINFAST PHƯƠNG ĐÔNG AWARDS 2025 (CHUẨN GỐC PHƯƠNG ĐÔNG - ẢNH 3) */}
       <AwardsSection />
 
-      {/* 7. TIN TỨC MỚI NHẤT (CHUẨN GỐC THỊNH CƯỜNG - ẢNH 1) */}
+      {/* 7. TIN TỨC MỚI NHẤT (CHUẨN GỐC PHƯƠNG ĐÔNG - ẢNH 1) */}
       <NewsSection />
 
     </div>

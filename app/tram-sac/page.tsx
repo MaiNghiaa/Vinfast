@@ -130,7 +130,7 @@ const GALLERY_IMAGES = [
 export default function ChargingStationPage() {
   const [productTab, setProductTab] = useState<"dc" | "ac">("dc");
 
-  // Carousel states: 5 items visible on desktop (matching Thịnh Cường exactly)
+  // Carousel states: 5 items visible on desktop (matching Phương Đông exactly)
   const [carouselIndex, setCarouselIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [itemsPerView, setItemsPerView] = useState(5);
@@ -198,7 +198,7 @@ export default function ChargingStationPage() {
       <section className="relative w-full min-h-[380px] sm:min-h-[440px] md:min-h-[500px] flex items-center justify-center overflow-hidden bg-black">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/suachuaimg_1656869862_1658394682.webp"
-          alt="Trạm sạc VinFast Thịnh Cường"
+          alt="Trạm sạc VinFast Phương Đông"
           fill
           priority
           sizes="100vw"
@@ -214,7 +214,7 @@ export default function ChargingStationPage() {
       </section>
 
       {/* ============================================================
-          2. SẢN PHẨM TRẠM SẠC V-GREEN THỊNH CƯỜNG (matching 77969d9 & Image 2)
+          2. SẢN PHẨM TRẠM SẠC V-GREEN PHƯƠNG ĐÔNG (matching 77969d9 & Image 2)
           - Heading: Mulish 900 đậm (#0C0C0C), text-[28px]-text-[38px], tracking-tight
           - Divider: #3AB3FF, width 16%, thickness 4.5px, centered
           - Tabs: TRẠM SẠC VINFAST DC & TRẠM SẠC VINFAST AC (Mulish 800, text-[16px])
@@ -228,7 +228,7 @@ export default function ChargingStationPage() {
           {/* Section Header */}
           <div className="text-center mb-6 sm:mb-8">
             <h2 className="text-[#0C0C0C] text-[28px] sm:text-[34px] md:text-[38px] font-black font-mulish uppercase tracking-tight leading-tight">
-              SẢN PHẨM TRẠM SẠC V-GREEN THỊNH CƯỜNG
+              SẢN PHẨM TRẠM SẠC V-GREEN PHƯƠNG ĐÔNG
             </h2>
 
             {/* Elementor exact Divider: width 16%, thickness 4.5px, color #3AB3FF */}
@@ -298,7 +298,7 @@ export default function ChargingStationPage() {
       </section>
 
       {/* ============================================================
-          3. DỰ ÁN TRẠM SẠC VGREEN THỊNH CƯỜNG (matching 641b7c6 & Image 3)
+          3. DỰ ÁN TRẠM SẠC VGREEN PHƯƠNG ĐÔNG (matching 641b7c6 & Image 3)
           - Heading: Mulish 900 to đậm (#0C0C0C), text-[28px]-text-[38px]
           - Full-width Section with minimal padding (w-full px-1 sm:px-2 md:px-3) matching Image 3
           - 5 Slides visible edge-to-edge across Desktop (no massive padding squeezing slides)
@@ -312,7 +312,7 @@ export default function ChargingStationPage() {
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8">
             <h2 className="text-[#0C0C0C] text-[28px] sm:text-[34px] md:text-[38px] font-black font-mulish uppercase tracking-tight leading-tight">
-              DỰ ÁN TRẠM SẠC VGREEN THỊNH CƯỜNG
+              DỰ ÁN TRẠM SẠC VGREEN PHƯƠNG ĐÔNG
             </h2>
             {/* Elementor exact Divider under title: width 16%, thickness 4.5px, color #3AB3FF */}
             <div className="w-[16%] min-w-[120px] max-w-[190px] h-[4.5px] bg-[#3AB3FF] mx-auto mt-3 rounded-full" />
@@ -425,7 +425,7 @@ export default function ChargingStationPage() {
                 <CheckCircle className="w-14 h-14 text-emerald-400 mx-auto" />
                 <h3 className="text-2xl font-[900] text-white">Đăng ký thành công!</h3>
                 <p className="text-sm text-gray-200 max-w-md mx-auto">
-                  Cảm ơn Quý khách <strong className="text-white">{fullName}</strong> ({phone}). Chuyên viên VinFast Thịnh Cường sẽ liên hệ tư vấn sớm nhất.
+                  Cảm ơn Quý khách <strong className="text-white">{fullName}</strong> ({phone}). Chuyên viên VinFast Phương Đông sẽ liên hệ tư vấn sớm nhất.
                 </p>
                 <button
                   type="button"
@@ -530,7 +530,7 @@ export default function ChargingStationPage() {
                       className="mt-0.5 w-4 h-4 rounded text-[#1863dc] focus:ring-[#3AB3FF] cursor-pointer"
                     />
                     <span>
-                      Tôi xác nhận rằng Vinfast Thịnh Cường có thể gửi cho tôi thêm thông tin về các sản phẩm hoặc dịch vụ của Vinfast.
+                      Tôi xác nhận rằng Vinfast Phương Đông có thể gửi cho tôi thêm thông tin về các sản phẩm hoặc dịch vụ của Vinfast.
                     </span>
                   </label>
 
@@ -547,7 +547,7 @@ export default function ChargingStationPage() {
                       <Link href="/chinh-sach-bao-mat-thong-tin/" className="text-[#3AB3FF] underline">
                         Quy định và chính sách
                       </Link>{" "}
-                      của Vinfast Thịnh Cường!
+                      của Vinfast Phương Đông!
                     </span>
                   </label>
                 </div>
@@ -568,7 +568,7 @@ export default function ChargingStationPage() {
       </section>
 
       {/* ============================================================
-          5. VGREEN THỊNH CƯỜNG - LỰA CHỌN HÀNG ĐẦU TẠI VIỆT NAM (matching f7281db & Image 1)
+          5. VGREEN PHƯƠNG ĐÔNG - LỰA CHỌN HÀNG ĐẦU TẠI VIỆT NAM (matching f7281db & Image 1)
          ============================================================ */}
       <section className="mt-[50px] lg:mt-[80px] mb-0 py-6 sm:py-10">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
@@ -595,7 +595,7 @@ export default function ChargingStationPage() {
             {/* Right: Text & Benefits - Clean black checkmarks & larger font (Image 1) */}
             <div className="lg:col-span-6 space-y-4 sm:space-y-5">
               <h2 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[34px] font-black font-mulish uppercase text-[#0C0C0C] tracking-tight leading-[1.25]">
-                VGREEN THỊNH CƯỜNG - LỰA CHỌN HÀNG ĐẦU TẠI VIỆT NAM
+                VGREEN PHƯƠNG ĐÔNG - LỰA CHỌN HÀNG ĐẦU TẠI VIỆT NAM
               </h2>
 
               <p className="text-[15px] sm:text-[16px] md:text-[17px] text-[#000000] leading-relaxed">

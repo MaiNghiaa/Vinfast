@@ -3,7 +3,7 @@ import { Charger, ChargerNewsItem } from "./types";
 export const CHARGER_RELATED_NEWS: ChargerNewsItem[] = [
   {
     id: "ha-tang-xanh",
-    title: "HẠ TẦNG XANH – TƯƠNG LAI BẮT ĐẦU TỪ HÔM NAY CÙNG V-GREEN THỊNH CƯỜNG",
+    title: "HẠ TẦNG XANH – TƯƠNG LAI BẮT ĐẦU TỪ HÔM NAY CÙNG V-GREEN PHƯƠNG ĐÔNG",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/02/Gemini_Generated_Image_vj002vvj002vvj00-scaled.png",
     slug: "ha-tang-xanh-tuong-lai-bat-dau-tu-hom-nay-cung-v-green-thinh-cuong",
     category: "Trạm Sạc",
@@ -17,7 +17,7 @@ export const CHARGER_RELATED_NEWS: ChargerNewsItem[] = [
   },
   {
     id: "dai-phuc-sinh-news",
-    title: "TRẠM SẠC XE ĐIỆN CÔNG NGHỆ XANH TẠI KHÁCH SẠN ĐẠI PHÚC SINH – V-GREEN THỊNH CƯỜNG",
+    title: "TRẠM SẠC XE ĐIỆN CÔNG NGHỆ XANH TẠI KHÁCH SẠN ĐẠI PHÚC SINH – V-GREEN PHƯƠNG ĐÔNG",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/02/bia-websacdb.jpg",
     slug: "tram-sac-xe-dien-cong-nghe-xanh-tai-khach-san-dai-phuc-sinh-v-green-thinh-cuong",
     category: "Trạm Sạc",

@@ -13,11 +13,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const charger = CHARGERS.find((c) => c.slug === slug);
   if (!charger) {
     return {
-      title: "Trạm sạc không tồn tại | VinFast Thịnh Cường",
+      title: "Trạm sạc không tồn tại | VinFast Phương Đông",
     };
   }
   return {
-    title: `${charger.name} – VinFast Thịnh Cường`,
+    title: `${charger.name} – VinFast Phương Đông`,
     description: charger.description,
   };
 }

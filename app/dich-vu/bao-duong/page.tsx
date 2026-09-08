@@ -80,7 +80,7 @@ export default function DichVuBaoDuongPage() {
     {
       id: "B1",
       name: "B1. Đặt lịch bảo dưỡng",
-      desc: "Khách hàng đặt lịch hẹn trước qua điện thoại, website hoặc ứng dụng của Vinfast Thịnh Cường. Điều này giúp đảm bảo rằng khi Quý khách hàng đến, các kỹ thuật viên và dụng cụ được chọn lọc phù hợp, sẵn sàng quy trình bảo dưỡng.",
+      desc: "Khách hàng đặt lịch hẹn trước qua điện thoại, website hoặc ứng dụng của Vinfast Phương Đông. Điều này giúp đảm bảo rằng khi Quý khách hàng đến, các kỹ thuật viên và dụng cụ được chọn lọc phù hợp, sẵn sàng quy trình bảo dưỡng.",
       benefit: "Tiết kiệm thời gian, đảm bảo quy trình bảo dưỡng diễn ra thuận lợi và nhanh chóng.",
     },
     {
@@ -129,7 +129,7 @@ export default function DichVuBaoDuongPage() {
     {
       title: "Thời gian bảo dưỡng nhanh chóng",
       icon: Clock,
-      desc: "Vinfast Thịnh Cường đã thiết lập quy trình làm việc bảo dưỡng nhanh Express Maintenance 60 phút (EM) theo tiêu chuẩn Vinfast Việt Nam (giảm thiểu tối đa các động tác thừa của nhân viên kỹ thuật trong thao tác làm việc), đồng thời liên tục thực hiện kaizen tăng năng suất lao động, giảm thời gian chờ đợi của Quý khách hàng.",
+      desc: "Vinfast Phương Đông đã thiết lập quy trình làm việc bảo dưỡng nhanh Express Maintenance 60 phút (EM) theo tiêu chuẩn Vinfast Việt Nam (giảm thiểu tối đa các động tác thừa của nhân viên kỹ thuật trong thao tác làm việc), đồng thời liên tục thực hiện kaizen tăng năng suất lao động, giảm thời gian chờ đợi của Quý khách hàng.",
     },
     {
       title: "Chất lượng đảm bảo",
@@ -150,11 +150,11 @@ export default function DichVuBaoDuongPage() {
 
   return (
     <div className="w-full bg-white">
-      {/* 1. TOP BANNER (MATCHING THỊNH CƯỜNG ẢNH 3: RỘNG RÃI, TEXT VỪA VẶN TINH TẾ) */}
+      {/* 1. TOP BANNER (MATCHING PHƯƠNG ĐÔNG ẢNH 3: RỘNG RÃI, TEXT VỪA VẶN TINH TẾ) */}
       <section className="relative w-full h-[380px] sm:h-[460px] md:h-[520px] lg:h-[560px] flex items-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/BAODUONG.jpg"
-          alt="Dịch vụ bảo dưỡng VinFast Thịnh Cường"
+          alt="Dịch vụ bảo dưỡng VinFast Phương Đông"
           fill
           priority
           sizes="100vw"
@@ -168,7 +168,7 @@ export default function DichVuBaoDuongPage() {
             <h1 className="text-2xl sm:text-3xl lg:text-[34px] font-bold uppercase text-white leading-[1.35] tracking-wide mb-3 sm:mb-4 drop-shadow-md">
               DỊCH VỤ BẢO DƯỠNG
               <br />
-              VINFAST THỊNH CƯỜNG
+              VINFAST PHƯƠNG ĐÔNG
             </h1>
             <h2 className="text-xs sm:text-[13px] md:text-sm font-bold uppercase tracking-wider text-white mb-2 sm:mb-2.5">
               UY TÍN – TẬN TÂM – CHUYÊN NGHIỆP
@@ -188,7 +188,7 @@ export default function DichVuBaoDuongPage() {
         </div>
       </section>
 
-      {/* 2. TẦM QUAN TRỌNG CỦA BẢO DƯỠNG XE ĐỊNH KỲ (MATCHING THỊNH CƯỜNG ẢNH 3) */}
+      {/* 2. TẦM QUAN TRỌNG CỦA BẢO DƯỠNG XE ĐỊNH KỲ (MATCHING PHƯƠNG ĐÔNG ẢNH 3) */}
       <section
         className="py-14 sm:py-20 bg-white relative"
         style={{
@@ -210,7 +210,7 @@ export default function DichVuBaoDuongPage() {
                 <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight mt-1">
                   BẢO DƯỠNG XE ĐỊNH KỲ
                 </h2>
-                {/* Horizontal black underline as in Thịnh Cường ẢNH 3 */}
+                {/* Horizontal black underline as in Phương Đông ẢNH 3 */}
                 <div className="w-16 h-0.5 bg-black mt-2 mb-6" />
               </div>
 
@@ -248,7 +248,7 @@ export default function DichVuBaoDuongPage() {
               </div>
             </div>
 
-            {/* Right Images (Clean straight rectangular matching Thịnh Cường ẢNH 3) */}
+            {/* Right Images (Clean straight rectangular matching Phương Đông ẢNH 3) */}
             <div className="lg:col-span-6 grid grid-cols-2 gap-4">
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-sm border border-gray-200">
                 <Image
@@ -296,7 +296,7 @@ export default function DichVuBaoDuongPage() {
         </div>
       </section>
 
-      {/* 4. HẠNG MỤC BẢO DƯỠNG NHANH (MATCHING THỊNH CƯỜNG ẢNH 5) */}
+      {/* 4. HẠNG MỤC BẢO DƯỠNG NHANH (MATCHING PHƯƠNG ĐÔNG ẢNH 5) */}
       <section className="py-14 sm:py-20 bg-white border-t border-gray-100">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           {/* Header with M2.png matrix watermark on top left */}
@@ -373,7 +373,7 @@ export default function DichVuBaoDuongPage() {
                 QUY TRÌNH BẢO DƯỠNG NHANH
               </h2>
               <p className="text-base sm:text-lg font-black text-gray-900 uppercase mt-1">
-                TẠI VINFAST THỊNH CƯỜNG
+                TẠI VINFAST PHƯƠNG ĐÔNG
               </p>
               <div className="w-16 h-0.5 bg-black mt-2" />
             </div>
@@ -437,11 +437,11 @@ export default function DichVuBaoDuongPage() {
         </div>
       </section>
 
-      {/* 6. VIDEO QUY TRÌNH BẢO DƯỠNG XE (MATCHING THỊNH CƯỜNG ẢNH 1) */}
+      {/* 6. VIDEO QUY TRÌNH BẢO DƯỠNG XE (MATCHING PHƯƠNG ĐÔNG ẢNH 1) */}
       <section className="relative w-full py-20 sm:py-28 flex items-center justify-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/BAODUONG1.jpg"
-          alt="Video quy trình bảo dưỡng xe VinFast tại VinFast Thịnh Cường"
+          alt="Video quy trình bảo dưỡng xe VinFast tại VinFast Phương Đông"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -451,7 +451,7 @@ export default function DichVuBaoDuongPage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight leading-snug">
             VIDEO QUY TRÌNH BẢO DƯỠNG XE VINFAST
             <br />
-            TẠI VINFAST THỊNH CƯỜNG
+            TẠI VINFAST PHƯƠNG ĐÔNG
           </h2>
           <div className="flex justify-center">
             <button
@@ -467,7 +467,7 @@ export default function DichVuBaoDuongPage() {
         </div>
       </section>
 
-      {/* 7. CAM KẾT VẬN HÀNH & BẢO DƯỠNG (MATCHING THỊNH CƯỜNG ẢNH 2) */}
+      {/* 7. CAM KẾT VẬN HÀNH & BẢO DƯỠNG (MATCHING PHƯƠNG ĐÔNG ẢNH 2) */}
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
@@ -476,7 +476,7 @@ export default function DichVuBaoDuongPage() {
               <div className="relative w-full flex-1 min-h-[460px] lg:min-h-full rounded-sm overflow-hidden shadow-xs border border-gray-200">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/16.jpg"
-                  alt="Bảo dưỡng nhanh tại VinFast Thịnh Cường"
+                  alt="Bảo dưỡng nhanh tại VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 100vw, 35vw"
                   className="object-cover object-center"
@@ -489,13 +489,13 @@ export default function DichVuBaoDuongPage() {
               {/* Header */}
               <div className="mb-6 sm:mb-8 text-left">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-black text-[#f80000] uppercase tracking-tight">
-                  BẢO DƯỠNG NHANH TẠI VINFAST THỊNH CƯỜNG
+                  BẢO DƯỠNG NHANH TẠI VINFAST PHƯƠNG ĐÔNG
                 </h2>
                 <p className="text-sm sm:text-base font-bold text-gray-900 uppercase mt-1">
                   ĐÚNG CHUẨN - TOÀN DIỆN - AN TÂM VẬN HÀNH
                 </p>
                 <p className="text-xs sm:text-[13px] text-gray-600 mt-3 leading-relaxed text-justify">
-                  VinFast Thịnh Cường luôn thấu hiểu, mỗi chiếc xe đều là một người bạn tri kỷ, người đồng hành cùng Quý khách trên mọi nẻo đường. Do vậy, đối với chúng tôi, việc chăm sóc một chiếc xe có ý nghĩa giống như chăm sóc người thân quay trở về nhà sau mỗi hành trình dài. Tất cả dịch vụ đều được thực hiện trong quy trình khép kín, chăm sóc tỉ mỉ, cẩn thận để duy trì cho chiếc xe chất lượng tốt nhất khi vận hành!
+                  VinFast Phương Đông luôn thấu hiểu, mỗi chiếc xe đều là một người bạn tri kỷ, người đồng hành cùng Quý khách trên mọi nẻo đường. Do vậy, đối với chúng tôi, việc chăm sóc một chiếc xe có ý nghĩa giống như chăm sóc người thân quay trở về nhà sau mỗi hành trình dài. Tất cả dịch vụ đều được thực hiện trong quy trình khép kín, chăm sóc tỉ mỉ, cẩn thận để duy trì cho chiếc xe chất lượng tốt nhất khi vận hành!
                 </p>
               </div>
 
@@ -530,7 +530,7 @@ export default function DichVuBaoDuongPage() {
                           </>
                         ) : idx === 2 ? (
                           <p>
-                            Vinfast Thịnh Cường đã thiết lập quy trình làm việc bảo dưỡng nhanh{" "}
+                            Vinfast Phương Đông đã thiết lập quy trình làm việc bảo dưỡng nhanh{" "}
                             <strong className="font-bold text-gray-900">Express Maintenance 60 phút (EM)</strong> theo tiêu chuẩn Vinfast Việt Nam (giảm thiểu tối đa các động tác thừa của nhân viên kỹ thuật trong thao tác làm việc), đồng thời liên tục thực hiện kaizen tăng năng suất lao động, giảm thời gian chờ đợi của Quý khách hàng.
                           </p>
                         ) : (

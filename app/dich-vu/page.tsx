@@ -51,7 +51,7 @@ export default function DichVuPage() {
       title: "CĂN CHỈNH GÓC ĐẶT BÁNH XE VÀ CÂN BẰNG LỐP",
       image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1234.jpg",
       description:
-        "Sau thời gian sử dụng, vận hành. Do nhiều nguyên nhân khác nhau như: Điều kiện mặt đường, xe chở quá tải, va quệt… Các sai lệch trong góc đặt bánh xe sẽ xuất hiện, lốp xe bào mòn không đều. Từ đó dẫn tới các hiện tượng như: rung lắc vô lăng ở tốc độ cao, lệch lái, nhao lái. VinFast Thịnh Cường sử dụng các trang thiết bị hiện đại, trả lại các thông số góc đặt như xe mới sản xuất, giúp xe vận hành ổn định, êm ái và tránh những hao mòn lốp, các chi tiết cơ khí… và đặc biệt là an toàn khi vận hành.",
+        "Sau thời gian sử dụng, vận hành. Do nhiều nguyên nhân khác nhau như: Điều kiện mặt đường, xe chở quá tải, va quệt… Các sai lệch trong góc đặt bánh xe sẽ xuất hiện, lốp xe bào mòn không đều. Từ đó dẫn tới các hiện tượng như: rung lắc vô lăng ở tốc độ cao, lệch lái, nhao lái. VinFast Phương Đông sử dụng các trang thiết bị hiện đại, trả lại các thông số góc đặt như xe mới sản xuất, giúp xe vận hành ổn định, êm ái và tránh những hao mòn lốp, các chi tiết cơ khí… và đặc biệt là an toàn khi vận hành.",
     },
     {
       title: "SỬA CHỮA LƯU ĐỘNG",
@@ -116,11 +116,11 @@ export default function DichVuPage() {
 
   return (
     <div className="w-full bg-white">
-      {/* 1. TOP BANNER (EXACT 1:1 CLONE OF THỊNH CƯỜNG LIVE SITE) */}
+      {/* 1. TOP BANNER (EXACT 1:1 CLONE OF PHƯƠNG ĐÔNG LIVE SITE) */}
       <section className="relative w-full min-h-[380px] sm:min-h-[440px] md:min-h-[500px] flex items-center justify-center overflow-hidden bg-black">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/BAODUONG.jpg"
-          alt="Xưởng dịch vụ VinFast Thịnh Cường"
+          alt="Xưởng dịch vụ VinFast Phương Đông"
           fill
           priority
           sizes="100vw"
@@ -129,7 +129,7 @@ export default function DichVuPage() {
         <div className="absolute inset-0 bg-black/80" />
         <div className="relative z-10 text-center px-4 max-w-[1300px] mx-auto">
           <h3 className="text-sm sm:text-lg md:text-[24px] font-semibold uppercase tracking-normal text-[#f80000] mb-3 sm:mb-4 md:mb-5 drop-shadow-sm font-sans">
-            XƯỞNG DỊCH VỤ VINFAST THỊNH CƯỜNG
+            XƯỞNG DỊCH VỤ VINFAST PHƯƠNG ĐÔNG
           </h3>
           <h1 className="text-2xl sm:text-3xl md:text-[36px] font-black text-white uppercase leading-tight font-mulish drop-shadow-md tracking-normal">
             SỬA CHỮA NHANH
@@ -185,7 +185,7 @@ export default function DichVuPage() {
               <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Untitled-12.jpg"
-                  alt="Giới thiệu về xưởng dịch vụ VinFast Thịnh Cường"
+                  alt="Giới thiệu về xưởng dịch vụ VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -198,14 +198,14 @@ export default function DichVuPage() {
                   Giới thiệu về xưởng dịch vụ
                 </h3>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
-                  VINFAST THỊNH CƯỜNG
+                  VINFAST PHƯƠNG ĐÔNG
                 </h2>
               </div>
               <p className="text-sm sm:text-[15px] text-gray-700 leading-relaxed text-justify">
-                VinFast Thịnh Cường luôn nỗ lực mang đến những trải nghiệm sau bán hàng vượt mong đợi. Chúng tôi coi dịch vụ hậu mãi không chỉ là một phần trong hành trình sở hữu xe, mà là <strong className="font-bold text-gray-900">cam kết đồng hành lâu dài</strong>, là giá trị cốt lõi giúp VinFast chinh phục niềm tin của khách hàng.
+                VinFast Phương Đông luôn nỗ lực mang đến những trải nghiệm sau bán hàng vượt mong đợi. Chúng tôi coi dịch vụ hậu mãi không chỉ là một phần trong hành trình sở hữu xe, mà là <strong className="font-bold text-gray-900">cam kết đồng hành lâu dài</strong>, là giá trị cốt lõi giúp VinFast chinh phục niềm tin của khách hàng.
               </p>
               <p className="text-sm sm:text-[15px] text-gray-700 leading-relaxed text-justify">
-                Tại xưởng dịch vụ VinFast Thịnh Cường, mỗi chiếc xe đều được chăm sóc bởi đội ngũ kỹ thuật viên tay nghề cao, được đào tạo bài bản theo tiêu chuẩn khắt khe của VinFast toàn cầu. Hệ thống trang thiết bị hiện đại, công nghệ chẩn đoán tiên tiến cùng nguồn phụ tùng chính hãng 100% đảm bảo xe của bạn luôn vận hành trong tình trạng hoàn hảo và an toàn nhất.
+                Tại xưởng dịch vụ VinFast Phương Đông, mỗi chiếc xe đều được chăm sóc bởi đội ngũ kỹ thuật viên tay nghề cao, được đào tạo bài bản theo tiêu chuẩn khắt khe của VinFast toàn cầu. Hệ thống trang thiết bị hiện đại, công nghệ chẩn đoán tiên tiến cùng nguồn phụ tùng chính hãng 100% đảm bảo xe của bạn luôn vận hành trong tình trạng hoàn hảo và an toàn nhất.
               </p>
               <p className="text-sm sm:text-[15px] text-gray-700 leading-relaxed text-justify">
                 Không chỉ dừng lại ở chất lượng kỹ thuật, chúng tôi còn chú trọng đến trải nghiệm của khách hàng với quy trình tiếp nhận nhanh chóng, khu vực phòng chờ tiện nghi, sang trọng cùng thái độ phục vụ tận tâm, minh bạch và chuyên nghiệp.
@@ -314,7 +314,7 @@ export default function DichVuPage() {
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-4 leading-tight uppercase">
                 Xưởng dịch vụ
                 <br />
-                VINFAST THỊNH CƯỜNG
+                VINFAST PHƯƠNG ĐÔNG
               </h2>
               <p className="text-sm sm:text-base text-white/95 leading-relaxed mb-6">
                 Với kĩ thuật sửa chữa theo tiêu chuẩn toàn cầu, trang bị thiết bị vật tư chất lượng cao (được chỉ định bởi Vinfast Việt Nam), các đại lý của Vinfast sẽ phục hồi hình dạng cũng như diện mạo lớp sơn trên chiếc xe của bạn về như ban đầu.
@@ -340,7 +340,7 @@ export default function DichVuPage() {
             <div className="relative min-h-[300px] lg:min-h-[460px]">
               <Image
                 src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/tinh-than-phuc-vu-omotenashi-toyota-thai-hoa-tu-liem-8111.jpg"
-                alt="Tinh thần phục vụ VinFast Thịnh Cường"
+                alt="Tinh thần phục vụ VinFast Phương Đông"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -354,7 +354,7 @@ export default function DichVuPage() {
       <section className="relative w-full py-20 sm:py-28 flex items-center justify-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/thinhcuong-vinfast.jpg"
-          alt="Khách hàng đánh giá VinFast Thịnh Cường"
+          alt="Khách hàng đánh giá VinFast Phương Đông"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -364,7 +364,7 @@ export default function DichVuPage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight">
             KHÁCH HÀNG ĐÁNH GIÁ XƯỞNG DỊCH VỤ
             <br />
-            CỦA VINFAST THỊNH CƯỜNG
+            CỦA VINFAST PHƯƠNG ĐÔNG
           </h2>
           <div className="flex justify-center">
             <button
@@ -387,7 +387,7 @@ export default function DichVuPage() {
               <div className="relative w-full flex-1 min-h-[360px] lg:min-h-full rounded-xl overflow-hidden shadow-lg group">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/showroom-3s-vinfast-vinh-phuc-3.jpg"
-                  alt="Showroom 3S VinFast Thịnh Cường"
+                  alt="Showroom 3S VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"

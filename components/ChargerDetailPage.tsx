@@ -125,12 +125,12 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
   return (
     <div className={`w-full bg-white text-[#333333] ${mulish.className}`}>
       {/* ============================================================
-          1. TOP ASPHALT ROAD BANNER (matching Thịnh Cường car-detail-breadcum-all)
+          1. TOP ASPHALT ROAD BANNER (matching Phương Đông car-detail-breadcum-all)
          ============================================================ */}
       <section className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] overflow-hidden bg-neutral-900">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/07/toyota-thai-hoa-tu-liem-car-detail-breadcum-all.webp"
-          alt="VinFast Thịnh Cường - Chi tiết trạm sạc"
+          alt="VinFast Phương Đông - Chi tiết trạm sạc"
           fill
           priority
           sizes="100vw"
@@ -205,7 +205,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                 <div className="w-12 h-1 bg-[#3AB3FF] rounded-full mb-6" />
               </div>
 
-              {/* Quick Specs Bullet List (Matching Thịnh Cường exactly) */}
+              {/* Quick Specs Bullet List (Matching Phương Đông exactly) */}
               <div className="space-y-2.5">
                 <ul className="space-y-2 text-[14px] sm:text-[15px] text-[#333333]">
                   {charger.quickSpecs && charger.quickSpecs.length > 0 ? (
@@ -250,14 +250,14 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
       </section>
 
       {/* ============================================================
-          3. GIỚI THIỆU TẬP ĐOÀN THỊNH CƯỜNG & V-GREEN THỊNH CƯỜNG
+          3. GIỚI THIỆU TẬP ĐOÀN PHƯƠNG ĐÔNG & V-GREEN PHƯƠNG ĐÔNG
          ============================================================ */}
       <section className="py-12 sm:py-16 bg-[#fafafa]">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           {/* Section Heading */}
           <div className="text-center mb-8 sm:mb-10 max-w-3xl mx-auto">
             <h2 className="text-[#0C0C0C] text-[24px] sm:text-[28px] md:text-[32px] font-black font-mulish uppercase tracking-tight leading-tight">
-              GIỚI THIỆU TẬP ĐOÀN THỊNH CƯỜNG &amp; V-GREEN THỊNH CƯỜNG
+              GIỚI THIỆU TẬP ĐOÀN PHƯƠNG ĐÔNG &amp; V-GREEN PHƯƠNG ĐÔNG
             </h2>
             <div className="w-20 h-1 bg-[#3AB3FF] mx-auto mt-3 rounded-full" />
           </div>
@@ -265,12 +265,12 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
           {/* Intro Text */}
           <div className="max-w-4xl mx-auto text-[14px] sm:text-[15px] text-[#333333] leading-relaxed space-y-4 text-justify sm:text-left mb-10">
             <p>
-              Công ty CP Thịnh Cường (Tập đoàn Thịnh Cường) thành lập năm 2001, sau 25 năm phát triển đã vươn lên trở thành tập đoàn đa ngành{" "}
+              Công ty CP Phương Đông (Tập đoàn Phương Đông) thành lập năm 2001, sau 25 năm phát triển đã vươn lên trở thành tập đoàn đa ngành{" "}
               <strong className="text-black font-bold">top 500 doanh nghiệp có quy mô lớn</strong> tại Việt Nam với{" "}
               <strong className="text-black font-bold">tổng nhân sự khoảng 3.000 người</strong>.
             </p>
             <p>
-              Hệ sinh thái của Thịnh Cường bao gồm khai thác khoáng sản, xây dựng hạ tầng, vận tải logistics, kinh doanh dịch vụ taxi, Công nghệ Global và chuỗi khách sạn An Bình.
+              Hệ sinh thái của Phương Đông bao gồm khai thác khoáng sản, xây dựng hạ tầng, vận tải logistics, kinh doanh dịch vụ taxi, Công nghệ Global và chuỗi khách sạn An Bình.
             </p>
             <p>
               Năm 2024, doanh nghiệp chính thức tham gia phân phối xe ô tô điện của{" "}
@@ -279,10 +279,10 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
             <p>
               Đặc biệt, mảng kinh doanh và triển khai{" "}
               <strong className="text-black font-bold">trạm sạc VinFast</strong> với thương hiệu{" "}
-              <strong className="text-black font-bold">V-Green Thịnh Cường</strong> được đầu tư bài bản, quy tụ hơn 100 đội ngũ nhân sự chuyên nghiệp.
+              <strong className="text-black font-bold">V-Green Phương Đông</strong> được đầu tư bài bản, quy tụ hơn 100 đội ngũ nhân sự chuyên nghiệp.
             </p>
             <p>
-              <strong className="text-black font-bold">V-Green Thịnh Cường</strong> tập trung xây dựng mạng lưới{" "}
+              <strong className="text-black font-bold">V-Green Phương Đông</strong> tập trung xây dựng mạng lưới{" "}
               <strong className="text-black font-bold">trạm sạc</strong> hiện đại, đồng bộ, tích hợp giải pháp quản lý thông minh, hướng tới phát triển hạ tầng sạc bền vững cho tương lai giao thông điện tại Việt Nam.
             </p>
           </div>
@@ -305,7 +305,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                     <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-100 shadow-sm">
                       <Image
                         src={imgUrl}
-                        alt={`Xưởng dịch vụ và trạm sạc Thịnh Cường ${wIdx + 1}`}
+                        alt={`Xưởng dịch vụ và trạm sạc Phương Đông ${wIdx + 1}`}
                         fill
                         className="object-cover hover:scale-105 transition-transform duration-500"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -316,7 +316,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
               </div>
             </div>
 
-            {/* 10 Pagination Dots Matching Thịnh Cường Webarchive */}
+            {/* 10 Pagination Dots Matching Phương Đông Webarchive */}
             <div className="flex items-center justify-center gap-1.5 mt-6">
               {WORKSHOP_GALLERY_IMAGES.map((_, dotIdx) => (
                 <button
@@ -337,14 +337,14 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
       </section>
 
       {/* ============================================================
-          4. DỰ ÁN TRẠM SẠC VGREEN THỊNH CƯỜNG
+          4. DỰ ÁN TRẠM SẠC VGREEN PHƯƠNG ĐÔNG
          ============================================================ */}
       <section className="py-12 sm:py-16 w-full">
         <div className="w-full px-2 sm:px-4 lg:px-6">
           {/* Section Heading */}
           <div className="text-center mb-8">
             <h2 className="text-[#0C0C0C] text-[24px] sm:text-[28px] md:text-[34px] font-black font-mulish uppercase tracking-tight leading-tight">
-              DỰ ÁN TRẠM SẠC VGREEN THỊNH CƯỜNG
+              DỰ ÁN TRẠM SẠC VGREEN PHƯƠNG ĐÔNG
             </h2>
             <div className="w-[16%] min-w-[120px] max-w-[190px] h-[4.5px] bg-[#3AB3FF] mx-auto mt-3 rounded-full" />
           </div>
@@ -470,7 +470,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                     </p>
                   )}
 
-                  {/* Bullet Points with Red Dot Indicator matching Thịnh Cường 1:1 */}
+                  {/* Bullet Points with Red Dot Indicator matching Phương Đông 1:1 */}
                   {pillar.bullets && pillar.bullets.length > 0 && (
                     <ul className="space-y-2 pt-1 pl-1 text-[14px] sm:text-[15px] text-[#333333]">
                       {pillar.bullets.map((b, bIdx) => (
@@ -493,7 +493,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
             </div>
           )}
 
-          {/* Section Divider Line matching Thịnh Cường 1:1 */}
+          {/* Section Divider Line matching Phương Đông 1:1 */}
           <div className="w-[16%] min-w-[120px] max-w-[180px] h-[4px] bg-[#3AB3FF] mx-auto mt-14 rounded-full" />
         </div>
       </section>
@@ -524,7 +524,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                 <CheckCircle className="w-14 h-14 text-emerald-400 mx-auto" />
                 <h3 className="text-2xl font-[900] text-white">Đăng ký thành công!</h3>
                 <p className="text-sm text-gray-200 max-w-md mx-auto">
-                  Cảm ơn Quý khách <strong className="text-white">{fullName}</strong> ({phone}). Chuyên viên V-Green Thịnh Cường sẽ liên hệ tư vấn trạm sạc sớm nhất.
+                  Cảm ơn Quý khách <strong className="text-white">{fullName}</strong> ({phone}). Chuyên viên V-Green Phương Đông sẽ liên hệ tư vấn trạm sạc sớm nhất.
                 </p>
                 <button
                   type="button"
@@ -625,7 +625,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                       className="mt-0.5 w-4 h-4 rounded text-[#1863dc] focus:ring-[#3AB3FF] cursor-pointer"
                     />
                     <span>
-                      Tôi xác nhận rằng Vinfast Thịnh Cường có thể gửi cho tôi thêm thông tin về các sản phẩm hoặc dịch vụ của Vinfast.
+                      Tôi xác nhận rằng Vinfast Phương Đông có thể gửi cho tôi thêm thông tin về các sản phẩm hoặc dịch vụ của Vinfast.
                     </span>
                   </label>
 
@@ -642,7 +642,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                       <Link href="/chinh-sach-bao-mat-thong-tin/" className="text-[#3AB3FF] underline">
                         Quy định và chính sách
                       </Link>{" "}
-                      của Vinfast Thịnh Cường!
+                      của Vinfast Phương Đông!
                     </span>
                   </label>
                 </div>
@@ -663,14 +663,14 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
       </section>
 
       {/* ============================================================
-          7. SẢN PHẨM TRẠM SẠC V-GREEN THỊNH CƯỜNG (Tabs DC / AC)
+          7. SẢN PHẨM TRẠM SẠC V-GREEN PHƯƠNG ĐÔNG (Tabs DC / AC)
          ============================================================ */}
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           {/* Section Heading */}
           <div className="text-center mb-6 sm:mb-8">
             <h2 className="text-[#0C0C0C] text-[26px] sm:text-[32px] md:text-[36px] font-black font-mulish uppercase tracking-tight leading-tight">
-              SẢN PHẨM TRẠM SẠC V-GREEN THỊNH CƯỜNG
+              SẢN PHẨM TRẠM SẠC V-GREEN PHƯƠNG ĐÔNG
             </h2>
             <div className="w-[16%] min-w-[120px] max-w-[190px] h-[4.5px] bg-[#3AB3FF] mx-auto mt-3 mb-6 rounded-full" />
 

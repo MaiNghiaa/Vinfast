@@ -19,7 +19,7 @@ export default function PromoBannerCards() {
               {/* Banner Image */}
               <Image
                 src="/images/banners/banner-khuyen-mai.jpg"
-                alt="Khuyến mại xe VinFast - VinFast Thịnh Cường"
+                alt="Khuyến mại xe VinFast - VinFast Phương Đông"
                 fill
                 className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -47,7 +47,7 @@ export default function PromoBannerCards() {
               {/* Banner Image */}
               <Image
                 src="/images/banners/banner-dich-vu.jpg"
-                alt="Khám phá dịch vụ VinFast Thịnh Cường"
+                alt="Khám phá dịch vụ VinFast Phương Đông"
                 fill
                 className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"

@@ -13,12 +13,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const car = USED_CARS.find((c) => c.slug === slug);
   if (!car) {
     return {
-      title: "Xe cũ không tồn tại | VinFast Thịnh Cường",
+      title: "Xe cũ không tồn tại | VinFast Phương Đông",
     };
   }
   return {
-    title: `${car.name} – Xe cũ Green Future | VinFast Thịnh Cường`,
-    description: `Chi tiết xe cũ ${car.name}, Odo ${car.odo}, năm sản xuất ${car.year}, nguồn gốc Green Future chính hãng tại VinFast Thịnh Cường.`,
+    title: `${car.name} – Xe cũ Green Future | VinFast Phương Đông`,
+    description: `Chi tiết xe cũ ${car.name}, Odo ${car.odo}, năm sản xuất ${car.year}, nguồn gốc Green Future chính hãng tại VinFast Phương Đông.`,
   };
 }
 

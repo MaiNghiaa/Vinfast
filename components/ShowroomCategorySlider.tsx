@@ -15,74 +15,38 @@ export interface ShowroomCategory {
 
 export const SHOWROOM_CATEGORIES: ShowroomCategory[] = [
   {
-    id: "vinh-phuc",
+    id: "hoang-quoc-viet",
     name: "SHOWROOM VINFAST",
-    subName: "THỊNH CƯỜNG VĨNH PHÚC",
-    image: "/images/showrooms/vinh-phuc.png",
-    link: "/contact",
-  },
-  {
-    id: "ocean-park",
-    name: "SHOWROOM VINFAST",
-    subName: "THỊNH CƯỜNG OCEAN PARK",
+    subName: "PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT",
     image: "/images/showrooms/ocean-park.png",
     link: "/contact",
   },
   {
-    id: "son-tay",
+    id: "bat-trang",
     name: "SHOWROOM VINFAST",
-    subName: "THỊNH CƯỜNG SƠN TÂY",
-    image: "/images/showrooms/son-tay.png",
-    link: "/contact",
-  },
-  {
-    id: "uong-bi",
-    name: "SHOWROOM VINFAST",
-    subName: "THỊNH CƯỜNG UÔNG BÍ",
-    image: "/images/showrooms/uong-bi.png",
-    link: "/contact",
-  },
-  {
-    id: "cam-pha",
-    name: "SHOWROOM VINFAST",
-    subName: "THỊNH CƯỜNG CẨM PHẢ",
-    image: "/images/showrooms/cam-pha.png",
-    link: "/contact",
-  },
-  {
-    id: "ha-long",
-    name: "SHOWROOM VINFAST",
-    subName: "THỊNH CƯỜNG HẠ LONG",
-    image: "/images/showrooms/ha-long.png",
-    link: "/contact",
-  },
-  {
-    id: "long-bien",
-    name: "SHOWROOM VINFAST",
-    subName: "THỊNH CƯỜNG LONG BIÊN",
+    subName: "PHƯƠNG ĐÔNG BÁT TRÀNG",
     image: "/images/showrooms/long-bien.png",
     link: "/contact",
   },
   {
-    id: "xuan-mai",
+    id: "thuong-tin",
     name: "SHOWROOM VINFAST",
-    subName: "THỊNH CƯỜNG XUÂN MAI",
-    image: "/images/showrooms/xuan-mai.png",
+    subName: "PHƯƠNG ĐÔNG THƯỜNG TÍN",
+    image: "/images/showrooms/son-tay.png",
     link: "/contact",
   },
   {
-    id: "smart-city",
+    id: "hoa-lac",
     name: "SHOWROOM VINFAST",
-    subName: "THỊNH CƯỜNG SMART CITY",
-    image: "/images/showrooms/smart-city.png",
+    subName: "PHƯƠNG ĐÔNG HÒA LẠC",
+    image: "/images/showrooms/vinh-phuc.png",
     link: "/contact",
   },
 ];
 
 export default function ShowroomCategorySlider() {
-  const totalItems = SHOWROOM_CATEGORIES.length; // 9
-  // Start at index 3 in the middle set (which is Uông Bí, matching reference screenshot)
-  const [currentIndex, setCurrentIndex] = useState(totalItems + 3);
+  const totalItems = SHOWROOM_CATEGORIES.length;
+  const [currentIndex, setCurrentIndex] = useState(totalItems);
   const [withTransition, setWithTransition] = useState(true);
   const [itemsPerView, setItemsPerView] = useState(5);
   const [isPaused, setIsPaused] = useState(false);

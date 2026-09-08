@@ -33,7 +33,7 @@ const JOBS_DATA = [
     salary: "15 – 18 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/web-11.jpg",
     description:
-      "1. GIỚI THIỆU VỀ VINFAST THỊNH CƯỜNG VinFast Thịnh Cường là đại lý ủy quyền chính hãng của VinFast Việt Nam...",
+      "1. GIỚI THIỆU VỀ VINFAST PHƯƠNG ĐÔNG VinFast Phương Đông là đại lý ủy quyền chính hãng của VinFast Việt Nam...",
     details: {
       responsibilities: [
         "Lên ý tưởng, kịch bản, quay phim và hậu kỳ video quảng bá các dòng xe điện VinFast (VF 3, VF 5, VF 6, VF 7, VF 8, VF 9).",
@@ -66,7 +66,7 @@ const JOBS_DATA = [
     salary: "15 – 25 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/web-12.jpg",
     description:
-      "1. GIỚI THIỆU VỀ VINFAST THỊNH CƯỜNG VinFast Thịnh Cường là đơn vị tiên phong trong phân phối ô tô điện VinFast...",
+      "1. GIỚI THIỆU VỀ VINFAST PHƯƠNG ĐÔNG VinFast Phương Đông là đơn vị tiên phong trong phân phối ô tô điện VinFast...",
     details: {
       responsibilities: [
         "Nghiên cứu, thu thập và phân tích dữ liệu thị trường ô tô điện, hành vi khách hàng và đối thủ cạnh tranh.",
@@ -97,7 +97,7 @@ const JOBS_DATA = [
     salary: "12 – 15 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/02/tuyen-dung-web.jpg",
     description:
-      "1. GIỚI THIỆU VỀ VINFAST THỊNH CƯỜNG VinFast Thịnh Cường là hệ thống đại lý hàng đầu mang giải pháp xanh...",
+      "1. GIỚI THIỆU VỀ VINFAST PHƯƠNG ĐÔNG VinFast Phương Đông là hệ thống đại lý hàng đầu mang giải pháp xanh...",
     details: {
       responsibilities: [
         "Sáng tạo nội dung bài viết truyền thông trên Fanpage, Website, Zalo OA và các hội nhóm xe VinFast.",
@@ -118,7 +118,7 @@ const JOBS_DATA = [
   },
   {
     id: 4,
-    title: "Tuyển Dụng Kế Toán Trưởng – VinFast Thịnh Cường – Thu nhập: 25 – 30 triệu",
+    title: "Tuyển Dụng Kế Toán Trưởng – VinFast Phương Đông – Thu nhập: 25 – 30 triệu",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -128,7 +128,7 @@ const JOBS_DATA = [
     salary: "25 – 30 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-ke-toan-thinhcuong.jpg",
     description:
-      "VinFast Thịnh Cường tuyển dụng kế toán trưởng. Thu nhập 25 - 30 triệu. Quản lý toàn bộ hệ thống tài chính kế toán đại lý...",
+      "VinFast Phương Đông tuyển dụng kế toán trưởng. Thu nhập 25 - 30 triệu. Quản lý toàn bộ hệ thống tài chính kế toán đại lý...",
     details: {
       responsibilities: [
         "Tổ chức và quản lý toàn bộ hệ thống kế toán, tài chính tại các showroom và xưởng dịch vụ.",
@@ -149,7 +149,7 @@ const JOBS_DATA = [
   },
   {
     id: 5,
-    title: "Tuyển Dụng Chuyên Viên Đào Tạo Nội Bộ – VinFast Thịnh Cường – Thu nhập: 12 – 20 triệu",
+    title: "Tuyển Dụng Chuyên Viên Đào Tạo Nội Bộ – VinFast Phương Đông – Thu nhập: 12 – 20 triệu",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -159,7 +159,7 @@ const JOBS_DATA = [
     salary: "12 – 20 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dao-tao-noi-bo-thinhcuong.jpg",
     description:
-      "VinFast Thịnh Cường tuyển dụng 2 Chuyên viên đào tạo nội bộ. Thu nhập 12 - 20 triệu. Xây dựng giáo trình và đào tạo kỹ năng...",
+      "VinFast Phương Đông tuyển dụng 2 Chuyên viên đào tạo nội bộ. Thu nhập 12 - 20 triệu. Xây dựng giáo trình và đào tạo kỹ năng...",
     details: {
       responsibilities: [
         "Khảo sát nhu cầu đào tạo, lập kế hoạch và tổ chức các lớp đào tạo hội nhập, kỹ năng tư vấn cho nhân sự mới.",
@@ -180,7 +180,7 @@ const JOBS_DATA = [
   },
   {
     id: 6,
-    title: "Tuyển Dụng Nhân Viên Tiếng Trung Thương Mại – VinFast Thịnh Cường – Thu nhập Hấp Dẫn",
+    title: "Tuyển Dụng Nhân Viên Tiếng Trung Thương Mại – VinFast Phương Đông – Thu nhập Hấp Dẫn",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -190,7 +190,7 @@ const JOBS_DATA = [
     salary: "15 – 25 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-tro-ly-phien-dich-tieng-trung-thinhcuong.jpg",
     description:
-      "VinFast Thịnh Cường tuyển dụng 4 Nhân viên tiếng Trung thương mại. Thu nhập hấp dẫn. Phiên dịch và làm việc cùng đối tác quốc tế...",
+      "VinFast Phương Đông tuyển dụng 4 Nhân viên tiếng Trung thương mại. Thu nhập hấp dẫn. Phiên dịch và làm việc cùng đối tác quốc tế...",
     details: {
       responsibilities: [
         "Biên phiên dịch tiếng Trung trong các buổi đàm phán thương mại, ký kết hợp đồng và gặp gỡ đối tác quốc tế.",
@@ -211,7 +211,7 @@ const JOBS_DATA = [
   },
   {
     id: 7,
-    title: "Tuyển Dụng Trợ Lý Chủ Tịch/Tổng Giám Đốc – VinFast Thịnh Cường – Thu nhập: 25 – 35 triệu",
+    title: "Tuyển Dụng Trợ Lý Chủ Tịch/Tổng Giám Đốc – VinFast Phương Đông – Thu nhập: 25 – 35 triệu",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -221,7 +221,7 @@ const JOBS_DATA = [
     salary: "25 – 35 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-tro-ly-giam-doc-thinhcuong.jpg",
     description:
-      "VinFast Thịnh Cường tuyển dụng 4 Trợ Lý Chủ Tịch/Tổng Giám Đốc. Hỗ trợ điều hành chiến lược kinh doanh toàn hệ thống...",
+      "VinFast Phương Đông tuyển dụng 4 Trợ Lý Chủ Tịch/Tổng Giám Đốc. Hỗ trợ điều hành chiến lược kinh doanh toàn hệ thống...",
     details: {
       responsibilities: [
         "Tham mưu, hỗ trợ Chủ tịch/Tổng Giám Đốc trong công tác điều hành chiến lược các khối kinh doanh và vận hành.",
@@ -236,13 +236,13 @@ const JOBS_DATA = [
       benefits: [
         "Thu nhập: 25 – 35 triệu VNĐ/tháng + Thưởng hiệu quả điều hành.",
         "Làm việc trực tiếp cùng dàn lãnh đạo tâm huyết, tầm nhìn chiến lược lớn.",
-        "Chế độ phúc lợi toàn diện bậc nhất hệ thống Thịnh Cường.",
+        "Chế độ phúc lợi toàn diện bậc nhất hệ thống Phương Đông.",
       ],
     },
   },
   {
     id: 8,
-    title: "Tuyển Dụng Trợ Lý Ban Lãnh Đạo – VinFast Thịnh Cường – Thu nhập: 25 – 30 triệu",
+    title: "Tuyển Dụng Trợ Lý Ban Lãnh Đạo – VinFast Phương Đông – Thu nhập: 25 – 30 triệu",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -252,7 +252,7 @@ const JOBS_DATA = [
     salary: "25 – 30 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-tro-ly-phien-dich-thinhcuong.jpg",
     description:
-      "VinFast Thịnh Cường tuyển dụng 4 Trợ Lý Ban Lãnh Đạo. Điều phối các phòng ban chức năng, giám sát thực thi mục tiêu OKR...",
+      "VinFast Phương Đông tuyển dụng 4 Trợ Lý Ban Lãnh Đạo. Điều phối các phòng ban chức năng, giám sát thực thi mục tiêu OKR...",
     details: {
       responsibilities: [
         "Đóng vai trò cầu nối thông tin giữa Ban Lãnh đạo và các khối kinh doanh, showroom, xưởng dịch vụ.",
@@ -273,7 +273,7 @@ const JOBS_DATA = [
   },
   {
     id: 9,
-    title: "Tuyển Dụng Trợ Lý Tiếng Trung – VinFast Thịnh Cường – Thu Nhập Hấp Dẫn",
+    title: "Tuyển Dụng Trợ Lý Tiếng Trung – VinFast Phương Đông – Thu Nhập Hấp Dẫn",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -283,7 +283,7 @@ const JOBS_DATA = [
     salary: "18 – 28 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-tro-ly-phien-dich-nam-thinhcuong.jpg",
     description:
-      "VinFast Thịnh Cường tuyển dụng 1 Trợ Lý Tiếng Trung. Lương thưởng cạnh tranh, hỗ trợ trực tiếp các chương trình hợp tác quốc tế...",
+      "VinFast Phương Đông tuyển dụng 1 Trợ Lý Tiếng Trung. Lương thưởng cạnh tranh, hỗ trợ trực tiếp các chương trình hợp tác quốc tế...",
     details: {
       responsibilities: [
         "Đồng hành cùng lãnh đạo trong các chuyến công tác và đàm phán hợp tác với đối tác nước ngoài.",
@@ -302,7 +302,7 @@ const JOBS_DATA = [
   },
   {
     id: 10,
-    title: "Tuyển Dụng Giám Đốc Kinh Doanh – VinFast Thịnh Cường – Thu Nhập 30-60 Triệu",
+    title: "Tuyển Dụng Giám Đốc Kinh Doanh – VinFast Phương Đông – Thu Nhập 30-60 Triệu",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -312,7 +312,7 @@ const JOBS_DATA = [
     salary: "30 – 60 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-giam-doc-kinh-doanh-vinfast-thinhcuong.jpg",
     description:
-      "VinFast Thịnh Cường tuyển dụng Giám đốc kinh doanh ô tô. Lãnh đạo đội ngũ tư vấn bán hàng toàn hệ thống showroom...",
+      "VinFast Phương Đông tuyển dụng Giám đốc kinh doanh ô tô. Lãnh đạo đội ngũ tư vấn bán hàng toàn hệ thống showroom...",
     details: {
       responsibilities: [
         "Xây dựng và triển khai chiến lược kinh doanh xe điện VinFast trên toàn hệ thống showroom.",
@@ -343,7 +343,7 @@ const JOBS_DATA = [
     salary: "9 – 18 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-nhan-vien-xuong-vinfast-thinhcuong.jpg",
     description:
-      "VinFast Thịnh Cường tuyển dụng Kỹ thuật viên bảo dưỡng & sửa chữa chung xưởng dịch vụ. Đào tạo trực tiếp từ hãng...",
+      "VinFast Phương Đông tuyển dụng Kỹ thuật viên bảo dưỡng & sửa chữa chung xưởng dịch vụ. Đào tạo trực tiếp từ hãng...",
     details: {
       responsibilities: [
         "Thực hiện công việc bảo dưỡng định kỳ, chẩn đoán lỗi và sửa chữa các dòng ô tô điện VinFast.",
@@ -374,7 +374,7 @@ const JOBS_DATA = [
     salary: "9 – 14 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-nhan-vien-xuong2-vinfast-thinhcuong.jpg",
     description:
-      "VinFast Thịnh Cường tuyển dụng Nhân viên quản lý kho phụ tùng chính hãng xưởng dịch vụ ô tô...",
+      "VinFast Phương Đông tuyển dụng Nhân viên quản lý kho phụ tùng chính hãng xưởng dịch vụ ô tô...",
     details: {
       responsibilities: [
         "Tiếp nhận, kiểm đếm và sắp xếp phụ tùng, phụ kiện chính hãng VinFast nhập xưởng.",
@@ -395,7 +395,7 @@ const JOBS_DATA = [
   },
   {
     id: 13,
-    title: "Tuyển Dụng Nhân Viên Content Marketing – VinFast Thịnh Cường – Thu Nhập 12-15 Triệu",
+    title: "Tuyển Dụng Nhân Viên Content Marketing – VinFast Phương Đông – Thu Nhập 12-15 Triệu",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -424,7 +424,7 @@ const JOBS_DATA = [
   },
   {
     id: 14,
-    title: "Tuyển Thực Tập Sinh Marketing – VinFast Thịnh Cường – Thu Nhập Hấp Dẫn",
+    title: "Tuyển Thực Tập Sinh Marketing – VinFast Phương Đông – Thu Nhập Hấp Dẫn",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -454,7 +454,7 @@ const JOBS_DATA = [
   },
   {
     id: 15,
-    title: "Tuyển Dụng Nhân Viên Kinh Doanh B2B – VinFast Thịnh Cường – Thu Nhập Hấp Dẫn",
+    title: "Tuyển Dụng Nhân Viên Kinh Doanh B2B – VinFast Phương Đông – Thu Nhập Hấp Dẫn",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -494,7 +494,7 @@ const JOBS_DATA = [
     salary: "15 – 18 triệu",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-media-vinfast-thinhcuong.jpg",
     description:
-      "Sản xuất các thước phim ấn tượng ghi dấu hành trình chuyển đổi xanh của các chủ xe VinFast Thịnh Cường...",
+      "Sản xuất các thước phim ấn tượng ghi dấu hành trình chuyển đổi xanh của các chủ xe VinFast Phương Đông...",
     details: {
       responsibilities: [
         "Tạo ra các video highlight, phóng sự bàn giao xe và hành trình lái thử đầy cảm xúc.",
@@ -512,7 +512,7 @@ const JOBS_DATA = [
   },
   {
     id: 17,
-    title: "Tuyển Dụng Trưởng Phòng Kinh Doanh – VinFast Thịnh Cường – Thu Nhập 20-50 Triệu",
+    title: "Tuyển Dụng Trưởng Phòng Kinh Doanh – VinFast Phương Đông – Thu Nhập 20-50 Triệu",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -541,7 +541,7 @@ const JOBS_DATA = [
   },
   {
     id: 18,
-    title: "Tuyển Dụng Nhân Viên Kinh Doanh – VinFast Thịnh Cường – Thu Nhập Hấp Dẫn",
+    title: "Tuyển Dụng Nhân Viên Kinh Doanh – VinFast Phương Đông – Thu Nhập Hấp Dẫn",
     day: "16",
     month: "Th8",
     date: "16/08/2025",
@@ -750,11 +750,11 @@ export default function CareersPage() {
 
   return (
     <div className="w-full bg-[#fdfdfd] min-h-screen">
-      {/* 1. HERO BANNER CHUẨN THỊNH CƯỜNG (VF 9 ĐEN TRÊN CAO TỐC) */}
+      {/* 1. HERO BANNER CHUẨN PHƯƠNG ĐÔNG (VF 9 ĐEN TRÊN CAO TỐC) */}
       <section className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[400px] flex items-center justify-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/anh-dep2.png"
-          alt="Tin tuyển dụng VinFast Thịnh Cường"
+          alt="Tin tuyển dụng VinFast Phương Đông"
           fill
           priority
           sizes="100vw"
@@ -893,7 +893,7 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* 3. LƯỚI DANH SÁCH BÀI ĐĂNG TUYỂN DỤNG (3 CỘT CHUẨN THỊNH CƯỜNG) */}
+      {/* 3. LƯỚI DANH SÁCH BÀI ĐĂNG TUYỂN DỤNG (3 CỘT CHUẨN PHƯƠNG ĐÔNG) */}
       <section className="py-10 md:py-14">
         <div className="max-w-[1320px] mx-auto px-4 sm:px-6 lg:px-8">
           {filteredJobs.length === 0 ? (
@@ -930,7 +930,7 @@ export default function CareersPage() {
                         className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                       />
 
-                      {/* Date Badge chuẩn phong cách Thịnh Cường */}
+                      {/* Date Badge chuẩn phong cách Phương Đông */}
                       <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs rounded-md px-2.5 py-1 text-center shadow-xs border border-gray-100 leading-tight">
                         <span className="block text-[10px] font-bold text-gray-500 uppercase">
                           {job.month}
@@ -1108,7 +1108,7 @@ export default function CareersPage() {
                     Nộp Hồ Sơ Ứng Tuyển Nhanh
                   </h4>
                   <p className="text-xs text-gray-500 mb-4">
-                    Phòng Nhân sự VinFast Thịnh Cường sẽ phản hồi trong vòng 24h làm việc.
+                    Phòng Nhân sự VinFast Phương Đông sẽ phản hồi trong vòng 24h làm việc.
                   </p>
 
                   {applySuccess ? (

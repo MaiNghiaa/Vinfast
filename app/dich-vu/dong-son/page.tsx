@@ -168,7 +168,7 @@ export default function DichVuDongSonPage() {
       <section className="relative w-full h-[380px] sm:h-[460px] md:h-[520px] lg:h-[560px] flex items-center justify-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/sua-1.1.jpg"
-          alt="Dịch vụ đồng sơn công nghệ cao VinFast Thịnh Cường"
+          alt="Dịch vụ đồng sơn công nghệ cao VinFast Phương Đông"
           fill
           priority
           sizes="100vw"
@@ -178,7 +178,7 @@ export default function DichVuDongSonPage() {
         <div className="relative z-10 text-center px-4 max-w-[1300px] mx-auto text-white space-y-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight drop-shadow-md leading-[1.35]">
             DỊCH VỤ ĐỒNG SƠN CÔNG NGHỆ CAO
-            <span className="text-[#f80000] block mt-1">VINFAST THỊNH CƯỜNG</span>
+            <span className="text-[#f80000] block mt-1">VINFAST PHƯƠNG ĐÔNG</span>
           </h1>
           <p className="text-xs sm:text-sm md:text-base text-gray-200 max-w-2xl mx-auto leading-relaxed">
             Với quy trình Đồng Sơn tỉ mỉ, chuyên nghiệp từ khâu xử lý bề mặt, pha màu, quy trình sơn sấy và hoàn thiện sau khi sơn, xế yêu của Quý khách sẽ được trả lại vẻ đẹp như thuở ban đầu.
@@ -194,7 +194,7 @@ export default function DichVuDongSonPage() {
         </div>
       </section>
 
-      {/* 2. CHỌN VINFAST THỊNH CƯỜNG - CHỌN ĐỒNG SƠN CHẤT LƯỢNG */}
+      {/* 2. CHỌN VINFAST PHƯƠNG ĐÔNG - CHỌN ĐỒNG SƠN CHẤT LƯỢNG */}
       <section
         className="py-14 sm:py-20 bg-white relative"
         style={{
@@ -211,7 +211,7 @@ export default function DichVuDongSonPage() {
             <div className="lg:col-span-6 space-y-6">
               <div>
                 <span className="text-sm sm:text-base font-bold uppercase text-[#f80000] tracking-wider block">
-                  CHỌN VINFAST THỊNH CƯỜNG
+                  CHỌN VINFAST PHƯƠNG ĐÔNG
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight mt-1">
                   CHỌN DỊCH VỤ ĐỒNG SƠN CHẤT LƯỢNG
@@ -252,7 +252,7 @@ export default function DichVuDongSonPage() {
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-sm border border-gray-200">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-2.jpg"
-                  alt="Dịch vụ đồng sơn VinFast Thịnh Cường"
+                  alt="Dịch vụ đồng sơn VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
@@ -261,7 +261,7 @@ export default function DichVuDongSonPage() {
               <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-sm border border-gray-200">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/13-1.jpg"
-                  alt="Phòng sơn sấy VinFast Thịnh Cường"
+                  alt="Phòng sơn sấy VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 50vw, 25vw"
                   className="object-cover"
@@ -298,7 +298,7 @@ export default function DichVuDongSonPage() {
         </div>
       </section>
 
-      {/* 4. 8 HẠNG MỤC DỊCH VỤ ĐỒNG SƠN TẠI ĐẠI LÝ (MATCHING GỐC THỊNH CƯỜNG) */}
+      {/* 4. 8 HẠNG MỤC DỊCH VỤ ĐỒNG SƠN TẠI ĐẠI LÝ (MATCHING GỐC PHƯƠNG ĐÔNG) */}
       <section className="py-14 sm:py-20 bg-white border-t border-gray-100">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           {/* Header matching original: M2.png watermark on top left, HẠNG MỤC (red), DỊCH VỤ ĐỒNG SƠN TẠI ĐẠI LÝ (black) */}
@@ -384,7 +384,7 @@ export default function DichVuDongSonPage() {
                 QUY TRÌNH ĐỒNG SƠN CHẤT LƯỢNG
               </h2>
               <p className="text-sm sm:text-base font-bold text-[#f80000] uppercase mt-1">
-                TẠI VINFAST THỊNH CƯỜNG
+                TẠI VINFAST PHƯƠNG ĐÔNG
               </p>
             </div>
             {/* Scroll buttons */}
@@ -450,7 +450,7 @@ export default function DichVuDongSonPage() {
       <section className="relative w-full py-20 sm:py-28 flex items-center justify-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/sua-1.1.jpg"
-          alt="Video dịch vụ đồng sơn VinFast Thịnh Cường"
+          alt="Video dịch vụ đồng sơn VinFast Phương Đông"
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -463,7 +463,7 @@ export default function DichVuDongSonPage() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-tight">
             VIDEO DỊCH VỤ ĐỒNG SƠN - PHỤC HỒI XE TAI NẠN
             <br />
-            <span className="text-[#f80000]">TẠI VINFAST THỊNH CƯỜNG</span>
+            <span className="text-[#f80000]">TẠI VINFAST PHƯƠNG ĐÔNG</span>
           </h2>
           <div className="flex justify-center pt-2">
             <div className="relative">
@@ -489,7 +489,7 @@ export default function DichVuDongSonPage() {
               <div className="relative w-full h-full min-h-[380px] lg:min-h-[460px] rounded-2xl overflow-hidden shadow-md border border-gray-200">
                 <Image
                   src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/sua-13.1.jpg"
-                  alt="Xưởng BP VinFast Thịnh Cường"
+                  alt="Xưởng BP VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
@@ -507,7 +507,7 @@ export default function DichVuDongSonPage() {
                   SỬA CHỮA THÂN XE & SƠN CHÍNH HÃNG
                 </h2>
                 <p className="text-xs sm:text-sm font-bold text-gray-500 uppercase mt-1">
-                  VINFAST THỊNH CƯỜNG
+                  VINFAST PHƯƠNG ĐÔNG
                 </p>
                 <div className="w-16 h-0.5 bg-black mt-2 mb-4" />
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">

@@ -21,7 +21,7 @@ export default function NewsListPage() {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-8 flex items-center gap-2">
           <Link href="/" className="hover:text-[#1863dc]">Trang chủ</Link>
           <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-          <span className="text-gray-900 font-bold">Tin tức & Sự kiện VinFast Thịnh Cường</span>
+          <span className="text-gray-900 font-bold">Tin tức & Sự kiện VinFast Phương Đông</span>
         </div>
       </div>
 

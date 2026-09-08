@@ -22,14 +22,14 @@ export default function SingleArticlePage() {
   const nextPost =
     currentIndex < POSTS.length - 1 ? POSTS[currentIndex + 1] : POSTS[0];
 
-  // Parse date for Thịnh Cường date badge (e.g. 31/08/2026 -> TH8 / 31)
+  // Parse date for Phương Đông date badge (e.g. 31/08/2026 -> TH8 / 31)
   const dateParts = post.publishedDate?.split("/") || ["31", "08", "2026"];
   const day = dateParts[0] || "31";
   const month = dateParts[1] ? `TH${parseInt(dateParts[1], 10)}` : "TH8";
 
   return (
     <div className="w-full bg-[#fdfdfd] min-h-screen">
-      {/* 1. HERO BANNER CHUẨN THỊNH CƯỜNG (anh-dep2.png) */}
+      {/* 1. HERO BANNER CHUẨN PHƯƠNG ĐÔNG (anh-dep2.png) */}
       <section className="relative w-full h-[220px] sm:h-[280px] md:h-[340px] flex items-center justify-center overflow-hidden">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/anh-dep2.png"
@@ -49,7 +49,7 @@ export default function SingleArticlePage() {
         </div>
       </section>
 
-      {/* 2. MAIN ARTICLE CONTAINER (Exact 850px width matching Thịnh Cường 1:1) */}
+      {/* 2. MAIN ARTICLE CONTAINER (Exact 850px width matching Phương Đông 1:1) */}
       <div className="max-w-[850px] mx-auto px-4 sm:px-6 py-8">
         <article className="space-y-4">
           {/* Top Featured Image with Date Badge */}
@@ -155,7 +155,7 @@ export default function SingleArticlePage() {
             </div>
           </div>
 
-          {/* 4. POST NAVIGATION (Previous / Next matching Thịnh Cường 1:1) */}
+          {/* 4. POST NAVIGATION (Previous / Next matching Phương Đông 1:1) */}
           <nav className="my-8 border-t border-b border-gray-200 py-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Prev post */}

@@ -50,7 +50,7 @@ export default function UtilitiesSection() {
             <span className="block text-[15px] sm:text-[16px] text-[#3AB3FF] font-extrabold tracking-wider mb-1">
               TIỆN ÍCH
             </span>
-            CHỌN DỊCH VỤ VINFAST THỊNH CƯỜNG
+            CHỌN DỊCH VỤ VINFAST PHƯƠNG ĐÔNG
           </h2>
           <div className="w-14 h-[3px] bg-[#3AB3FF] mx-auto mt-3"></div>
         </div>

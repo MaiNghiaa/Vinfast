@@ -11,153 +11,171 @@ export default function Footer() {
       {/* ========================================================================= */}
       <div className="w-full bg-[#ededed] pt-[75px] pb-[85px]">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
-            {/* Cột 1: Thông tin công ty Thịnh Cường */}
-            <div>
-              <div className="mb-5">
-                <Link href="/">
-                  <Image
-                    src="/images/footer/logo1-2048x626-1.png"
-                    alt="VinFast Thịnh Cường Logo"
-                    width={230}
-                    height={70}
-                    className="w-[220px] h-auto object-contain"
-                    priority
-                  />
-                </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+            {/* Cột 1: Thông tin công ty Phương Đông (lg:col-span-4) */}
+            <div className="lg:col-span-4 flex flex-col justify-between">
+              <div>
+                <div className="mb-4">
+                  <Link href="/" className="inline-block">
+                    <Image
+                      src="/images/logo-phuong-dong.png"
+                      alt="VinFast Phương Đông Logo"
+                      width={210}
+                      height={64}
+                      className="w-[200px] h-auto object-contain"
+                      priority
+                    />
+                  </Link>
+                </div>
+                <h2 className="text-[17px] lg:text-[18px] font-bold text-black uppercase mb-3.5 leading-snug">
+                  CÔNG TY CỔ PHẦN PHƯƠNG ĐÔNG
+                </h2>
+                <div className="space-y-3 text-[14px] font-medium text-black leading-[1.7]">
+                  <p>
+                    <strong className="font-bold">Nhà phân phối chính hãng VinFast Việt Nam</strong>
+                  </p>
+                  <p>
+                    Hotline tổng đài 24/7:{" "}
+                    <strong className="font-bold">
+                      <a
+                        href="tel:0902422522"
+                        className="text-black hover:text-[#f20000] transition-colors"
+                      >
+                        090 242 25 22
+                      </a>
+                    </strong>
+                  </p>
+                  <p>
+                    Mail CSKH:{" "}
+                    <strong className="font-bold">
+                      <a
+                        href="mailto:cskh@vinfastphuongdong.com.vn"
+                        className="text-black hover:text-[#f20000] transition-colors"
+                      >
+                        cskh@vinfastphuongdong.com.vn
+                      </a>
+                    </strong>
+                  </p>
+                  <p>
+                    Trụ sở chính:{" "}
+                    <strong className="font-bold">
+                      G2, Green Bay, Mễ Trì, Nam Từ Liêm, Hà Nội
+                    </strong>
+                  </p>
+                </div>
               </div>
-              <h2 className="text-[18px] lg:text-[19px] font-bold text-black uppercase mb-4 leading-snug">
-                CÔNG TY CỔ PHẦN THỊNH CƯỜNG
-              </h2>
-              <div className="space-y-3.5 text-[14.5px] font-medium text-black leading-[1.75]">
+
+              <div className="pt-3 text-[14px] font-medium text-black">
                 <p>
-                  <strong className="font-bold">Nhà phân phối chính hãng Vinfast Việt Nam</strong>
-                </p>
-                <p>
-                  Hotline tổng đài 24/7:{" "}
+                  Thời gian làm việc:{" "}
                   <strong className="font-bold">
-                    <a
-                      href="tel:0902422522"
-                      className="text-black hover:text-[#f20000] transition-colors"
-                    >
+                    08:00 – 18:00 (Thứ 2 – Chủ nhật)
+                  </strong>
+                </p>
+              </div>
+            </div>
+
+            {/* Cột 2: Hệ thống 4 Showroom tại Hà Nội (lg:col-span-8) */}
+            <div className="lg:col-span-8 flex flex-col justify-between">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-3.5 border-b border-gray-300 pb-2.5">
+                <h2 className="text-[17px] lg:text-[18px] font-bold text-black uppercase leading-snug">
+                  HỆ THỐNG SHOWROOM HÀ NỘI
+                </h2>
+                <span className="text-[12px] font-semibold text-gray-700 bg-gray-200/90 px-2.5 py-0.5 rounded">
+                  4 Cơ sở đại lý chính thức
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-4.5 text-[14px] text-black flex-1">
+                {/* Cơ sở 1: Hoàng Quốc Việt */}
+                <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-[#e53935] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
+                        N00802
+                      </span>
+                      <p className="font-extrabold text-black text-[14.5px] leading-snug">
+                        VINFAST HOÀNG QUỐC VIỆT
+                      </p>
+                    </div>
+                    <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
+                      Địa chỉ: Số 14 Hoàng Quốc Việt, Cầu Giấy, HN
+                    </p>
+                  </div>
+                  <p className="text-[13px] text-gray-600 mt-2">
+                    Hotline tư vấn:{" "}
+                    <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
                       090 242 25 22
                     </a>
-                  </strong>
-                </p>
-                <p>
-                  Mail CSKH:{" "}
-                  <strong className="font-bold">
-                    <a
-                      href="mailto:cskh@vinfastthinhcuong.com.vn"
-                      className="text-black hover:text-[#f20000] transition-colors"
-                    >
-                      cskh@vinfastthinhcuong.com.vn
+                  </p>
+                </div>
+
+                {/* Cơ sở 2: Bát Tràng */}
+                <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-[#e53935] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
+                        N00804
+                      </span>
+                      <p className="font-extrabold text-black text-[14.5px] leading-snug">
+                        VINFAST BÁT TRÀNG
+                      </p>
+                    </div>
+                    <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
+                      Địa chỉ: 268 Đường Giáp Hải, Xã Bát Tràng, HN
+                    </p>
+                  </div>
+                  <p className="text-[13px] text-gray-600 mt-2">
+                    Hotline tư vấn:{" "}
+                    <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
+                      090 242 25 22
                     </a>
-                  </strong>
-                </p>
-                <p>
-                  Trụ sở:{" "}
-                  <strong className="font-bold">
-                    G2, Green Bay, Mễ Trì, Nam Từ Liêm, Hà Nội
-                  </strong>
-                </p>
-              </div>
-            </div>
+                  </p>
+                </div>
 
-            {/* Cột 2: Hà Nội */}
-            <div>
-              <h2 className="text-[18px] lg:text-[19px] font-bold text-black uppercase mb-4 leading-snug">
-                HÀ NỘI
-              </h2>
-              <div className="space-y-5 text-[14.5px] text-black">
-                <div>
-                  <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                    1 – VINFAST THỊNH CƯỜNG OCEAN PARK
-                  </p>
-                  <p className="text-[13.5px] font-semibold text-[#1a1a1a] mt-1 leading-snug">
-                    Địa chỉ: Tầng 1 TTTM Vincom Ocean Park, Kiêu Kỵ, Gia Lâm, Hà Nội
-                  </p>
-                </div>
-                <div>
-                  <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                    2 – VINFAST THỊNH CƯỜNG LONG BIÊN
-                  </p>
-                  <p className="text-[13.5px] font-semibold text-[#1a1a1a] mt-1 leading-snug">
-                    Địa chỉ: Tầng 1, TTTM Vincom Plaza, KĐT Vinhomes Riverside, Long Biên, Hà Nội
-                  </p>
-                </div>
-                <div>
-                  <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                    3 – VINFAST THỊNH CƯỜNG SMART CITY
-                  </p>
-                  <p className="text-[13.5px] font-semibold text-[#1a1a1a] mt-1 leading-snug">
-                    Địa chỉ: Tầng 1 TTTM Vincom Smart City, P. Tây Mỗ, Q Nam Từ Liêm, HN
+                {/* Cơ sở 3: Thường Tín */}
+                <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-[#e53935] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
+                        N00801
+                      </span>
+                      <p className="font-extrabold text-black text-[14.5px] leading-snug">
+                        VINFAST THƯỜNG TÍN
+                      </p>
+                    </div>
+                    <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
+                      Địa chỉ: 207 Quán Gánh, Thường Tín, HN
+                    </p>
+                  </div>
+                  <p className="text-[13px] text-gray-600 mt-2">
+                    Hotline tư vấn:{" "}
+                    <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
+                      090 242 25 22
+                    </a>
                   </p>
                 </div>
-                <div>
-                  <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                    4 – VINFAST THỊNH CƯỜNG SƠN TÂY
-                  </p>
-                  <p className="text-[13.5px] font-semibold text-[#1a1a1a] mt-1 leading-snug">
-                    Địa chỉ: Khu Cầu Quan, Trung Sơn Trầm, Sơn Tây, Hà Nội
-                  </p>
-                </div>
-                <div>
-                  <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                    5 – VINFAST THỊNH CƯỜNG XUÂN MAI
-                  </p>
-                  <p className="text-[13.5px] font-semibold text-[#1a1a1a] mt-1 leading-snug">
-                    Địa chỉ: Khu Đồng Vai, TT Xuân Mai, Chương Mỹ, Hà Nội
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            {/* Cột 3: Quảng Ninh */}
-            <div>
-              <h2 className="text-[18px] lg:text-[19px] font-bold text-black uppercase mb-4 leading-snug">
-                QUẢNG NINH
-              </h2>
-              <div className="space-y-5 text-[14.5px] text-black">
-                <div>
-                  <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                    1 – VINFAST THỊNH CƯỜNG UÔNG BÍ
-                  </p>
-                  <p className="text-[13.5px] font-semibold text-[#1a1a1a] mt-1 leading-snug">
-                    Địa chỉ: 114 Trần Thái Tông, Phường Yên Thanh, Thành Phố Uông Bí, Tỉnh Quảng Ninh.
-                  </p>
-                </div>
-                <div>
-                  <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                    2 – VINFAST THỊNH CƯỜNG CẨM PHẢ
-                  </p>
-                  <p className="text-[13.5px] font-semibold text-[#1a1a1a] mt-1 leading-snug">
-                    Địa chỉ: Tổ 5, Khu Diêm Thủy, P.Cẩm Bình, TP Cẩm Phả, Quảng Ninh
-                  </p>
-                </div>
-                <div>
-                  <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                    3 – VINFAST THỊNH CƯỜNG HẠ LONG
-                  </p>
-                  <p className="text-[13.5px] font-semibold text-[#1a1a1a] mt-1 leading-snug">
-                    Địa chỉ: Vincom Hạ Long, Khu Cột Đồng Hồ, Bạch Đằng, TP. Hạ Long, Quảng Ninh
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Cột 4: Vĩnh Phúc */}
-            <div>
-              <h2 className="text-[18px] lg:text-[19px] font-bold text-black uppercase mb-4 leading-snug">
-                VĨNH PHÚC
-              </h2>
-              <div className="space-y-5 text-[14.5px] text-black">
-                <div>
-                  <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                    1 – VINFAST THỊNH CƯỜNG VĨNH PHÚC
-                  </p>
-                  <p className="text-[13.5px] font-semibold text-[#1a1a1a] mt-1 leading-snug">
-                    Địa chỉ: Ngã 4 Nguyễn Tất Thành, P. Định Trung, TP Vĩnh Yên, Vĩnh Phúc
+                {/* Cơ sở 4: Hòa Lạc */}
+                <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-[#e53935] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
+                        N00803
+                      </span>
+                      <p className="font-extrabold text-black text-[14.5px] leading-snug">
+                        VINFAST HÒA LẠC
+                      </p>
+                    </div>
+                    <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
+                      Địa chỉ: Tầng 1, Tòa nhà Hòa Lạc Mall, Thôn 2, Hoà Lạc, HN
+                    </p>
+                  </div>
+                  <p className="text-[13px] text-gray-600 mt-2">
+                    Hotline tư vấn:{" "}
+                    <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
+                      090 242 25 22
+                    </a>
                   </p>
                 </div>
               </div>
@@ -167,7 +185,7 @@ export default function Footer() {
       </div>
 
       {/* ========================================================================= */}
-      {/* SECTION 2: DÒNG XE HOT, VỀ VINFAST THỊNH CƯỜNG, SOCIAL, BỘ CÔNG THƯƠNG    */}
+      {/* SECTION 2: DÒNG XE HOT, VỀ VINFAST PHƯƠNG ĐÔNG, SOCIAL, BỘ CÔNG THƯƠNG    */}
       {/* Background: #dadada, padding: 55px 0px, container: 1380px                 */}
       {/* ========================================================================= */}
       <div className="w-full bg-[#dadada] py-[55px]">
@@ -242,10 +260,10 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Cột 2: Về VinFast Thịnh Cường (col-span-3) */}
+            {/* Cột 2: Về VinFast Phương Đông (col-span-3) */}
             <div className="lg:col-span-3">
               <h2 className="text-[18px] lg:text-[19px] font-bold text-black uppercase mb-4 leading-snug">
-                VỀ VINFAST THỊNH CƯỜNG
+                VỀ VINFAST PHƯƠNG ĐÔNG
               </h2>
               <ul className="space-y-2.5 text-[14px] text-black">
                 <li>
@@ -310,7 +328,7 @@ export default function Footer() {
                 />
               </div>
               <p className="text-[12px] text-[#333333] font-normal leading-normal">
-                VinFast Thịnh Cường | Bảo lưu mọi quyền
+                VinFast Phương Đông | Bảo lưu mọi quyền
               </p>
               <p className="text-[12px] text-[#333333] font-normal leading-normal mt-0.5">
                 All rights reserved © 2025
@@ -321,29 +339,29 @@ export default function Footer() {
       </div>
 
       {/* ========================================================================= */}
-      {/* SECTION 3: HỆ SINH THÁI TẬP ĐOÀN THỊNH CƯỜNG                              */}
+      {/* SECTION 3: HỆ SINH THÁI TẬP ĐOÀN PHƯƠNG ĐÔNG                              */}
       {/* Background: #eeeeee, padding: 55px 0px, card trắng cao ráo, logo to rõ nét  */}
       {/* ========================================================================= */}
       <div className="w-full bg-[#eeeeee] py-[55px] border-t border-white/20">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           <div className="bg-white rounded-2xl py-8 px-6 sm:px-14 shadow-xs flex flex-wrap lg:flex-nowrap items-center justify-between gap-6 sm:gap-8 min-h-[115px]">
-            {/* Logo 1: Thịnh Cường có slogan (Lớn, cao ~75px) */}
+            {/* Logo 1: Phương Đông có slogan (Lớn, cao ~75px) */}
             <div className="shrink-0 flex items-center justify-center">
               <Image
                 src="/images/footer/Logo-Thinh-Cuong-doc-co-slogan-01.png"
-                alt="Logo công ty cổ phần Thịnh Cường"
+                alt="Logo công ty cổ phần Phương Đông"
                 width={180}
                 height={110}
                 className="h-[70px] sm:h-[76px] w-auto object-contain"
               />
             </div>
 
-            {/* Tiêu đề 2 dòng: HỆ SINH THÁI / TẬP ĐOÀN THỊNH CƯỜNG (Chữ to, đậm, rõ nét) */}
+            {/* Tiêu đề 2 dòng: HỆ SINH THÁI / TẬP ĐOÀN PHƯƠNG ĐÔNG (Chữ to, đậm, rõ nét) */}
             <div className="text-center shrink-0 px-2">
               <h4 className="text-[16px] sm:text-[17.5px] font-black text-black uppercase leading-[1.25] tracking-tight">
                 <span>HỆ SINH THÁI</span>
                 <br />
-                <span>TẬP ĐOÀN THỊNH CƯỜNG</span>
+                <span>TẬP ĐOÀN PHƯƠNG ĐÔNG</span>
               </h4>
             </div>
 
@@ -351,18 +369,18 @@ export default function Footer() {
             <div className="shrink-0 flex items-center justify-center">
               <Image
                 src="/images/footer/Xanh-SM-03-scaled.png"
-                alt="Xanh SM Thịnh Cường"
+                alt="Xanh SM Phương Đông"
                 width={220}
                 height={69}
                 className="h-[54px] sm:h-[58px] w-auto object-contain"
               />
             </div>
 
-            {/* Logo 3: VinFast Thịnh Cường (Lớn, rõ nét cả logo V và THỊNH CƯỜNG, cao ~48px) */}
+            {/* Logo 3: VinFast Phương Đông */}
             <div className="shrink-0 flex items-center justify-center">
               <Image
-                src="/images/footer/logo1-2048x626-1.png"
-                alt="VinFast Thịnh Cường logo"
+                src="/images/logo-phuong-dong.png"
+                alt="VinFast Phương Đông logo"
                 width={210}
                 height={64}
                 className="h-[46px] sm:h-[50px] w-auto object-contain"

@@ -20,7 +20,7 @@ export default function BookingModal({
 }: BookingModalProps) {
   const [type, setType] = useState<"lai-thu" | "bao-gia" | "dich-vu">(defaultType);
   const [selectedVehicle, setSelectedVehicle] = useState(defaultVehicleSlug || "vinfast-vf3");
-  const [selectedShowroom, setSelectedShowroom] = useState("ocean-park");
+  const [selectedShowroom, setSelectedShowroom] = useState("hoang-quoc-viet");
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
   const [preferredDate, setPreferredDate] = useState("");
@@ -76,7 +76,7 @@ export default function BookingModal({
               Đăng Ký Thành Công!
             </h3>
             <p className="text-xs text-gray-600 leading-relaxed">
-              Cảm ơn Quý khách <strong>{fullName}</strong> đã gửi yêu cầu. Chuyên viên tư vấn của <strong>VinFast Thịnh Cường</strong> sẽ liên hệ qua số <strong>{phone}</strong> trong vòng 15 phút để xác nhận lịch hẹn.
+              Cảm ơn Quý khách <strong>{fullName}</strong> đã gửi yêu cầu. Chuyên viên tư vấn của <strong>VinFast Phương Đông</strong> sẽ liên hệ qua số <strong>{phone}</strong> trong vòng 15 phút để xác nhận lịch hẹn.
             </p>
             <div className="bg-gray-50 p-4 rounded-lg text-xs text-gray-500 text-left space-y-1 border border-gray-200">
               <p>📍 Cơ sở tiếp nhận: <strong>{SHOWROOMS.find((s) => s.id === selectedShowroom)?.name}</strong></p>

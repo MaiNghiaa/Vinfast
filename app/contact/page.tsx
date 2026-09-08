@@ -16,45 +16,39 @@ interface HotlineBox {
 
 const HOTLINE_BOXES: HotlineBox[] = [
   {
-    title: "HOTLINE BÁN HÀNG",
+    title: "HOTLINE BÁN HÀNG & LÁI THỬ",
     items: [
-      { name: "VINFAST THỊNH CƯỜNG LONG BIÊN (HÀ NỘI)", phone: "0933 579 889" },
-      { name: "VINFAST THỊNH CƯỜNG OCEAN PARK (HÀ NỘI)", phone: "0988 499 932" },
-      { name: "VINFAST THỊNH CƯỜNG SƠN TÂY (HÀ NỘI)", phone: "0971 041 999" },
-      { name: "VINFAST THỊNH CƯỜNG SMART CITY (HÀ NỘI)", phone: "0889 139 388" },
-      { name: "VINFAST THỊNH CƯỜNG XUÂN MAI (HÀ NỘI)", phone: "0856 157 222" },
+      { name: "VINFAST PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT (N00802)", phone: "090 242 25 22" },
+      { name: "VINFAST PHƯƠNG ĐÔNG BÁT TRÀNG (N00804)", phone: "090 242 25 22" },
+      { name: "VINFAST PHƯƠNG ĐÔNG THƯỜNG TÍN (N00801)", phone: "090 242 25 22" },
+      { name: "VINFAST PHƯƠNG ĐÔNG HÒA LẠC (N00803)", phone: "090 242 25 22" },
     ],
   },
   {
-    title: "HOTLINE BÁN HÀNG",
+    title: "HOTLINE DỊCH VỤ & BẢO DƯỠNG",
     items: [
-      { name: "VINFAST THỊNH CƯỜNG VĨNH PHÚC (VĨNH PHÚC)", phone: "0968 930 869" },
-      { name: "VINFAST THỊNH CƯỜNG CẨM PHẢ (QUẢNG NINH)", phone: "0856 157 222" },
-      { name: "VINFAST THỊNH CƯỜNG HẠ LONG (QUẢNG NINH)", phone: "0981 335 507" },
-      { name: "VINFAST THỊNH CƯỜNG UÔNG BÍ (QUẢNG NINH)", phone: "0974 820 098" },
+      { name: "XƯỞNG DỊCH VỤ HOÀNG QUỐC VIỆT", phone: "090 242 25 22" },
+      { name: "XƯỞNG DỊCH VỤ BÁT TRÀNG", phone: "090 242 25 22" },
+      { name: "XƯỞNG DỊCH VỤ THƯỜNG TÍN", phone: "090 242 25 22" },
+      { name: "XƯỞNG DỊCH VỤ HÒA LẠC", phone: "090 242 25 22" },
     ],
   },
   {
-    title: "HOTLINE DỊCH VỤ",
+    title: "CỨU HỘ & KỸ THUẬT 24/7",
     items: [
-      { name: "VINFAST THỊNH CƯỜNG LONG BIÊN (HÀ NỘI)", phone: "0981 760 599" },
-      { name: "VINFAST THỊNH CƯỜNG OCEAN PARK (HÀ NỘI)", phone: "0984 597 786" },
-      { name: "VINFAST THỊNH CƯỜNG SƠN TÂY (HÀ NỘI)", phone: "0965 469 888" },
-      { name: "VINFAST THỊNH CƯỜNG SMART CITY (HÀ NỘI)", phone: "0345 002 966" },
-      { name: "VINFAST THỊNH CƯỜNG VIỆT TRÌ (HÀ NỘI)", phone: "0979 071 997" },
-      { name: "VINFAST THỊNH CƯỜNG ĐÀI TƯ (HÀ NỘI)", phone: "0981 189 068" },
+      { name: "CỨU HỘ PIN TOÀN QUỐC (24/7)", phone: "1900 23 23 89" },
+      { name: "CỨU HỘ XE & KÉO XE KHẨN CẤP", phone: "090 242 25 22" },
+      { name: "SỬA CHỮA LƯU ĐỘNG (MOBILE SERVICE)", phone: "090 242 25 22" },
+      { name: "KỸ THUẬT VIÊN TRỰC KHẨN CẤP", phone: "090 242 25 22" },
     ],
   },
   {
-    title: "HOTLINE DỊCH VỤ",
+    title: "CSKH & PHỤ TÙNG CHÍNH HÃNG",
     items: [
-      { name: "VINFAST THỊNH CƯỜNG XUÂN MAI (HÀ NỘI)", phone: "0866 233 301" },
-      { name: "VINFAST THỊNH CƯỜNG VĨNH PHÚC (HÀ NỘI)", phone: "0336 459 969" },
-      { name: "VINFAST THỊNH CƯỜNG HẠ LONG (QUẢNG NINH)", phone: "0968 197 266" },
-      { name: "VINFAST THỊNH CƯỜNG UÔNG BÍ (QUẢNG NINH)", phone: "0963 206 899" },
-      { name: "VINFAST THỊNH CƯỜNG TUYÊN QUANG (TUYÊN QUANG)", phone: "0866 233 303" },
-      { name: "VINFAST THỊNH CƯỜNG UÔNG BÍ (QUẢNG NINH)", phone: "0963 206 899" },
-      { name: "VINFAST THỊNH CƯỜNG HỒ CHÍ MINH (Q12.TP.HCM)", phone: "0866 233 306" },
+      { name: "TỔNG ĐÀI CSKH PHƯƠNG ĐÔNG", phone: "090 242 25 22" },
+      { name: "KINH DOANH PHỤ TÙNG CHÍNH HÃNG", phone: "090 242 25 22" },
+      { name: "TƯ VẤN TRẢ GÓP & BẢO HIỂM", phone: "090 242 25 22" },
+      { name: "ĐĂNG KÝ LÁI THỬ XE TẬN NHÀ", phone: "090 242 25 22" },
     ],
   },
 ];
@@ -77,11 +71,11 @@ export default function ContactPage() {
 
   return (
     <div className="w-full bg-white">
-      {/* 1. Top Banner (matching Thịnh Cường 1620e3b) */}
+      {/* 1. Top Banner (matching Phương Đông 1620e3b) */}
       <div className="w-full relative overflow-hidden bg-gray-100 aspect-[2560/850] max-h-[460px]">
         <Image
           src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/thinh-cuong.jpg"
-          alt="VinFast Thịnh Cường"
+          alt="VinFast Phương Đông"
           fill
           priority
           className="object-cover w-full h-full"
@@ -89,7 +83,7 @@ export default function ContactPage() {
         />
       </div>
 
-      {/* 2. Map & Headquarters (matching Thịnh Cường 469388c - contact-section-map) */}
+      {/* 2. Map & Headquarters (matching Phương Đông 469388c - contact-section-map) */}
       <section className="py-10 sm:py-14">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
@@ -103,7 +97,7 @@ export default function ContactPage() {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Bản đồ VinFast Thịnh Cường"
+                title="Bản đồ VinFast Phương Đông"
               />
             </div>
 
@@ -111,7 +105,7 @@ export default function ContactPage() {
             <div className="space-y-6 font-['Mulish',sans-serif]">
               <div>
                 <h1 className="text-[24px] sm:text-[30px] font-extrabold uppercase text-[#000000] tracking-tight mb-4">
-                  LIÊN HỆ VINFAST THỊNH CƯỜNG
+                  LIÊN HỆ VINFAST PHƯƠNG ĐÔNG
                 </h1>
               </div>
 
@@ -134,10 +128,10 @@ export default function ContactPage() {
                   <p>
                     – Email:{" "}
                     <a
-                      href="mailto:cskh@vinfastthinhcuong.com.vn"
+                      href="mailto:cskh@vinfastphuongdong.com.vn"
                       className="text-[#333333] hover:text-[#1863dc] transition-colors"
                     >
-                      cskh@vinfastthinhcuong.com.vn
+                      cskh@vinfastphuongdong.com.vn
                     </a>
                   </p>
                 </div>
@@ -159,7 +153,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* 3. Form Section (matching Thịnh Cường 17f8e28 - contact-section-form) */}
+      {/* 3. Form Section (matching Phương Đông 17f8e28 - contact-section-form) */}
       <section className="py-12 bg-gray-50/60 border-t border-b border-gray-100">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-8 font-['Mulish',sans-serif]">
@@ -168,7 +162,7 @@ export default function ContactPage() {
             </h2>
             <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
               Mọi yêu cầu tư vấn về sản phẩm và dịch vụ, Quý khách hàng vui lòng đăng ký thông tin theo mẫu,
-              VinFast Thịnh Cường sẽ liên hệ tới Quý Khách hàng ngay sau khi nhận được thông tin. Xin cảm ơn!
+              VinFast Phương Đông sẽ liên hệ tới Quý Khách hàng ngay sau khi nhận được thông tin. Xin cảm ơn!
             </p>
           </div>
 
@@ -180,7 +174,7 @@ export default function ContactPage() {
                   Thông tin đăng ký đã được gửi thành công!
                 </h3>
                 <p className="text-sm text-gray-600">
-                  VinFast Thịnh Cường sẽ liên hệ với Quý khách trong thời gian sớm nhất.
+                  VinFast Phương Đông sẽ liên hệ với Quý khách trong thời gian sớm nhất.
                 </p>
                 <button
                   type="button"
@@ -274,12 +268,12 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* 4. Showrooms Hotline Directory (matching Thịnh Cường 5025803 - 4 Columns Box-Col) */}
+      {/* 4. Showrooms Hotline Directory (matching Phương Đông 5025803 - 4 Columns Box-Col) */}
       <section className="py-12 sm:py-16">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6 font-['Mulish',sans-serif]">
           <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-[20px] sm:text-[24px] md:text-[26px] font-black uppercase text-[#111111] tracking-tight">
-              THÔNG TIN LIÊN HỆ - HỆ THỐNG SHOWROOM VINFAST THỊNH CƯỜNG
+              THÔNG TIN LIÊN HỆ - HỆ THỐNG SHOWROOM VINFAST PHƯƠNG ĐÔNG
             </h2>
           </div>
 
