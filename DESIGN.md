@@ -1,6 +1,4 @@
----
-name: VinFast Thinh Cuong Electric Mobility
-colors:
+---colors:
   surface: '#f8f9ff'
   surface-dim: '#d0dbed'
   surface-bright: '#f8f9ff'
