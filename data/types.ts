@@ -26,6 +26,8 @@ export interface Vehicle {
   tagline: string;
   basePrice: number; // in VND
   priceText: string; // e.g. "Từ 458.000.000 VNĐ"
+  priceRangeText?: string; // e.g. "278.000.000 ₫ – 296.000.000 ₫"
+  watermarkText?: string; // e.g. "VF 3"
   thumbnail: string;
   bannerImage: string;
   specs: {
@@ -37,12 +39,78 @@ export interface Vehicle {
     wheelbase: string; // mm
     groundClearance: string; // mm
     batteryCapacity: string; // kWh
+    gearbox?: string;
+    engineType?: string;
   };
   colors: VehicleColor[];
   trims: VehicleTrim[];
   features: string[];
   isFeatured?: boolean;
   category: "electric-car" | "green-mobility" | "commercial";
+
+  // Rich detail fields matching VinFast Thịnh Cường 1:1
+  galleryThumbnails?: string[];
+  commitmentsTitle?: string;
+  commitments?: string[];
+  pricingTable?: {
+    version: string;
+    originalPrice: string;
+    promoPrice: string;
+  }[];
+  comparisonTable?: {
+    model: string;
+    features: string[];
+    std1: string;
+    std2: string;
+  }[];
+  monthlyOffer?: string;
+  sliderPhotos?: string[];
+  exteriorData?: {
+    intro: string[];
+    bannerImg: string;
+    items: {
+      title: string;
+      img: string;
+      desc: string;
+    }[];
+  };
+  interiorData?: {
+    intro: string[];
+    bannerImg: string;
+    items: {
+      title: string;
+      img: string;
+      desc: string;
+    }[];
+  };
+  safetyTech?: {
+    title: string;
+    items: {
+      title: string;
+      img: string;
+    }[];
+  };
+  reviewVideo?: {
+    title: string;
+    bgImg: string;
+    videoUrl: string;
+  };
+  lifestyleGallery?: string[];
+  relatedNews?: {
+    id: string;
+    title: string;
+    dateDay: string;
+    dateMonth: string;
+    comments: number;
+    categories: string;
+    excerpt: string;
+    img: string;
+    slug: string;
+  }[];
+  additionalAttributes?: {
+    label: string;
+    value: string;
+  }[];
 }
 
 export interface Showroom {
@@ -59,10 +127,33 @@ export interface Showroom {
   image?: string;
 }
 
+export interface ChargerSpecItem {
+  label: string;
+  value: string;
+}
+
+export interface ChargerPillar {
+  number: number;
+  title: string;
+  subtitle?: string;
+  desc?: string;
+  bullets?: string[];
+  concludingText?: string;
+}
+
+export interface ChargerNewsItem {
+  id: string;
+  title: string;
+  image: string;
+  slug: string;
+  category: string;
+}
+
 export interface Charger {
   id: string;
   slug: string;
   name: string;
+  categoryName: string; // e.g. "Trạm sạc nhanh DC" | "Trạm sạc gia đình AC"
   type: "AC" | "DC";
   power: string;
   chargingTime: string;
@@ -72,6 +163,12 @@ export interface Charger {
   image: string;
   description: string;
   features: string[];
+
+  // Rich detail fields matching VinFast Thịnh Cường 1:1
+  quickSpecs: ChargerSpecItem[];
+  introParagraph?: string;
+  pillars?: ChargerPillar[];
+  relatedNews?: ChargerNewsItem[];
 }
 
 export interface Post {
@@ -86,4 +183,32 @@ export interface Post {
   publishedDate: string;
   author: string;
   isFeatured?: boolean;
+}
+
+export interface UsedCar {
+  id: string;
+  slug: string;
+  name: string;
+  priceText: string;
+  priceNumber?: number;
+  model: string;
+  version: string;
+  year: number;
+  odo: string;
+  odoKm: number;
+  exteriorColor: string;
+  interiorColor: string;
+  seats: number;
+  trunkCapacity: string;
+  rangeNedc: string;
+  battery: string;
+  carCondition: string;
+  allocatedTo: string;
+  documentStatus: string;
+  carStatus: string;
+  image: string;
+  galleryImages: string[];
+  vehicleType: "electric" | "gasoline" | "commercial";
+  province?: string;
+  notes?: string[];
 }

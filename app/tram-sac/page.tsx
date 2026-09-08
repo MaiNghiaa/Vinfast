@@ -15,6 +15,7 @@ const mulish = Mulish({
 
 interface ProductItem {
   id: string;
+  slug: string;
   name: string;
   category: string;
   image: string;
@@ -23,18 +24,21 @@ interface ProductItem {
 const DC_PRODUCTS: ProductItem[] = [
   {
     id: "dc-60kw",
+    slug: "tram-sac-nhanh-dc-60kw",
     name: "Trạm sạc VinFast nhanh DC 60kW",
     category: "Trạm sạc nhanh DC",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/tram-sac-vinfast-60kw.png",
   },
   {
     id: "dc-120kw",
+    slug: "tram-sac-nhanh-dc-120kw",
     name: "Trạm sạc nhanh DC 120kW",
     category: "Trạm sạc nhanh DC",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/60kw-1.png",
   },
   {
     id: "dc-30kw",
+    slug: "tram-sac-nhanh-dc-30kw",
     name: "Trạm sạc nhanh DC 30kW",
     category: "Trạm sạc nhanh DC",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/sachjj.jpg",
@@ -44,18 +48,21 @@ const DC_PRODUCTS: ProductItem[] = [
 const AC_PRODUCTS: ProductItem[] = [
   {
     id: "ac-7kw",
+    slug: "tram-sac-nhanh-ac-7-4-kw",
     name: "Trạm sạc VinFast treo tường AC 7.4kW",
     category: "Trạm sạc gia đình AC",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/pin-tramsac-11_1660273822-300x235.png",
   },
   {
     id: "ac-11kw",
+    slug: "tram-sac-nhanh-ac-11kw",
     name: "Trạm sạc VinFast AC 11kW",
     category: "Trạm sạc doanh nghiệp AC",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/pin-tramsac-8_1660273763-300x122.png",
   },
   {
     id: "ac-22kw",
+    slug: "tram-sac-nhanh-ac-22-kw",
     name: "Trạm sạc VinFast trụ đứng AC 22kW",
     category: "Trạm sạc công cộng AC",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/tram-sac-vinfast-60kw.png",
@@ -258,9 +265,10 @@ export default function ChargingStationPage() {
           {/* Product Grid - Large Chargers filling the cards (matching Image 2 & Elementor grid-v3) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-[30px] pt-4">
             {currentProducts.map((prod) => (
-              <div
+              <Link
                 key={prod.id}
-                className="group bg-white border border-[#e6e6e6] p-4 sm:p-[20px] md:p-[25px] transition-all duration-300 hover:shadow-[0px_0px_10px_0px_rgba(0,0,0,0.35)] flex flex-col justify-between"
+                href={`/tram-sac/${prod.slug}`}
+                className="group bg-white border border-[#e6e6e6] p-4 sm:p-[20px] md:p-[25px] transition-all duration-300 hover:shadow-[0px_0px_10px_0px_rgba(0,0,0,0.35)] flex flex-col justify-between block"
               >
                 {/* Product Image: Full aspect-square so chargers are BIG and prominent */}
                 <div className="relative w-full aspect-square bg-white flex items-center justify-center overflow-hidden">
@@ -283,7 +291,7 @@ export default function ChargingStationPage() {
                     {prod.name}
                   </h3>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
