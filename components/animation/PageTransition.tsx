@@ -1,18 +1,18 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useLayoutEffect } from "react";
 import { usePathname } from "next/navigation";
-import { gsap, useGSAP } from "@/lib/gsap";
+import { gsap } from "@/lib/gsap";
 
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const transitionRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      const el = transitionRef.current;
-      if (!el) return;
+  useLayoutEffect(() => {
+    const el = transitionRef.current;
+    if (!el) return;
 
+    const ctx = gsap.context(() => {
       // Silky smooth entrance transition on route change
       gsap.fromTo(
         el,
@@ -28,9 +28,10 @@ export default function PageTransition({ children }: { children: React.ReactNode
           clearProps: "all",
         }
       );
-    },
-    { scope: transitionRef, dependencies: [pathname] }
-  );
+    });
+
+    return () => ctx.revert();
+  }, [pathname]);
 
   return (
     <div ref={transitionRef} className="w-full">

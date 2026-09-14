@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { gsap, useGSAP } from "@/lib/gsap";
+import React, { useRef, useLayoutEffect } from "react";
+import { gsap } from "@/lib/gsap";
 
 interface StaggerContainerProps {
   children: React.ReactNode;
@@ -24,14 +24,16 @@ export default function StaggerContainer({
 }: StaggerContainerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      const container = containerRef.current;
-      if (!container) return;
+  useLayoutEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
 
-      const items = container.querySelectorAll(itemSelector);
-      if (!items || items.length === 0) return;
+    const items = itemSelector === "> *"
+      ? container.children
+      : container.querySelectorAll(itemSelector);
+    if (!items || items.length === 0) return;
 
+    const ctx = gsap.context(() => {
       gsap.fromTo(
         items,
         {
@@ -52,9 +54,10 @@ export default function StaggerContainer({
           },
         }
       );
-    },
-    { scope: containerRef, dependencies: [stagger, duration, yOffset] }
-  );
+    });
+
+    return () => ctx.revert();
+  }, [stagger, duration, yOffset, delay, itemSelector]);
 
   return (
     <div ref={containerRef} className={className}>

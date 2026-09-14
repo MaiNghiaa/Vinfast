@@ -23,6 +23,7 @@ import { USED_CARS } from "@/data/usedCars";
 import UsedCarDetailPage from "@/components/UsedCarDetailPage";
 import { useModal } from "@/components/ClientLayout";
 import GsapReveal from "@/components/animation/GsapReveal";
+import StaggerContainer from "@/components/animation/StaggerContainer";
 
 export default function VehicleDetailPage({
   params,
@@ -359,6 +360,7 @@ export default function VehicleDetailPage({
         </GsapReveal>
 
         {/* 3. WooCommerce Tabs Bar matching Phương Đông 1:1 */}
+        <GsapReveal animation="fade-up" duration={0.6}>
         <div className="mt-10 mb-6 border-b border-gray-200">
           <div className="flex items-center gap-8">
             <button
@@ -385,6 +387,7 @@ export default function VehicleDetailPage({
             </button>
           </div>
         </div>
+        </GsapReveal>
 
         {/* Tab Content: Thông tin bổ sung */}
         {activeTab === "additional_information" && (
@@ -437,6 +440,7 @@ export default function VehicleDetailPage({
         {activeTab === "description" && (
           <>
             {/* Horizontal Lead Form Bar */}
+            <GsapReveal animation="fade-up" duration={0.7}>
             <div ref={leadFormRef} className="mt-4 bg-[#f5f5f5] p-4 sm:p-5 border border-gray-200">
               {formSubmitted ? (
                 <div className="p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded text-center flex items-center justify-center gap-2 text-sm font-semibold">
@@ -499,13 +503,16 @@ export default function VehicleDetailPage({
                 </form>
               )}
             </div>
+            </GsapReveal>
 
             {/* 4. Specs & Northern Market Best Price */}
             <div className="mt-12 space-y-16">
           {/* SECTION A: 2-Column Specs & Northern Market Best Price */}
+          <GsapReveal animation="fade-up" duration={0.8}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Left: Specs Table */}
-            <div className="lg:col-span-5">
+            <GsapReveal animation="slide-left" duration={0.7} yOffset={40} className="lg:col-span-5">
+            <div>
               <div className="border-b-2 border-black pb-2 mb-6">
                 <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight">
                   THÔNG SỐ KỸ THUẬT {vehicle.name.toUpperCase()}
@@ -543,9 +550,11 @@ export default function VehicleDetailPage({
                 </div>
               </div>
             </div>
+            </GsapReveal>
 
             {/* Right: Northern Market Best Price */}
-            <div className="lg:col-span-7 space-y-4">
+            <GsapReveal animation="slide-right" duration={0.7} yOffset={40} className="lg:col-span-7">
+            <div className="space-y-4">
               <div>
                 <h3 className="text-xl font-black text-gray-900 uppercase tracking-tight mb-2">
                   {vehicle.name.toUpperCase()}: GIÁ TỐT MIỀN BẮC
@@ -639,10 +648,13 @@ export default function VehicleDetailPage({
                 </a>
               </div>
             </div>
+            </GsapReveal>
           </div>
+          </GsapReveal>
 
               {/* SECTION B: Pre-Exterior Dynamic Photo Slider (4 Slides matching Photo 4) */}
               {sliderPhotos.length > 0 && (
+                <GsapReveal animation="scale-up" duration={0.8}>
                 <div className="relative pt-6 group">
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 overflow-hidden rounded-xl">
                     {sliderPhotos.slice(sliderIndex, sliderIndex + 3).map((photo, i) => (
@@ -693,19 +705,23 @@ export default function VehicleDetailPage({
                     </>
                   )}
                 </div>
+                </GsapReveal>
               )}
 
               {/* SECTION C: NGOẠI THẤT (Matching Photo 1 & Photo 4) */}
               {vehicle.exteriorData && (
                 <div className="space-y-8 pt-4">
+                  <GsapReveal animation="fade-up" duration={0.7}>
                   <div>
                     <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight">
                       NGOẠI THẤT {vehicle.name.toUpperCase()}
                     </h2>
                     <div className="w-24 h-1 bg-[#dc2626] mt-2 mb-6" />
                   </div>
+                  </GsapReveal>
 
                   {/* Intro 2-Column: Left Text, Right Large Image */}
+                  <GsapReveal animation="fade-in" duration={0.9}>
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     <div className="lg:col-span-6 space-y-4 text-xs sm:text-[13px] md:text-sm text-gray-800 leading-relaxed">
                       {vehicle.exteriorData.intro.map((p, i) => (
@@ -726,9 +742,10 @@ export default function VehicleDetailPage({
                       />
                     </div>
                   </div>
+                  </GsapReveal>
 
                   {/* 3 Detail Cards (Đầu xe, Thân xe, Đuôi xe - Clean 3-Column Studio Display matching Photo 1) */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+                  <StaggerContainer stagger={0.15} yOffset={30} className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
                     {vehicle.exteriorData.items.map((item, i) => (
                       <div key={i} className="flex flex-col space-y-4">
                         <div className="relative h-56 sm:h-64 md:h-72 w-full flex items-center justify-center">
@@ -753,21 +770,24 @@ export default function VehicleDetailPage({
                         )}
                       </div>
                     ))}
-                  </div>
+                  </StaggerContainer>
                 </div>
               )}
 
               {/* SECTION D: NỘI THẤT (Matching Photo 2) */}
               {vehicle.interiorData && (
                 <div className="space-y-8 pt-10 border-t border-gray-100">
+                  <GsapReveal animation="fade-up" duration={0.7}>
                   <div>
                     <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight">
                       NỘI THẤT {vehicle.name.toUpperCase()}
                     </h2>
                     <div className="w-24 h-1 bg-[#dc2626] mt-2 mb-6" />
                   </div>
+                  </GsapReveal>
 
                   {/* Intro 2-Column: Left Text, Right Large Image */}
+                  <GsapReveal animation="fade-in" duration={0.9}>
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                     <div className="lg:col-span-6 space-y-4 text-xs sm:text-[13px] md:text-sm text-gray-800 leading-relaxed">
                       {vehicle.interiorData.intro.map((p, i) => (
@@ -788,9 +808,10 @@ export default function VehicleDetailPage({
                       />
                     </div>
                   </div>
+                  </GsapReveal>
 
                   {/* 3 Detail Cards (Khoang lái, Ghế, Khoang hành lý - Photo 2) */}
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
+                  <StaggerContainer stagger={0.15} yOffset={30} className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-6">
                     {vehicle.interiorData.items.map((item, i) => (
                       <div key={i} className="flex flex-col space-y-4">
                         <div className="relative aspect-[16/10] sm:h-56 md:h-64 w-full overflow-hidden">
@@ -815,19 +836,21 @@ export default function VehicleDetailPage({
                         )}
                       </div>
                     ))}
-                  </div>
+                  </StaggerContainer>
                 </div>
               )}
 
               {/* SECTION E: CÔNG NGHỆ VÀ VẬN HÀNH (Matching Photo 3) */}
               {safetyItems.length > 0 && (
                 <div className="space-y-6 pt-10 border-t border-gray-100">
+                  <GsapReveal animation="fade-up" duration={0.7}>
                   <div className="text-center">
                     <h2 className="text-2xl sm:text-3xl font-black text-gray-900 uppercase tracking-tight inline-block">
                       {vehicle.safetyTech?.title || `CÔNG NGHỆ VÀ VẬN HÀNH ${vehicle.name.toUpperCase()}`}
                     </h2>
                     <div className="w-24 h-1 bg-[#dc2626] mx-auto mt-2" />
                   </div>
+                  </GsapReveal>
 
                   <div className="relative mt-6 group">
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3">
@@ -900,6 +923,7 @@ export default function VehicleDetailPage({
 
               {/* SECTION F: REVIEW BANNER */}
               {vehicle.reviewVideo && (
+                <GsapReveal animation="scale-up" duration={0.9}>
                 <div className="relative rounded-2xl overflow-hidden h-72 sm:h-96 md:h-[440px] flex items-center justify-center text-center shadow-lg my-8">
                   <Image
                     src={vehicle.reviewVideo.bgImg}
@@ -921,12 +945,13 @@ export default function VehicleDetailPage({
                     </button>
                   </div>
                 </div>
+                </GsapReveal>
               )}
 
               {/* SECTION G: Lifestyle Photo Gallery Swiper (5 Desktop Columns matching Phương Đông 1:1) */}
               {lifestylePhotos.length > 0 && (
                 <div className="space-y-4 pt-4">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
+                  <StaggerContainer stagger={0.1} yOffset={20} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
                     {lifestylePhotos
                       .slice(galleryIndex, galleryIndex + 5)
                       .map((photo, i) => (
@@ -942,7 +967,7 @@ export default function VehicleDetailPage({
                           />
                         </div>
                       ))}
-                  </div>
+                  </StaggerContainer>
 
                   {lifestylePhotos.length > 5 && (
                     <div className="flex items-center justify-center gap-3 pt-2">
@@ -989,14 +1014,16 @@ export default function VehicleDetailPage({
               {/* SECTION H: TIN TỨC MỚI NHẤT */}
               {vehicle.relatedNews && vehicle.relatedNews.length > 0 && (
                 <div className="pt-10 border-t border-gray-100 space-y-6">
+                  <GsapReveal animation="fade-up" duration={0.7}>
                   <div className="text-center">
                     <h2 className="text-2xl font-black text-gray-900 uppercase inline-block">
                       TIN TỨC MỚI NHẤT
                     </h2>
                     <div className="w-20 h-1 bg-[#dc2626] mx-auto mt-2" />
                   </div>
+                  </GsapReveal>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
+                  <StaggerContainer stagger={0.15} yOffset={25} className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-2">
                     {vehicle.relatedNews.map((news) => (
                       <div
                         key={news.id}
@@ -1047,12 +1074,13 @@ export default function VehicleDetailPage({
                         </div>
                       </div>
                     ))}
-                  </div>
+                  </StaggerContainer>
                 </div>
               )}
 
               {/* SECTION I: THÔNG TIN BỔ SUNG (Bottom Specifications Table matching Phương Đông 1:1) */}
               <div className="pt-12 border-t border-gray-200 space-y-4">
+                <GsapReveal animation="fade-up" duration={0.7}>
                 <h2 className="text-xl font-bold text-gray-900">Thông tin bổ sung</h2>
                 <div className="overflow-x-auto max-w-2xl">
                   <table className="w-full text-xs sm:text-sm border border-gray-200">
@@ -1094,6 +1122,7 @@ export default function VehicleDetailPage({
                     </tbody>
                   </table>
                 </div>
+                </GsapReveal>
               </div>
             </div>
           </>

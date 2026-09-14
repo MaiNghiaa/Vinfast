@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { gsap, useGSAP } from "@/lib/gsap";
+import React, { useRef, useLayoutEffect } from "react";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 interface GsapRevealProps {
   children: React.ReactNode;
@@ -25,34 +25,34 @@ export default function GsapReveal({
 }: GsapRevealProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      const el = containerRef.current;
-      if (!el) return;
+  useLayoutEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
 
-      let fromVars: gsap.TweenVars = {
-        opacity: 0,
-      };
+    let fromVars: gsap.TweenVars = {
+      opacity: 0,
+    };
 
-      switch (animation) {
-        case "fade-up":
-          fromVars = { opacity: 0, y: yOffset };
-          break;
-        case "scale-up":
-          fromVars = { opacity: 0, scale: 0.95, y: yOffset / 2 };
-          break;
-        case "slide-left":
-          fromVars = { opacity: 0, x: -yOffset };
-          break;
-        case "slide-right":
-          fromVars = { opacity: 0, x: yOffset };
-          break;
-        case "fade-in":
-        default:
-          fromVars = { opacity: 0 };
-          break;
-      }
+    switch (animation) {
+      case "fade-up":
+        fromVars = { opacity: 0, y: yOffset };
+        break;
+      case "scale-up":
+        fromVars = { opacity: 0, scale: 0.95, y: yOffset / 2 };
+        break;
+      case "slide-left":
+        fromVars = { opacity: 0, x: -yOffset };
+        break;
+      case "slide-right":
+        fromVars = { opacity: 0, x: yOffset };
+        break;
+      case "fade-in":
+      default:
+        fromVars = { opacity: 0 };
+        break;
+    }
 
+    const ctx = gsap.context(() => {
       gsap.fromTo(
         el,
         fromVars,
@@ -71,9 +71,10 @@ export default function GsapReveal({
           },
         }
       );
-    },
-    { scope: containerRef, dependencies: [animation, delay, duration] }
-  );
+    });
+
+    return () => ctx.revert();
+  }, [animation, delay, duration, yOffset, triggerOnce]);
 
   return (
     <div ref={containerRef} className={className}>

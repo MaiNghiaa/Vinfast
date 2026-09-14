@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef } from "react";
-import { gsap, useGSAP } from "@/lib/gsap";
+import React, { useRef, useLayoutEffect } from "react";
+import { gsap } from "@/lib/gsap";
 
 interface AnimatedNumberProps {
   value: number;
@@ -23,13 +23,13 @@ export default function AnimatedNumber({
   const spanRef = useRef<HTMLSpanElement>(null);
   const countObj = useRef({ val: 0 });
 
-  useGSAP(
-    () => {
-      const el = spanRef.current;
-      if (!el) return;
+  useLayoutEffect(() => {
+    const el = spanRef.current;
+    if (!el) return;
 
-      countObj.current.val = 0;
+    countObj.current.val = 0;
 
+    const ctx = gsap.context(() => {
       gsap.to(countObj.current, {
         val: value,
         duration,
@@ -49,9 +49,10 @@ export default function AnimatedNumber({
           }
         },
       });
-    },
-    { scope: spanRef, dependencies: [value, duration] }
-  );
+    });
+
+    return () => ctx.revert();
+  }, [value, duration, prefix, suffix, decimals]);
 
   return (
     <span ref={spanRef} className={className}>
