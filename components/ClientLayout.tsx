@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState, createContext, useContext } from "react";
+import dynamic from "next/dynamic";
 import Header from "./Header";
 import Footer from "./Footer";
 import FloatingActions from "./FloatingActions";
-import BookingModal from "./BookingModal";
-
 import PageTransition from "./animation/PageTransition";
+
+const BookingModal = dynamic(() => import("./BookingModal"), { ssr: false });
 
 interface ModalContextType {
   openBooking: (vehicleSlug?: string, type?: "lai-thu" | "bao-gia" | "dich-vu") => void;
@@ -38,12 +39,14 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
         </main>
         <Footer />
         <FloatingActions onOpenBookingModal={(type) => openBooking(undefined, (type as any) || "lai-thu")} />
-        <BookingModal
-          isOpen={modalOpen}
-          onClose={() => setModalOpen(false)}
-          defaultVehicleSlug={modalVehicle}
-          defaultType={modalType}
-        />
+        {modalOpen && (
+          <BookingModal
+            isOpen={modalOpen}
+            onClose={() => setModalOpen(false)}
+            defaultVehicleSlug={modalVehicle}
+            defaultType={modalType}
+          />
+        )}
       </div>
     </ModalContext.Provider>
   );

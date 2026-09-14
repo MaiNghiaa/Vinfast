@@ -23,7 +23,7 @@ export default function Footer() {
                       width={210}
                       height={64}
                       className="w-[200px] h-auto object-contain"
-                      priority
+                      loading="lazy"
                     />
                   </Link>
                 </div>

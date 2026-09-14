@@ -32,7 +32,7 @@ export default function FloatingActions({ onOpenBookingModal }: FloatingActionsP
           className="relative w-12 h-12 rounded-full bg-[#dc2626] text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform pulse-call"
           title="Gọi ngay Hotline 090 242 25 22"
         >
-          <Phone className="w-5 h-5 fill-current animate-bounce" />
+          <Phone className="w-5 h-5 fill-current" />
         </a>
 
         {/* Nút Cuộn Lên Đầu Trang (Sky blue matching live site) */}

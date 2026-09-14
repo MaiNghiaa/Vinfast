@@ -5,16 +5,18 @@ import ClientLayout from "@/components/ClientLayout";
 
 const manrope = Manrope({
   subsets: ["latin", "vietnamese"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-manrope",
   display: "swap",
+  preload: true,
 });
 
 const mulish = Mulish({
   subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "600", "700", "800", "900"],
   variable: "--font-mulish",
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {

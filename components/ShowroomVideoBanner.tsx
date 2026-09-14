@@ -17,8 +17,9 @@ export default function ShowroomVideoBanner() {
             alt="VinFast Phương Đông Showroom"
             fill
             className="object-cover object-center"
-            priority
+            loading="lazy"
             sizes="100vw"
+            quality={75}
           />
           {/* Overlay matching elementor-background-overlay (opacity 0.65) */}
           <div className="absolute inset-0 bg-black/65"></div>

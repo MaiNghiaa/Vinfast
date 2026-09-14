@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useLayoutEffect } from "react";
-import { gsap } from "@/lib/gsap";
 
 interface AnimatedNumberProps {
   value: number;
@@ -27,31 +26,40 @@ export default function AnimatedNumber({
     const el = spanRef.current;
     if (!el) return;
 
+    let cancelled = false;
+    let ctx: { revert: () => void } | undefined;
     countObj.current.val = 0;
 
-    const ctx = gsap.context(() => {
-      gsap.to(countObj.current, {
-        val: value,
-        duration,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",
-          toggleActions: "play none none none",
-        },
-        onUpdate: () => {
-          if (el) {
-            const formatted =
-              decimals > 0
-                ? countObj.current.val.toFixed(decimals)
-                : Math.round(countObj.current.val).toLocaleString("vi-VN");
-            el.textContent = `${prefix}${formatted}${suffix}`;
-          }
-        },
+    void import("@/lib/gsap").then(({ gsap }) => {
+      if (cancelled || !el) return;
+
+      ctx = gsap.context(() => {
+        gsap.to(countObj.current, {
+          val: value,
+          duration,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 90%",
+            toggleActions: "play none none none",
+          },
+          onUpdate: () => {
+            if (el) {
+              const formatted =
+                decimals > 0
+                  ? countObj.current.val.toFixed(decimals)
+                  : Math.round(countObj.current.val).toLocaleString("vi-VN");
+              el.textContent = `${prefix}${formatted}${suffix}`;
+            }
+          },
+        });
       });
     });
 
-    return () => ctx.revert();
+    return () => {
+      cancelled = true;
+      ctx?.revert();
+    };
   }, [value, duration, prefix, suffix, decimals]);
 
   return (
