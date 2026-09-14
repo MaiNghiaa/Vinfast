@@ -4,6 +4,8 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Play, X, Facebook, Youtube, Instagram, ChevronRight } from "lucide-react";
+import GsapReveal from "@/components/animation/GsapReveal";
+import StaggerContainer from "@/components/animation/StaggerContainer";
 
 // Carousel 1: Xưởng dịch vụ & Kỹ thuật viên (11 ảnh)
 const SERVICE_IMAGES = [
@@ -147,17 +149,18 @@ export default function AboutPage() {
       </section>
 
       {/* 2. SECTION: 25 NĂM KIẾN TẠO GIÁ TRỊ BỀN VỮNG */}
-      <section className="py-12 sm:py-16 bg-white text-center">
-        <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-          <h2 className="text-xl sm:text-2xl md:text-[27px] font-extrabold uppercase text-[#000000] tracking-[0.2px] font-['Mulish',sans-serif] leading-snug mb-5">
-            25 NĂM KIẾN TẠO GIÁ TRỊ BỀN VỮNG
-          </h2>
-          <p className="text-sm sm:text-base text-[#111111] leading-relaxed max-w-5xl mx-auto font-normal">
-            <strong className="font-bold">Công ty Cổ phần Phương Đông (Tập đoàn Phương Đông)</strong> được thành lập từ năm 2001. Trải qua <strong className="font-bold">25 năm phát triển không ngừng</strong>, Phương Đông đã từng bước xây dựng hệ sinh thái đa ngành vững mạnh, bao gồm: <strong className="font-bold">Khai thác khoáng sản – Xây dựng hạ tầng – Vận tải Logistics – Dịch vụ AnTaxi – Công nghệ Global – Nhà hàng Khách sạn An Bình</strong>, và đặc biệt là lĩnh vực đầy tiềm năng: <strong className="font-bold text-[#1863dc]">Xe ô tô điện VinFast</strong>.
-          </p>
-
-        </div>
-      </section>
+      <GsapReveal animation="fade-up" duration={0.8}>
+        <section className="py-12 sm:py-16 bg-white text-center">
+          <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
+            <h2 className="text-xl sm:text-2xl md:text-[27px] font-extrabold uppercase text-[#000000] tracking-[0.2px] font-['Mulish',sans-serif] leading-snug mb-5">
+              25 NĂM KIẾN TẠO GIÁ TRỊ BỀN VỮNG
+            </h2>
+            <p className="text-sm sm:text-base text-[#111111] leading-relaxed max-w-5xl mx-auto font-normal">
+              <strong className="font-bold">Công ty Cổ phần Phương Đông (Tập đoàn Phương Đông)</strong> được thành lập từ năm 2001. Trải qua <strong className="font-bold">25 năm phát triển không ngừng</strong>, Phương Đông đã từng bước xây dựng hệ sinh thái đa ngành vững mạnh, bao gồm: <strong className="font-bold">Khai thác khoáng sản – Xây dựng hạ tầng – Vận tải Logistics – Dịch vụ AnTaxi – Công nghệ Global – Nhà hàng Khách sạn An Bình</strong>, và đặc biệt là lĩnh vực đầy tiềm năng: <strong className="font-bold text-[#1863dc]">Xe ô tô điện VinFast</strong>.
+            </p>
+          </div>
+        </section>
+      </GsapReveal>
 
       {/* 3. SECTION: VINFAST PHƯƠNG ĐÔNG – NHÀ PHÂN PHỐI Ô TÔ ĐIỆN SỐ 1 VIỆT NAM */}
       <section className="pb-10 bg-white text-center">
@@ -260,8 +263,8 @@ export default function AboutPage() {
             </h3>
           </div>
 
-          {/* 3 ảnh giải thưởng đứng độc lập, không có viền/nền box */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 w-full">
+          {/* 3 ảnh giải thưởng đứng độc lập với hiệu ứng so le */}
+          <StaggerContainer stagger={0.15} yOffset={30} className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-12 w-full">
             <div className="relative w-full aspect-square overflow-hidden group cursor-pointer">
               <Image
                 src="/images/about/TTT.jpg"
@@ -291,7 +294,7 @@ export default function AboutPage() {
                 sizes="(max-width: 768px) 100vw, 450px"
               />
             </div>
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -299,7 +302,7 @@ export default function AboutPage() {
       {/* 8. SECTION: 3 CỘT (VỊ THẾ DẪN ĐẦU - SỨ MỆNH PHỤC VỤ - GIÁ TRỊ CỐT LÕI) */}
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
+          <StaggerContainer stagger={0.15} yOffset={35} className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
             {/* Cột 1: Vị thế dẫn đầu */}
             <div className="bg-[#fbfbfb] rounded-xl p-6 sm:p-8 border border-gray-100 shadow-2xs hover:shadow-md transition-shadow">
               <h3 className="text-base sm:text-lg font-extrabold uppercase text-center text-[#000000] tracking-[0.8px] mb-5 pb-3 border-b-2 border-[#1863dc] font-['Mulish',sans-serif]">
@@ -374,7 +377,7 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 

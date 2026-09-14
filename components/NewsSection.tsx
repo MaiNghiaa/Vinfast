@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { POSTS } from "@/data/news";
+import StaggerContainer from "@/components/animation/StaggerContainer";
 
 interface TabItem {
   id: string;
@@ -65,8 +66,8 @@ export default function NewsSection({ className = "" }: NewsSectionProps) {
           })}
         </div>
 
-        {/* 6 Cards Grid matching ha-post-tab-grid-3 (3 cols x 2 rows) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+        {/* 6 Cards Grid with Staggered Entrance */}
+        <StaggerContainer stagger={0.1} yOffset={25} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {filteredPosts.map((post) => (
             <Link
               key={post.id}
@@ -92,7 +93,7 @@ export default function NewsSection({ className = "" }: NewsSectionProps) {
               </div>
             </Link>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

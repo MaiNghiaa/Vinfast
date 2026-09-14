@@ -22,6 +22,7 @@ import ChargerDetailPage from "@/components/ChargerDetailPage";
 import { USED_CARS } from "@/data/usedCars";
 import UsedCarDetailPage from "@/components/UsedCarDetailPage";
 import { useModal } from "@/components/ClientLayout";
+import GsapReveal from "@/components/animation/GsapReveal";
 
 export default function VehicleDetailPage({
   params,
@@ -139,31 +140,23 @@ export default function VehicleDetailPage({
 
   return (
     <div className="w-full bg-white text-[#333333] font-sans antialiased">
-      {/* 1. Top Asphalt Highway Banner with Breadcrumbs */}
-      <div className="relative w-full h-36 sm:h-48 md:h-56 lg:h-64 overflow-hidden bg-zinc-900">
-        <Image
-          src={vehicle.bannerImage || "https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/07/toyota-thai-hoa-tu-liem-car-detail-breadcum-all.webp"}
-          alt={`${vehicle.name} Banner`}
-          fill
-          priority
-          className="object-cover object-bottom"
-        />
-        {/* Breadcrumbs matching Phương Đông 1:1 */}
-        <div className="absolute top-4 left-4 sm:left-8 lg:left-12 z-20">
-          <ol className="flex items-center gap-1.5 text-xs text-white/90 font-medium drop-shadow-md">
+      {/* Breadcrumb */}
+      <div className="bg-[#f8f9fa] border-b border-gray-200 py-3 text-xs text-gray-600">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6">
+          <ol className="flex items-center gap-1.5 flex-wrap">
             <li>
-              <Link href="/" className="hover:text-white hover:underline transition-colors">
+              <Link href="/" className="hover:text-[#1863dc] transition-colors">
                 Trang chủ
               </Link>
             </li>
-            <li className="text-white/60">/</li>
+            <li className="text-gray-400">/</li>
             <li>
-              <Link href="/xe-moi" className="hover:text-white hover:underline transition-colors">
+              <Link href="/xe-moi" className="hover:text-[#1863dc] transition-colors">
                 Xe mới
               </Link>
             </li>
-            <li className="text-white/60">/</li>
-            <li className="text-white font-bold">{vehicle.name}</li>
+            <li className="text-gray-400">/</li>
+            <li className="text-gray-900 font-bold">{vehicle.name}</li>
           </ol>
         </div>
       </div>
@@ -171,7 +164,8 @@ export default function VehicleDetailPage({
       {/* Main Container */}
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 py-6 sm:py-8">
         {/* 2. Hero Product Details (Gallery Left, Summary Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+        <GsapReveal animation="fade-up" duration={0.8}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Left Column: Thumbnails + Main View with Watermark */}
           <div className="lg:col-span-7 flex flex-col-reverse sm:flex-row gap-4 items-start">
             {/* Vertical Thumbnails */}
@@ -362,6 +356,7 @@ export default function VehicleDetailPage({
             </div>
           </div>
         </div>
+        </GsapReveal>
 
         {/* 3. WooCommerce Tabs Bar matching Phương Đông 1:1 */}
         <div className="mt-10 mb-6 border-b border-gray-200">

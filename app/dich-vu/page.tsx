@@ -6,6 +6,8 @@ import Link from "next/link";
 import { ChevronDown, Phone, Play, Check } from "lucide-react";
 import NewsSection from "@/components/NewsSection";
 import { useModal } from "@/components/ClientLayout";
+import GsapReveal from "@/components/animation/GsapReveal";
+import StaggerContainer from "@/components/animation/StaggerContainer";
 
 export default function DichVuPage() {
   const { openBooking } = useModal();
@@ -140,7 +142,7 @@ export default function DichVuPage() {
       {/* 2. 4 QUICK ACTION ICONS */}
       <section className="py-10 bg-white">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 justify-items-center text-center">
+          <StaggerContainer stagger={0.12} yOffset={25} className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 justify-items-center text-center">
             {quickLinks.map((item, idx) => {
               const content = (
                 <div className="flex flex-col items-center group cursor-pointer w-full max-w-[200px]">
@@ -173,7 +175,7 @@ export default function DichVuPage() {
                 </div>
               );
             })}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -272,7 +274,7 @@ export default function DichVuPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <StaggerContainer stagger={0.12} yOffset={30} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
             {processSteps.map((step) => (
               <div
                 key={step.id}
@@ -298,7 +300,7 @@ export default function DichVuPage() {
                 </p>
               </div>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 

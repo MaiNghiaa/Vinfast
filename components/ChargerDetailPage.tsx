@@ -124,61 +124,49 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
 
   return (
     <div className={`w-full bg-white text-[#333333] ${mulish.className}`}>
-      {/* ============================================================
-          1. TOP ASPHALT ROAD BANNER (matching Phương Đông car-detail-breadcum-all)
-         ============================================================ */}
-      <section className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] overflow-hidden bg-neutral-900">
-        <Image
-          src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/07/toyota-thai-hoa-tu-liem-car-detail-breadcum-all.webp"
-          alt="VinFast Phương Đông - Chi tiết trạm sạc"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/30" />
-      </section>
+      {/* Breadcrumb Top Bar */}
+      <div className="bg-[#f8f9fa] border-b border-gray-200 py-3 text-xs text-gray-600">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 flex items-center justify-between">
+          <nav className="flex items-center gap-1.5 flex-wrap font-medium">
+            <Link href="/" className="hover:text-[#1863dc] transition-colors">
+              Trang chủ
+            </Link>
+            <span className="text-gray-400">/</span>
+            <Link
+              href="/tram-sac"
+              className="hover:text-[#1863dc] transition-colors"
+            >
+              {charger.categoryName || (charger.type === "DC" ? "Trạm sạc nhanh DC" : "Trạm sạc gia đình AC")}
+            </Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-gray-900 font-bold">{charger.name}</span>
+          </nav>
+
+          {/* Prev / Next Charger Navigation Buttons */}
+          <div className="flex items-center gap-1.5">
+            <Link
+              href={`/tram-sac/${prevCharger.slug}`}
+              title={`Trạm sạc trước: ${prevCharger.name}`}
+              className="w-7 h-7 border border-gray-300 rounded flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
+            >
+              <ChevronLeft className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              href={`/tram-sac/${nextCharger.slug}`}
+              title={`Trạm sạc tiếp theo: ${nextCharger.name}`}
+              className="w-7 h-7 border border-gray-300 rounded flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
+            >
+              <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+      </div>
 
       {/* ============================================================
-          2. HERO SHOWCASE: BREADCRUMB, QUICK SPECS & CHARGER IMAGE
+          PRODUCT SHOWCASE: QUICK SPECS & CHARGER IMAGE
          ============================================================ */}
       <section className="py-8 sm:py-12 border-b border-gray-100">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-          {/* Breadcrumb & Prev/Next Arrows */}
-          <div className="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-[13px] text-[#777777] mb-6 pb-2 border-b border-gray-100">
-            <nav className="flex items-center gap-1.5 flex-wrap">
-              <Link href="/" className="hover:text-[#3AB3FF] transition-colors">
-                Trang chủ
-              </Link>
-              <span>/</span>
-              <Link
-                href="/tram-sac"
-                className="hover:text-[#3AB3FF] transition-colors"
-              >
-                {charger.categoryName || (charger.type === "DC" ? "Trạm sạc nhanh DC" : "Trạm sạc gia đình AC")}
-              </Link>
-              <span>/</span>
-              <span className="text-black font-semibold">{charger.name}</span>
-            </nav>
-
-            {/* Prev / Next Charger Navigation Buttons */}
-            <div className="flex items-center gap-2">
-              <Link
-                href={`/tram-sac/${prevCharger.slug}`}
-                aria-label={`Xem trạm sạc trước: ${prevCharger.name}`}
-                className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </Link>
-              <Link
-                href={`/tram-sac/${nextCharger.slug}`}
-                aria-label={`Xem trạm sạc tiếp theo: ${nextCharger.name}`}
-                className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
 
           {/* Product Showcase Grid: Image on left, Name & Specs on right */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">

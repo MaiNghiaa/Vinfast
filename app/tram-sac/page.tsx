@@ -6,6 +6,8 @@ import Link from "next/link";
 import { Mulish } from "next/font/google";
 import { ChevronLeft, ChevronRight, CheckCircle } from "lucide-react";
 import NewsSection from "@/components/NewsSection";
+import GsapReveal from "@/components/animation/GsapReveal";
+import StaggerContainer from "@/components/animation/StaggerContainer";
 
 const mulish = Mulish({
   subsets: ["latin", "vietnamese"],
@@ -195,23 +197,25 @@ export default function ChargingStationPage() {
       {/* ============================================================
           1. HEADER BANNER SECTION (matching Elementor e83e538)
          ============================================================ */}
-      <section className="relative w-full min-h-[380px] sm:min-h-[440px] md:min-h-[500px] flex items-center justify-center overflow-hidden bg-black">
-        <Image
-          src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/suachuaimg_1656869862_1658394682.webp"
-          alt="Trạm sạc VinFast Phương Đông"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/80" />
+      <GsapReveal animation="fade-in" duration={1}>
+        <section className="relative w-full min-h-[380px] sm:min-h-[440px] md:min-h-[500px] flex items-center justify-center overflow-hidden bg-black">
+          <Image
+            src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/06/suachuaimg_1656869862_1658394682.webp"
+            alt="Trạm sạc VinFast Phương Đông"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/80" />
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto py-12">
-          <h1 className="text-white text-[32px] sm:text-[38px] md:text-[44px] font-black font-mulish uppercase tracking-tight drop-shadow-md leading-tight">
-            Trạm sạc
-          </h1>
-        </div>
-      </section>
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto py-12">
+            <h1 className="text-white text-[32px] sm:text-[38px] md:text-[44px] font-black font-mulish uppercase tracking-tight drop-shadow-md leading-tight">
+              Trạm sạc
+            </h1>
+          </div>
+        </section>
+      </GsapReveal>
 
       {/* ============================================================
           2. SẢN PHẨM TRẠM SẠC V-GREEN PHƯƠNG ĐÔNG (matching 77969d9 & Image 2)
@@ -262,8 +266,13 @@ export default function ChargingStationPage() {
             </div>
           </div>
 
-          {/* Product Grid - Large Chargers filling the cards (matching Image 2 & Elementor grid-v3) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-[30px] pt-4">
+          {/* Product Grid - Large Chargers with Staggered entrance */}
+          <StaggerContainer
+            key={productTab}
+            stagger={0.12}
+            yOffset={30}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-[30px] pt-4"
+          >
             {currentProducts.map((prod) => (
               <Link
                 key={prod.id}
@@ -293,7 +302,7 @@ export default function ChargingStationPage() {
                 </div>
               </Link>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 

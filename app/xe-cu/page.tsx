@@ -19,6 +19,8 @@ import {
   Sparkles,
 } from "lucide-react";
 import { USED_CARS, GREEN_FUTURE_COMMITMENTS, USED_CARS_NEWS } from "@/data/usedCars";
+import GsapReveal from "@/components/animation/GsapReveal";
+import StaggerContainer from "@/components/animation/StaggerContainer";
 
 const mulish = Mulish({
   subsets: ["latin", "vietnamese"],
@@ -147,11 +149,12 @@ export default function UsedCarsPage() {
       {/* ============================================================
           2. BỘ LỌC TÌM KIẾM XE ĐA NĂNG (OVERLAPPING SEARCH BOX)
          ============================================================ */}
-      <section className="relative z-20 max-w-[1360px] mx-auto px-4 sm:px-6 -mt-24 sm:-mt-32 md:-mt-40">
-        <div className="bg-white rounded-2xl md:rounded-[22px] shadow-[0_15px_45px_rgba(0,0,0,0.12)] p-6 sm:p-8 md:p-10 border border-gray-100">
-          <h2 className="text-center text-[20px] sm:text-[24px] md:text-[28px] font-black font-mulish uppercase text-[#0C0C0C] tracking-tight mb-6 sm:mb-8">
-            BẠN ĐANG MUỐN TÌM MỘT CHIẾC XE NHƯ THẾ NÀO?
-          </h2>
+      <GsapReveal animation="fade-up" duration={0.8}>
+        <section className="relative z-20 max-w-[1360px] mx-auto px-4 sm:px-6 -mt-24 sm:-mt-32 md:-mt-40">
+          <div className="bg-white rounded-2xl md:rounded-[22px] shadow-[0_15px_45px_rgba(0,0,0,0.12)] p-6 sm:p-8 md:p-10 border border-gray-100">
+            <h2 className="text-center text-[20px] sm:text-[24px] md:text-[28px] font-black font-mulish uppercase text-[#0C0C0C] tracking-tight mb-6 sm:mb-8">
+              BẠN ĐANG MUỐN TÌM MỘT CHIẾC XE NHƯ THẾ NÀO?
+            </h2>
 
           {/* 4 Type Tabs with Car Sketch Images matching Phương Đông 1:1 */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-4 border-b border-gray-200 mb-6 sm:mb-8">
@@ -391,6 +394,7 @@ export default function UsedCarsPage() {
           </div>
         </div>
       </section>
+      </GsapReveal>
 
       {/* ============================================================
           3. RESULT TOOLBAR & QUICK FILTERS
@@ -502,7 +506,12 @@ export default function UsedCarsPage() {
             </button>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <StaggerContainer
+            key={`${vehicleTypeTab}-${selectedModel}-${selectedYear}-${selectedProvince}-${maxPrice}-${maxOdo}-${sortBy}`}
+            stagger={0.1}
+            yOffset={30}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+          >
             {filteredCars.map((car) => (
               <Link
                 key={car.id}
@@ -565,7 +574,7 @@ export default function UsedCarsPage() {
                 </div>
               </Link>
             ))}
-          </div>
+          </StaggerContainer>
         )}
       </section>
 

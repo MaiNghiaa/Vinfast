@@ -11,6 +11,7 @@ import ShowroomVideoBanner from "@/components/ShowroomVideoBanner";
 import UtilitiesSection from "@/components/UtilitiesSection";
 import AwardsSection from "@/components/AwardsSection";
 import NewsSection from "@/components/NewsSection";
+import GsapReveal from "@/components/animation/GsapReveal";
 
 const HERO_SLIDES = [
   {
@@ -113,25 +114,40 @@ export default function HomePage() {
       </section>
 
       {/* 2. SHOWROOM CIRCULAR CAROUSEL (CHUẨN GỐC PHƯƠNG ĐÔNG) */}
-      <ShowroomCategorySlider />
+      <GsapReveal animation="fade-up" duration={0.9}>
+        <ShowroomCategorySlider />
+      </GsapReveal>
+
 
       {/* 3. KHÁM PHÁ CÁC DÒNG XE (CHUẨN GỐC PHƯƠNG ĐÔNG) */}
-      <VehicleTabsShowcase />
+      <GsapReveal animation="fade-up" duration={0.9}>
+        <VehicleTabsShowcase />
+      </GsapReveal>
 
       {/* BANNER ĐÔI: KHUYẾN MÃI XE & KHÁM PHÁ DỊCH VỤ (CHUẨN GỐC PHƯƠNG ĐÔNG) */}
-      <PromoBannerCards />
+      <GsapReveal animation="scale-up" duration={0.9}>
+        <PromoBannerCards />
+      </GsapReveal>
 
       {/* 4. SHOWROOM VIDEO BANNER (CHUẨN GỐC PHƯƠNG ĐÔNG - ẢNH 1) */}
-      <ShowroomVideoBanner />
+      <GsapReveal animation="fade-in" duration={1}>
+        <ShowroomVideoBanner />
+      </GsapReveal>
 
       {/* 5. TIỆN ÍCH DỊCH VỤ VINFAST PHƯƠNG ĐÔNG (CHUẨN GỐC PHƯƠNG ĐÔNG - ẢNH 2) */}
-      <UtilitiesSection />
+      <GsapReveal animation="fade-up" duration={0.9}>
+        <UtilitiesSection />
+      </GsapReveal>
 
       {/* 6. VINFAST PHƯƠNG ĐÔNG AWARDS 2025 (CHUẨN GỐC PHƯƠNG ĐÔNG - ẢNH 3) */}
-      <AwardsSection />
+      <GsapReveal animation="fade-up" duration={0.9}>
+        <AwardsSection />
+      </GsapReveal>
 
       {/* 7. TIN TỨC MỚI NHẤT (CHUẨN GỐC PHƯƠNG ĐÔNG - ẢNH 1) */}
-      <NewsSection />
+      <GsapReveal animation="fade-up" duration={0.9}>
+        <NewsSection />
+      </GsapReveal>
 
     </div>
 

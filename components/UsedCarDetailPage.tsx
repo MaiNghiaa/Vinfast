@@ -57,57 +57,47 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
 
   return (
     <div className={`w-full bg-white text-[#333333] ${mulish.className}`}>
-      {/* ============================================================
-          1. TOP ASPHALT ROAD BANNER
-         ============================================================ */}
-      <section className="relative w-full h-[180px] sm:h-[220px] md:h-[260px] overflow-hidden bg-neutral-900">
-        <Image
-          src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/07/toyota-thai-hoa-tu-liem-car-detail-breadcum-all.webp"
-          alt="VinFast Phương Đông - Xe cũ Green Future"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-0 bg-black/30" />
-      </section>
+
+      {/* Breadcrumb Top Bar */}
+      <div className="bg-[#f8f9fa] border-b border-gray-200 py-3 text-xs text-gray-600">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 flex items-center justify-between">
+          <nav className="flex items-center gap-1.5 flex-wrap font-medium">
+            <Link href="/" className="hover:text-[#1863dc] transition-colors">
+              Trang chủ
+            </Link>
+            <span className="text-gray-400">/</span>
+            <Link href="/xe-cu" className="hover:text-[#1863dc] transition-colors">
+              Xe cũ Green Future
+            </Link>
+            <span className="text-gray-400">/</span>
+            <span className="text-gray-900 font-bold">{car.name}</span>
+          </nav>
+
+          {/* Prev / Next Car Navigation Buttons */}
+          <div className="flex items-center gap-1.5">
+            <Link
+              href={`/xe-cu/${prevCar.slug}`}
+              title={`Xem xe trước: ${prevCar.name}`}
+              className="w-7 h-7 border border-gray-300 rounded flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
+            >
+              <ChevronLeft className="w-3.5 h-3.5" />
+            </Link>
+            <Link
+              href={`/xe-cu/${nextCar.slug}`}
+              title={`Xem xe tiếp theo: ${nextCar.name}`}
+              className="w-7 h-7 border border-gray-300 rounded flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
+            >
+              <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+      </div>
 
       {/* ============================================================
-          2. PRODUCT SHOWCASE: THUMBNAILS, BIG IMAGE, TITLE & ACTIONS
+          PRODUCT SHOWCASE: THUMBNAILS, BIG IMAGE, TITLE & ACTIONS
          ============================================================ */}
       <section className="py-8 sm:py-12 border-b border-gray-100">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
-          {/* Breadcrumb & Navigation Arrows */}
-          <div className="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-[13px] text-[#777777] mb-6 pb-2 border-b border-gray-100">
-            <nav className="flex items-center gap-1.5 flex-wrap">
-              <Link href="/" className="hover:text-[#3AB3FF] transition-colors">
-                Trang chủ
-              </Link>
-              <span>/</span>
-              <Link href="/xe-cu" className="hover:text-[#3AB3FF] transition-colors">
-                Xe cũ Green Future
-              </Link>
-              <span>/</span>
-              <span className="text-black font-semibold">{car.name}</span>
-            </nav>
-
-            <div className="flex items-center gap-2">
-              <Link
-                href={`/xe-cu/${prevCar.slug}`}
-                aria-label={`Xem xe trước: ${prevCar.name}`}
-                className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </Link>
-              <Link
-                href={`/xe-cu/${nextCar.slug}`}
-                aria-label={`Xem xe tiếp theo: ${nextCar.name}`}
-                className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:text-black hover:border-black transition-colors"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </div>
 
           {/* Main Showcase Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">

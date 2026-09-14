@@ -6,6 +6,7 @@ import Link from "next/link";
 import { ChevronRight, ArrowRight, Calendar, Check, X, Car } from "lucide-react";
 import { VEHICLES } from "@/data/vehicles";
 import { useModal } from "@/components/ClientLayout";
+import GsapReveal from "@/components/animation/GsapReveal";
 
 export default function CarComparisonPage() {
   const { openBooking } = useModal();
@@ -31,19 +32,21 @@ export default function CarComparisonPage() {
       </div>
 
       {/* Header Banner */}
-      <div className="bg-[#111827] text-white py-12 px-4 sm:px-8 border-b border-gray-800 text-center">
-        <div className="max-w-[1440px] mx-auto space-y-2">
-          <span className="text-xs font-black text-[#00d2ff] uppercase tracking-widest block">
-            CÔNG CỤ ĐỐI CHIẾU THÔNG SỐ
-          </span>
-          <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
-            SO SÁNH CÁC DÒNG XE VINFAST
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto">
-            Đặt các dòng xe cạnh nhau để so sánh trực quan về kích thước, quãng đường di chuyển, công suất động cơ và giá bán niêm yết.
-          </p>
+      <GsapReveal animation="fade-up" duration={0.8}>
+        <div className="bg-[#111827] text-white py-12 px-4 sm:px-8 border-b border-gray-800 text-center">
+          <div className="max-w-[1440px] mx-auto space-y-2">
+            <span className="text-xs font-black text-[#00d2ff] uppercase tracking-widest block">
+              CÔNG CỤ ĐỐI CHIẾU THÔNG SỐ
+            </span>
+            <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
+              SO SÁNH CÁC DÒNG XE VINFAST
+            </h1>
+            <p className="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto">
+              Đặt các dòng xe cạnh nhau để so sánh trực quan về kích thước, quãng đường di chuyển, công suất động cơ và giá bán niêm yết.
+            </p>
+          </div>
         </div>
-      </div>
+      </GsapReveal>
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 py-10">
         {/* Car Selectors */}
@@ -89,6 +92,7 @@ export default function CarComparisonPage() {
         </div>
 
         {/* Comparison Table */}
+        <GsapReveal animation="fade-up" duration={0.8}>
         <div className="bg-white rounded-xl border border-gray-200 shadow-md overflow-x-auto">
           <table className="w-full text-xs text-left border-collapse min-w-[700px]">
             {/* Table Header: Car Previews */}
@@ -236,6 +240,7 @@ export default function CarComparisonPage() {
             </tbody>
           </table>
         </div>
+        </GsapReveal>
       </div>
     </div>
   );

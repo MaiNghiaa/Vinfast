@@ -6,6 +6,8 @@ import { ChevronRight, Filter, Car } from "lucide-react";
 import { VEHICLES } from "@/data/vehicles";
 import CarCard from "@/components/CarCard";
 import { useModal } from "@/components/ClientLayout";
+import GsapReveal from "@/components/animation/GsapReveal";
+import StaggerContainer from "@/components/animation/StaggerContainer";
 
 export default function VehicleCatalogPage() {
   const { openBooking } = useModal();
@@ -40,19 +42,21 @@ export default function VehicleCatalogPage() {
       </div>
 
       {/* Header Banner */}
-      <div className="bg-[#111827] text-white py-12 px-4 sm:px-8 border-b border-gray-800">
-        <div className="max-w-[1440px] mx-auto text-center space-y-2">
-          <span className="text-xs font-black text-[#00d2ff] uppercase tracking-widest block">
-            HỆ THỐNG PHÂN PHỐI CHÍNH HÃNG PHƯƠNG ĐÔNG
-          </span>
-          <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
-            TOÀN BỘ CÁC DÒNG XE Ô TÔ ĐIỆN VINFAST
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto">
-            Khám phá dải sản phẩm xe điện thông minh đa dạng từ phân khúc Mini SUV đến Full-size SUV hạng sang và xe dịch vụ thương mại xanh.
-          </p>
+      <GsapReveal animation="fade-up" duration={0.8}>
+        <div className="bg-[#111827] text-white py-12 px-4 sm:px-8 border-b border-gray-800">
+          <div className="max-w-[1440px] mx-auto text-center space-y-2">
+            <span className="text-xs font-black text-[#00d2ff] uppercase tracking-widest block">
+              HỆ THỐNG PHÂN PHỐI CHÍNH HÃNG PHƯƠNG ĐÔNG
+            </span>
+            <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
+              TOÀN BỘ CÁC DÒNG XE Ô TÔ ĐIỆN VINFAST
+            </h1>
+            <p className="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto">
+              Khám phá dải sản phẩm xe điện thông minh đa dạng từ phân khúc Mini SUV đến Full-size SUV hạng sang và xe dịch vụ thương mại xanh.
+            </p>
+          </div>
         </div>
-      </div>
+      </GsapReveal>
 
       {/* Filter Bar */}
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 py-6">
@@ -120,8 +124,13 @@ export default function VehicleCatalogPage() {
           </div>
         </div>
 
-        {/* Vehicles Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        {/* Vehicles Grid with Staggered entrance */}
+        <StaggerContainer
+          key={`${selectedCategory}-${priceFilter}`}
+          stagger={0.08}
+          yOffset={25}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8"
+        >
           {filteredVehicles.map((vehicle) => (
             <CarCard
               key={vehicle.id}
@@ -129,7 +138,7 @@ export default function VehicleCatalogPage() {
               onBookTestDrive={(slug) => openBooking(slug, "lai-thu")}
             />
           ))}
-        </div>
+        </StaggerContainer>
 
         {filteredVehicles.length === 0 && (
           <div className="bg-white rounded-xl p-12 text-center text-gray-500 mt-8 border border-gray-200">

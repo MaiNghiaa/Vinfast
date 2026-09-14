@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronRight, Calculator, Calendar, Phone, CheckCircle2 } from "lucide-react";
 import { VEHICLES } from "@/data/vehicles";
 import { useModal } from "@/components/ClientLayout";
+import GsapReveal from "@/components/animation/GsapReveal";
 
 const PROVINCES = [
   { id: "hanoi", name: "Hà Nội", plateFee: 20000000 },
@@ -66,24 +67,27 @@ export default function RollingCostPage() {
       </div>
 
       {/* Header Banner */}
-      <div className="bg-[#111827] text-white py-12 px-4 sm:px-8 border-b border-gray-800 text-center">
-        <div className="max-w-[1440px] mx-auto space-y-2">
-          <span className="text-xs font-black text-[#00d2ff] uppercase tracking-widest block">
-            CÔNG CỤ TIỆN ÍCH CHUYÊN NGHIỆP
-          </span>
-          <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
-            DỰ TOÁN CHI PHÍ LĂN BÁNH XE ĐIỆN VINFAST
-          </h1>
-          <p className="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto">
-            Tính toán đầy đủ thuế phí, biểu phí trước bạ xe điện 0% và bảng sao kê trả góp ngân hàng hàng tháng linh hoạt.
-          </p>
+      <GsapReveal animation="fade-up" duration={0.8}>
+        <div className="bg-[#111827] text-white py-12 px-4 sm:px-8 border-b border-gray-800 text-center">
+          <div className="max-w-[1440px] mx-auto space-y-2">
+            <span className="text-xs font-black text-[#00d2ff] uppercase tracking-widest block">
+              CÔNG CỤ TIỆN ÍCH CHUYÊN NGHIỆP
+            </span>
+            <h1 className="text-2xl sm:text-4xl font-black uppercase tracking-tight">
+              DỰ TOÁN CHI PHÍ LĂN BÁNH XE ĐIỆN VINFAST
+            </h1>
+            <p className="text-xs sm:text-sm text-gray-300 max-w-2xl mx-auto">
+              Tính toán đầy đủ thuế phí, biểu phí trước bạ xe điện 0% và bảng sao kê trả góp ngân hàng hàng tháng linh hoạt.
+            </p>
+          </div>
         </div>
-      </div>
+      </GsapReveal>
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Left: Input Selection */}
           <div className="lg:col-span-6 space-y-6">
+            <GsapReveal animation="slide-left" duration={0.8}>
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-xs space-y-5">
               <h2 className="text-sm font-black uppercase text-[#111827] border-b pb-2 flex items-center gap-2">
                 <Calculator className="w-4 h-4 text-[#1863dc]" /> BƯỚC 1: CHỌN MẪU XE & ĐỊA ĐIỂM ĐĂNG KÝ
@@ -245,10 +249,12 @@ export default function RollingCostPage() {
                 </p>
               </div>
             </div>
+            </GsapReveal>
           </div>
 
           {/* Right: Detailed Cost Summary Sheet */}
           <div className="lg:col-span-6 space-y-6">
+            <GsapReveal animation="slide-right" duration={0.8}>
             <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-md space-y-4 sticky top-24">
               <div className="border-b pb-3">
                 <span className="text-[11px] font-bold text-[#1863dc] uppercase tracking-wider block">
@@ -350,6 +356,7 @@ export default function RollingCostPage() {
                 </p>
               </div>
             </div>
+            </GsapReveal>
           </div>
         </div>
       </div>

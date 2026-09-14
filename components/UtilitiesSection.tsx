@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useModal } from "@/components/ClientLayout";
+import StaggerContainer from "@/components/animation/StaggerContainer";
 
 export interface UtilityItem {
   id: string;
@@ -55,8 +56,8 @@ export default function UtilitiesSection() {
           <div className="w-14 h-[3px] bg-[#3AB3FF] mx-auto mt-3"></div>
         </div>
 
-        {/* 4 Glossy Badge Items */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+        {/* 4 Glossy Badge Items with Staggered Entrance */}
+        <StaggerContainer stagger={0.15} yOffset={25} className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {UTILITY_ITEMS.map((item) => (
             <div
               key={item.id}
@@ -91,7 +92,7 @@ export default function UtilitiesSection() {
               </button>
             </div>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

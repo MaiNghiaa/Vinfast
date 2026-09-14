@@ -18,6 +18,8 @@ import {
   Filter,
   RotateCcw,
 } from "lucide-react";
+import GsapReveal from "@/components/animation/GsapReveal";
+import StaggerContainer from "@/components/animation/StaggerContainer";
 
 // Dữ liệu 20 vị trí tuyển dụng thực tế từ vinfastthinhcuong.com.vn
 const JOBS_DATA = [
@@ -913,7 +915,7 @@ export default function CareersPage() {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <StaggerContainer key={currentPage} stagger={0.08} yOffset={25} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentJobs.map((job) => (
                 <article
                   key={job.id}
@@ -994,7 +996,7 @@ export default function CareersPage() {
                   </div>
                 </article>
               ))}
-            </div>
+            </StaggerContainer>
           )}
 
           {/* 4. PHÂN TRANG (PAGINATION) */}
