@@ -133,7 +133,7 @@ export default function DichVuPage() {
           <h3 className="text-sm sm:text-lg md:text-[24px] font-semibold uppercase tracking-normal text-[#f80000] mb-3 sm:mb-4 md:mb-5 drop-shadow-sm font-sans">
             XƯỞNG DỊCH VỤ VINFAST PHƯƠNG ĐÔNG
           </h3>
-          <h1 className="text-2xl sm:text-3xl md:text-[36px] font-black text-white uppercase leading-tight font-mulish drop-shadow-md tracking-normal">
+          <h1 className="text-2xl sm:text-3xl md:text-[36px] font-black text-white uppercase leading-tight drop-shadow-md tracking-normal">
             SỬA CHỮA NHANH
           </h1>
         </div>

@@ -47,7 +47,7 @@ export default function UtilitiesSection() {
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
         {/* Title & Blue Divider */}
         <div className="text-center mb-10 md:mb-12">
-          <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-black uppercase text-[#0c0c0c] tracking-tight font-['Mulish',sans-serif] leading-tight">
+          <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-black uppercase text-[#0c0c0c] tracking-tight leading-tight">
             <span className="block text-[15px] sm:text-[16px] text-[#3AB3FF] font-extrabold tracking-wider mb-1">
               TIỆN ÍCH
             </span>

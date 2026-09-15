@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mulish } from "next/font/google";
 import {
   ChevronLeft,
   ChevronRight,
@@ -15,12 +14,6 @@ import {
 import { UsedCar } from "@/data/types";
 import { USED_CARS } from "@/data/usedCars";
 import { useModal } from "@/components/ClientLayout";
-
-const mulish = Mulish({
-  subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
 
 interface UsedCarDetailPageProps {
   car: UsedCar;
@@ -56,7 +49,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
   const relatedCars = USED_CARS.filter((c) => c.slug !== car.slug).slice(0, 3);
 
   return (
-    <div className={`w-full bg-white text-[#333333] ${mulish.className}`}>
+    <div className="w-full bg-white text-[#333333]">
 
       {/* Breadcrumb Top Bar */}
       <div className="bg-[#f8f9fa] border-b border-gray-200 py-3 text-xs text-gray-600">
@@ -145,7 +138,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
                 <span className="inline-block bg-[#eef7ff] text-[#1863dc] text-xs font-black uppercase px-2.5 py-1 rounded tracking-wider mb-2">
                   Xe lướt Green Future chính hãng
                 </span>
-                <h1 className="text-[22px] sm:text-[26px] md:text-[30px] font-black font-mulish text-[#0C0C0C] tracking-tight leading-snug">
+                <h1 className="text-[22px] sm:text-[26px] md:text-[30px] font-black text-[#0C0C0C] tracking-tight leading-snug">
                   {car.name}
                 </h1>
               </div>
@@ -153,7 +146,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
               {/* Price Banner */}
               <div className="bg-[#f8f9fa] border border-gray-200 p-4 rounded-xl flex items-baseline justify-between">
                 <span className="text-xs sm:text-sm text-gray-500 font-medium">Giá chào bán:</span>
-                <span className="text-2xl sm:text-3xl font-black text-[#00c853] font-mulish">
+                <span className="text-2xl sm:text-3xl font-black text-[#00c853]">
                   {car.priceText}
                 </span>
               </div>
@@ -209,7 +202,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6">
           <div className="mb-8">
-            <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-black font-mulish text-[#0C0C0C] uppercase tracking-tight mb-3">
+            <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-black text-[#0C0C0C] uppercase tracking-tight mb-3">
               THÔNG TIN XE {car.name}
             </h2>
             <p className="text-sm sm:text-[15px] text-[#444444] leading-relaxed">
@@ -339,7 +332,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
       <section className="py-12 sm:py-16 bg-[#fafafa] border-t border-gray-200">
         <div className="max-w-[760px] mx-auto px-4 sm:px-6">
           <div className="bg-white p-6 sm:p-10 rounded-2xl border border-gray-200 shadow-sm">
-            <h3 className="text-center text-xl sm:text-2xl font-black font-mulish uppercase text-[#0C0C0C] mb-2">
+            <h3 className="text-center text-xl sm:text-2xl font-black uppercase text-[#0C0C0C] mb-2">
               ĐĂNG KÝ TƯ VẤN &amp; XEM XE TRỰC TIẾP
             </h3>
             <p className="text-center text-xs sm:text-sm text-gray-500 mb-6">
@@ -410,7 +403,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
       <section className="py-12 sm:py-16 bg-white border-t border-gray-100">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-8">
-            <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-black font-mulish text-[#0C0C0C] uppercase tracking-tight">
+            <h2 className="text-[20px] sm:text-[24px] md:text-[28px] font-black text-[#0C0C0C] uppercase tracking-tight">
               XE CŨ GREEN FUTURE ĐANG CÓ SẴN
             </h2>
             <div className="w-16 h-1 bg-[#3AB3FF] mx-auto mt-2.5 rounded-full" />
@@ -437,7 +430,7 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
                     </div>
                   </div>
                   <div className="p-4">
-                    <h3 className="font-extrabold font-mulish text-sm text-black group-hover:text-[#1863dc] transition-colors line-clamp-2 leading-snug">
+                    <h3 className="font-extrabold text-sm text-black group-hover:text-[#1863dc] transition-colors line-clamp-2 leading-snug">
                       {rc.name}
                     </h3>
                     <div className="mt-3 flex items-center justify-between text-xs text-gray-500 pt-2 border-t border-gray-100">

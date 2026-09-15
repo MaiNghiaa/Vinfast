@@ -26,7 +26,6 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-manrope)", "Manrope", "sans-serif"],
-        mulish: ["var(--font-mulish)", "Mulish", "sans-serif"],
       },
       animation: {
         "pulse-call": "pulse-ring 2s infinite cubic-bezier(0.45, 0, 0.55, 1)",

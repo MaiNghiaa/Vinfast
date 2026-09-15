@@ -40,13 +40,14 @@
 
 :root {
   --font-manrope: 'Manrope', sans-serif;
-  --font-mulish: 'Mulish', sans-serif;
 }
 
 body {
   font-family: var(--font-manrope);
   color: #212121;
   background-color: #ffffff;
+  /* Full viewport width so native scrollbar overlays content instead of reserving a gutter */
+  width: 100vw;
   overflow-x: clip;
 }
 
@@ -100,26 +101,41 @@ body {
   }
 }
 
-/* Thanh cuộn tàng hình - Không chiếm size hay diện tích trong page */
-html,
-body,
+/* Scrollbar nổi (overlay), màu bạc — không chiếm gutter */
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+  overflow-y: overlay; /* browsers còn hỗ trợ: thanh cuộn đè lên nội dung */
+  scrollbar-gutter: auto;
+}
+
 * {
-  scrollbar-width: none !important; /* Firefox, Chrome 121+, Safari 18.2+ */
-  -ms-overflow-style: none !important; /* IE, Edge */
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 transparent;
 }
 
 *::-webkit-scrollbar {
-  width: 0px !important;
-  height: 0px !important;
-  display: none !important;
-  background: transparent !important;
+  width: 6px;
+  height: 6px;
+  background: transparent;
 }
 
 *::-webkit-scrollbar-track {
-  background: transparent !important;
+  background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-  background: transparent !important;
+  background: rgb(192 192 192 / 0.8);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #9e9e9e;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
 }
 

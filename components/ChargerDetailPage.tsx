@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mulish } from "next/font/google";
 import {
   ChevronLeft,
   ChevronRight,
@@ -16,12 +15,6 @@ import {
   WORKSHOP_GALLERY_IMAGES,
   CHARGER_RELATED_NEWS,
 } from "@/data/chargers";
-
-const mulish = Mulish({
-  subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
 
 interface ChargerDetailPageProps {
   charger: Charger;
@@ -123,7 +116,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
   const relatedProducts = productTab === "dc" ? dcChargers : acChargers;
 
   return (
-    <div className={`w-full bg-white text-[#333333] ${mulish.className}`}>
+    <div className="w-full bg-white text-[#333333]">
       {/* Breadcrumb Top Bar */}
       <div className="bg-[#f8f9fa] border-b border-gray-200 py-3 text-xs text-gray-600">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 flex items-center justify-between">
@@ -187,7 +180,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
             {/* Product Summary: Title & Bullet Specifications */}
             <div className="lg:col-span-6 space-y-6">
               <div>
-                <h1 className="text-[28px] sm:text-[34px] md:text-[38px] font-black font-mulish text-[#0C0C0C] tracking-tight leading-tight mb-2">
+                <h1 className="text-[28px] sm:text-[34px] md:text-[38px] font-black text-[#0C0C0C] tracking-tight leading-tight mb-2">
                   {charger.name}
                 </h1>
                 <div className="w-12 h-1 bg-[#3AB3FF] rounded-full mb-6" />
@@ -244,7 +237,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           {/* Section Heading */}
           <div className="text-center mb-8 sm:mb-10 max-w-3xl mx-auto">
-            <h2 className="text-[#0C0C0C] text-[24px] sm:text-[28px] md:text-[32px] font-black font-mulish uppercase tracking-tight leading-tight">
+            <h2 className="text-[#0C0C0C] text-[24px] sm:text-[28px] md:text-[32px] font-black uppercase tracking-tight leading-tight">
               GIỚI THIỆU TẬP ĐOÀN PHƯƠNG ĐÔNG &amp; V-GREEN PHƯƠNG ĐÔNG
             </h2>
             <div className="w-20 h-1 bg-[#3AB3FF] mx-auto mt-3 rounded-full" />
@@ -331,7 +324,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
         <div className="w-full px-2 sm:px-4 lg:px-6">
           {/* Section Heading */}
           <div className="text-center mb-8">
-            <h2 className="text-[#0C0C0C] text-[24px] sm:text-[28px] md:text-[34px] font-black font-mulish uppercase tracking-tight leading-tight">
+            <h2 className="text-[#0C0C0C] text-[24px] sm:text-[28px] md:text-[34px] font-black uppercase tracking-tight leading-tight">
               DỰ ÁN TRẠM SẠC VGREEN PHƯƠNG ĐÔNG
             </h2>
             <div className="w-[16%] min-w-[120px] max-w-[190px] h-[4.5px] bg-[#3AB3FF] mx-auto mt-3 rounded-full" />
@@ -387,7 +380,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                         />
                       </div>
                       <div className="pt-2.5 pb-1 text-left">
-                        <h3 className="font-extrabold font-mulish text-[13px] sm:text-[14px] text-black uppercase tracking-tight leading-snug line-clamp-1 group-hover:text-[#3AB3FF] transition-colors">
+                        <h3 className="font-extrabold text-[13px] sm:text-[14px] text-black uppercase tracking-tight leading-snug line-clamp-1 group-hover:text-[#3AB3FF] transition-colors">
                           {proj.name}
                         </h3>
                       </div>
@@ -439,7 +432,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                     <span className="w-8 h-8 rounded bg-[#3AB3FF] text-white font-black text-sm flex items-center justify-center shrink-0 shadow-sm">
                       {pillar.number}
                     </span>
-                    <h2 className="text-[17px] sm:text-[19px] md:text-[20px] font-extrabold font-mulish text-[#0C0C0C] leading-snug">
+                    <h2 className="text-[17px] sm:text-[19px] md:text-[20px] font-extrabold text-[#0C0C0C] leading-snug">
                       {pillar.title}
                     </h2>
                   </div>
@@ -503,7 +496,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
 
         <div className="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="max-w-[720px] mx-auto text-white">
-            <h2 className="text-center text-[24px] sm:text-[30px] md:text-[34px] font-black font-mulish uppercase tracking-tight text-white mb-8">
+            <h2 className="text-center text-[24px] sm:text-[30px] md:text-[34px] font-black uppercase tracking-tight text-white mb-8">
               Đăng kí thông tin nhận ưu đãi trạm sạc
             </h2>
 
@@ -657,7 +650,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           {/* Section Heading */}
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-[#0C0C0C] text-[26px] sm:text-[32px] md:text-[36px] font-black font-mulish uppercase tracking-tight leading-tight">
+            <h2 className="text-[#0C0C0C] text-[26px] sm:text-[32px] md:text-[36px] font-black uppercase tracking-tight leading-tight">
               SẢN PHẨM TRẠM SẠC V-GREEN PHƯƠNG ĐÔNG
             </h2>
             <div className="w-[16%] min-w-[120px] max-w-[190px] h-[4.5px] bg-[#3AB3FF] mx-auto mt-3 mb-6 rounded-full" />
@@ -667,7 +660,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
               <button
                 type="button"
                 onClick={() => setProductTab("dc")}
-                className={`relative pb-3 text-sm sm:text-[16px] font-extrabold font-mulish uppercase tracking-normal transition-all cursor-pointer ${
+                className={`relative pb-3 text-sm sm:text-[16px] font-extrabold uppercase tracking-normal transition-all cursor-pointer ${
                   productTab === "dc"
                     ? "text-[#3AB3FF] border-b-[3px] border-[#3AB3FF] mb-[-1.5px]"
                     : "text-[#000000] hover:text-[#3AB3FF]"
@@ -679,7 +672,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
               <button
                 type="button"
                 onClick={() => setProductTab("ac")}
-                className={`relative pb-3 text-sm sm:text-[16px] font-extrabold font-mulish uppercase tracking-normal transition-all cursor-pointer ${
+                className={`relative pb-3 text-sm sm:text-[16px] font-extrabold uppercase tracking-normal transition-all cursor-pointer ${
                   productTab === "ac"
                     ? "text-[#3AB3FF] border-b-[3px] border-[#3AB3FF] mb-[-1.5px]"
                     : "text-[#000000] hover:text-[#3AB3FF]"
@@ -709,10 +702,10 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                 </div>
 
                 <div className="pt-4 pb-1 text-left">
-                  <span className="block text-[13px] text-[#777777] font-medium font-mulish mb-1">
+                  <span className="block text-[13px] text-[#777777] font-medium mb-1">
                     {prod.categoryName}
                   </span>
-                  <h3 className="text-[16px] sm:text-[17px] font-extrabold font-mulish text-[#000000] group-hover:text-[#3AB3FF] transition-colors leading-snug">
+                  <h3 className="text-[16px] sm:text-[17px] font-extrabold text-[#000000] group-hover:text-[#3AB3FF] transition-colors leading-snug">
                     {prod.name}
                   </h3>
                 </div>
@@ -728,7 +721,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
       <section className="py-14 sm:py-20 bg-[#fafafa] border-t border-gray-100">
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-8">
-            <h2 className="text-[#0C0C0C] text-[26px] sm:text-[32px] md:text-[36px] font-black font-mulish uppercase tracking-tight leading-tight">
+            <h2 className="text-[#0C0C0C] text-[26px] sm:text-[32px] md:text-[36px] font-black uppercase tracking-tight leading-tight">
               TIN TỨC MỚI NHẤT
             </h2>
             <div className="w-[16%] min-w-[120px] max-w-[190px] h-[4.5px] bg-[#3AB3FF] mx-auto mt-3 mb-6 rounded-full" />
@@ -756,7 +749,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
                   />
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
-                  <h3 className="font-extrabold font-mulish text-[15px] sm:text-[16px] text-black group-hover:text-[#3AB3FF] transition-colors leading-snug line-clamp-3">
+                  <h3 className="font-extrabold text-[15px] sm:text-[16px] text-black group-hover:text-[#3AB3FF] transition-colors leading-snug line-clamp-3">
                     {news.title}
                   </h3>
                 </div>

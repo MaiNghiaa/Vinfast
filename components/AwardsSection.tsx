@@ -98,7 +98,7 @@ export default function AwardsSection() {
         >
           {/* Left Column: Title, Subtitle, Arrows */}
           <div className="w-full md:w-[38%] shrink-0 text-left flex flex-col justify-center">
-            <h2 className="text-2xl sm:text-[28px] font-extrabold text-[#0c0c0c] uppercase tracking-tight leading-tight font-['Mulish',sans-serif]">
+            <h2 className="text-2xl sm:text-[28px] font-extrabold text-[#0c0c0c] uppercase tracking-tight leading-tight">
               VINFAST PHƯƠNG ĐÔNG <br />
               AWARDS NĂM 2025
             </h2>

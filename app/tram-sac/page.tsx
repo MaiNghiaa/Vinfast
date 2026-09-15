@@ -3,17 +3,10 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mulish } from "next/font/google";
 import { ChevronLeft, ChevronRight, CheckCircle } from "lucide-react";
 import NewsSection from "@/components/NewsSection";
 import GsapReveal from "@/components/animation/GsapReveal";
 import StaggerContainer from "@/components/animation/StaggerContainer";
-
-const mulish = Mulish({
-  subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
 
 interface ProductItem {
   id: string;
@@ -193,7 +186,7 @@ export default function ChargingStationPage() {
   const currentProducts = productTab === "dc" ? DC_PRODUCTS : AC_PRODUCTS;
 
   return (
-    <div className={`w-full bg-white text-[#333333] ${mulish.className}`}>
+    <div className="w-full bg-white text-[#333333]">
       {/* ============================================================
           1. HEADER BANNER SECTION (matching Elementor e83e538)
          ============================================================ */}
@@ -210,7 +203,7 @@ export default function ChargingStationPage() {
           <div className="absolute inset-0 bg-black/80" />
 
           <div className="relative z-10 text-center px-4 max-w-4xl mx-auto py-12">
-            <h1 className="text-white text-[32px] sm:text-[38px] md:text-[44px] font-black font-mulish uppercase tracking-tight drop-shadow-md leading-tight">
+            <h1 className="text-white text-[32px] sm:text-[38px] md:text-[44px] font-black uppercase tracking-tight drop-shadow-md leading-tight">
               Trạm sạc
             </h1>
           </div>
@@ -219,9 +212,9 @@ export default function ChargingStationPage() {
 
       {/* ============================================================
           2. SẢN PHẨM TRẠM SẠC V-GREEN PHƯƠNG ĐÔNG (matching 77969d9 & Image 2)
-          - Heading: Mulish 900 đậm (#0C0C0C), text-[28px]-text-[38px], tracking-tight
+          - Heading: font-black (#0C0C0C), text-[28px]-text-[38px], tracking-tight
           - Divider: #3AB3FF, width 16%, thickness 4.5px, centered
-          - Tabs: TRẠM SẠC VINFAST DC & TRẠM SẠC VINFAST AC (Mulish 800, text-[16px])
+          - Tabs: TRẠM SẠC VINFAST DC & TRẠM SẠC VINFAST AC (font-extrabold, text-[16px])
           - Product Card:
             + Image TO KHÔNG BỊ CO LẠI (aspect-square w-full, ~350px x 350px)
             + Category: text-[13px] text-[#777777] font-medium
@@ -231,7 +224,7 @@ export default function ChargingStationPage() {
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           {/* Section Header */}
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-[#0C0C0C] text-[28px] sm:text-[34px] md:text-[38px] font-black font-mulish uppercase tracking-tight leading-tight">
+            <h2 className="text-[#0C0C0C] text-[28px] sm:text-[34px] md:text-[38px] font-black uppercase tracking-tight leading-tight">
               SẢN PHẨM TRẠM SẠC V-GREEN PHƯƠNG ĐÔNG
             </h2>
 
@@ -243,7 +236,7 @@ export default function ChargingStationPage() {
               <button
                 type="button"
                 onClick={() => setProductTab("dc")}
-                className={`relative pb-3 text-sm sm:text-[16px] font-extrabold font-mulish uppercase tracking-normal transition-all cursor-pointer ${
+                className={`relative pb-3 text-sm sm:text-[16px] font-extrabold uppercase tracking-normal transition-all cursor-pointer ${
                   productTab === "dc"
                     ? "text-[#3AB3FF] border-b-[3px] border-[#3AB3FF] mb-[-1.5px]"
                     : "text-[#000000] hover:text-[#3AB3FF]"
@@ -255,7 +248,7 @@ export default function ChargingStationPage() {
               <button
                 type="button"
                 onClick={() => setProductTab("ac")}
-                className={`relative pb-3 text-sm sm:text-[16px] font-extrabold font-mulish uppercase tracking-normal transition-all cursor-pointer ${
+                className={`relative pb-3 text-sm sm:text-[16px] font-extrabold uppercase tracking-normal transition-all cursor-pointer ${
                   productTab === "ac"
                     ? "text-[#3AB3FF] border-b-[3px] border-[#3AB3FF] mb-[-1.5px]"
                     : "text-[#000000] hover:text-[#3AB3FF]"
@@ -293,10 +286,10 @@ export default function ChargingStationPage() {
 
                 {/* Meta text: Category + Bold Name */}
                 <div className="pt-3 pb-1 text-left">
-                  <span className="block text-[13px] text-[#777777] font-medium font-mulish mb-1">
+                  <span className="block text-[13px] text-[#777777] font-medium mb-1">
                     {prod.category}
                   </span>
-                  <h3 className="text-[16px] sm:text-[17px] font-extrabold font-mulish text-[#000000] group-hover:text-[#3AB3FF] transition-colors leading-snug">
+                  <h3 className="text-[16px] sm:text-[17px] font-extrabold text-[#000000] group-hover:text-[#3AB3FF] transition-colors leading-snug">
                     {prod.name}
                   </h3>
                 </div>
@@ -308,7 +301,7 @@ export default function ChargingStationPage() {
 
       {/* ============================================================
           3. DỰ ÁN TRẠM SẠC VGREEN PHƯƠNG ĐÔNG (matching 641b7c6 & Image 3)
-          - Heading: Mulish 900 to đậm (#0C0C0C), text-[28px]-text-[38px]
+          - Heading: font-black (#0C0C0C), text-[28px]-text-[38px]
           - Full-width Section with minimal padding (w-full px-1 sm:px-2 md:px-3) matching Image 3
           - 5 Slides visible edge-to-edge across Desktop (no massive padding squeezing slides)
           - Inside navigation arrows (elementor-arrows-position-inside)
@@ -320,7 +313,7 @@ export default function ChargingStationPage() {
         <div className="w-full px-1 sm:px-2 md:px-3 lg:px-4">
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-[#0C0C0C] text-[28px] sm:text-[34px] md:text-[38px] font-black font-mulish uppercase tracking-tight leading-tight">
+            <h2 className="text-[#0C0C0C] text-[28px] sm:text-[34px] md:text-[38px] font-black uppercase tracking-tight leading-tight">
               DỰ ÁN TRẠM SẠC VGREEN PHƯƠNG ĐÔNG
             </h2>
             {/* Elementor exact Divider under title: width 16%, thickness 4.5px, color #3AB3FF */}
@@ -380,7 +373,7 @@ export default function ChargingStationPage() {
 
                       {/* Caption underneath the image on white background */}
                       <div className="pt-2.5 pb-1 text-left">
-                        <h3 className="font-extrabold font-mulish text-[13px] sm:text-[14px] text-black uppercase tracking-tight leading-snug line-clamp-1 group-hover:text-[#3AB3FF] transition-colors">
+                        <h3 className="font-extrabold text-[13px] sm:text-[14px] text-black uppercase tracking-tight leading-snug line-clamp-1 group-hover:text-[#3AB3FF] transition-colors">
                           {proj.name}
                         </h3>
                       </div>
@@ -425,7 +418,7 @@ export default function ChargingStationPage() {
 
         <div className="relative z-10 max-w-[1300px] mx-auto px-4 sm:px-6">
           <div className="max-w-[760px] mx-auto text-white">
-            <h2 className="text-center text-[26px] sm:text-[32px] md:text-[36px] font-black font-mulish uppercase tracking-tight text-white mb-8">
+            <h2 className="text-center text-[26px] sm:text-[32px] md:text-[36px] font-black uppercase tracking-tight text-white mb-8">
               Đăng kí thông tin nhận ưu đãi trạm sạc
             </h2>
 
@@ -603,7 +596,7 @@ export default function ChargingStationPage() {
 
             {/* Right: Text & Benefits - Clean black checkmarks & larger font (Image 1) */}
             <div className="lg:col-span-6 space-y-4 sm:space-y-5">
-              <h2 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[34px] font-black font-mulish uppercase text-[#0C0C0C] tracking-tight leading-[1.25]">
+              <h2 className="text-[24px] sm:text-[28px] md:text-[32px] lg:text-[34px] font-black uppercase text-[#0C0C0C] tracking-tight leading-[1.25]">
                 VGREEN PHƯƠNG ĐÔNG - LỰA CHỌN HÀNG ĐẦU TẠI VIỆT NAM
               </h2>
 

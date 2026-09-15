@@ -234,7 +234,7 @@ export default function VehicleTabsShowcase() {
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
         {/* 1. Header Title & Accent Divider matching Phương Đông */}
         <div className="text-center mb-6">
-          <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-black uppercase text-[#0c0c0c] tracking-tight font-['Mulish',sans-serif]">
+          <h2 className="text-2xl sm:text-[28px] md:text-[32px] font-black uppercase text-[#0c0c0c] tracking-tight">
             KHÁM PHÁ CÁC DÒNG XE
           </h2>
           {/* Blue accent underline */}

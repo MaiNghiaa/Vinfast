@@ -102,7 +102,7 @@ export default function ContactPage() {
             </div>
 
             {/* Headquarters Info */}
-            <div className="space-y-6 font-['Mulish',sans-serif]">
+            <div className="space-y-6">
               <div>
                 <h1 className="text-[24px] sm:text-[30px] font-extrabold uppercase text-[#000000] tracking-tight mb-4">
                   LIÊN HỆ VINFAST PHƯƠNG ĐÔNG
@@ -156,7 +156,7 @@ export default function ContactPage() {
       {/* 3. Form Section (matching Phương Đông 17f8e28 - contact-section-form) */}
       <section className="py-12 bg-gray-50/60 border-t border-b border-gray-100">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-8 font-['Mulish',sans-serif]">
+          <div className="text-center max-w-3xl mx-auto mb-8">
             <h2 className="text-[22px] sm:text-[28px] md:text-[30px] font-extrabold uppercase text-[#000000] tracking-tight mb-3">
               ĐĂNG KÝ FORM - NHẬN ƯU ĐÃI
             </h2>
@@ -270,7 +270,7 @@ export default function ContactPage() {
 
       {/* 4. Showrooms Hotline Directory (matching Phương Đông 5025803 - 4 Columns Box-Col) */}
       <section className="py-12 sm:py-16">
-        <div className="max-w-[1300px] mx-auto px-4 sm:px-6 font-['Mulish',sans-serif]">
+        <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-[20px] sm:text-[24px] md:text-[26px] font-black uppercase text-[#111111] tracking-tight">
               THÔNG TIN LIÊN HỆ - HỆ THỐNG SHOWROOM VINFAST PHƯƠNG ĐÔNG

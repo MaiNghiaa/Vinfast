@@ -111,7 +111,7 @@ export default function AboutPage() {
 
         {/* Content Centered placed in the middle of hero banner */}
         <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center py-16 sm:py-20 md:py-24">
-          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold uppercase tracking-[1px] font-['Mulish',sans-serif] drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] mb-3 sm:mb-4">
+          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold uppercase tracking-[1px] drop-shadow-[0_2px_14px_rgba(0,0,0,0.85)] mb-3 sm:mb-4">
             GIỚI THIỆU VINFAST PHƯƠNG ĐÔNG
           </h1>
 
@@ -152,7 +152,7 @@ export default function AboutPage() {
       <GsapReveal animation="fade-up" duration={0.8}>
         <section className="py-12 sm:py-16 bg-white text-center">
           <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-            <h2 className="text-xl sm:text-2xl md:text-[27px] font-extrabold uppercase text-[#000000] tracking-[0.2px] font-['Mulish',sans-serif] leading-snug mb-5">
+            <h2 className="text-xl sm:text-2xl md:text-[27px] font-extrabold uppercase text-[#000000] tracking-[0.2px] leading-snug mb-5">
               25 NĂM KIẾN TẠO GIÁ TRỊ BỀN VỮNG
             </h2>
             <p className="text-sm sm:text-base text-[#111111] leading-relaxed max-w-5xl mx-auto font-normal">
@@ -165,7 +165,7 @@ export default function AboutPage() {
       {/* 3. SECTION: VINFAST PHƯƠNG ĐÔNG – NHÀ PHÂN PHỐI Ô TÔ ĐIỆN SỐ 1 VIỆT NAM */}
       <section className="pb-10 bg-white text-center">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-          <h3 className="text-lg sm:text-xl md:text-[23px] font-extrabold uppercase text-[#000000] tracking-[1.2px] font-['Mulish',sans-serif] leading-snug mb-5">
+          <h3 className="text-lg sm:text-xl md:text-[23px] font-extrabold uppercase text-[#000000] tracking-[1.2px] leading-snug mb-5">
             VINFAST PHƯƠNG ĐÔNG – NHÀ PHÂN PHỐI Ô TÔ ĐIỆN SỐ 1 VIỆT NAM
           </h3>
           <p className="text-sm sm:text-base text-[#111111] leading-relaxed max-w-5xl mx-auto mb-6">
@@ -219,7 +219,7 @@ export default function AboutPage() {
       {/* 5. SECTION: DỊCH VỤ BẰNG TRÁI TIM – KẾT NỐI BẰNG GIÁ TRỊ */}
       <section className="py-12 sm:py-16 bg-white text-center">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-          <h3 className="text-lg sm:text-xl md:text-[24px] font-extrabold uppercase text-[#000000] tracking-wide font-['Mulish',sans-serif] leading-snug mb-6">
+          <h3 className="text-lg sm:text-xl md:text-[24px] font-extrabold uppercase text-[#000000] tracking-wide leading-snug mb-6">
             DỊCH VỤ BẰNG TRÁI TIM – KẾT NỐI BẰNG GIÁ TRỊ
           </h3>
           <p className="text-sm sm:text-base text-[#222222] leading-relaxed max-w-5xl mx-auto text-justify sm:text-center font-normal">
@@ -258,7 +258,7 @@ export default function AboutPage() {
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-14">
-            <h3 className="text-2xl sm:text-3xl md:text-[32px] font-extrabold uppercase text-[#000000] tracking-tight font-['Mulish',sans-serif]">
+            <h3 className="text-2xl sm:text-3xl md:text-[32px] font-extrabold uppercase text-[#000000] tracking-tight">
               GIẢI THƯỞNG VINFAST PHƯƠNG ĐÔNG
             </h3>
           </div>
@@ -305,7 +305,7 @@ export default function AboutPage() {
           <StaggerContainer stagger={0.15} yOffset={35} className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10">
             {/* Cột 1: Vị thế dẫn đầu */}
             <div className="bg-[#fbfbfb] rounded-xl p-6 sm:p-8 border border-gray-100 shadow-2xs hover:shadow-md transition-shadow">
-              <h3 className="text-base sm:text-lg font-extrabold uppercase text-center text-[#000000] tracking-[0.8px] mb-5 pb-3 border-b-2 border-[#1863dc] font-['Mulish',sans-serif]">
+              <h3 className="text-base sm:text-lg font-extrabold uppercase text-center text-[#000000] tracking-[0.8px] mb-5 pb-3 border-b-2 border-[#1863dc]">
                 VỊ THẾ DẪN ĐẦU
               </h3>
               <div className="space-y-4 text-xs sm:text-sm text-[#111111] leading-relaxed">
@@ -326,7 +326,7 @@ export default function AboutPage() {
 
             {/* Cột 2: Sứ mệnh phục vụ */}
             <div className="bg-[#fbfbfb] rounded-xl p-6 sm:p-8 border border-gray-100 shadow-2xs hover:shadow-md transition-shadow">
-              <h3 className="text-base sm:text-lg font-extrabold uppercase text-center text-[#000000] tracking-[0.8px] mb-5 pb-3 border-b-2 border-[#1863dc] font-['Mulish',sans-serif]">
+              <h3 className="text-base sm:text-lg font-extrabold uppercase text-center text-[#000000] tracking-[0.8px] mb-5 pb-3 border-b-2 border-[#1863dc]">
                 SỨ MỆNH PHỤC VỤ
               </h3>
               <div className="space-y-4 text-xs sm:text-sm text-[#111111] leading-relaxed">
@@ -353,7 +353,7 @@ export default function AboutPage() {
 
             {/* Cột 3: Giá trị cốt lõi */}
             <div className="bg-[#fbfbfb] rounded-xl p-6 sm:p-8 border border-gray-100 shadow-2xs hover:shadow-md transition-shadow">
-              <h3 className="text-base sm:text-lg font-extrabold uppercase text-center text-[#000000] tracking-[0.8px] mb-5 pb-3 border-b-2 border-[#1863dc] font-['Mulish',sans-serif]">
+              <h3 className="text-base sm:text-lg font-extrabold uppercase text-center text-[#000000] tracking-[0.8px] mb-5 pb-3 border-b-2 border-[#1863dc]">
                 GIÁ TRỊ CỐT LÕI
               </h3>
               <div className="space-y-4 text-xs sm:text-sm text-[#111111] leading-relaxed">
@@ -384,7 +384,7 @@ export default function AboutPage() {
       {/* 9. SECTION: HƯỚNG TỚI TƯƠNG LAI XANH – CÙNG VINFAST VIỆT NAM & GALLERY (ẢNH TO HƠN THEO ẢNH 2) */}
       <section className="py-12 sm:py-18 bg-white text-center">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-          <h3 className="text-xl sm:text-2xl md:text-[26px] font-extrabold uppercase text-[#000000] tracking-wide font-['Mulish',sans-serif] leading-snug mb-6">
+          <h3 className="text-xl sm:text-2xl md:text-[26px] font-extrabold uppercase text-[#000000] tracking-wide leading-snug mb-6">
             HƯỚNG TỚI TƯƠNG LAI XANH – CÙNG VINFAST VIỆT NAM
           </h3>
 
@@ -431,7 +431,7 @@ export default function AboutPage() {
 
         {/* Content Centered */}
         <div className="relative z-10 max-w-[1300px] mx-auto px-4 sm:px-6 text-center flex flex-col items-center">
-          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-wide leading-tight font-['Mulish',sans-serif] drop-shadow-md">
+          <h2 className="text-white text-2xl sm:text-3xl md:text-4xl font-extrabold uppercase tracking-wide leading-tight drop-shadow-md">
             GIỚI THIỆU TẬP ĐOÀN PHƯƠNG ĐÔNG
           </h2>
 

@@ -3,7 +3,6 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mulish } from "next/font/google";
 import {
   Car,
   Zap,
@@ -21,12 +20,6 @@ import {
 import { USED_CARS, GREEN_FUTURE_COMMITMENTS, USED_CARS_NEWS } from "@/data/usedCars";
 import GsapReveal from "@/components/animation/GsapReveal";
 import StaggerContainer from "@/components/animation/StaggerContainer";
-
-const mulish = Mulish({
-  subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  display: "swap",
-});
 
 export default function UsedCarsPage() {
   // Vehicle type tab
@@ -131,7 +124,7 @@ export default function UsedCarsPage() {
   };
 
   return (
-    <div className={`w-full bg-white text-[#333333] ${mulish.className}`}>
+    <div className="w-full bg-white text-[#333333]">
       {/* ============================================================
           1. SHOWROOM HERO BACKGROUND (matching Phương Đông 1:1)
          ============================================================ */}
@@ -152,7 +145,7 @@ export default function UsedCarsPage() {
       <GsapReveal animation="fade-up" duration={0.8}>
         <section className="relative z-20 max-w-[1360px] mx-auto px-4 sm:px-6 -mt-24 sm:-mt-32 md:-mt-40">
           <div className="bg-white rounded-2xl md:rounded-[22px] shadow-[0_15px_45px_rgba(0,0,0,0.12)] p-6 sm:p-8 md:p-10 border border-gray-100">
-            <h2 className="text-center text-[20px] sm:text-[24px] md:text-[28px] font-black font-mulish uppercase text-[#0C0C0C] tracking-tight mb-6 sm:mb-8">
+            <h2 className="text-center text-[20px] sm:text-[24px] md:text-[28px] font-black uppercase text-[#0C0C0C] tracking-tight mb-6 sm:mb-8">
               BẠN ĐANG MUỐN TÌM MỘT CHIẾC XE NHƯ THẾ NÀO?
             </h2>
 
@@ -532,7 +525,7 @@ export default function UsedCarsPage() {
                   <div className="absolute bottom-2.5 left-2.5 sm:left-3 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded shadow-sm border border-gray-200">
                     <span className="text-[11px] text-gray-500 mr-1.5 font-medium">Giá bán</span>
                     <span
-                      className={`text-sm sm:text-[15px] font-black font-mulish ${
+                      className={`text-sm sm:text-[15px] font-black ${
                         car.priceText === "Liên hệ" ? "text-[#00c853]" : "text-[#00c853]"
                       }`}
                     >
@@ -543,7 +536,7 @@ export default function UsedCarsPage() {
 
                 {/* Car Title & Specs */}
                 <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
-                  <h3 className="text-[15px] sm:text-[16px] font-extrabold font-mulish text-[#000000] group-hover:text-[#3AB3FF] transition-colors leading-snug mb-4">
+                  <h3 className="text-[15px] sm:text-[16px] font-extrabold text-[#000000] group-hover:text-[#3AB3FF] transition-colors leading-snug mb-4">
                     {car.name}
                   </h3>
 
@@ -592,7 +585,7 @@ export default function UsedCarsPage() {
 
         <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6">
           <div className="max-w-[760px] mx-auto text-white">
-            <h2 className="text-center text-[22px] sm:text-[28px] md:text-[32px] font-black font-mulish uppercase tracking-tight text-white mb-2">
+            <h2 className="text-center text-[22px] sm:text-[28px] md:text-[32px] font-black uppercase tracking-tight text-white mb-2">
               ĐỊNH GIÁ XE CỦA QUÝ KHÁCH
             </h2>
             <p className="text-center text-xs sm:text-sm text-gray-300 mb-8">
@@ -749,7 +742,7 @@ export default function UsedCarsPage() {
       <section className="py-14 sm:py-20 bg-white">
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-[#0C0C0C] text-[24px] sm:text-[30px] md:text-[34px] font-black font-mulish uppercase tracking-tight leading-tight">
+            <h2 className="text-[#0C0C0C] text-[24px] sm:text-[30px] md:text-[34px] font-black uppercase tracking-tight leading-tight">
               Cam kết của Green Future
             </h2>
             <div className="w-16 h-1 bg-[#3AB3FF] mx-auto mt-3 rounded-full" />
@@ -770,7 +763,7 @@ export default function UsedCarsPage() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-black font-mulish text-[15px] sm:text-[16px] text-[#0C0C0C] uppercase tracking-tight">
+                <h3 className="font-black text-[15px] sm:text-[16px] text-[#0C0C0C] uppercase tracking-tight">
                   {comm.title}
                 </h3>
                 <p className="text-xs sm:text-[13px] text-[#555555] leading-relaxed text-justify sm:text-center">
@@ -788,7 +781,7 @@ export default function UsedCarsPage() {
       <section className="py-14 sm:py-20 bg-[#fafafa] border-t border-gray-100">
         <div className="max-w-[1360px] mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
-            <h2 className="text-[#0C0C0C] text-[24px] sm:text-[30px] md:text-[34px] font-black font-mulish uppercase tracking-tight leading-tight">
+            <h2 className="text-[#0C0C0C] text-[24px] sm:text-[30px] md:text-[34px] font-black uppercase tracking-tight leading-tight">
               TIN TỨC MỚI NHẤT TỪ Vinfast PHƯƠNG ĐÔNG
             </h2>
             <div className="w-20 h-1 bg-[#3AB3FF] mx-auto mt-3 rounded-full" />
@@ -810,7 +803,7 @@ export default function UsedCarsPage() {
                   />
                 </div>
                 <div className="p-5 flex-1 flex flex-col justify-between">
-                  <h3 className="font-extrabold font-mulish text-[15px] sm:text-[16px] text-black group-hover:text-[#3AB3FF] transition-colors leading-snug line-clamp-3">
+                  <h3 className="font-extrabold text-[15px] sm:text-[16px] text-black group-hover:text-[#3AB3FF] transition-colors leading-snug line-clamp-3">
                     {news.title}
                   </h3>
                 </div>
