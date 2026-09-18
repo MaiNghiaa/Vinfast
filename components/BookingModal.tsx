@@ -26,6 +26,8 @@ export default function BookingModal({
   const [preferredDate, setPreferredDate] = useState("");
   const [note, setNote] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [leadCode, setLeadCode] = useState("");
 
   useEffect(() => {
     if (defaultVehicleSlug) {
@@ -41,18 +43,44 @@ export default function BookingModal({
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName || !phone) {
       alert("Vui lòng nhập họ tên và số điện thoại của bạn.");
       return;
     }
-    // Simulate submission (ready for Directus API)
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName,
+          phone,
+          type,
+          vehicleSlug: selectedVehicle,
+          showroomSlug: selectedShowroom,
+          preferredDate,
+          note,
+          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+      const data = await res.json();
+      if (data.code) {
+        setLeadCode(data.code);
+      }
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Lỗi gửi form sang Directus:", err);
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleReset = () => {
     setSubmitted(false);
+    setLeadCode("");
     onClose();
   };
 
@@ -75,8 +103,13 @@ export default function BookingModal({
             <h3 className="text-xl font-extrabold text-gray-900">
               Đăng Ký Thành Công!
             </h3>
+            {leadCode && (
+              <div className="inline-block px-3 py-1 bg-blue-50 text-[#1863dc] rounded-full text-xs font-mono font-bold">
+                Mã tiếp nhận: {leadCode}
+              </div>
+            )}
             <p className="text-xs text-gray-600 leading-relaxed">
-              Cảm ơn Quý khách <strong>{fullName}</strong> đã gửi yêu cầu. Chuyên viên tư vấn của <strong>VinFast Phương Đông</strong> sẽ liên hệ qua số <strong>{phone}</strong> trong vòng 15 phút để xác nhận lịch hẹn.
+              Cảm ơn Quý khách <strong>{fullName}</strong> đã gửi yêu cầu. Yêu cầu đã được chuyển vào hệ thống quản lý của <strong>VinFast Phương Đông</strong>. Chuyên viên tư vấn sẽ liên hệ qua số <strong>{phone}</strong> trong vòng 15 phút để xác nhận.
             </p>
             <div className="bg-gray-50 p-4 rounded-lg text-xs text-gray-500 text-left space-y-1 border border-gray-200">
               <p>📍 Cơ sở tiếp nhận: <strong>{SHOWROOMS.find((s) => s.id === selectedShowroom)?.name}</strong></p>
