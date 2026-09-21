@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { POSTS } from "@/data/news";
+import { Post } from "@/data/types";
 import StaggerContainer from "@/components/animation/StaggerContainer";
 
 interface TabItem {
@@ -20,12 +21,14 @@ const NEWS_TABS: TabItem[] = [
 
 interface NewsSectionProps {
   className?: string;
+  posts?: Post[];
 }
 
-export default function NewsSection({ className = "" }: NewsSectionProps) {
+export default function NewsSection({ className = "", posts }: NewsSectionProps) {
   const [activeTab, setActiveTab] = useState<string>("all");
+  const postList = (posts && posts.length > 0) ? posts : POSTS;
 
-  const filteredPosts = POSTS.filter((post) => {
+  const filteredPosts = postList.filter((post) => {
     if (activeTab === "all") return true;
     if (activeTab === "khuyen-mai") return post.category === "uu-dai";
     if (activeTab === "su-kien") return post.category === "su-kien";

@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Showroom, getDirectusAssetUrl } from "@/lib/directus";
 
 export interface ShowroomCategory {
   id: string;
@@ -13,39 +14,53 @@ export interface ShowroomCategory {
   link: string;
 }
 
-export const SHOWROOM_CATEGORIES: ShowroomCategory[] = [
+export const DEFAULT_SHOWROOM_CATEGORIES: ShowroomCategory[] = [
   {
     id: "hoang-quoc-viet",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT",
-    image: "/images/showrooms/ocean-park.png",
+    image: getDirectusAssetUrl("a94f1dfd-7bf8-43c2-9e7f-3ba95214f233"),
     link: "/contact",
   },
   {
     id: "bat-trang",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG BÁT TRÀNG",
-    image: "/images/showrooms/long-bien.png",
+    image: getDirectusAssetUrl("4f59fbe3-b8e5-4d62-aaea-3b5cd65ee9be"),
     link: "/contact",
   },
   {
     id: "thuong-tin",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG THƯỜNG TÍN",
-    image: "/images/showrooms/son-tay.png",
+    image: getDirectusAssetUrl("d9cfeee4-7d83-4289-a1c5-c40eda977fb9"),
     link: "/contact",
   },
   {
     id: "hoa-lac",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG HÒA LẠC",
-    image: "/images/showrooms/vinh-phuc.png",
+    image: getDirectusAssetUrl("585f74f2-93b7-457b-9fc1-cbd491a3d508"),
     link: "/contact",
   },
 ];
 
-export default function ShowroomCategorySlider() {
-  const totalItems = SHOWROOM_CATEGORIES.length;
+interface ShowroomCategorySliderProps {
+  showrooms?: Showroom[];
+}
+
+export default function ShowroomCategorySlider({ showrooms }: ShowroomCategorySliderProps) {
+  const categories: ShowroomCategory[] = (showrooms && showrooms.length > 0)
+    ? showrooms.map((sr) => ({
+        id: sr.id,
+        name: "SHOWROOM VINFAST",
+        subName: sr.name.toUpperCase().replace(/^SHOWROOM\s+VINFAST\s+/i, ""),
+        image: sr.image || getDirectusAssetUrl("a94f1dfd-7bf8-43c2-9e7f-3ba95214f233"),
+        link: "/contact",
+      }))
+    : DEFAULT_SHOWROOM_CATEGORIES;
+
+  const totalItems = categories.length;
   const [currentIndex, setCurrentIndex] = useState(totalItems);
   const [withTransition, setWithTransition] = useState(true);
   const [itemsPerView, setItemsPerView] = useState(5);
@@ -123,9 +138,9 @@ export default function ShowroomCategorySlider() {
 
   // Extended 3x array for seamless infinite looping
   const extendedItems = [
-    ...SHOWROOM_CATEGORIES,
-    ...SHOWROOM_CATEGORIES,
-    ...SHOWROOM_CATEGORIES,
+    ...categories,
+    ...categories,
+    ...categories,
   ];
 
   const itemWidthPercent = 100 / itemsPerView;

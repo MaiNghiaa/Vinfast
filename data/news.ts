@@ -1,4 +1,5 @@
 import { Post } from "./types";
+import { getDirectusAssetUrl } from "@/lib/directus-url";
 
 export const POSTS: Post[] = [
   {
@@ -193,7 +194,7 @@ export const POSTS: Post[] = [
       <h3>2. Phanh tự động khẩn cấp (AEB) & Cảnh báo điểm mù (BSW)</h3>
       <p>Cảm biến radar và camera kép liên tục quét môi trường xung quanh, đưa ra cảnh báo sớm bằng hình ảnh trên màn hình trung tâm kết hợp âm thanh khi phát hiện phương tiện cắt ngang hoặc chướng ngại vật bất ngờ.</p>
     `,
-    thumbnail: "/images/news/adas-vf8-all-new.png",
+    thumbnail: getDirectusAssetUrl("a159ae92-070d-4e7c-958d-17ce4f387174"),
     publishedDate: "28/08/2026",
     author: "Chuyên viên Kỹ thuật Phương Đông",
     isFeatured: true,
@@ -213,7 +214,7 @@ export const POSTS: Post[] = [
         <li><strong>Bảo dưỡng:</strong> Xe điện không có bugi, dầu máy, lọc dầu, đai cam... chu kỳ bảo dưỡng lên tới 12.000 km giúp tiết kiệm tới 60% chi phí chăm sóc xe.</li>
       </ul>
     `,
-    thumbnail: "/images/news/co-1-ty-mua-vf8.png",
+    thumbnail: getDirectusAssetUrl("5619ac7d-12ac-4bbb-8b4b-90dfb9c7d58e"),
     publishedDate: "20/08/2026",
     author: "Ban Biên Tập VinFast",
     isFeatured: true,
@@ -228,7 +229,7 @@ export const POSTS: Post[] = [
     content: `
       <p><strong>VinFast Limo Green</strong> là mẫu MPV 7 chỗ thuần điện đang nhận được sự quan tâm rất lớn từ các công ty lữ hành, dịch vụ đón tiễn sân bay và gia đình đông người nhờ không gian rộng rãi và chi phí vận hành siêu kinh tế.</p>
     `,
-    thumbnail: "/images/news/limo-green-thang-8.png",
+    thumbnail: getDirectusAssetUrl("e0e79317-907f-4722-8421-08f5bbaa0b51"),
     publishedDate: "15/08/2026",
     author: "Phòng Kinh Doanh Phương Đông",
     isFeatured: true,
@@ -243,7 +244,7 @@ export const POSTS: Post[] = [
     content: `
       <p>VinFast VF MPV7 sở hữu thiết kế hiện đại, nội thất tối ưu cho 7 người lớn cùng động cơ điện mạnh mẽ và tiết kiệm chi phí tối đa.</p>
     `,
-    thumbnail: "/images/news/vf-mpv7-thang-8.png",
+    thumbnail: getDirectusAssetUrl("543ce5a7-952a-4ffe-8ab0-3fa6714d78a5"),
     publishedDate: "12/08/2026",
     author: "Phòng Kinh Doanh Phương Đông",
     isFeatured: true,
@@ -258,7 +259,7 @@ export const POSTS: Post[] = [
     content: `
       <p>Với mức tài chính khoảng 500 - 600 triệu, khách hàng có thể dễ dàng tiếp cận các dòng xe điện 7 chỗ của VinFast thông qua các gói hỗ trợ trả góp lãi suất thấp độc quyền từ VinFast Phương Đông.</p>
     `,
-    thumbnail: "/images/news/tai-chinh-500-600-trieu.png",
+    thumbnail: getDirectusAssetUrl("37a00ec5-bd8b-4b96-bfad-c44cac066860"),
     publishedDate: "05/08/2026",
     author: "Ban Tư Vấn Phương Đông",
     isFeatured: true,

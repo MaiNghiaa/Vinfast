@@ -1,27 +1,12 @@
-// lib/directus.ts
 import { Vehicle, Showroom, UsedCar, Charger, Post } from '@/data/types';
+export type { Vehicle, Showroom, UsedCar, Charger, Post };
 import { VEHICLES } from '@/data/vehicles';
 import { SHOWROOMS, HEADQUARTERS } from '@/data/showrooms';
 import { USED_CARS } from '@/data/usedCars';
 import { CHARGERS } from '@/data/chargers';
 import { POSTS } from '@/data/news';
-
-export const DIRECTUS_PUBLIC_URL = process.env.NEXT_PUBLIC_DIRECTUS_URL || 'http://localhost:8055';
-export const DIRECTUS_SERVER_URL = process.env.DIRECTUS_SERVER_URL || DIRECTUS_PUBLIC_URL;
-export const DIRECTUS_STATIC_TOKEN = process.env.DIRECTUS_STATIC_TOKEN || 'vf_secret_service_token_2026';
-
-/**
- * Convert a Directus file UUID or existing URL to a full image URL
- */
-export function getDirectusAssetUrl(fileIdOrUrl?: string | null): string {
-  if (!fileIdOrUrl) return '';
-  if (fileIdOrUrl.startsWith('http://') || fileIdOrUrl.startsWith('https://')) {
-    return fileIdOrUrl;
-  }
-  // Remove trailing slashes
-  const baseUrl = (typeof window === 'undefined' ? DIRECTUS_SERVER_URL : DIRECTUS_PUBLIC_URL).replace(/\/+$/, '');
-  return `${baseUrl}/assets/${fileIdOrUrl}`;
-}
+export * from './directus-url';
+import { DIRECTUS_PUBLIC_URL, DIRECTUS_SERVER_URL, DIRECTUS_STATIC_TOKEN, getDirectusAssetUrl } from './directus-url';
 
 /**
  * Universal safe fetcher with Directus fallback to static data
@@ -322,4 +307,123 @@ export async function getPosts(): Promise<Post[]> {
     }));
   }
   return POSTS;
+}
+
+/**
+ * 6. FETCH BANNERS (Hero Slider & Promo Cards)
+ */
+export interface Banner {
+  id: number;
+  title: string;
+  subtitle?: string;
+  type: 'hero' | 'promo' | 'service';
+  image: string;
+  link?: string;
+  badge?: string;
+  sort: number;
+}
+
+const STATIC_HERO_SLIDES: Banner[] = [
+  {
+    id: 1,
+    title: 'Lịch lái thử VinFast Phương Đông tháng 9/2026',
+    subtitle: 'Thứ 7 hạnh phúc - Trải nghiệm các dòng xe điện thông minh',
+    type: 'hero',
+    image: getDirectusAssetUrl('a98e3eba-2bd8-46a5-a84d-106016894ea1'),
+    link: '/contact',
+    badge: 'Lái Thử',
+    sort: 1,
+  },
+  {
+    id: 2,
+    title: 'VinFast Phương Đông - Đại Lý Số 1 Miền Bắc',
+    subtitle: 'Hệ thống phân phối xe ô tô điện VinFast chính hãng',
+    type: 'hero',
+    image: getDirectusAssetUrl('4bca56e3-14dc-4fb4-8715-4f42e3dd2ab0'),
+    link: '/xe-moi',
+    badge: 'Chính Hãng',
+    sort: 2,
+  },
+  {
+    id: 3,
+    title: 'VinFast Ưu Đãi Tiên Phong Chuyển Đổi Xanh',
+    subtitle: 'Hỗ trợ đổi xe xăng sang xe điện lên đến 80 triệu đồng',
+    type: 'hero',
+    image: getDirectusAssetUrl('6a6510a8-00b2-4ce4-8316-866132332324'),
+    link: '/tin-tuc',
+    badge: 'Ưu Đãi Lớn',
+    sort: 3,
+  },
+  {
+    id: 4,
+    title: 'Vinh danh VinFast Phương Đông Club 1000',
+    subtitle: 'Top đại lý xuất sắc toàn quốc',
+    type: 'hero',
+    image: getDirectusAssetUrl('56752840-bc26-4848-97b2-71cac5bad22d'),
+    link: '/gioi-thieu',
+    badge: 'Vinh Danh',
+    sort: 4,
+  },
+  {
+    id: 5,
+    title: 'Showroom VinFast Phương Đông Chuẩn 3S',
+    subtitle: 'Trải nghiệm dịch vụ 5 sao và không gian hiện đại',
+    type: 'hero',
+    image: getDirectusAssetUrl('a94f1dfd-7bf8-43c2-9e7f-3ba95214f233'),
+    link: '/contact',
+    badge: 'Showroom',
+    sort: 5,
+  },
+  {
+    id: 6,
+    title: 'Bứt Phá Mọi Giới Hạn Cùng VinFast',
+    subtitle: 'Công nghệ thông minh - Tương lai xanh bền vững',
+    type: 'hero',
+    image: getDirectusAssetUrl('4f59fbe3-b8e5-4d62-aaea-3b5cd65ee9be'),
+    link: '/xe-moi',
+    badge: 'VinFast',
+    sort: 6,
+  },
+  {
+    id: 7,
+    title: 'Chương Trình Khuyến Mại Tháng Này',
+    subtitle: 'Ưu đãi quà tặng và bảo hiểm thân vỏ chính hãng',
+    type: 'promo',
+    image: getDirectusAssetUrl('4328f5f0-c9f9-4d0d-bab5-94b14b2cfc47'),
+    link: '/tin-tuc',
+    badge: 'Khuyến Mại',
+    sort: 7,
+  },
+  {
+    id: 8,
+    title: 'Xưởng Dịch Vụ & Bảo Dưỡng 3S Chính Hãng',
+    subtitle: 'Đội ngũ kỹ thuật viên tay nghề cao và phụ tùng chính hãng',
+    type: 'service',
+    image: getDirectusAssetUrl('fceeb4bd-e264-45ea-952a-9e9ccab19798'),
+    link: '/dich-vu',
+    badge: 'Dịch Vụ',
+    sort: 8,
+  },
+];
+
+export async function getBanners(type?: 'hero' | 'promo' | 'service'): Promise<Banner[]> {
+  const query = type 
+    ? `/items/banners?filter[type][_eq]=${type}&filter[status][_eq]=published&sort=sort`
+    : '/items/banners?filter[status][_eq]=published&sort=sort';
+
+  const res = await directusFetch(query);
+  if (res && Array.isArray(res.data) && res.data.length > 0) {
+    return res.data.map((b: any) => ({
+      id: b.id,
+      title: b.title,
+      subtitle: b.subtitle || '',
+      type: b.type || 'hero',
+      image: getDirectusAssetUrl(b.image),
+      link: b.link || '',
+      badge: b.badge || '',
+      sort: b.sort || 0,
+    }));
+  }
+
+  return type ? STATIC_HERO_SLIDES.filter((b) => b.type === type) : STATIC_HERO_SLIDES;
 }

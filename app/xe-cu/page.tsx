@@ -18,6 +18,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { USED_CARS, GREEN_FUTURE_COMMITMENTS, USED_CARS_NEWS } from "@/data/usedCars";
+import { getDirectusAssetUrl } from "@/lib/directus";
 import GsapReveal from "@/components/animation/GsapReveal";
 import StaggerContainer from "@/components/animation/StaggerContainer";
 
@@ -162,7 +163,7 @@ export default function UsedCarsPage() {
             >
               <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
                 <Image
-                  src="/images/used-cars/car1.jpg"
+                  src={getDirectusAssetUrl("97668b62-ca80-46a4-97e3-a1e1aabbcb68")}
                   alt="Tất cả các loại"
                   fill
                   className="object-contain"
@@ -185,7 +186,7 @@ export default function UsedCarsPage() {
             >
               <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
                 <Image
-                  src="/images/used-cars/car2.jpg"
+                  src={getDirectusAssetUrl("7d504fe9-e510-4f1f-81a5-578c11723e95")}
                   alt="Xe động cơ điện"
                   fill
                   className="object-contain"
@@ -208,7 +209,7 @@ export default function UsedCarsPage() {
             >
               <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
                 <Image
-                  src="/images/used-cars/car3.jpg"
+                  src={getDirectusAssetUrl("b022c5a0-16f8-4879-8204-62743762e95d")}
                   alt="Xe động cơ xăng"
                   fill
                   className="object-contain"
@@ -231,7 +232,7 @@ export default function UsedCarsPage() {
             >
               <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
                 <Image
-                  src="/images/used-cars/car4.jpg"
+                  src={getDirectusAssetUrl("52773c33-63d2-46af-aa23-df4fb7878b9c")}
                   alt="Xe dịch vụ"
                   fill
                   className="object-contain"
