@@ -344,50 +344,39 @@ export default function Footer() {
       {/* ========================================================================= */}
       <div className="w-full bg-[#eeeeee] py-[55px] border-t border-white/20">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-2xl py-8 px-6 sm:px-14 shadow-xs flex flex-wrap lg:flex-nowrap items-center justify-between gap-6 sm:gap-8 min-h-[115px]">
-            {/* Logo 1: Phương Đông có slogan (Lớn, cao ~75px) */}
+          <div className="bg-white rounded-2xl py-7 px-6 sm:px-10 md:px-14 shadow-xs flex flex-wrap md:flex-nowrap items-center justify-between gap-6 sm:gap-8 min-h-[110px]">
+            {/* Logo 1: VinFast Phương Đông */}
             <div className="shrink-0 flex items-center justify-center">
               <Image
                 src="/images/logo-phuong-dong.png"
-                alt="Logo Công ty TNHH Phương Đông"
-                width={180}
-                height={110}
-                className="h-[70px] sm:h-[76px] w-auto object-contain"
+                alt="Logo VinFast Phương Đông"
+                width={200}
+                height={80}
+                className="h-[54px] sm:h-[62px] w-auto object-contain"
               />
             </div>
 
-            {/* Tiêu đề 2 dòng: HỆ SINH THÁI / TẬP ĐOÀN PHƯƠNG ĐÔNG (Chữ to, đậm, rõ nét) */}
-            <div className="text-center shrink-0 px-2">
-              <h4 className="text-[16px] sm:text-[17.5px] font-black text-black uppercase leading-[1.25] tracking-tight">
+            {/* Tiêu đề 2 dòng: HỆ SINH THÁI / TẬP ĐOÀN PHƯƠNG ĐÔNG */}
+            <div className="text-center shrink-0 px-2 sm:px-4">
+              <h4 className="text-[15px] sm:text-[17px] font-black text-black uppercase leading-[1.25] tracking-tight">
                 <span>HỆ SINH THÁI</span>
                 <br />
                 <span>TẬP ĐOÀN PHƯƠNG ĐÔNG</span>
               </h4>
             </div>
 
-            {/* Logo 2: Xanh SM (Lớn, cao ~56px) */}
+            {/* Logo 2: Xanh SM */}
             <div className="shrink-0 flex items-center justify-center">
               <Image
                 src="/images/footer/Xanh-SM-03-scaled.png"
-                alt="Xanh SM Phương Đông"
-                width={220}
-                height={69}
-                className="h-[54px] sm:h-[58px] w-auto object-contain"
+                alt="Xanh SM"
+                width={200}
+                height={60}
+                className="h-[46px] sm:h-[52px] w-auto object-contain"
               />
             </div>
 
-            {/* Logo 3: VinFast Phương Đông */}
-            <div className="shrink-0 flex items-center justify-center">
-              <Image
-                src="/images/logo-phuong-dong.png"
-                alt="VinFast Phương Đông logo"
-                width={210}
-                height={64}
-                className="h-[46px] sm:h-[50px] w-auto object-contain"
-              />
-            </div>
-
-            {/* Logo 4: An Taxi (Lớn, cao ~52px) */}
+            {/* Logo 3: An Taxi */}
             <div className="shrink-0 flex items-center justify-center">
               <a
                 href="https://antaxi.com.vn/"
@@ -398,22 +387,11 @@ export default function Footer() {
                 <Image
                   src="/images/footer/An-Taxi-03-scaled.png"
                   alt="An Taxi"
-                  width={190}
-                  height={60}
-                  className="h-[48px] sm:h-[52px] w-auto object-contain"
+                  width={180}
+                  height={56}
+                  className="h-[44px] sm:h-[48px] w-auto object-contain"
                 />
               </a>
-            </div>
-
-            {/* Logo 5: Anan's Garden (Lớn, cao ~64px) */}
-            <div className="shrink-0 flex items-center justify-center">
-              <Image
-                src="/images/footer/AN-GARDEN-LOGO.png"
-                alt="AN GARDEN LOGO"
-                width={170}
-                height={113}
-                className="h-[60px] sm:h-[66px] w-auto object-contain"
-              />
             </div>
           </div>
         </div>
