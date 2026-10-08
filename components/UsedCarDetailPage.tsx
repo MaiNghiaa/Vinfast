@@ -7,9 +7,12 @@ import {
   ChevronLeft,
   ChevronRight,
   ShieldCheck,
-  CheckCircle,
   Phone,
   Calendar,
+  User,
+  Loader2,
+  CheckCircle2,
+  Send,
 } from "lucide-react";
 import { UsedCar } from "@/data/types";
 import { USED_CARS } from "@/data/usedCars";
@@ -36,14 +39,42 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
   const [phone, setPhone] = useState("");
   const [note, setNote] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [leadCode, setLeadCode] = useState("");
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName.trim() || !phone.trim()) {
       alert("Vui lòng điền đầy đủ họ tên và số điện thoại.");
       return;
     }
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: fullName.trim(),
+          phone: phone.trim(),
+          type: "used_car",
+          vehicleSlug: car.slug,
+          showroomSlug: "",
+          preferredDate: "",
+          note: `Quan tâm xe cũ: ${car.name} (${car.priceText}) | Ghi chú: ${note || "Không có"}`,
+          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+      const data = await res.json();
+      if (data.code) {
+        setLeadCode(data.code);
+      }
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Lỗi gửi yêu cầu tư vấn xe cũ:", err);
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const relatedCars = USED_CARS.filter((c) => c.slug !== car.slug).slice(0, 3);
@@ -340,56 +371,91 @@ export default function UsedCarDetailPage({ car }: UsedCarDetailPageProps) {
             </p>
 
             {submitted ? (
-              <div className="bg-green-50 p-6 rounded-xl text-center space-y-3 text-green-800">
-                <CheckCircle className="w-10 h-10 text-green-600 mx-auto" />
-                <h4 className="font-bold text-base">Gửi yêu cầu thành công!</h4>
-                <p className="text-xs">
-                  Cảm ơn Quý khách <strong className="text-green-950">{fullName}</strong> ({phone}). Chuyên viên Phương Đông sẽ sớm liên hệ tư vấn chiếc {car.name}.
+              <div className="p-6 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-xl text-center space-y-2.5 animate-in fade-in">
+                <CheckCircle2 className="w-10 h-10 text-emerald-600 mx-auto" />
+                <h4 className="font-bold text-base text-gray-900">Gửi Yêu Cầu Thành Công!</h4>
+                {leadCode && (
+                  <div className="inline-block px-3 py-1 bg-white text-emerald-700 rounded-full text-xs font-mono font-bold border border-emerald-200">
+                    Mã tiếp nhận: {leadCode}
+                  </div>
+                )}
+                <p className="text-xs sm:text-sm text-gray-600">
+                  Cảm ơn Quý khách <strong className="text-gray-900">{fullName}</strong> ({phone}). Chuyên viên tư vấn xe cũ VinFast Phương Đông sẽ sớm liên hệ tư vấn chiếc <strong>{car.name}</strong>.
                 </p>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSubmitted(false);
+                    setFullName("");
+                    setPhone("");
+                    setNote("");
+                    setLeadCode("");
+                  }}
+                  className="mt-2 text-xs text-[#1863dc] font-bold hover:underline"
+                >
+                  Gửi yêu cầu khác
+                </button>
               </div>
             ) : (
-              <form onSubmit={handleFormSubmit} className="space-y-4 text-xs sm:text-sm">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <form onSubmit={handleFormSubmit} className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
                   <div>
-                    <label className="block font-bold text-gray-700 mb-1">Họ tên *</label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Nguyễn Văn A"
-                      value={fullName}
-                      onChange={(e) => setFullName(e.target.value)}
-                      className="w-full px-3.5 py-2.5 border border-gray-300 rounded focus:border-[#1863dc] outline-none"
-                    />
+                    <label className="block text-xs font-bold text-gray-700 mb-1.5">Họ tên *</label>
+                    <div className="relative">
+                      <User className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      <input
+                        type="text"
+                        required
+                        placeholder="Nguyễn Văn A"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        className="w-full pl-10 pr-3.5 py-2.5 sm:py-3 text-base md:text-sm border border-gray-300 rounded-lg focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 outline-none transition-all placeholder:text-gray-400"
+                      />
+                    </div>
                   </div>
                   <div>
-                    <label className="block font-bold text-gray-700 mb-1">Số điện thoại *</label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="09xx xxx xxx"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      className="w-full px-3.5 py-2.5 border border-gray-300 rounded focus:border-[#1863dc] outline-none"
-                    />
+                    <label className="block text-xs font-bold text-gray-700 mb-1.5">Số điện thoại *</label>
+                    <div className="relative">
+                      <Phone className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      <input
+                        type="tel"
+                        required
+                        placeholder="09xx xxx xxx"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="w-full pl-10 pr-3.5 py-2.5 sm:py-3 text-base md:text-sm border border-gray-300 rounded-lg focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 outline-none transition-all placeholder:text-gray-400"
+                      />
+                    </div>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block font-bold text-gray-700 mb-1">Ghi chú hoặc câu hỏi:</label>
+                  <label className="block text-xs font-bold text-gray-700 mb-1.5">Ghi chú hoặc câu hỏi:</label>
                   <textarea
                     rows={3}
                     placeholder="Thời gian hẹn xem xe, yêu cầu định giá xe cũ đổi mới..."
                     value={note}
                     onChange={(e) => setNote(e.target.value)}
-                    className="w-full px-3.5 py-2.5 border border-gray-300 rounded focus:border-[#1863dc] outline-none resize-none"
+                    className="w-full px-3.5 py-2.5 sm:py-3 text-base md:text-sm border border-gray-300 rounded-lg focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 outline-none transition-all resize-none placeholder:text-gray-400"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-[#1863dc] hover:bg-[#004dd6] text-white font-black py-3.5 rounded text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow cursor-pointer"
+                  disabled={loading}
+                  className="w-full bg-[#1863dc] hover:bg-[#004dd6] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-black py-3 sm:py-3.5 rounded-lg text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer"
                 >
-                  GỬI YÊU CẦU TƯ VẤN
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>ĐANG GỬI...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>GỬI YÊU CẦU TƯ VẤN</span>
+                      <Send className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
               </form>
             )}

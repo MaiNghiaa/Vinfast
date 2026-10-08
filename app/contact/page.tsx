@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle2, User, Phone, Loader2, Send } from "lucide-react";
 
 interface HotlineItem {
   name: string;
@@ -59,14 +59,42 @@ export default function ContactPage() {
   const [service, setService] = useState("Mua xe mới");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [leadCode, setLeadCode] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!fullName.trim() || !phone.trim()) {
       alert("Vui lòng nhập họ tên và số điện thoại.");
       return;
     }
-    setSubmitted(true);
+    setLoading(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: fullName.trim(),
+          phone: phone.trim(),
+          type: service.includes("Bảo dưỡng") ? "service" : "quote",
+          vehicleSlug: "",
+          showroomSlug: "",
+          preferredDate: "",
+          note: `Dịch vụ: ${service} | Lời nhắn: ${message || "Không có"}`,
+          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+      const data = await res.json();
+      if (data.code) {
+        setLeadCode(data.code);
+      }
+      setSubmitted(true);
+    } catch (err) {
+      console.error("Lỗi gửi liên hệ:", err);
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -168,13 +196,20 @@ export default function ContactPage() {
 
           <div className="max-w-[860px] mx-auto bg-white p-6 sm:p-10 rounded-xl border border-gray-200/80 shadow-sm">
             {submitted ? (
-              <div className="text-center py-8 space-y-3">
-                <CheckCircle className="w-12 h-12 text-emerald-600 mx-auto" />
-                <h3 className="text-lg font-bold text-gray-900">
+              <div className="text-center py-8 space-y-4 animate-in fade-in">
+                <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
+                  <CheckCircle2 className="w-10 h-10" />
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900">
                   Thông tin đăng ký đã được gửi thành công!
                 </h3>
-                <p className="text-sm text-gray-600">
-                  VinFast Phương Đông sẽ liên hệ với Quý khách trong thời gian sớm nhất.
+                {leadCode && (
+                  <div className="inline-block px-3.5 py-1 bg-blue-50 text-[#1863dc] rounded-full text-xs font-mono font-bold border border-blue-200">
+                    Mã tiếp nhận: {leadCode}
+                  </div>
+                )}
+                <p className="text-xs sm:text-sm text-gray-600 max-w-md mx-auto">
+                  Cảm ơn Quý khách <strong>{fullName}</strong>. Chuyên viên VinFast Phương Đông sẽ liên hệ lại qua số <strong>{phone}</strong> trong thời gian sớm nhất!
                 </p>
                 <button
                   type="button"
@@ -183,83 +218,103 @@ export default function ContactPage() {
                     setFullName("");
                     setPhone("");
                     setMessage("");
+                    setLeadCode("");
                   }}
-                  className="mt-4 inline-block bg-[#1863dc] hover:bg-[#3AB3FF] text-white px-6 py-2 rounded text-xs font-bold uppercase tracking-wider transition-all"
+                  className="mt-4 inline-block bg-[#1863dc] hover:bg-[#004dd6] text-white px-6 py-2.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all shadow-xs"
                 >
                   Gửi yêu cầu khác
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                {/* Row 1 */}
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                {/* Row 1: Họ tên & SĐT */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-gray-700 mb-1.5">
-                      Họ tên: *
+                      Họ và tên <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Đỗ Việt Nam"
-                      value={fullName}
-                      onChange={(e) => setFullName(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-gray-300 rounded focus:border-[#1863dc] focus:ring-1 focus:ring-[#1863dc] outline-none transition-all"
-                    />
+                    <div className="relative">
+                      <User className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      <input
+                        type="text"
+                        required
+                        placeholder="Ví dụ: Nguyễn Văn A"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                        className="w-full pl-10 pr-3.5 py-2.5 sm:py-3 text-base md:text-sm border border-gray-300 rounded-lg focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 outline-none transition-all placeholder:text-gray-400"
+                      />
+                    </div>
                   </div>
+
                   <div>
                     <label className="block text-xs font-bold text-gray-700 mb-1.5">
-                      Số điện thoại: *
+                      Số điện thoại <span className="text-red-500">*</span>
                     </label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="0966666666"
-                      value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-gray-300 rounded focus:border-[#1863dc] focus:ring-1 focus:ring-[#1863dc] outline-none transition-all"
-                    />
+                    <div className="relative">
+                      <Phone className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      <input
+                        type="tel"
+                        required
+                        placeholder="09xx xxx xxx"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        className="w-full pl-10 pr-3.5 py-2.5 sm:py-3 text-base md:text-sm border border-gray-300 rounded-lg focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 outline-none transition-all placeholder:text-gray-400"
+                      />
+                    </div>
                   </div>
                 </div>
 
-                {/* Row 2 */}
+                {/* Row 2: Dịch vụ & Lời nhắn */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-gray-700 mb-1.5">
-                      Dịch vụ cần tư vấn: *
+                      Dịch vụ cần tư vấn <span className="text-red-500">*</span>
                     </label>
                     <select
                       value={service}
                       onChange={(e) => setService(e.target.value)}
-                      className="w-full px-3.5 py-2.5 text-xs sm:text-sm border border-gray-300 rounded focus:border-[#1863dc] focus:ring-1 focus:ring-[#1863dc] outline-none bg-white transition-all"
+                      className="w-full px-3.5 py-2.5 sm:py-3 text-base md:text-sm border border-gray-300 rounded-lg focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 outline-none bg-white transition-all cursor-pointer"
                     >
-                      <option value="Mua xe mới">Mua xe mới</option>
-                      <option value="Tư vấn và báo giá xe mới">Tư vấn và báo giá xe mới</option>
-                      <option value="Tư vấn và báo giá xe đã qua sử dụng">Tư vấn và báo giá xe đã qua sử dụng</option>
-                      <option value="Đặt lịch Bảo dưỡng & Sửa chữa">Đặt lịch Bảo dưỡng & Sửa chữa</option>
-                      <option value="Khác">Khác</option>
+                      <option value="Mua xe mới">Tư vấn mua xe ô tô điện mới</option>
+                      <option value="Tư vấn và báo giá xe mới">Nhận báo giá lăn bánh xe mới</option>
+                      <option value="Tư vấn và báo giá xe đã qua sử dụng">Tư vấn xe lướt / Xe đã qua sử dụng</option>
+                      <option value="Đặt lịch Bảo dưỡng & Sửa chữa">Đặt lịch hẹn xưởng dịch vụ</option>
+                      <option value="Khác">Hỗ trợ vấn đề khác</option>
                     </select>
                   </div>
+
                   <div>
                     <label className="block text-xs font-bold text-gray-700 mb-1.5">
-                      Lời nhắn thêm: *
+                      Nội dung cần hỗ trợ thêm
                     </label>
                     <textarea
                       rows={2}
-                      placeholder="Nội dung cần hỗ trợ..."
+                      placeholder="Dòng xe quan tâm, thời gian có thể nghe máy..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
-                      className="w-full px-3.5 py-2 text-xs sm:text-sm border border-gray-300 rounded focus:border-[#1863dc] focus:ring-1 focus:ring-[#1863dc] outline-none transition-all resize-none"
+                      className="w-full px-3.5 py-2.5 text-base md:text-sm border border-gray-300 rounded-lg focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 outline-none transition-all resize-none placeholder:text-gray-400"
                     />
                   </div>
                 </div>
 
                 {/* Submit button */}
-                <div className="text-center pt-3">
+                <div className="text-center pt-2">
                   <button
                     type="submit"
-                    className="bg-[#1863dc] hover:bg-[#3AB3FF] text-white font-bold py-2.5 px-10 rounded text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-sm hover:shadow"
+                    disabled={loading}
+                    className="w-full sm:w-auto min-w-[220px] bg-[#1863dc] hover:bg-[#004dd6] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-extrabold py-3 sm:py-3.5 px-10 rounded-lg text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-md hover:shadow-lg inline-flex items-center justify-center gap-2 cursor-pointer"
                   >
-                    Gửi
+                    {loading ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin" />
+                        <span>ĐANG GỬI...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>GỬI YÊU CẦU NGAY</span>
+                        <Send className="w-4 h-4" />
+                      </>
+                    )}
                   </button>
                 </div>
               </form>

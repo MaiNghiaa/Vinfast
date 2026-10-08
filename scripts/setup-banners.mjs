@@ -65,7 +65,7 @@ async function createBannersCollection() {
     method: 'POST',
     body: JSON.stringify({
       collection: 'banners',
-      meta: {
+      meta: {dir
         note: 'Banner trang chủ và banner khuyến mại/dịch vụ',
         icon: 'view_carousel',
       },

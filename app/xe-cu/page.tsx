@@ -16,6 +16,8 @@ import {
   Award,
   Layers,
   Sparkles,
+  Loader2,
+  CheckCircle2,
 } from "lucide-react";
 import { USED_CARS, GREEN_FUTURE_COMMITMENTS, USED_CARS_NEWS } from "@/data/usedCars";
 import { getDirectusAssetUrl } from "@/lib/directus";
@@ -115,13 +117,42 @@ export default function UsedCarsPage() {
     sortBy,
   ]);
 
-  const handleValuationSubmit = (e: React.FormEvent) => {
+  const [valLoading, setValLoading] = useState(false);
+  const [valLeadCode, setValLeadCode] = useState("");
+
+  const handleValuationSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!valName.trim() || !valPhone.trim() || !valCarTarget.trim()) {
       alert("Vui lòng điền các trường bắt buộc (*).");
       return;
     }
-    setValSubmitted(true);
+    setValLoading(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: valName.trim(),
+          phone: valPhone.trim(),
+          type: "used_car",
+          vehicleSlug: "",
+          showroomSlug: "",
+          preferredDate: "",
+          note: `Định giá xe cũ: ${valCarTarget} | Năm SX: ${valYear || "Chưa rõ"} | Biển số: ${valPlate || "Chưa rõ"}`,
+          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+      const data = await res.json();
+      if (data.code) {
+        setValLeadCode(data.code);
+      }
+      setValSubmitted(true);
+    } catch (err) {
+      console.error("Lỗi gửi yêu cầu định giá:", err);
+      setValSubmitted(true);
+    } finally {
+      setValLoading(false);
+    }
   };
 
   return (
@@ -597,6 +628,11 @@ export default function UsedCarsPage() {
               <div className="bg-black/80 backdrop-blur-md p-8 sm:p-10 rounded-xl text-center space-y-4 border border-white/20">
                 <CheckCircle className="w-14 h-14 text-emerald-400 mx-auto" />
                 <h3 className="text-2xl font-[900] text-white">Đăng ký thành công!</h3>
+                {valLeadCode && (
+                  <div className="inline-block px-3.5 py-1 bg-white/10 text-white rounded-full text-xs font-mono font-bold border border-white/20">
+                    Mã tiếp nhận: {valLeadCode}
+                  </div>
+                )}
                 <p className="text-sm text-gray-200 max-w-md mx-auto">
                   Cảm ơn Quý khách <strong className="text-white">{valName}</strong> ({valPhone}). Chuyên viên thẩm định xe cũ VinFast Phương Đông sẽ liên hệ định giá xe trong thời gian sớm nhất.
                 </p>
@@ -609,14 +645,15 @@ export default function UsedCarsPage() {
                     setValCarTarget("");
                     setValYear("");
                     setValPlate("");
+                    setValLeadCode("");
                   }}
-                  className="mt-4 bg-[#3AB3FF] hover:bg-[#1863dc] text-white px-8 py-3 rounded text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
+                  className="mt-4 bg-[#3AB3FF] hover:bg-[#1863dc] text-white px-8 py-3 rounded-lg text-xs font-bold uppercase tracking-wider transition-all cursor-pointer"
                 >
                   Gửi yêu cầu khác
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleValuationSubmit} className="space-y-4 text-xs sm:text-sm">
+              <form onSubmit={handleValuationSubmit} className="space-y-4">
                 {/* Row 1: Name & Phone */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
@@ -629,7 +666,7 @@ export default function UsedCarsPage() {
                       placeholder="Đỗ Việt Nam"
                       value={valName}
                       onChange={(e) => setValName(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-white text-gray-900 placeholder:text-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-[#3AB3FF]"
+                      className="w-full px-3.5 py-2.5 sm:py-3 bg-white text-base md:text-sm text-gray-900 placeholder:text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3AB3FF] transition-all"
                     />
                   </div>
                   <div>
@@ -642,7 +679,7 @@ export default function UsedCarsPage() {
                       placeholder="0966666666"
                       value={valPhone}
                       onChange={(e) => setValPhone(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-white text-gray-900 placeholder:text-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-[#3AB3FF]"
+                      className="w-full px-3.5 py-2.5 sm:py-3 bg-white text-base md:text-sm text-gray-900 placeholder:text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3AB3FF] transition-all"
                     />
                   </div>
                 </div>
@@ -658,7 +695,7 @@ export default function UsedCarsPage() {
                     placeholder="Vinfast VF9"
                     value={valCarTarget}
                     onChange={(e) => setValCarTarget(e.target.value)}
-                    className="w-full px-3.5 py-2.5 bg-white text-gray-900 placeholder:text-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-[#3AB3FF]"
+                    className="w-full px-3.5 py-2.5 sm:py-3 bg-white text-base md:text-sm text-gray-900 placeholder:text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3AB3FF] transition-all"
                   />
                 </div>
 
@@ -673,7 +710,7 @@ export default function UsedCarsPage() {
                       placeholder="2020"
                       value={valYear}
                       onChange={(e) => setValYear(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-white text-gray-900 placeholder:text-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-[#3AB3FF]"
+                      className="w-full px-3.5 py-2.5 sm:py-3 bg-white text-base md:text-sm text-gray-900 placeholder:text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3AB3FF] transition-all"
                     />
                   </div>
                   <div>
@@ -685,7 +722,7 @@ export default function UsedCarsPage() {
                       placeholder="29A - 88888"
                       value={valPlate}
                       onChange={(e) => setValPlate(e.target.value)}
-                      className="w-full px-3.5 py-2.5 bg-white text-gray-900 placeholder:text-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-[#3AB3FF]"
+                      className="w-full px-3.5 py-2.5 sm:py-3 bg-white text-base md:text-sm text-gray-900 placeholder:text-gray-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3AB3FF] transition-all"
                     />
                   </div>
                 </div>

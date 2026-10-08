@@ -61,7 +61,7 @@ export async function directusJson(endpoint, options = {}) {
   const text = await res.text();
   if (!res.ok) {
     let errObj;
-    try { errObj = JSON.parse(text); } catch {}
+    try { errObj = JSON.parse(text); } catch { }
     const msg = errObj?.errors?.[0]?.message || text;
     const error = new Error(`Directus API Error [${res.status}] ${endpoint}: ${msg}`);
     error.status = res.status;
@@ -83,10 +83,10 @@ export async function ensureFolder(name, parentId = null) {
   if (folderCache[cacheKey]) return folderCache[cacheKey];
 
   // Check if folder exists
-  const query = parentId 
+  const query = parentId
     ? `?filter[name][_eq]=${encodeURIComponent(name)}&filter[parent][_eq]=${parentId}`
     : `?filter[name][_eq]=${encodeURIComponent(name)}&filter[parent][_null]=true`;
-  
+
   const existing = await directusJson(`/folders${query}`);
   if (existing.data && existing.data.length > 0) {
     folderCache[cacheKey] = existing.data[0].id;

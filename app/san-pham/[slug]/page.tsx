@@ -15,6 +15,10 @@ import {
   Calendar,
   Layers,
   ArrowRight,
+  User,
+  Clock,
+  Loader2,
+  CheckCircle2,
 } from "lucide-react";
 import { VEHICLES } from "@/data/vehicles";
 import { CHARGERS } from "@/data/chargers";
@@ -99,14 +103,42 @@ export default function VehicleDetailPage({
   const [formTime, setFormTime] = useState("");
   const [formAgreed, setFormAgreed] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [formLoading, setFormLoading] = useState(false);
+  const [leadCode, setLeadCode] = useState("");
 
-  const handleLeadSubmit = (e: React.FormEvent) => {
+  const handleLeadSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formName.trim() || !formPhone.trim()) {
       alert("Vui lòng điền đầy đủ Họ tên và Số điện thoại!");
       return;
     }
-    setFormSubmitted(true);
+    setFormLoading(true);
+    try {
+      const res = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          fullName: formName.trim(),
+          phone: formPhone.trim(),
+          type: "quote",
+          vehicleSlug: vehicle.slug,
+          showroomSlug: "",
+          preferredDate: "",
+          note: formTime ? `Thời gian dự kiến lấy xe: ${formTime}` : `Đăng ký nhận báo giá & lái thử xe ${vehicle.name}`,
+          sourceUrl: typeof window !== "undefined" ? window.location.href : "",
+        }),
+      });
+      const data = await res.json();
+      if (data.code) {
+        setLeadCode(data.code);
+      }
+      setFormSubmitted(true);
+    } catch (err) {
+      console.error("Lỗi gửi thông tin báo giá:", err);
+      setFormSubmitted(true);
+    } finally {
+      setFormLoading(false);
+    }
   };
 
 
@@ -441,46 +473,97 @@ export default function VehicleDetailPage({
           <>
             {/* Horizontal Lead Form Bar */}
             <GsapReveal animation="fade-up" duration={0.7}>
-            <div ref={leadFormRef} className="mt-4 bg-[#f5f5f5] p-4 sm:p-5 border border-gray-200">
+            <div ref={leadFormRef} className="mt-6 bg-gradient-to-r from-gray-50 to-blue-50/40 p-5 sm:p-7 rounded-xl border border-gray-200 shadow-xs">
               {formSubmitted ? (
-                <div className="p-4 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded text-center flex items-center justify-center gap-2 text-sm font-semibold">
-                  <Check className="w-5 h-5 text-emerald-600" />
-                  Cảm ơn bạn! Thông tin tư vấn xe {vehicle.name} đã được gửi thành công. Chuyên viên VinFast Phương Đông sẽ liên hệ sớm nhất!
+                <div className="p-6 bg-emerald-50 border border-emerald-300 text-emerald-800 rounded-xl text-center space-y-2">
+                  <CheckCircle2 className="w-8 h-8 text-emerald-600 mx-auto" />
+                  <h4 className="text-base font-bold text-gray-900">
+                    Đăng Ký Nhận Báo Giá Thành Công!
+                  </h4>
+                  {leadCode && (
+                    <div className="inline-block px-3 py-1 bg-white text-emerald-700 rounded-full text-xs font-mono font-bold border border-emerald-200">
+                      Mã tiếp nhận: {leadCode}
+                    </div>
+                  )}
+                  <p className="text-xs sm:text-sm text-gray-600 max-w-xl mx-auto">
+                    Cảm ơn bạn <strong>{formName}</strong>! Yêu cầu tư vấn & báo giá xe <strong>{vehicle.name}</strong> đã được chuyển tới chuyên viên VinFast Phương Đông. Chúng tôi sẽ liên hệ qua số <strong>{formPhone}</strong> trong vòng 15 phút.
+                  </p>
                 </div>
               ) : (
-                <form onSubmit={handleLeadSubmit} className="space-y-3">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-                    <input
-                      type="text"
-                      placeholder="Họ tên"
-                      value={formName}
-                      onChange={(e) => setFormName(e.target.value)}
-                      required
-                      className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#3AB3FF]"
-                    />
-                    <input
-                      type="tel"
-                      placeholder="Số điện thoại"
-                      value={formPhone}
-                      onChange={(e) => setFormPhone(e.target.value)}
-                      required
-                      className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-900 placeholder-gray-400 focus:outline-hidden focus:border-[#3AB3FF]"
-                    />
-                    <select
-                      value={formTime}
-                      onChange={(e) => setFormTime(e.target.value)}
-                      className="w-full bg-white border border-gray-300 rounded-[3px] px-3.5 py-2 text-xs sm:text-[13px] text-gray-700 focus:outline-hidden focus:border-[#3AB3FF] cursor-pointer"
-                    >
-                      <option value="">Thời gian dự kiến lấy xe</option>
-                      <option value="Tháng này">Tháng này</option>
-                      <option value="Tháng sau">Tháng sau</option>
-                      <option value="Đang tham khảo">Đang tham khảo</option>
-                    </select>
+                <form onSubmit={handleLeadSubmit} className="space-y-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-b border-gray-200/80 pb-3">
+                    <div>
+                      <h4 className="text-sm sm:text-base font-black uppercase text-gray-900 tracking-tight">
+                        ĐĂNG KÝ NHẬN BÁO GIÁ & LÁI THỬ {vehicle.name.toUpperCase()}
+                      </h4>
+                      <p className="text-[11px] sm:text-xs text-gray-500">
+                        Nhận bảng tính lăn bánh chi tiết, ưu đãi tiền mặt và quà tặng phụ kiện tại đại lý.
+                      </p>
+                    </div>
+                    <span className="text-[11px] font-bold text-[#1863dc] bg-blue-50 px-2.5 py-1 rounded-full border border-blue-200 self-start sm:self-auto shrink-0">
+                      Hotline: 090 242 25 22
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5">
+                    {/* Input Họ tên */}
+                    <div className="relative">
+                      <User className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      <input
+                        type="text"
+                        placeholder="Họ và tên *"
+                        value={formName}
+                        onChange={(e) => setFormName(e.target.value)}
+                        required
+                        className="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-3.5 py-2.5 sm:py-3 text-base md:text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 transition-all"
+                      />
+                    </div>
+
+                    {/* Input Số điện thoại */}
+                    <div className="relative">
+                      <Phone className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      <input
+                        type="tel"
+                        placeholder="Số điện thoại *"
+                        value={formPhone}
+                        onChange={(e) => setFormPhone(e.target.value)}
+                        required
+                        className="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-3.5 py-2.5 sm:py-3 text-base md:text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 transition-all"
+                      />
+                    </div>
+
+                    {/* Select Thời gian dự kiến lấy xe */}
+                    <div className="relative">
+                      <Clock className="w-4 h-4 text-gray-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                      <select
+                        value={formTime}
+                        onChange={(e) => setFormTime(e.target.value)}
+                        className="w-full bg-white border border-gray-300 rounded-lg pl-10 pr-3.5 py-2.5 sm:py-3 text-base md:text-sm text-gray-700 focus:outline-none focus:border-[#1863dc] focus:ring-2 focus:ring-[#1863dc]/20 cursor-pointer transition-all"
+                      >
+                        <option value="">Thời gian dự kiến lấy xe</option>
+                        <option value="Tháng này">Trong tháng này</option>
+                        <option value="Tháng sau">Tháng sau</option>
+                        <option value="Đang tham khảo">Đang tham khảo</option>
+                      </select>
+                    </div>
+
+                    {/* Submit Button */}
                     <button
                       type="submit"
-                      className="w-full bg-[#3AB3FF] hover:bg-[#1fa1ef] text-white font-bold py-2 px-4 rounded-[3px] text-xs sm:text-[13px] transition-colors shadow-xs uppercase tracking-wide cursor-pointer"
+                      disabled={formLoading || !formAgreed}
+                      className="w-full bg-[#1863dc] hover:bg-[#004dd6] disabled:bg-gray-300 disabled:cursor-not-allowed text-white font-bold py-2.5 sm:py-3 px-4 rounded-lg text-xs sm:text-sm transition-all shadow-sm hover:shadow uppercase tracking-wider cursor-pointer flex items-center justify-center gap-2"
                     >
-                      Gửi thông tin
+                      {formLoading ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>Đang gửi...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>GỬI YÊU CẦU</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </>
+                      )}
                     </button>
                   </div>
 
@@ -490,11 +573,11 @@ export default function VehicleDetailPage({
                       id="agree-term"
                       checked={formAgreed}
                       onChange={(e) => setFormAgreed(e.target.checked)}
-                      className="rounded border-gray-300 text-[#3AB3FF] focus:ring-[#3AB3FF] cursor-pointer"
+                      className="rounded border-gray-300 text-[#1863dc] focus:ring-[#1863dc] cursor-pointer"
                     />
                     <label htmlFor="agree-term" className="cursor-pointer text-[11px] sm:text-xs text-gray-600">
                       Tôi đã đọc và đồng ý với các{" "}
-                      <Link href="/chinh-sach-bao-mat" className="text-[#3AB3FF] hover:underline">
+                      <Link href="/chinh-sach-bao-mat" className="text-[#1863dc] hover:underline font-medium">
                         quy định và chính sách
                       </Link>{" "}
                       của VinFast Phương Đông!
