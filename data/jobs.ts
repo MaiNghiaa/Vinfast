@@ -34,7 +34,7 @@ export const JOBS_DATA: Job[] = [
     department: "Marketing & Media",
     location: "Trụ sở Hà Nội",
     salary: "15 – 18 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/web-11.jpg",
+    image: "/images/about/pd-showroom-1.jpg",
     description:
       "1. GIỚI THIỆU VỀ VINFAST PHƯƠNG ĐÔNG VinFast Phương Đông là đại lý ủy quyền chính hãng của VinFast Việt Nam...",
     details: {
@@ -68,7 +68,7 @@ export const JOBS_DATA: Job[] = [
     department: "Marketing & Media",
     location: "Trụ sở Hà Nội",
     salary: "15 – 25 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/web-12.jpg",
+    image: "/images/about/pd-showroom-2.jpg",
     description:
       "1. GIỚI THIỆU VỀ VINFAST PHƯƠNG ĐÔNG VinFast Phương Đông là đơn vị tiên phong trong phân phối ô tô điện VinFast...",
     details: {
@@ -100,7 +100,7 @@ export const JOBS_DATA: Job[] = [
     department: "Marketing & Media",
     location: "Trụ sở Hà Nội",
     salary: "12 – 15 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/02/tuyen-dung-web.jpg",
+    image: "/images/about/pd-showroom-3.jpg",
     description:
       "1. GIỚI THIỆU VỀ VINFAST PHƯƠNG ĐÔNG VinFast Phương Đông là hệ thống đại lý hàng đầu mang giải pháp xanh...",
     details: {
@@ -132,7 +132,7 @@ export const JOBS_DATA: Job[] = [
     department: "Tài chính & Kế toán",
     location: "Trụ sở Hà Nội",
     salary: "25 – 30 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-ke-toan-thinhcuong.jpg",
+    image: "/images/about/pd-delivery-1.jpg",
     description:
       "VinFast Phương Đông tuyển dụng kế toán trưởng. Thu nhập 25 - 30 triệu. Quản lý toàn bộ hệ thống tài chính kế toán đại lý...",
     details: {
@@ -164,7 +164,7 @@ export const JOBS_DATA: Job[] = [
     department: "Nhân sự & Ban Lãnh đạo",
     location: "Trụ sở Hà Nội",
     salary: "12 – 20 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dao-tao-noi-bo-thinhcuong.jpg",
+    image: "/images/about/pd-delivery-2.jpg",
     description:
       "VinFast Phương Đông tuyển dụng 2 Chuyên viên đào tạo nội bộ. Thu nhập 12 - 20 triệu. Xây dựng giáo trình và đào tạo kỹ năng...",
     details: {
@@ -196,7 +196,7 @@ export const JOBS_DATA: Job[] = [
     department: "Nhân sự & Ban Lãnh đạo",
     location: "Trụ sở Hà Nội",
     salary: "15 – 25 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-tro-ly-phien-dich-tieng-trung-thinhcuong.jpg",
+    image: "/images/about/pd-delivery-3.jpg",
     description:
       "VinFast Phương Đông tuyển dụng 4 Nhân viên tiếng Trung thương mại. Thu nhập hấp dẫn. Phiên dịch và làm việc cùng đối tác quốc tế...",
     details: {
@@ -228,7 +228,7 @@ export const JOBS_DATA: Job[] = [
     department: "Nhân sự & Ban Lãnh đạo",
     location: "Trụ sở Hà Nội",
     salary: "25 – 35 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-tro-ly-giam-doc-thinhcuong.jpg",
+    image: "/images/about/pd-delivery-4.jpg",
     description:
       "VinFast Phương Đông tuyển dụng 4 Trợ Lý Chủ Tịch/Tổng Giám Đốc. Hỗ trợ điều hành chiến lược kinh doanh toàn hệ thống...",
     details: {
@@ -260,7 +260,7 @@ export const JOBS_DATA: Job[] = [
     department: "Nhân sự & Ban Lãnh đạo",
     location: "Trụ sở Hà Nội",
     salary: "25 – 30 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-tro-ly-phien-dich-thinhcuong.jpg",
+    image: "/images/about/pd-delivery-5.jpg",
     description:
       "VinFast Phương Đông tuyển dụng 4 Trợ Lý Ban Lãnh Đạo. Điều phối các phòng ban chức năng, giám sát thực thi mục tiêu OKR...",
     details: {
@@ -292,7 +292,7 @@ export const JOBS_DATA: Job[] = [
     department: "Nhân sự & Ban Lãnh đạo",
     location: "Trụ sở Hà Nội",
     salary: "18 – 28 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-tro-ly-phien-dich-nam-thinhcuong.jpg",
+    image: "/images/banners/banner-he-thong-phuong-dong.jpg",
     description:
       "VinFast Phương Đông tuyển dụng 1 Trợ Lý Tiếng Trung. Lương thưởng cạnh tranh, hỗ trợ trực tiếp các chương trình hợp tác quốc tế...",
     details: {
@@ -322,7 +322,7 @@ export const JOBS_DATA: Job[] = [
     department: "Kinh doanh & Bán hàng",
     location: "Hệ thống Showroom",
     salary: "30 – 60 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-giam-doc-kinh-doanh-vinfast-thinhcuong.jpg",
+    image: "/images/banners/banner-lai-thu-phuong-dong.jpg",
     description:
       "VinFast Phương Đông tuyển dụng Giám đốc kinh doanh ô tô. Lãnh đạo đội ngũ tư vấn bán hàng toàn hệ thống showroom...",
     details: {
@@ -354,7 +354,7 @@ export const JOBS_DATA: Job[] = [
     department: "Kỹ thuật & Xưởng",
     location: "Hà Nội / Quảng Ninh",
     salary: "9 – 18 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-nhan-vien-xuong-vinfast-thinhcuong.jpg",
+    image: "/images/about/pd-showroom-1.jpg",
     description:
       "VinFast Phương Đông tuyển dụng Kỹ thuật viên bảo dưỡng & sửa chữa chung xưởng dịch vụ. Đào tạo trực tiếp từ hãng...",
     details: {
@@ -386,7 +386,7 @@ export const JOBS_DATA: Job[] = [
     department: "Kỹ thuật & Xưởng",
     location: "Hà Nội / Quảng Ninh",
     salary: "9 – 14 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-nhan-vien-xuong2-vinfast-thinhcuong.jpg",
+    image: "/images/about/pd-showroom-2.jpg",
     description:
       "VinFast Phương Đông tuyển dụng Nhân viên quản lý kho phụ tùng chính hãng xưởng dịch vụ ô tô...",
     details: {
@@ -418,7 +418,7 @@ export const JOBS_DATA: Job[] = [
     department: "Marketing & Media",
     location: "Trụ sở Hà Nội",
     salary: "12 – 15 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-nhan-vien-marketing-vinfast-thinhcuong.jpg",
+    image: "/images/about/pd-showroom-3.jpg",
     description:
       "Tuyển dụng chuyên viên sáng tạo nội dung truyền thông cho các chiến dịch marketing xe điện xanh...",
     details: {
@@ -448,7 +448,7 @@ export const JOBS_DATA: Job[] = [
     department: "Marketing & Media",
     location: "Trụ sở Hà Nội",
     salary: "Trợ cấp hấp dẫn",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-tts-vinfast-thinhcuong.jpg",
+    image: "/images/about/pd-delivery-1.jpg",
     description:
       "Cơ hội thực chiến tuyệt vời dành cho các bạn sinh viên năm cuối đam mê ngành ô tô và truyền thông thương hiệu...",
     details: {
@@ -479,7 +479,7 @@ export const JOBS_DATA: Job[] = [
     department: "Kinh doanh & Bán hàng",
     location: "Hệ thống Showroom",
     salary: "20 – 45 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-nhan-vien-kinh-doanh-b2b-vinfast-thinhcuong.jpg",
+    image: "/images/about/pd-delivery-2.jpg",
     description:
       "Phát triển khách hàng doanh nghiệp, các đơn vị vận tải taxi điện Xanh SM, cơ quan nhà nước và tập đoàn...",
     details: {
@@ -510,7 +510,7 @@ export const JOBS_DATA: Job[] = [
     department: "Marketing & Media",
     location: "Trụ sở Hà Nội",
     salary: "15 – 18 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-media-vinfast-thinhcuong.jpg",
+    image: "/images/about/pd-delivery-3.jpg",
     description:
       "Sản xuất các thước phim ấn tượng ghi dấu hành trình chuyển đổi xanh của các chủ xe VinFast Phương Đông...",
     details: {
@@ -539,7 +539,7 @@ export const JOBS_DATA: Job[] = [
     department: "Kinh doanh & Bán hàng",
     location: "Hệ thống Showroom",
     salary: "20 – 50 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/tuyen-dung-truong-phong-kinh-doanh-vinfast-thinhcuong.jpg",
+    image: "/images/about/pd-delivery-4.jpg",
     description:
       "Lãnh đạo đội ngũ 10-15 nhân viên tư vấn bán hàng, chịu trách nhiệm doanh số bán xe tại showroom...",
     details: {
@@ -569,7 +569,7 @@ export const JOBS_DATA: Job[] = [
     department: "Kinh doanh & Bán hàng",
     location: "Hệ thống Showroom",
     salary: "15 – 45 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/van-hoa-vinfast-thinhcuongg.jpg",
+    image: "/images/about/pd-delivery-5.jpg",
     description:
       "Tư vấn giới thiệu các dòng xe điện VinFast thông minh cho khách hàng đến showroom và khách hàng online...",
     details: {
@@ -600,7 +600,7 @@ export const JOBS_DATA: Job[] = [
     department: "Marketing & Media",
     location: "Trụ sở Hà Nội",
     salary: "10 – 20 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/Tuyendung-ContentMKT.jpg",
+    image: "/images/banners/banner-he-thong-phuong-dong.jpg",
     description:
       "Kết hợp nội dung và thiết kế trực quan để tạo nên các chiến dịch quảng cáo ô tô điện đầy thu hút...",
     details: {
@@ -629,7 +629,7 @@ export const JOBS_DATA: Job[] = [
     department: "Nhân sự & Ban Lãnh đạo",
     location: "Hệ thống Showroom",
     salary: "12 – 18 triệu",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/08/Tuyendung.jpg",
+    image: "/images/banners/banner-lai-thu-phuong-dong.jpg",
     description:
       "Đảm bảo an ninh trật tự, an toàn tài sản xe trưng bày và hướng dẫn đón tiếp khách hàng văn minh tại showroom...",
     details: {

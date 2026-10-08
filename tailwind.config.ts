@@ -25,7 +25,15 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-manrope)", "Manrope", "sans-serif"],
+        sans: [
+          "var(--font-sans)",
+          "Be Vietnam Pro",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
       },
       animation: {
         "pulse-call": "pulse-ring 2s infinite cubic-bezier(0.45, 0, 0.55, 1)",

@@ -251,7 +251,7 @@ export const VEHICLES: Vehicle[] = [
     basePrice: 496000000,
     priceText: "Từ 496.000.000 VNĐ",
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf51.png",
-    bannerImage: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/banner-wweb.jpg",
+    bannerImage: "/images/banners/banner-he-thong-phuong-dong.jpg",
     category: "electric-car",
     isFeatured: true,
     specs: {
@@ -486,7 +486,7 @@ export const VEHICLES: Vehicle[] = [
     basePrice: 649000000,
     priceText: "Từ 649.000.000 VNĐ",
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf61.png",
-    bannerImage: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/banner-wweb.jpg",
+    bannerImage: "/images/banners/banner-he-thong-phuong-dong.jpg",
     category: "electric-car",
     isFeatured: true,
     specs: {
@@ -822,7 +822,7 @@ export const VEHICLES: Vehicle[] = [
     basePrice: 750000000,
     priceText: "Từ 750.000.000 VNĐ",
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf71.png",
-    bannerImage: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/banner-wweb.jpg",
+    bannerImage: "/images/banners/banner-he-thong-phuong-dong.jpg",
     category: "electric-car",
     isFeatured: true,
     specs: {
@@ -1072,7 +1072,7 @@ export const VEHICLES: Vehicle[] = [
     basePrice: 898000000,
     priceText: "Từ 898.000.000 VNĐ",
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf81.png",
-    bannerImage: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/banner-wweb.jpg",
+    bannerImage: "/images/banners/banner-he-thong-phuong-dong.jpg",
     category: "electric-car",
     isFeatured: true,
     specs: {
@@ -1317,7 +1317,7 @@ export const VEHICLES: Vehicle[] = [
     basePrice: 1348000000,
     priceText: "Từ 1.348.000.000 VNĐ",
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf91.png",
-    bannerImage: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/banner-wweb.jpg",
+    bannerImage: "/images/banners/banner-he-thong-phuong-dong.jpg",
     category: "electric-car",
     isFeatured: true,
     specs: {
@@ -1557,7 +1557,7 @@ export const VEHICLES: Vehicle[] = [
     basePrice: 269000000,
     priceText: "Từ 269.000.000 VNĐ",
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Minio-Green.png",
-    bannerImage: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/banner-wweb.jpg",
+    bannerImage: "/images/banners/banner-he-thong-phuong-dong.jpg",
     category: "green-mobility",
     specs: {
       range: "180 km (NEDC)",
@@ -1775,7 +1775,7 @@ export const VEHICLES: Vehicle[] = [
     basePrice: 469000000,
     priceText: "Từ 469.000.000 VNĐ",
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-10.jpg",
-    bannerImage: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/banner-wweb.jpg",
+    bannerImage: "/images/banners/banner-he-thong-phuong-dong.jpg",
     category: "green-mobility",
     specs: {
       range: "300 km (NEDC)",
@@ -2000,7 +2000,7 @@ export const VEHICLES: Vehicle[] = [
     basePrice: 628000000,
     priceText: "Từ 628.000.000 VNĐ",
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Nerio-Green.png",
-    bannerImage: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/banner-wweb.jpg",
+    bannerImage: "/images/banners/banner-he-thong-phuong-dong.jpg",
     category: "green-mobility",
     specs: {
       range: "380 km (WLTP)",
@@ -2227,7 +2227,7 @@ export const VEHICLES: Vehicle[] = [
     basePrice: 699000000,
     priceText: "Từ 699.000.000 VNĐ",
     thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Limo-Green.png",
-    bannerImage: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/banner-wweb.jpg",
+    bannerImage: "/images/banners/banner-he-thong-phuong-dong.jpg",
     category: "green-mobility",
     specs: {
       range: "420 km (NEDC)",

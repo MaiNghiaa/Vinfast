@@ -30,94 +30,24 @@ export const POSTS: Post[] = [
           </thead>
           <tbody>
             <tr>
-              <td><strong>Long Biên</strong></td>
-              <td>12/09/2026</td>
-              <td>Showroom VinFast Long Biên – Tầng 1 TTTM Vincom Long Biên, Phúc Lợi, Hà Nội</td>
+              <td><strong>Thường Tín (3S)</strong></td>
+              <td>Thứ 7 hàng tuần</td>
+              <td>Showroom VinFast Phương Đông Thường Tín – Km 189+700, QL1A, Xã Quất Động, Huyện Thường Tín, Hà Nội</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
-              <td>26/09/2026</td>
-              <td>Cafe Hợp Tác Xã Làng Nghề Lệ Mật</td>
+              <td><strong>Hoàng Quốc Việt (3S)</strong></td>
+              <td>Thứ 7 hàng tuần</td>
+              <td>Showroom VinFast Phương Đông Hoàng Quốc Việt – Số 214 Hoàng Quốc Việt, Cổ Nhuế 1, Bắc Từ Liêm, Hà Nội</td>
             </tr>
             <tr>
-              <td><strong>Ocean Park</strong></td>
-              <td>19/09/2026</td>
-              <td>SR Ocean Park, Tầng 1 TTTM Vincom Ocean Park, Kiêu Kỵ, Gia Lâm, Hà Nội</td>
+              <td><strong>Hòa Lạc (3S)</strong></td>
+              <td>Thứ 7 hàng tuần</td>
+              <td>Showroom VinFast Phương Đông Hòa Lạc – Km 17+500 Đại Lộ Thăng Long, Khu CNC Hòa Lạc, Thạch Thất, Hà Nội</td>
             </tr>
             <tr>
-              <td>&nbsp;</td>
-              <td>26/09/2026</td>
-              <td>Bold Brew – Cafe & Work Date Eco Park, Đô thị Ecopark, Phụng Công, Hưng Yên</td>
-            </tr>
-            <tr>
-              <td><strong>Smart City</strong></td>
-              <td>12/09/2026</td>
-              <td>Cà phê AHA, Vincom Smart City, Tây Mỗ, Hà Nội</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>26/09/2026</td>
-              <td>Highland Coffee Vincom Smart City, Tầng 1 TTTM Vincom Smart City</td>
-            </tr>
-            <tr>
-              <td><strong>Sơn Tây</strong></td>
-              <td>12/09/2026</td>
-              <td>Cafe H+ Garden, số 5 LK V13 khu đô thị HUD, phường Sơn Tây, Thành phố Hà Nội</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>19/09/2026</td>
-              <td>H+ Phúc Thọ, xã Phúc Thọ, thành phố Hà Nội</td>
-            </tr>
-            <tr>
-              <td><strong>Vĩnh Phúc</strong></td>
-              <td>19/09/2026</td>
-              <td>Showroom VinFast Phương Đông Vĩnh Phúc</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>26/09/2026</td>
-              <td>Showroom VinFast Phương Đông Vĩnh Phúc</td>
-            </tr>
-            <tr>
-              <td><strong>Hạ Long</strong></td>
-              <td>12/09/2026</td>
-              <td>SR VinFast Phương Đông Hạ Long, Vincom Hạ Long, khu Cột Đồng Hồ, P. Bạch Đằng, TP. Hạ Long, Quảng Ninh</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>19/09/2026</td>
-              <td>Phúc Long Coffee – phường Hồng Gai, tỉnh Quảng Ninh</td>
-            </tr>
-            <tr>
-              <td><strong>Cẩm Phả</strong></td>
-              <td>05/09/2026</td>
-              <td>Coffee Bay Khu 8, Thị Trấn Cái Rồng, Huyện Vân Đồn, TP.Quảng Ninh</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>12/09/2026</td>
-              <td>Showroom VinFast Cẩm Phả – Tổ 5, Khu Diêm Thủy, Cẩm Phả, Quảng Ninh</td>
-            </tr>
-            <tr>
-              <td><strong>Xuân Mai</strong></td>
-              <td>12/09/2026</td>
-              <td>Cafe Trà San Tuyết – Quốc Oai, Hà Nội</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>26/09/2026</td>
-              <td>Quán Bay Coffee – Hòa Lạc, Hà Nội</td>
-            </tr>
-            <tr>
-              <td><strong>Uông Bí</strong></td>
-              <td>12/09/2026</td>
-              <td>Trung Nguyên Coffee, Vincom Uông Bí, Quảng Ninh</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>19/09/2026</td>
-              <td>Showroom VinFast Uông Bí, 114 Trần Thái Tông, Uông Bí, Quảng Ninh</td>
+              <td><strong>Bát Tràng (1S)</strong></td>
+              <td>Thứ 7 hàng tuần</td>
+              <td>Showroom VinFast Phương Đông Bát Tràng – Khu Đô Thị Ecopark / Bát Tràng, Gia Lâm, Hà Nội</td>
             </tr>
           </tbody>
         </table>
@@ -154,12 +84,9 @@ export const POSTS: Post[] = [
       <h3>Không gian giao lưu và thưởng thức cà phê</h3>
       <p>Các địa điểm tổ chức được lựa chọn nhằm mang đến không gian thoải mái để khách hàng và gia đình vừa trải nghiệm xe, vừa giao lưu và tìm hiểu sản phẩm.</p>
 
-      <h2>Lái thử VinFast tại Hà Nội, Vĩnh Phúc và Quảng Ninh</h2>
-      <p>Chuỗi sự kiện “THỨ 7 HẠNH PHÚC” tháng 9/2026 được VinFast Phương Đông tổ chức tại nhiều khu vực, giúp khách hàng thuận tiện lựa chọn địa điểm gần nơi sinh sống.</p>
-      <p>Tại <strong>Hà Nội</strong>, chương trình được tổ chức ở Long Biên, Ocean Park, Smart City, Sơn Tây và Xuân Mai.</p>
-      <p>Tại <strong>Vĩnh Phúc</strong>, khách hàng có thể tham gia tại Showroom VinFast Phương Đông Vĩnh Phúc.</p>
-      <p>Tại <strong>Quảng Ninh</strong>, chương trình diễn ra tại Hạ Long, Cẩm Phả và Uông Bí.</p>
-      <p>Việc tổ chức nhiều điểm lái thử giúp khách hàng tiết kiệm thời gian di chuyển và dễ dàng trải nghiệm xe điện VinFast ngay tại khu vực của mình.</p>
+      <h2>Lái thử VinFast tại Hệ thống Showroom VinFast Phương Đông Hà Nội</h2>
+      <p>Chuỗi sự kiện “THỨ 7 HẠNH PHÚC” tháng 9/2026 được VinFast Phương Đông tổ chức định kỳ vào thứ 7 hàng tuần tại hệ thống 04 Showroom và 03 Xưởng dịch vụ chính hãng tại Hà Nội: Thường Tín, Hoàng Quốc Việt, Hòa Lạc và Bát Tràng.</p>
+      <p>Việc tổ chức đồng bộ tại các showroom trọng điểm giúp quý khách hàng dễ dàng di chuyển và trực tiếp trải nghiệm trọn vẹn các dòng xe điện VinFast thế hệ mới.</p>
 
       <h2>Cách đăng ký lái thử VinFast tháng 9/2026</h2>
       <p>Khách hàng có nhu cầu tham gia chương trình có thể đăng ký trước với VinFast Phương Đông để được xác nhận lịch và địa điểm.</p>

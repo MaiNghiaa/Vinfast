@@ -18,7 +18,7 @@ export default function PromoBannerCards() {
             >
               {/* Banner Image */}
               <Image
-                src="/images/banners/banner-khuyen-mai.jpg"
+                src="/images/banners/banner-phuong-dong-len-doi-xe.jpg"
                 alt="Khuyến mại xe VinFast - VinFast Phương Đông"
                 fill
                 className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
@@ -46,7 +46,7 @@ export default function PromoBannerCards() {
             >
               {/* Banner Image */}
               <Image
-                src="/images/banners/banner-dich-vu.jpg"
+                src="/images/banners/banner-he-thong-phuong-dong.jpg"
                 alt="Khám phá dịch vụ VinFast Phương Đông"
                 fill
                 className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"

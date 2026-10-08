@@ -124,16 +124,53 @@ export default function JobDetailPage({ params }: PageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* LEFT COLUMN: Detailed Descriptions */}
           <main className="lg:col-span-7 xl:col-span-8 space-y-8">
-            {/* Featured Image */}
-            <div className="relative w-full aspect-[16/9] max-h-[420px] rounded-xl overflow-hidden border border-gray-200 bg-gray-100 shadow-xs">
+            {/* Featured Branded Job Poster */}
+            <div className="relative w-full aspect-[16/9] max-h-[420px] rounded-2xl overflow-hidden border border-gray-200/80 shadow-md group">
               <Image
                 src={job.image}
                 alt={job.title}
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 66vw"
-                className="object-cover"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
+              {/* Gradient overlay for readability and premium look */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/25" />
+
+              {/* Poster content overlay */}
+              <div className="absolute inset-0 p-6 sm:p-8 flex flex-col justify-between text-white select-none">
+                {/* Top Badge */}
+                <div className="flex items-center justify-between gap-3">
+                  <div className="inline-flex items-center gap-2 bg-[#1863dc]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wider text-white shadow-sm">
+                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                    VinFast Phương Đông Tuyển Dụng
+                  </div>
+                  <span className="text-xs bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-gray-200 font-semibold hidden sm:inline-block">
+                    Cơ sở Hà Nội
+                  </span>
+                </div>
+
+                {/* Bottom Banner Title & Highlights */}
+                <div className="space-y-2.5">
+                  <span className="text-[#3AB3FF] text-xs sm:text-sm font-bold uppercase tracking-wider block">
+                    {job.department}
+                  </span>
+                  <h2 className="text-xl sm:text-2xl md:text-3xl font-black uppercase text-white leading-tight drop-shadow-md">
+                    {job.title.replace(/^TUYỂN DỤNG:\s*/i, "")}
+                  </h2>
+                  <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-1 text-xs sm:text-sm">
+                    <span className="bg-emerald-500/90 backdrop-blur-md px-3 py-1 rounded-md font-bold text-white shadow-xs">
+                      Thu nhập: {job.salary}
+                    </span>
+                    <span className="bg-white/20 backdrop-blur-md px-3 py-1 rounded-md text-gray-100 font-medium">
+                      {job.location}
+                    </span>
+                    <span className="bg-white/20 backdrop-blur-md px-3 py-1 rounded-md text-gray-100 font-medium hidden md:inline-block">
+                      Hotline HR: 090 242 25 22
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Introduction Card */}
@@ -145,7 +182,7 @@ export default function JobDetailPage({ params }: PageProps) {
                 {job.description}
               </p>
               <p className="text-sm text-gray-700 leading-relaxed">
-                VinFast Phương Đông tự hào là một trong những đại lý ủy quyền hàng đầu của VinFast Việt Nam với chuỗi 9 showroom và xưởng dịch vụ hiện đại. Chúng tôi liên tục tìm kiếm và chiêu mộ nhân tài để cùng kiến tạo tương lai giao thông xanh thông minh.
+                VinFast Phương Đông tự hào là một trong những đại lý ủy quyền hàng đầu của VinFast Việt Nam với hệ thống 4 showroom và 3 xưởng dịch vụ hiện đại tại Hà Nội. Chúng tôi liên tục tìm kiếm và chiêu mộ nhân tài để cùng kiến tạo tương lai giao thông xanh thông minh.
               </p>
             </section>
 

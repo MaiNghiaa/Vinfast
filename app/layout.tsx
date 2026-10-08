@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Be_Vietnam_Pro } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
 
-const manrope = Manrope({
+const beVietnam = Be_Vietnam_Pro({
   subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-manrope",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-sans",
   display: "swap",
   preload: true,
 });
@@ -58,8 +58,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={manrope.variable}>
-      <body className={`${manrope.className} antialiased selection:bg-[#1863dc] selection:text-white`}>
+    <html lang="vi" className={beVietnam.variable}>
+      <body className={`${beVietnam.className} antialiased selection:bg-[#1863dc] selection:text-white`}>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
