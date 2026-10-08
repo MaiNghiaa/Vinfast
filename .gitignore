@@ -32,6 +32,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# webarchive & large raw archives
-*.webarchive
-
+# directus local data & uploads
+directus/data/
+directus/uploads/
+directus/.env
+directus/extensions/
