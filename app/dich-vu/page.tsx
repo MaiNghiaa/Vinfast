@@ -355,7 +355,7 @@ export default function DichVuPage() {
       {/* 7. VIDEO ĐÁNH GIÁ KHÁCH HÀNG */}
       <section className="relative w-full py-20 sm:py-28 flex items-center justify-center overflow-hidden">
         <Image
-          src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/thinhcuong-vinfast.jpg"
+          src="/images/about/pd-showroom-1.jpg"
           alt="Khách hàng đánh giá VinFast Phương Đông"
           fill
           sizes="100vw"
@@ -388,7 +388,7 @@ export default function DichVuPage() {
             <div className="lg:col-span-6 flex flex-col">
               <div className="relative w-full flex-1 min-h-[360px] lg:min-h-full rounded-xl overflow-hidden shadow-lg group">
                 <Image
-                  src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/showroom-3s-vinfast-vinh-phuc-3.jpg"
+                  src="/images/showrooms/thuong-tin.png"
                   alt="Showroom 3S VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

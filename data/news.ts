@@ -3,21 +3,21 @@ import { Post } from "./types";
 export const POSTS: Post[] = [
   {
     id: "post-1",
-    slug: "lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-thu-7-hanh-phuc",
+    slug: "lich-lai-thu-vinfast-phuong-dong-thang-9-2026-thu-7-hanh-phuc",
     title: "LỊCH LÁI THỬ VINFAST PHƯƠNG ĐÔNG THÁNG 9/2026 – THỨ 7 HẠNH PHÚC",
     category: "su-kien",
     categoryName: "Tin sự kiện",
-    excerpt: "Chuỗi sự kiện 'Thứ 7 Hạnh Phúc' tháng 9/2026 tại Hệ thống 09 Showroom VinFast Phương Đông mang đến cơ hội trải nghiệm thực tế trọn bộ dải xe điện thông minh VF 3, VF 6, VF 7, VF 8 All New cùng vô vàn phần quà hấp dẫn.",
+    excerpt: "Chuỗi sự kiện 'Thứ 7 Hạnh Phúc' tháng 9/2026 tại Hệ thống 04 Showroom VinFast Phương Đông mang đến cơ hội trải nghiệm thực tế trọn bộ dải xe điện thông minh VF 3, VF 6, VF 7, VF 8 All New cùng vô vàn phần quà hấp dẫn.",
     content: `
       <h2>Lịch lái thử VinFast Phương Đông tháng 9/2026 – Trải nghiệm xe điện, nhận ưu đãi hấp dẫn</h2>
-      <p>Tháng 9/2026, <strong>VinFast Phương Đông</strong> tiếp tục tổ chức chuỗi sự kiện <strong>“THỨ 7 HẠNH PHÚC”</strong> tại nhiều địa điểm ở Hà Nội, Vĩnh Phúc và Quảng Ninh.</p>
+      <p>Tháng 9/2026, <strong>VinFast Phương Đông</strong> tiếp tục tổ chức chuỗi sự kiện <strong>“THỨ 7 HẠNH PHÚC”</strong> tại hệ thống showroom Hà Nội.</p>
       <p>Đây là cơ hội để khách hàng <strong>trực tiếp trải nghiệm, lái thử các dòng ô tô điện VinFast</strong>, tìm hiểu sản phẩm, chính sách bán hàng và các chương trình ưu đãi đang được áp dụng trong tháng 9.</p>
       <p>Không chỉ đơn thuần là một buổi lái thử xe, <strong>“THỨ 7 HẠNH PHÚC”</strong> còn mang đến không gian giao lưu, thưởng thức cà phê và được đội ngũ tư vấn VinFast Phương Đông hỗ trợ lựa chọn mẫu xe phù hợp với nhu cầu và ngân sách.</p>
 
-      <p><img src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-1-1-1024x576.jpg" alt="Lịch lái thử VinFast Phương Đông tháng 9/2026" /></p>
+      <p><img src="/images/banners/banner-lai-thu-phuong-dong.jpg" alt="Lịch lái thử VinFast Phương Đông tháng 9/2026" /></p>
 
       <h2>Lịch lái thử VinFast Phương Đông tháng 9/2026</h2>
-      <p>Trong tháng 9, chương trình được tổ chức tại <strong>9 khu vực/showroom của VinFast Phương Đông</strong>, với nhiều thời gian và địa điểm khác nhau.</p>
+      <p>Trong tháng 9, chương trình được tổ chức tại <strong>4 showroom của VinFast Phương Đông</strong>, với nhiều thời gian và địa điểm khác nhau.</p>
 
       <div class="table-responsive">
         <table>
@@ -127,7 +127,7 @@ export const POSTS: Post[] = [
         <p><strong>Lưu ý:</strong> Thời gian và địa điểm tổ chức có thể được VinFast Phương Đông điều chỉnh tùy theo tình hình thực tế. Khách hàng nên đăng ký trước để được xác nhận thông tin sự kiện.</p>
       </blockquote>
 
-      <p><img src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-2-1.jpg" alt="Lịch lái thử VinFast Phương Đông tháng 9 2026" /></p>
+      <p><img src="/images/banners/banner-lai-thu-phuong-dong.jpg" alt="Lịch lái thử VinFast Phương Đông tháng 9 2026" /></p>
 
       <h2>Trải nghiệm trực tiếp các dòng xe điện VinFast</h2>
       <p>Tham gia chương trình lái thử VinFast tháng 9/2026, khách hàng có cơ hội trực tiếp trải nghiệm khả năng vận hành và những trang bị trên các mẫu xe điện VinFast.</p>
@@ -174,7 +174,7 @@ export const POSTS: Post[] = [
       <p>Khách hàng có thể <strong>đăng ký lái thử VinFast</strong> bằng cách để lại số điện thoại hoặc nhắn tin trực tiếp cho VinFast Phương Đông. Đội ngũ tư vấn sẽ liên hệ, hỗ trợ lựa chọn địa điểm phù hợp và cung cấp thông tin chi tiết về chương trình.</p>
       <p><strong>VinFast Phương Đông – Đồng hành cùng khách hàng trên hành trình trải nghiệm và sở hữu ô tô điện VinFast.</strong></p>
     `,
-    thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-1.jpg",
+    thumbnail: "/images/banners/banner-lai-thu-phuong-dong.jpg",
     publishedDate: "31/08/2026",
     author: "VinFast Phương Đông",
     isFeatured: true,
@@ -265,30 +265,30 @@ export const POSTS: Post[] = [
   },
   {
     id: "post-7",
-    slug: "tong-ket-quy-ii-2026-tap-doan-thinh-cuong-ghi-nhan-thanh-tuu-san-sang-but-pha-quy-iii",
-    title: "TỔNG KẾT QUÝ II/2026: TẬP ĐOÀN PHƯƠNG ĐÔNG GHI NHẬN THÀNH TỰU, SẴN SÀNG BỨT PHÁ QUÝ III",
+    slug: "tong-ket-quy-ii-2026-vinfast-phuong-dong-ghi-nhan-thanh-tuu-san-sang-but-pha-quy-iii",
+    title: "TỔNG KẾT QUÝ II/2026: VINFAST PHƯƠNG ĐÔNG GHI NHẬN THÀNH TỰU, SẴN SÀNG BỨT PHÁ QUÝ III",
     category: "tin-noi-bo",
     categoryName: "Tin nội bộ",
-    excerpt: "Tập đoàn Phương Đông tiếp tục giữ vững vị trí Nhà phân phối xe ô tô điện VinFast Số 1 Việt Nam với hơn 5.000 xe được bàn giao trong nửa đầu năm 2026.",
+    excerpt: "VinFast Phương Đông tiếp tục giữ vững vị trí Nhà phân phối xe ô tô điện VinFast hàng đầu tại Hà Nội với hàng nghìn xe được bàn giao trong nửa đầu năm 2026.",
     content: `
-      <p>Tại buổi lễ sơ kết hoạt động kinh doanh Quý II/2026, Ban Lãnh đạo <strong>Tập đoàn Phương Đông</strong> đã tuyên dương các tập thể Showroom Long Biên, Ocean Park và Hạ Long đạt thành tích xuất sắc trong công tác bán hàng và chăm sóc khách hàng.</p>
+      <p>Tại buổi lễ sơ kết hoạt động kinh doanh Quý II/2026, Ban Lãnh đạo <strong>VinFast Phương Đông</strong> đã tuyên dương các tập thể Showroom Thường Tín, Hoàng Quốc Việt, Hòa Lạc và Bát Tràng đạt thành tích xuất sắc trong công tác bán hàng và chăm sóc khách hàng.</p>
     `,
-    thumbnail: "/images/awards/vinh-danh-long-bien.png",
+    thumbnail: "/images/showrooms/thuong-tin.png",
     publishedDate: "10/08/2026",
     author: "Phòng Truyền Thông",
     isFeatured: false,
   },
   {
     id: "post-8",
-    slug: "vinfast-thinh-cuong-dao-tao-ky-thuat-vien-dat-chuan-dich-vu-5-sao-toan-dien",
+    slug: "vinfast-phuong-dong-dao-tao-ky-thuat-vien-dat-chuan-dich-vu-5-sao-toan-dien",
     title: "VINFAST PHƯƠNG ĐÔNG ĐÀO TẠO KỸ THUẬT VIÊN ĐẠT CHUẨN DỊCH VỤ 5 SAO TOÀN DIỆN",
     category: "tin-noi-bo",
     categoryName: "Tin nội bộ",
-    excerpt: "Chương trình nâng cao tay nghề và chứng chỉ chuyên sâu về sửa chữa Pin và Động cơ điện công nghệ cao dành cho đội ngũ kỹ sư 13 Xưởng dịch vụ.",
+    excerpt: "Chương trình nâng cao tay nghề và chứng chỉ chuyên sâu về sửa chữa Pin và Động cơ điện công nghệ cao dành cho đội ngũ kỹ sư 3 Xưởng dịch vụ.",
     content: `
-      <p>Nhằm đảm bảo chất lượng dịch vụ đồng bộ tại 13 Xưởng dịch vụ chuẩn quốc tế, VinFast Phương Đông tổ chức khóa huấn luyện định kỳ với các chuyên gia kỹ thuật hàng đầu của VinFast.</p>
+      <p>Nhằm đảm bảo chất lượng dịch vụ đồng bộ tại 3 Xưởng dịch vụ chuẩn quốc tế, VinFast Phương Đông tổ chức khóa huấn luyện định kỳ với các chuyên gia kỹ thuật hàng đầu của VinFast.</p>
     `,
-    thumbnail: "/images/awards/vinh-danh-xuong-son-tay.jpg",
+    thumbnail: "/images/about/pd-showroom-1.jpg",
     publishedDate: "02/08/2026",
     author: "Khối Kỹ Thuật & Dịch Vụ",
     isFeatured: false,

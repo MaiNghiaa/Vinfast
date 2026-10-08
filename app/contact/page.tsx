@@ -18,19 +18,19 @@ const HOTLINE_BOXES: HotlineBox[] = [
   {
     title: "HOTLINE BÁN HÀNG & LÁI THỬ",
     items: [
-      { name: "VINFAST PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT (N00802)", phone: "090 242 25 22" },
-      { name: "VINFAST PHƯƠNG ĐÔNG BÁT TRÀNG (N00804)", phone: "090 242 25 22" },
       { name: "VINFAST PHƯƠNG ĐÔNG THƯỜNG TÍN (N00801)", phone: "090 242 25 22" },
+      { name: "VINFAST PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT (N00802)", phone: "090 242 25 22" },
       { name: "VINFAST PHƯƠNG ĐÔNG HÒA LẠC (N00803)", phone: "090 242 25 22" },
+      { name: "VINFAST PHƯƠNG ĐÔNG BÁT TRÀNG (N00804)", phone: "090 242 25 22" },
     ],
   },
   {
     title: "HOTLINE DỊCH VỤ & BẢO DƯỠNG",
     items: [
-      { name: "XƯỞNG DỊCH VỤ HOÀNG QUỐC VIỆT", phone: "090 242 25 22" },
-      { name: "XƯỞNG DỊCH VỤ BÁT TRÀNG", phone: "090 242 25 22" },
-      { name: "XƯỞNG DỊCH VỤ THƯỜNG TÍN", phone: "090 242 25 22" },
-      { name: "XƯỞNG DỊCH VỤ HÒA LẠC", phone: "090 242 25 22" },
+      { name: "XƯỞNG DỊCH VỤ THƯỜNG TÍN (3S)", phone: "090 242 25 22" },
+      { name: "XƯỞNG DỊCH VỤ HOÀNG QUỐC VIỆT (3S)", phone: "090 242 25 22" },
+      { name: "XƯỞNG DỊCH VỤ BÁT TRÀNG (3S)", phone: "090 242 25 22" },
+      { name: "ĐẶT LỊCH HẸN BẢO DƯỠNG TOÀN HỆ THỐNG", phone: "090 242 25 22" },
     ],
   },
   {
@@ -102,7 +102,7 @@ export default function ContactPage() {
       {/* 1. Top Banner (matching Phương Đông 1620e3b) */}
       <div className="w-full relative overflow-hidden bg-gray-100 aspect-[2560/850] max-h-[460px]">
         <Image
-          src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/thinh-cuong.jpg"
+          src="/images/banners/banner-he-thong-phuong-dong.jpg"
           alt="VinFast Phương Đông"
           fill
           priority

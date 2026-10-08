@@ -32,7 +32,7 @@ export default function SingleArticlePage() {
       {/* 1. HERO BANNER CHUẨN PHƯƠNG ĐÔNG (anh-dep2.png) */}
       <section className="relative w-full h-[220px] sm:h-[280px] md:h-[340px] flex items-center justify-center overflow-hidden">
         <Image
-          src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/anh-dep2.png"
+          src="/images/banners/banner-he-thong-phuong-dong.jpg"
           alt={post.title}
           fill
           priority
@@ -106,7 +106,7 @@ export default function SingleArticlePage() {
             <div className="flex items-center gap-1.5">
               {/* Facebook */}
               <a
-                href={`https://www.facebook.com/sharer.php?u=https://vinfastthinhcuong.com.vn/tin-tuc/${post.slug}`}
+                href={`https://www.facebook.com/sharer.php?u=https://vinfastphuongdonghanoi.com/tin-tuc/${post.slug}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Share on Facebook"
@@ -118,7 +118,7 @@ export default function SingleArticlePage() {
               </a>
               {/* Twitter / X */}
               <a
-                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=https://vinfastthinhcuong.com.vn/tin-tuc/${post.slug}`}
+                href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=https://vinfastphuongdonghanoi.com/tin-tuc/${post.slug}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Share on Twitter"
@@ -130,7 +130,7 @@ export default function SingleArticlePage() {
               </a>
               {/* LinkedIn */}
               <a
-                href={`https://www.linkedin.com/shareArticle?mini=true&url=https://vinfastthinhcuong.com.vn/tin-tuc/${post.slug}&title=${encodeURIComponent(post.title)}`}
+                href={`https://www.linkedin.com/shareArticle?mini=true&url=https://vinfastphuongdonghanoi.com/tin-tuc/${post.slug}&title=${encodeURIComponent(post.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Share on LinkedIn"
@@ -142,7 +142,7 @@ export default function SingleArticlePage() {
               </a>
               {/* Pinterest */}
               <a
-                href={`https://pinterest.com/pin/create/button/?url=https://vinfastthinhcuong.com.vn/tin-tuc/${post.slug}&media=${post.thumbnail}&description=${encodeURIComponent(post.title)}`}
+                href={`https://pinterest.com/pin/create/button/?url=https://vinfastphuongdonghanoi.com/tin-tuc/${post.slug}&media=${post.thumbnail}&description=${encodeURIComponent(post.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Share on Pinterest"

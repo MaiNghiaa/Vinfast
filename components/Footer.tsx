@@ -28,7 +28,7 @@ export default function Footer() {
                   </Link>
                 </div>
                 <h2 className="text-[17px] lg:text-[18px] font-bold text-black uppercase mb-3.5 leading-snug">
-                  CÔNG TY CỔ PHẦN PHƯƠNG ĐÔNG
+                  CÔNG TY TNHH PHƯƠNG ĐÔNG
                 </h2>
                 <div className="space-y-3 text-[14px] font-medium text-black leading-[1.7]">
                   <p>
@@ -82,66 +82,20 @@ export default function Footer() {
                   HỆ THỐNG SHOWROOM HÀ NỘI
                 </h2>
                 <span className="text-[12px] font-semibold text-gray-700 bg-gray-200/90 px-2.5 py-0.5 rounded">
-                  4 Cơ sở đại lý chính thức
+                  4 Showroom &bull; 3 Xưởng dịch vụ chính hãng
                 </span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-4.5 text-[14px] text-black flex-1">
-                {/* Cơ sở 1: Hoàng Quốc Việt */}
+                {/* Cơ sở 1: Thường Tín */}
                 <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <span className="bg-[#e53935] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
-                        N00802
+                        N00801 &bull; 3S
                       </span>
                       <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                        VINFAST HOÀNG QUỐC VIỆT
-                      </p>
-                    </div>
-                    <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
-                      Địa chỉ: Số 14 Hoàng Quốc Việt, Cầu Giấy, HN
-                    </p>
-                  </div>
-                  <p className="text-[13px] text-gray-600 mt-2">
-                    Hotline tư vấn:{" "}
-                    <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
-                      090 242 25 22
-                    </a>
-                  </p>
-                </div>
-
-                {/* Cơ sở 2: Bát Tràng */}
-                <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="bg-[#e53935] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
-                        N00804
-                      </span>
-                      <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                        VINFAST BÁT TRÀNG
-                      </p>
-                    </div>
-                    <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
-                      Địa chỉ: 268 Đường Giáp Hải, Xã Bát Tràng, HN
-                    </p>
-                  </div>
-                  <p className="text-[13px] text-gray-600 mt-2">
-                    Hotline tư vấn:{" "}
-                    <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
-                      090 242 25 22
-                    </a>
-                  </p>
-                </div>
-
-                {/* Cơ sở 3: Thường Tín */}
-                <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
-                  <div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <span className="bg-[#e53935] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
-                        N00801
-                      </span>
-                      <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                        VINFAST THƯỜNG TÍN
+                        VINFAST PHƯƠNG ĐÔNG - THƯỜNG TÍN
                       </p>
                     </div>
                     <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
@@ -149,22 +103,45 @@ export default function Footer() {
                     </p>
                   </div>
                   <p className="text-[13px] text-gray-600 mt-2">
-                    Hotline tư vấn:{" "}
+                    Hotline & Xưởng dịch vụ:{" "}
                     <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
                       090 242 25 22
                     </a>
                   </p>
                 </div>
 
-                {/* Cơ sở 4: Hòa Lạc */}
+                {/* Cơ sở 2: Hoàng Quốc Việt */}
                 <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
                       <span className="bg-[#e53935] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
-                        N00803
+                        N00802 &bull; 3S
                       </span>
                       <p className="font-extrabold text-black text-[14.5px] leading-snug">
-                        VINFAST HÒA LẠC
+                        VINFAST PHƯƠNG ĐÔNG - HOÀNG QUỐC VIỆT
+                      </p>
+                    </div>
+                    <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
+                      Địa chỉ: Số 14 Hoàng Quốc Việt, Cầu Giấy, HN
+                    </p>
+                  </div>
+                  <p className="text-[13px] text-gray-600 mt-2">
+                    Hotline & Xưởng dịch vụ:{" "}
+                    <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
+                      090 242 25 22
+                    </a>
+                  </p>
+                </div>
+
+                {/* Cơ sở 3: Hòa Lạc */}
+                <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-[#1863dc] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
+                        N00803 &bull; SHOWROOM
+                      </span>
+                      <p className="font-extrabold text-black text-[14.5px] leading-snug">
+                        VINFAST PHƯƠNG ĐÔNG - HÒA LẠC
                       </p>
                     </div>
                     <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
@@ -173,6 +150,29 @@ export default function Footer() {
                   </div>
                   <p className="text-[13px] text-gray-600 mt-2">
                     Hotline tư vấn:{" "}
+                    <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
+                      090 242 25 22
+                    </a>
+                  </p>
+                </div>
+
+                {/* Cơ sở 4: Bát Tràng */}
+                <div className="bg-[#f7f7f7] p-4 rounded-lg border border-gray-300/80 shadow-[0_1px_2px_rgba(0,0,0,0.03)] hover:border-red-500/60 transition-colors flex flex-col justify-between">
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="bg-[#e53935] text-white text-[11px] font-extrabold px-2 py-0.5 rounded tracking-wide">
+                        N00804 &bull; 3S
+                      </span>
+                      <p className="font-extrabold text-black text-[14.5px] leading-snug">
+                        VINFAST PHƯƠNG ĐÔNG - BÁT TRÀNG
+                      </p>
+                    </div>
+                    <p className="text-[13.5px] font-semibold text-[#1a1a1a] leading-relaxed">
+                      Địa chỉ: 268 Đường Giáp Hải, Xã Bát Tràng, HN
+                    </p>
+                  </div>
+                  <p className="text-[13px] text-gray-600 mt-2">
+                    Hotline & Xưởng dịch vụ:{" "}
                     <a href="tel:0902422522" className="text-black font-bold hover:text-red-600 transition-colors">
                       090 242 25 22
                     </a>
@@ -292,7 +292,7 @@ export default function Footer() {
               </h4>
               <div className="flex items-center gap-3">
                 <a
-                  href="https://www.facebook.com/vinfastthinhcuong.com.vn"
+                  href="https://www.facebook.com/profile.php?id=61573789293153"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-[38px] h-[38px] rounded-full bg-black text-white flex items-center justify-center hover:bg-[#3ab3ff] transition-colors"
@@ -303,7 +303,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.youtube.com/@Vinfastthinhcuongofficial"
+                  href="https://www.youtube.com/channel/UC6WfPdHG-wTjp5S-ZcaiZyA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-[38px] h-[38px] rounded-full bg-black text-white flex items-center justify-center hover:bg-[#3ab3ff] transition-colors"
@@ -348,8 +348,8 @@ export default function Footer() {
             {/* Logo 1: Phương Đông có slogan (Lớn, cao ~75px) */}
             <div className="shrink-0 flex items-center justify-center">
               <Image
-                src="/images/footer/Logo-Thinh-Cuong-doc-co-slogan-01.png"
-                alt="Logo công ty cổ phần Phương Đông"
+                src="/images/logo-phuong-dong.png"
+                alt="Logo Công ty TNHH Phương Đông"
                 width={180}
                 height={110}
                 className="h-[70px] sm:h-[76px] w-auto object-contain"

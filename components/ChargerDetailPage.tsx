@@ -489,7 +489,7 @@ export default function ChargerDetailPage({ charger }: ChargerDetailPageProps) {
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat lg:bg-fixed"
           style={{
-            backgroundImage: `url('https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/thinhcuong-vinfast.jpg')`,
+            backgroundImage: `url('/images/banners/banner-he-thong-phuong-dong.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-black/65 z-0" />

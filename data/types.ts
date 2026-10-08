@@ -44,7 +44,7 @@ export interface Vehicle {
   };
   colors: VehicleColor[];
   trims: VehicleTrim[];
-  features: string[];
+  features?: string[];
   isFeatured?: boolean;
   category: "electric-car" | "green-mobility" | "commercial";
 
@@ -100,6 +100,21 @@ export interface Vehicle {
     videoUrl: string;
   };
   lifestyleGallery?: string[];
+  overview?: {
+    description?: string;
+    highlights?: { title: string; subtitle?: string; desc: string }[];
+  };
+  sections?: {
+    exterior?: { title: string; subtitle?: string; img: string; desc: string }[];
+    interior?: { title: string; subtitle?: string; img: string; desc: string }[];
+  };
+  compareCars?: {
+    id: string;
+    name: string;
+    priceText: string;
+    image: string;
+    slug: string;
+  }[];
   relatedNews?: {
     id: string;
     title: string;

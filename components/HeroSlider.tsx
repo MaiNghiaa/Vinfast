@@ -7,33 +7,33 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const HERO_SLIDES = [
   {
     id: 1,
-    image: "/images/banners/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026.jpg",
-    alt: "Lịch lái thử VinFast Phương Đông tháng 9/2026",
+    image: "/images/banners/banner-he-thong-phuong-dong.jpg",
+    alt: "VinFast Phương Đông - Hệ thống 4 Showroom 3 Xưởng dịch vụ chính hãng Hà Nội",
   },
   {
     id: 2,
-    image: "/images/banners/banner-wweb.jpg",
-    alt: "VinFast Phương Đông Đại Lý Số 1 Miền Bắc",
+    image: "/images/banners/banner-lai-thu-phuong-dong.jpg",
+    alt: "Lái thử và trải nghiệm xe điện VinFast tại VinFast Phương Đông",
   },
   {
     id: 3,
-    image: "/images/banners/vinfast-uu-dai-tien-phong-xang.jpg",
-    alt: "VinFast Ưu Đãi Tiên Phong Chuyển Đổi Xanh",
+    image: "/images/banners/banner-phuong-dong-giai-phap-xanh.jpg",
+    alt: "VinFast Phương Đông - Giải pháp di chuyển xanh bền vững",
   },
   {
     id: 4,
-    image: "/images/banners/vinh-danh-vinfast-thinh-cuong.jpg",
-    alt: "Vinh danh VinFast Phương Đông Club 1000",
+    image: "/images/banners/banner-phuong-dong-len-doi-xe.jpg",
+    alt: "VinFast Phương Đông - Lên đời xe xanh, tối ưu chi phí",
   },
   {
     id: 5,
-    image: "/images/banners/vinfast-thinhcuong-3.jpg",
-    alt: "Showroom VinFast Phương Đông Chuẩn 3S",
+    image: "/images/banners/banner-phuong-dong-vf-mpv7.jpg",
+    alt: "VinFast VF MPV 7 - Bạn đồng hành đại gia đình",
   },
   {
     id: 6,
-    image: "/images/banners/vinfast-thinh-cuong-banner-1-scaled.jpg",
-    alt: "VinFast Phương Đông Banner",
+    image: "/images/banners/banner-phuong-dong-vf-wild.jpg",
+    alt: "VinFast VF Wild - Bán tải điện tương lai",
   },
 ];
 

@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     "Hệ thống trạm sạc VinFast V-Green Phương Đông - Khảo sát, cung cấp và lắp đặt trạm sạc nhanh DC 30kW, 60kW, 120kW và trạm sạc gia đình AC trên toàn quốc.",
   alternates: {
-    canonical: "https://vinfastthinhcuong.com.vn/tram-sac/",
+    canonical: "https://vinfastphuongdonghanoi.com/tram-sac/",
   },
   openGraph: {
     title: "Trạm sạc – Vinfast Phương Đông",
     description:
       "Giải pháp toàn diện về trạm sạc ô tô điện VinFast V-Green Phương Đông - Lắp đặt trạm sạc DC, AC chính hãng trên toàn quốc.",
-    url: "https://vinfastthinhcuong.com.vn/tram-sac/",
+    url: "https://vinfastphuongdonghanoi.com/tram-sac/",
     siteName: "Vinfast Phương Đông",
     images: [
       {

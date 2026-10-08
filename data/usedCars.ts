@@ -31,19 +31,19 @@ export const USED_CARS_NEWS = [
   {
     id: "vf-mpv-7",
     title: "VF MPV 7: GIÁ, THÔNG SỐ & ƯU ĐÃI MỚI NHẤT | VINFAST PHƯƠNG ĐÔNG",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/09/khuyen-mai-vf-mpv-7-thang-9-2026--1024x576.jpg",
-    slug: "vf-mpv-7-gia-thong-so-uu-dai-moi-nhat-vinfast-thinh-cuong",
+    image: "/images/banners/banner-phuong-dong-vf-mpv7.jpg",
+    slug: "vf-mpv-7-gia-thong-so-uu-dai-moi-nhat-vinfast-phuong-dong",
   },
   {
     id: "lai-thu-xe-tai-nha",
     title: "LÁI THỬ XE VINFAST TẠI NHÀ: TRẢI NGHIỆM THỰC TẾ CÙNG VINFAST PHƯƠNG ĐÔNG",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/xuong-dich-vu-vinfast-thinhcuong-11888.jpg",
-    slug: "lai-thu-xe-vinfast-tai-nha-trai-nghiem-thuc-te-cung-vinfast-thinh-cuong",
+    image: "/images/banners/banner-lai-thu-phuong-dong.jpg",
+    slug: "lai-thu-xe-vinfast-tai-nha-trai-nghiem-thuc-te-cung-vinfast-phuong-dong",
   },
   {
     id: "adas-vf8-all-new",
     title: "ADAS TRÊN VF 8 ALL NEW: TÍNH NĂNG NGHE RẤT “XỊN”, NHƯNG NGOÀI ĐỜI CÓ THỰC SỰ DÙNG ĐƯỢC?",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/MKT0696-300x200.jpg",
+    image: "/images/news/adas-vf8-all-new.png",
     slug: "adas-tren-vf-8-all-new-tinh-nang-nghe-rat-xin-nhung-ngoai-doi-co-thuc-su-dung-duoc",
   },
 ];

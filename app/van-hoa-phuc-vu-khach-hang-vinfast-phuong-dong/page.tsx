@@ -35,7 +35,7 @@ export default function CustomerCulturePage() {
       <section
         className="relative w-full min-h-[28vh] sm:min-h-[45vh] md:min-h-[65vh] lg:min-h-[88vh] bg-cover bg-center bg-no-repeat flex items-center justify-center"
         style={{
-          backgroundImage: `url("https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/banner-web-TVBH-web1-1.jpg")`,
+          backgroundImage: `url("/images/banners/banner-he-thong-phuong-dong.jpg")`,
         }}
         aria-label="Văn hóa Phục vụ Khách hàng VinFast Phương Đông"
       >
@@ -47,13 +47,7 @@ export default function CustomerCulturePage() {
       {/* 3. TRIẾT LÝ PHỤC VỤ KHÁCH HÀNG (Elementor 275becdb) */}
       <section className="relative py-12 sm:py-20 lg:py-24 px-4 sm:px-6 overflow-hidden bg-white">
         {/* Subtle Watermark Background Pattern - Full Component Coverage */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.08] bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url("https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/08/train-in-japan-2021-10-06-19-06-22-utc.jpg")`,
-            filter: "grayscale(100%)",
-          }}
-        />
+        <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-gray-50" />
 
         <div className="max-w-[1300px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -61,7 +55,7 @@ export default function CustomerCulturePage() {
             <div className="lg:col-span-5 flex justify-center">
               <div className="group relative w-full h-[360px] sm:h-[420px] lg:h-[485px] overflow-hidden rounded-lg shadow-sm">
                 <Image
-                  src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/web-TVBH-web-o-duoi1-1.jpg"
+                  src="/images/about/pd-showroom-2.jpg"
                   alt="VinFast Phương Đông - Tư vấn bán hàng tận tâm"
                   fill
                   sizes="(max-width: 1024px) 100vw, 45vw"
@@ -137,16 +131,15 @@ export default function CustomerCulturePage() {
       {/* 4. BỘ 3 XE VINFAST: VF9, VF3, VF7 (Elementor 295306a2) */}
       <section className="w-full bg-white py-2 sm:py-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 px-2 sm:px-4">
-          {/* Card 1: VF9 (Elementor 57f9a9b7) */}
+          {/* Card 1: VF9 */}
           <div className="group relative w-full h-[320px] sm:h-[400px] md:h-[480px] lg:h-[500px] overflow-hidden">
             <Image
-              src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/11/vinfast-vf9-12-0e2b.webp"
+              src="/images/vehicles/vf9-1.jpg"
               alt="VinFast VF9"
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
             />
-            {/* Subtle hover overlay with zoom icon (no click popup) */}
             <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
               <div className="w-10 h-10 rounded-full bg-black/40 border border-white/80 flex items-center justify-center text-white shadow-md transform scale-90 group-hover:scale-100 transition-transform duration-300">
                 <ZoomIn className="w-5 h-5 stroke-[2.2]" />
@@ -154,16 +147,15 @@ export default function CustomerCulturePage() {
             </div>
           </div>
 
-          {/* Card 2: VF3 (Elementor 442efd5e) */}
+          {/* Card 2: VF3 */}
           <div className="group relative w-full h-[320px] sm:h-[400px] md:h-[480px] lg:h-[500px] overflow-hidden">
             <Image
-              src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/12/vinfast-vf3-253996.jpeg"
+              src="/images/vehicles/vf3-plus-1.jpg"
               alt="VinFast VF3"
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
             />
-            {/* Subtle hover overlay with zoom icon (no click popup) */}
             <div className="absolute inset-0 bg-black/15 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center pointer-events-none">
               <div className="w-10 h-10 rounded-full bg-black/40 border border-white/80 flex items-center justify-center text-white shadow-md transform scale-90 group-hover:scale-100 transition-transform duration-300">
                 <ZoomIn className="w-5 h-5 stroke-[2.2]" />
@@ -171,10 +163,10 @@ export default function CustomerCulturePage() {
             </div>
           </div>
 
-          {/* Card 3: VF7 (Elementor 254f3fa7) */}
+          {/* Card 3: VF7 */}
           <div className="group relative w-full h-[320px] sm:h-[400px] md:h-[480px] lg:h-[500px] overflow-hidden">
             <Image
-              src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/10/VF7-14.jpg"
+              src="/images/vehicles/vf7-1.jpg"
               alt="VinFast VF7"
               fill
               sizes="(max-width: 768px) 100vw, 33vw"
@@ -193,12 +185,7 @@ export default function CustomerCulturePage() {
       {/* 5. VỊ THẾ DẪN ĐẦU – SỨ MỆNH PHỤC VỤ (Elementor 6cc9e3d5) */}
       <section className="relative w-full py-14 sm:py-20 px-4 sm:px-6 bg-[#fafafa] overflow-hidden">
         {/* Watermark Pattern Background */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-35 bg-repeat"
-          style={{
-            backgroundImage: `url("https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/08/pattern-omotenashi-toyota-thai-hoa-tu-liem.jpg")`,
-          }}
-        />
+        <div className="absolute inset-0 pointer-events-none opacity-20 bg-gray-100" />
 
         <div className="max-w-4xl mx-auto relative z-10 text-center space-y-4">
           <h4 className="text-[#EB0000] font-[800] text-base sm:text-[18px] uppercase tracking-wider">
@@ -245,7 +232,7 @@ export default function CustomerCulturePage() {
               {/* Main Photo (width 65-70%) */}
               <div className="group relative w-[72%] aspect-[1280/1920] max-h-[500px] overflow-hidden rounded-md shadow-md border border-gray-100 z-10">
                 <Image
-                  src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/09/album-omotenashi-toyota-thai-hoa-tu-liem113.webp"
+                  src="/images/about/pd-delivery-1.jpg"
                   alt="Showroom đón tiếp khách hàng VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 70vw, 35vw"
@@ -258,22 +245,22 @@ export default function CustomerCulturePage() {
                 </div>
               </div>
 
-              {/* Overlapping Badge / Sticker Image (width 40-45%, overlapping bottom right) */}
-              <div className="relative w-[48%] -mt-[38%] self-end z-20 drop-shadow-xl hover:rotate-3 transition-transform duration-300">
+              {/* Overlapping Badge / Delivery Photo */}
+              <div className="relative w-[48%] -mt-[38%] self-end z-20 drop-shadow-xl hover:rotate-3 transition-transform duration-300 overflow-hidden rounded-md border-2 border-white">
                 <Image
-                  src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/01/mvpvpvp.png"
-                  alt="Các phiên bản màu và ưu đãi VinFast"
+                  src="/images/about/pd-delivery-2.jpg"
+                  alt="Bàn giao xe VinFast Phương Đông"
                   width={526}
                   height={526}
-                  className="w-full h-auto object-contain"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </div>
 
-            {/* Right Column: Showroom Text (Elementor 2737408) */}
+            {/* Right Column: Showroom Text */}
             <div className="lg:col-span-6 space-y-4 lg:pl-6 text-center lg:text-left">
               <h6 className="text-[#EB0000] font-[800] text-base sm:text-[18px] uppercase tracking-wider text-center lg:text-left">
-                09 SHOWROOM VINFAST HIỆN ĐẠI
+                04 SHOWROOM VINFAST HIỆN ĐẠI
               </h6>
 
               <h5 className="text-2xl sm:text-3xl font-[800] text-[#151515] uppercase tracking-tight leading-tight text-center lg:text-left">
@@ -303,20 +290,14 @@ export default function CustomerCulturePage() {
       {/* 7. 14 XƯỞNG DỊCH VỤ CHẤT LƯỢNG (Elementor 9df280e) */}
       <section className="relative py-14 sm:py-20 lg:py-24 px-4 sm:px-6 bg-[#fcfcfc] border-t border-gray-100 overflow-hidden">
         {/* Subtle Watermark Pattern - Full Component Coverage */}
-        <div
-          className="absolute inset-0 pointer-events-none opacity-[0.08] bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url("https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/08/train-in-japan-2021-10-06-19-06-22-utc.jpg")`,
-            filter: "grayscale(100%)",
-          }}
-        />
+        <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-gray-50" />
 
         <div className="max-w-[1300px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            {/* Left Column: Workshop Text (Elementor 094537d) */}
+            {/* Left Column: Workshop Text */}
             <div className="lg:col-span-6 space-y-4 text-center lg:text-left">
               <h6 className="text-[#F70300] font-[800] text-base sm:text-[18px] uppercase tracking-wider text-center lg:text-left">
-                14 XƯỞNG DỊCH VỤ CHẤT LƯỢNG
+                03 XƯỞNG DỊCH VỤ CHẤT LƯỢNG
               </h6>
 
               <h2 className="text-2xl sm:text-3xl font-[800] text-[#151515] uppercase tracking-tight leading-tight text-center lg:text-left">
@@ -345,7 +326,7 @@ export default function CustomerCulturePage() {
             <div className="lg:col-span-6 flex justify-center">
               <div className="group relative w-full h-[320px] sm:h-[362px] lg:h-[386px] overflow-hidden rounded-lg shadow-sm">
                 <Image
-                  src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/10/557643152_122103037797044175_747372450738561641_n.jpg"
+                  src="/images/about/pd-showroom-1.jpg"
                   alt="Kỹ thuật viên lành nghề tại Xưởng dịch vụ VinFast Phương Đông"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -362,11 +343,11 @@ export default function CustomerCulturePage() {
         </div>
       </section>
 
-      {/* 8. VIDEO BANNER PARALLAX: TẬP ĐOÀN VINFAST PHƯƠNG ĐÔNG (Elementor f32dd12) */}
+      {/* 8. VIDEO BANNER PARALLAX: TẬP ĐOÀN VINFAST PHƯƠNG ĐÔNG */}
       <section
         className="relative w-full min-h-[55vh] sm:min-h-[65vh] flex items-center justify-center bg-cover bg-center bg-no-repeat lg:bg-fixed overflow-hidden"
         style={{
-          backgroundImage: `url("https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/10/Thiet-ke-chua-co-ten-9.png")`,
+          backgroundImage: `url("/images/banners/banner-he-thong-phuong-dong.jpg")`,
         }}
       >
         {/* Dark overlay (matches Elementor: bg #000, opacity 0.87) */}

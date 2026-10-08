@@ -93,7 +93,7 @@ export default function CareersPage() {
       {/* 1. HERO BANNER CHUẨN PHƯƠNG ĐÔNG */}
       <section className="relative w-full h-[260px] sm:h-[320px] md:h-[380px] lg:h-[400px] flex items-center justify-center overflow-hidden">
         <Image
-          src="https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/anh-dep2.png"
+          src="/images/banners/banner-he-thong-phuong-dong.jpg"
           alt="Tin tuyển dụng VinFast Phương Đông"
           fill
           priority

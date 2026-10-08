@@ -161,7 +161,7 @@ export default function UsedCarsPage() {
          ============================================================ */}
       <section className="relative w-full h-[460px] sm:h-[540px] md:h-[620px] lg:h-[680px] xl:h-[720px] overflow-hidden bg-[#eef2f6]">
         <Image
-          src="/images/thinhcuong-vinfast.jpg"
+          src="/images/banners/banner-he-thong-phuong-dong.jpg"
           alt="VinFast Phương Đông - Xe cũ Green Future"
           fill
           priority
@@ -609,7 +609,7 @@ export default function UsedCarsPage() {
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat lg:bg-fixed"
           style={{
-            backgroundImage: `url('https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/thinhcuong-vinfast.jpg')`,
+            backgroundImage: `url('/images/banners/banner-he-thong-phuong-dong.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-black/75 z-0" />

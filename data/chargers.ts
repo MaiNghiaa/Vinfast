@@ -5,7 +5,7 @@ export const CHARGER_RELATED_NEWS: ChargerNewsItem[] = [
     id: "ha-tang-xanh",
     title: "HẠ TẦNG XANH – TƯƠNG LAI BẮT ĐẦU TỪ HÔM NAY CÙNG V-GREEN PHƯƠNG ĐÔNG",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/02/Gemini_Generated_Image_vj002vvj002vvj00-scaled.png",
-    slug: "ha-tang-xanh-tuong-lai-bat-dau-tu-hom-nay-cung-v-green-thinh-cuong",
+    slug: "ha-tang-xanh-tuong-lai-bat-dau-tu-hom-nay-cung-v-green-phuong-dong",
     category: "Trạm Sạc",
   },
   {
@@ -19,7 +19,7 @@ export const CHARGER_RELATED_NEWS: ChargerNewsItem[] = [
     id: "dai-phuc-sinh-news",
     title: "TRẠM SẠC XE ĐIỆN CÔNG NGHỆ XANH TẠI KHÁCH SẠN ĐẠI PHÚC SINH – V-GREEN PHƯƠNG ĐÔNG",
     image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/02/bia-websacdb.jpg",
-    slug: "tram-sac-xe-dien-cong-nghe-xanh-tai-khach-san-dai-phuc-sinh-v-green-thinh-cuong",
+    slug: "tram-sac-xe-dien-cong-nghe-xanh-tai-khach-san-dai-phuc-sinh-v-green-phuong-dong",
     category: "Trạm Sạc",
   },
 ];
@@ -43,7 +43,7 @@ export const CHARGER_PROJECTS = [
   {
     id: "vnpt-vinh-phuc",
     name: "TRẠM SẠC VINFAST VNPT VĨNH PHÚC",
-    image: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/tram-sac-vinfast-hd-phat-thinhcuong-2-1024x1024.jpg",
+    image: "/images/banners/banner-he-thong-phuong-dong.jpg",
   },
   {
     id: "hoang-duy-gia-lai",
@@ -58,16 +58,14 @@ export const CHARGER_PROJECTS = [
 ];
 
 export const WORKSHOP_GALLERY_IMAGES = [
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/123-vinfast-thinhcuong.jpg",
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/xuong-dich-vu-vinfast-thinhcuong-11888.jpg",
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/xuong-dich-vu-vinfast-thinhcuong-112.jpg",
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/xuong-dich-vu-vinfast-thinhcuong-11.jpg",
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/xuong-dich-vu-vinfast-thinhcuong-11xuong-dich-vu-vinfast-thinhcuong-114444.jpg",
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/dich-vu-vinfast-thinhcuong-1.jpg",
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/cvdv-vinfast-thinhcuong.jpg",
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/dich-vu-sua-chua-thinh-cuong-1.jpg",
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/dich-vu-sua-chua-thinh-cuong-6.jpg",
-  "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/xuong-dich-vu-vinfast-thinhcuong-1166.jpg",
+  "/images/about/pd-showroom-1.jpg",
+  "/images/about/pd-showroom-2.jpg",
+  "/images/about/pd-showroom-3.jpg",
+  "/images/about/pd-delivery-1.jpg",
+  "/images/about/pd-delivery-2.jpg",
+  "/images/about/pd-delivery-3.jpg",
+  "/images/about/pd-delivery-4.jpg",
+  "/images/about/pd-delivery-5.jpg",
 ];
 
 export const CHARGERS: Charger[] = [

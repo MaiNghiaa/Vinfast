@@ -15,31 +15,31 @@ export interface ShowroomCategory {
 
 export const SHOWROOM_CATEGORIES: ShowroomCategory[] = [
   {
-    id: "hoang-quoc-viet",
-    name: "SHOWROOM VINFAST",
-    subName: "PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT",
-    image: "/images/showrooms/ocean-park.png",
-    link: "/contact",
-  },
-  {
-    id: "bat-trang",
-    name: "SHOWROOM VINFAST",
-    subName: "PHƯƠNG ĐÔNG BÁT TRÀNG",
-    image: "/images/showrooms/long-bien.png",
-    link: "/contact",
-  },
-  {
     id: "thuong-tin",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG THƯỜNG TÍN",
-    image: "/images/showrooms/son-tay.png",
+    image: "/images/showrooms/thuong-tin.png",
+    link: "/contact",
+  },
+  {
+    id: "hoang-quoc-viet",
+    name: "SHOWROOM VINFAST",
+    subName: "PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT",
+    image: "/images/showrooms/hoang-quoc-viet.png",
     link: "/contact",
   },
   {
     id: "hoa-lac",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG HÒA LẠC",
-    image: "/images/showrooms/vinh-phuc.png",
+    image: "/images/showrooms/hoa-lac.png",
+    link: "/contact",
+  },
+  {
+    id: "bat-trang",
+    name: "SHOWROOM VINFAST",
+    subName: "PHƯƠNG ĐÔNG BÁT TRÀNG",
+    image: "/images/showrooms/bat-trang.png",
     link: "/contact",
   },
 ];
@@ -184,7 +184,7 @@ export default function ShowroomCategorySlider() {
                         src={item.image}
                         alt={item.name}
                         fill
-                        className="object-contain rounded-full transition-transform duration-500 ease-out group-hover:scale-95"
+                        className="object-cover rounded-full transition-transform duration-500 ease-out group-hover:scale-105"
                         sizes="(max-width: 768px) 135px, 160px"
                         draggable={false}
                       />

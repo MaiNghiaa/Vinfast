@@ -7,40 +7,36 @@ import { Play, X, Facebook, Youtube, Instagram, ChevronRight } from "lucide-reac
 import GsapReveal from "@/components/animation/GsapReveal";
 import StaggerContainer from "@/components/animation/StaggerContainer";
 
-// Carousel 1: Xưởng dịch vụ & Kỹ thuật viên (11 ảnh)
+// Carousel 1: Xưởng dịch vụ & Showroom VinFast Phương Đông (8 ảnh)
 const SERVICE_IMAGES = [
-  "/images/about/xuong-dich-vu-vinfast-thinhcuong-11xuong-dich-vu-vinfast-thinhcuong-114444.jpg",
-  "/images/about/dich-vu-vinfast-thinhcuong-1.jpg",
-  "/images/about/cvdv-vinfast-thinhcuong.jpg",
-  "/images/about/dich-vu-sua-chua-thinh-cuong-1.jpg",
-  "/images/about/dich-vu-sua-chua-thinh-cuong-6.jpg",
-  "/images/about/xuong-dich-vu-vinfast-thinhcuong-1166.jpg",
-  "/images/about/van-hoa-vinfast-thinhcuong-89.jpg",
-  "/images/about/123-vinfast-thinhcuong.jpg",
-  "/images/about/xuong-dich-vu-vinfast-thinhcuong-11888.jpg",
-  "/images/about/xuong-dich-vu-vinfast-thinhcuong-112.jpg",
-  "/images/about/xuong-dich-vu-vinfast-thinhcuong-11.jpg",
+  "/images/showrooms/thuong-tin.png",
+  "/images/showrooms/hoang-quoc-viet.png",
+  "/images/showrooms/hoa-lac.png",
+  "/images/showrooms/bat-trang.png",
+  "/images/about/pd-showroom-1.jpg",
+  "/images/about/pd-showroom-2.jpg",
+  "/images/about/pd-showroom-3.jpg",
+  "/images/banners/banner-he-thong-phuong-dong.jpg",
 ];
 
-// Carousel 2: Văn hóa & Bàn giao khách hàng (8 ảnh)
+// Carousel 2: Văn hóa & Bàn giao xe VinFast Phương Đông (7 ảnh)
 const CULTURE_IMAGES = [
-  "/images/about/van-hoa-vinfast-thinhcuong-2.jpg",
-  "/images/about/vinfast-thinhcuong-6.jpg",
-  "/images/about/vinfast-thinhcuong-100.jpg",
-  "/images/about/vinfast-thinhcuong-105.jpg",
-  "/images/about/khach-hang-vinfast-thinhcuong.jpg",
-  "/images/about/vinfast-thinhcuong-203.jpg",
-  "/images/about/vinfast-thinhcuong-101.jpg",
-  "/images/about/vinfast-thinhcuong-23.jpg",
+  "/images/about/pd-delivery-1.jpg",
+  "/images/about/pd-delivery-2.jpg",
+  "/images/about/pd-delivery-3.jpg",
+  "/images/about/pd-delivery-4.jpg",
+  "/images/about/pd-delivery-5.jpg",
+  "/images/banners/banner-lai-thu-phuong-dong.jpg",
+  "/images/banners/banner-phuong-dong-len-doi-xe.jpg",
 ];
 
 // Gallery 5 ảnh Hướng tới tương lai xanh
 const GREEN_GALLERY = [
-  { src: "/images/about/vinfast14.jpg", alt: "VinFast Phương Đông tương lai xanh 1" },
-  { src: "/images/about/vinfast1.jpg", alt: "VinFast Phương Đông tương lai xanh 2" },
-  { src: "/images/about/vinfast3.jpg", alt: "VinFast Phương Đông tương lai xanh 3" },
-  { src: "/images/about/vinfast2.jpg", alt: "VinFast Phương Đông tương lai xanh 4" },
-  { src: "/images/about/dich-vu-sua-chua-thinh-cuong-7_n.jpg", alt: "VinFast Phương Đông tương lai xanh 5" },
+  { src: "/images/banners/banner-phuong-dong-giai-phap-xanh.jpg", alt: "VinFast Phương Đông tương lai xanh 1" },
+  { src: "/images/about/pd-showroom-1.jpg", alt: "VinFast Phương Đông tương lai xanh 2" },
+  { src: "/images/about/pd-showroom-2.jpg", alt: "VinFast Phương Đông tương lai xanh 3" },
+  { src: "/images/about/pd-delivery-1.jpg", alt: "VinFast Phương Đông tương lai xanh 4" },
+  { src: "/images/banners/banner-phuong-dong-vf-mpv7.jpg", alt: "VinFast Phương Đông tương lai xanh 5" },
 ];
 
 export default function AboutPage() {
@@ -96,10 +92,10 @@ export default function AboutPage() {
     <div className="w-full bg-white selection:bg-[#1863dc] selection:text-white">
       {/* 1. HERO BANNER CHUẨN KÍCH THƯỚC VÀ VỊ TRÍ GỐC PHƯƠNG ĐÔNG (ẢNH 2) */}
       <section className="relative w-full min-h-[460px] sm:min-h-[500px] md:min-h-[540px] lg:min-h-[560px] flex items-center justify-center overflow-hidden">
-        {/* Background image thinh-cuong-1.jpg with dark overlay 0.62 */}
+        {/* Background banner with dark overlay */}
         <div className="absolute inset-0 w-full h-full">
           <Image
-            src="/images/about/thinh-cuong-1.jpg"
+            src="/images/banners/banner-he-thong-phuong-dong.jpg"
             alt="Giới thiệu VinFast Phương Đông"
             fill
             className="object-cover object-center"
@@ -118,7 +114,7 @@ export default function AboutPage() {
           {/* Social Icons matching elementor social-icons (nhỏ gọn, chuẩn ảnh 2) */}
           <div className="flex items-center justify-center gap-4">
             <a
-              href="https://www.facebook.com/vinfastthinhcuong.com.vn"
+              href="https://www.facebook.com/profile.php?id=61573789293153"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-[#3AB3FF] transition-all duration-300 hover:scale-115 cursor-pointer p-1"
@@ -127,7 +123,7 @@ export default function AboutPage() {
               <Facebook className="w-[18px] h-[18px] fill-current" />
             </a>
             <a
-              href="https://www.youtube.com/@Vinfastthinhcuongofficial"
+              href="https://www.youtube.com/channel/UC6WfPdHG-wTjp5S-ZcaiZyA"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-[#3AB3FF] transition-all duration-300 hover:scale-115 cursor-pointer p-1"
@@ -136,7 +132,7 @@ export default function AboutPage() {
               <Youtube className="w-[18px] h-[18px] fill-current" />
             </a>
             <a
-              href="https://www.facebook.com/vinfastthinhcuong.com.vn"
+              href="https://www.facebook.com/profile.php?id=61573789293153"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-[#3AB3FF] transition-all duration-300 hover:scale-115 cursor-pointer p-1"
@@ -156,7 +152,7 @@ export default function AboutPage() {
               25 NĂM KIẾN TẠO GIÁ TRỊ BỀN VỮNG
             </h2>
             <p className="text-sm sm:text-base text-[#111111] leading-relaxed max-w-5xl mx-auto font-normal">
-              <strong className="font-bold">Công ty Cổ phần Phương Đông (Tập đoàn Phương Đông)</strong> được thành lập từ năm 2001. Trải qua <strong className="font-bold">25 năm phát triển không ngừng</strong>, Phương Đông đã từng bước xây dựng hệ sinh thái đa ngành vững mạnh, bao gồm: <strong className="font-bold">Khai thác khoáng sản – Xây dựng hạ tầng – Vận tải Logistics – Dịch vụ AnTaxi – Công nghệ Global – Nhà hàng Khách sạn An Bình</strong>, và đặc biệt là lĩnh vực đầy tiềm năng: <strong className="font-bold text-[#1863dc]">Xe ô tô điện VinFast</strong>.
+              <strong className="font-bold">Công ty TNHH Phương Đông (Tập đoàn Phương Đông)</strong> được thành lập từ năm 2001. Trải qua <strong className="font-bold">25 năm phát triển không ngừng</strong>, Phương Đông đã từng bước xây dựng hệ sinh thái đa ngành vững mạnh, bao gồm: <strong className="font-bold">Khai thác khoáng sản – Xây dựng hạ tầng – Vận tải Logistics – Dịch vụ AnTaxi – Công nghệ Global – Nhà hàng Khách sạn An Bình</strong>, và đặc biệt là lĩnh vực đầy tiềm năng: <strong className="font-bold text-[#1863dc]">Xe ô tô điện VinFast</strong>.
             </p>
           </div>
         </section>
@@ -166,25 +162,29 @@ export default function AboutPage() {
       <section className="pb-10 bg-white text-center">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           <h3 className="text-lg sm:text-xl md:text-[23px] font-extrabold uppercase text-[#000000] tracking-[1.2px] leading-snug mb-5">
-            VINFAST PHƯƠNG ĐÔNG – NHÀ PHÂN PHỐI Ô TÔ ĐIỆN SỐ 1 VIỆT NAM
+            VINFAST PHƯƠNG ĐÔNG – HỆ THỐNG ĐẠI LÝ CHÍNH HÃNG HÀ NỘI
           </h3>
           <p className="text-sm sm:text-base text-[#111111] leading-relaxed max-w-5xl mx-auto mb-6">
-            <strong className="font-bold">VinFast Phương Đông</strong> là nhà phân phối chính thức và đối tác chiến lược của VinFast Việt Nam, hiện đang sở hữu hệ thống <strong className="font-bold text-[#1863dc]">09 Showroom và 12 xưởng dịch vụ</strong>. Tất cả đều được vận hành theo mô hình <strong className="font-bold">Đại lý 3S hiện đại</strong> (Xe mới – Dịch vụ – Phụ tùng phụ kiện), đặt tại 3 khu vực trọng điểm:
+            <strong className="font-bold">VinFast Phương Đông</strong> là nhà phân phối chính thức và đối tác chiến lược của VinFast Việt Nam, hiện đang sở hữu hệ thống <strong className="font-bold text-[#1863dc]">04 Showroom và 03 xưởng dịch vụ chính hãng</strong> (3 đại lý chuẩn 3S và 1 showroom trưng bày) tại các vị trí trọng điểm của Thủ đô Hà Nội:
           </p>
 
-          {/* 3 Trọng điểm phân phối */}
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-bold text-[#000000]">
+          {/* 4 Cơ sở Showroom & Xưởng dịch vụ */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm font-bold text-[#000000]">
             <div className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-4 py-2 rounded-full shadow-2xs">
               <span className="text-[#1863dc]">🔷</span>
-              <span><strong className="font-extrabold">Hà Nội:</strong> 5 Showroom – 6 Xưởng dịch vụ</span>
+              <span><strong className="font-extrabold">Thường Tín:</strong> Showroom 3S & Xưởng dịch vụ</span>
             </div>
             <div className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-4 py-2 rounded-full shadow-2xs">
               <span className="text-[#1863dc]">🔷</span>
-              <span><strong className="font-extrabold">Quảng Ninh:</strong> 3 Showroom – 3 Xưởng dịch vụ</span>
+              <span><strong className="font-extrabold">Hoàng Quốc Việt:</strong> Showroom 3S & Xưởng dịch vụ</span>
             </div>
             <div className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-4 py-2 rounded-full shadow-2xs">
               <span className="text-[#1863dc]">🔷</span>
-              <span><strong className="font-extrabold">Tây Bắc (Vĩnh Phúc, Việt Trì, Tuyên Quang):</strong> 1 Showroom – 3 Xưởng dịch vụ</span>
+              <span><strong className="font-extrabold">Hòa Lạc:</strong> Showroom trưng bày bán hàng</span>
+            </div>
+            <div className="flex items-center gap-1.5 bg-gray-50 border border-gray-200 px-4 py-2 rounded-full shadow-2xs">
+              <span className="text-[#1863dc]">🔷</span>
+              <span><strong className="font-extrabold">Bát Tràng:</strong> Showroom 3S & Xưởng dịch vụ</span>
             </div>
           </div>
         </div>

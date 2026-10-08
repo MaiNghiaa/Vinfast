@@ -13,34 +13,28 @@ export interface AwardItem {
 
 const AWARDS: AwardItem[] = [
   {
-    id: "long-bien",
-    name: "LONG BIÊN",
-    subtitle: "ĐẠI LÝ CÓ DOANH SỐ XUẤT SẮC NHẤT QUÝ II/2025",
-    image: "/images/awards/vinh-danh-long-bien.png",
+    id: "top-sales",
+    name: "TOP 1 DOANH SỐ",
+    subtitle: "ĐẠI LÝ XUẤT SẮC TOÀN DIỆN MIỀN BẮC NĂM 2025",
+    image: "/images/awards/award-pd-doanhso.png",
   },
   {
-    id: "ha-long",
-    name: "HẠ LONG",
-    subtitle: "ĐẠI LÝ CÓ DOANH SỐ XUẤT SẮC NHẤT QUÝ II/2025",
-    image: "/images/awards/vinh-danh-ha-long.png",
+    id: "service-5star",
+    name: "XƯỞNG DỊCH VỤ 5 SAO",
+    subtitle: "HỆ THỐNG XƯỞNG DỊCH VỤ TIÊU CHUẨN QUỐC TẾ NĂM 2025",
+    image: "/images/awards/award-pd-doanhso.png",
   },
   {
-    id: "son-tay-1",
-    name: "SƠN TÂY",
-    subtitle: "ĐẠI LÝ CÓ DOANH SỐ XUẤT SẮC NHẤT QUÝ II/2025",
-    image: "/images/awards/vinh-danh-son-tay.png",
+    id: "csat-excellence",
+    name: "HÀI LÒNG KHÁCH HÀNG",
+    subtitle: "CHỈ SỐ HÀI LÒNG CSAT CAO NHẤT HÀ NỘI NĂM 2025",
+    image: "/images/awards/award-pd-doanhso.png",
   },
   {
-    id: "son-tay-xuong",
-    name: "SƠN TÂY",
-    subtitle: "XƯỞNG DỊCH VỤ CÓ DOANH SỐ XUẤT SẮC QUÝ I/2025",
-    image: "/images/awards/vinh-danh-xuong-son-tay.jpg",
-  },
-  {
-    id: "son-tay-sr",
-    name: "SƠN TÂY",
-    subtitle: "SHOWROOM CÓ DOANH SỐ XUÂT SẮC QUÝ I/2025",
-    image: "/images/awards/vinh-danh-sr-son-tay.jpg",
+    id: "green-pioneer",
+    name: "TIÊN PHONG XANH",
+    subtitle: "KỶ LỤC BÀN GIAO XE Ô TÔ ĐIỆN VINFAST NĂM 2025",
+    image: "/images/awards/award-pd-doanhso.png",
   },
 ];
 

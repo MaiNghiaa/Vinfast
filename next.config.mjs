@@ -12,6 +12,10 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
+        hostname: 'vinfastphuongdonghanoi.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'vinfastthinhcuong.com.vn',
       },
       {
