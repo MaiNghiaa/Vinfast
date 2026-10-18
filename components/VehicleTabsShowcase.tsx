@@ -10,6 +10,7 @@ export interface VehicleShowcaseItem {
   name: string;
   category: string;
   slug: string;
+  href?: string; // link riêng (vd: xe GF cũ -> /xe-cu/...)
   image: string;
   imageHover: string;
 }
@@ -27,6 +28,14 @@ export const SHOWCASE_TABS: ShowcaseTab[] = [
     title: "XE ĐIỆN",
     categoryLabel: "Xe mới",
     vehicles: [
+      {
+        id: "vf2",
+        name: "VinFast VF 2",
+        category: "Xe mới",
+        slug: "vinfast-vf2",
+        image: "/images/vehicles/vf2-card.jpg",
+        imageHover: "/images/vehicles/vf2-1.jpg",
+      },
       {
         id: "vf3",
         name: "Vinfast VF3",
@@ -82,6 +91,14 @@ export const SHOWCASE_TABS: ShowcaseTab[] = [
         slug: "vinfast-vf9",
         image: "/images/vehicles/vf9-1.jpg",
         imageHover: "/images/vehicles/vf9-2.png",
+      },
+      {
+        id: "vf-wild",
+        name: "VinFast VF Wild",
+        category: "Xe mới",
+        slug: "vinfast-vf-wild",
+        image: "/images/vehicles/vf-wild-card.jpg",
+        imageHover: "/images/vehicles/vf-wild-1.jpg",
       },
     ],
   },
@@ -156,7 +173,8 @@ export const SHOWCASE_TABS: ShowcaseTab[] = [
         id: "gf-vf8-1",
         name: "VINFAST VF8 ECO 2023 – ĐEN – ĐEN",
         category: "VinFast GF",
-        slug: "vinfast-vf-8",
+        slug: "vinfast-vf8-eco-2023-den-den",
+        href: "/xe-cu/vinfast-vf8-eco-2023-den-den",
         image: "/images/vehicles/gf-vf8-1.jpg",
         imageHover: "/images/vehicles/gf-vf8-2.jpg",
       },
@@ -164,7 +182,8 @@ export const SHOWCASE_TABS: ShowcaseTab[] = [
         id: "gf-vf8-2",
         name: "VINFAST VF8 ECO 2023 – XANH DƯƠNG",
         category: "VinFast GF",
-        slug: "vinfast-vf-8",
+        slug: "vinfast-vf8-eco-2023-xanh-duong",
+        href: "/xe-cu/vinfast-vf8-eco-2023-xanh-duong",
         image: "/images/vehicles/gf-vf8-blue.jpg",
         imageHover: "/images/vehicles/gf-vf8-blue.jpg",
       },
@@ -172,7 +191,8 @@ export const SHOWCASE_TABS: ShowcaseTab[] = [
         id: "gf-vf8-3",
         name: "VINFAST VF8 PLUS 2023 – ĐỎ – ĐEN",
         category: "VinFast GF",
-        slug: "vinfast-vf-8",
+        slug: "vinfast-vf8-plus-2023-do-den",
+        href: "/xe-cu/vinfast-vf8-plus-2023-do-den",
         image: "/images/vehicles/gf-vf8-red-1.jpg",
         imageHover: "/images/vehicles/gf-vf8-red-2.jpg",
       },
@@ -180,7 +200,8 @@ export const SHOWCASE_TABS: ShowcaseTab[] = [
         id: "gf-vf8-4",
         name: "VINFAST VF8 PLUS 2023 – ĐỎ – NÂU",
         category: "VinFast GF",
-        slug: "vinfast-vf-8",
+        slug: "vinfast-vf8-plus-2023-do-nau",
+        href: "/xe-cu/vinfast-vf8-plus-2023-do-nau",
         image: "/images/vehicles/gf-vf8-red-1.jpg",
         imageHover: "/images/vehicles/gf-vf8-red-2.jpg",
       },
@@ -333,7 +354,7 @@ export default function VehicleTabsShowcase() {
                 >
                   {/* Product Card matching .product-block .grid-v3 */}
                   <div className="group/card bg-white border border-[#ededed] hover:border-gray-300 transition-all duration-400 flex flex-col h-full overflow-hidden">
-                    <Link href={`/san-pham/${v.slug}`} className="block">
+                    <Link href={v.href || `/san-pham/${v.slug}`} className="block">
                       {/* Image Frame with Primary & Hover Swap */}
                       <div className="relative w-full aspect-[1000/625] bg-white flex items-center justify-center p-3 overflow-hidden">
                         {/* 1. Primary Default Image */}

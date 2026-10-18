@@ -18,28 +18,28 @@ export const SHOWROOM_CATEGORIES: ShowroomCategory[] = [
     id: "thuong-tin",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG THƯỜNG TÍN",
-    image: "/images/showrooms/thuong-tin.png",
+    image: "/4_logo_cuacaccuahang/logo_phuong_dong_thuong_tin.png",
     link: "/contact",
   },
   {
     id: "hoang-quoc-viet",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT",
-    image: "/images/showrooms/hoang-quoc-viet.png",
+    image: "/4_logo_cuacaccuahang/logo_phuong_dong_hoang_quoc_viet.png",
     link: "/contact",
   },
   {
     id: "hoa-lac",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG HÒA LẠC",
-    image: "/images/showrooms/hoa-lac.png",
+    image: "/4_logo_cuacaccuahang/logo_phuong_dong_hoa_lac.png",
     link: "/contact",
   },
   {
     id: "bat-trang",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG BÁT TRÀNG",
-    image: "/images/showrooms/bat-trang.png",
+    image: "/4_logo_cuacaccuahang/logo_phuong_dong_bat_trang.png",
     link: "/contact",
   },
 ];
@@ -48,17 +48,15 @@ export default function ShowroomCategorySlider() {
   const totalItems = SHOWROOM_CATEGORIES.length;
   const [currentIndex, setCurrentIndex] = useState(totalItems);
   const [withTransition, setWithTransition] = useState(true);
-  const [itemsPerView, setItemsPerView] = useState(5);
+  const [itemsPerView, setItemsPerView] = useState(4);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
 
-  // Responsive items per view: desktop 5, tablet 4, mobile-landscape 3, mobile 2
+  // Responsive items per view: desktop/tablet 4, mobile-landscape 3, mobile 2
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width >= 1100) {
-        setItemsPerView(5);
-      } else if (width >= 768) {
+      if (width >= 768) {
         setItemsPerView(4);
       } else if (width >= 540) {
         setItemsPerView(3);
@@ -71,6 +69,9 @@ export default function ShowroomCategorySlider() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Khi số showroom vừa đủ hiển thị trên 1 hàng (desktop: 4/4) thì đứng yên, không lặp lại logo
+  const isStatic = totalItems <= itemsPerView;
 
   const nextSlide = useCallback(() => {
     setWithTransition(true);
@@ -95,12 +96,12 @@ export default function ShowroomCategorySlider() {
 
   // Autoplay matching slick-carousel data-autoplay="true"
   useEffect(() => {
-    if (isPaused) return;
+    if (isPaused || isStatic) return;
     const timer = setInterval(() => {
       nextSlide();
     }, 3500);
     return () => clearInterval(timer);
-  }, [isPaused, nextSlide]);
+  }, [isPaused, isStatic, nextSlide]);
 
   // Touch swipe support
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -122,11 +123,9 @@ export default function ShowroomCategorySlider() {
   };
 
   // Extended 3x array for seamless infinite looping
-  const extendedItems = [
-    ...SHOWROOM_CATEGORIES,
-    ...SHOWROOM_CATEGORIES,
-    ...SHOWROOM_CATEGORIES,
-  ];
+  const extendedItems = isStatic
+    ? SHOWROOM_CATEGORIES
+    : [...SHOWROOM_CATEGORIES, ...SHOWROOM_CATEGORIES, ...SHOWROOM_CATEGORIES];
 
   const itemWidthPercent = 100 / itemsPerView;
 
@@ -134,6 +133,7 @@ export default function ShowroomCategorySlider() {
     <section className="bg-white py-8 md:py-14 border-b border-gray-100 overflow-hidden relative group/section">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 relative">
         {/* Navigation Arrow - Left */}
+        {!isStatic && (
         <button
           type="button"
           onClick={prevSlide}
@@ -142,8 +142,10 @@ export default function ShowroomCategorySlider() {
         >
           <ChevronLeft className="w-5 h-5 stroke-[2.5]" />
         </button>
+        )}
 
         {/* Navigation Arrow - Right */}
+        {!isStatic && (
         <button
           type="button"
           onClick={nextSlide}
@@ -152,21 +154,22 @@ export default function ShowroomCategorySlider() {
         >
           <ChevronRight className="w-5 h-5 stroke-[2.5]" />
         </button>
+        )}
 
         {/* Carousel Viewport */}
         <div
           className="overflow-hidden py-4"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={handleTouchStart}
-          onTouchEnd={handleTouchEnd}
+          onTouchStart={isStatic ? undefined : handleTouchStart}
+          onTouchEnd={isStatic ? undefined : handleTouchEnd}
         >
           <div
-            className={`flex ${
-              withTransition ? "transition-transform duration-500 ease-in-out" : ""
+            className={`flex ${isStatic ? "justify-center" : ""} ${
+              withTransition && !isStatic ? "transition-transform duration-500 ease-in-out" : ""
             }`}
             style={{
-              transform: `translateX(-${currentIndex * itemWidthPercent}%)`,
+              transform: isStatic ? "none" : `translateX(-${currentIndex * itemWidthPercent}%)`,
             }}
             onTransitionEnd={handleTransitionEnd}
           >
@@ -182,9 +185,9 @@ export default function ShowroomCategorySlider() {
                     <div className="relative w-full h-full rounded-full overflow-hidden">
                       <Image
                         src={item.image}
-                        alt={item.name}
+                        alt={`Logo ${item.name} ${item.subName}`}
                         fill
-                        className="object-cover rounded-full transition-transform duration-500 ease-out group-hover:scale-105"
+                        className="object-contain rounded-full transition-transform duration-500 ease-out group-hover:scale-105"
                         sizes="(max-width: 768px) 135px, 160px"
                         draggable={false}
                       />
