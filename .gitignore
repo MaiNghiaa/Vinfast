@@ -39,4 +39,5 @@ next-env.d.ts
 /directus/data/
 /directus/uploads/
 /directus/.env
+/directus/catalog/.upload-map.json
 

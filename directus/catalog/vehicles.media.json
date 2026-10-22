@@ -1,0 +1,1285 @@
+{
+  "version": 1,
+  "source": "main data/vehicles.ts",
+  "note": "Catalog tạm để import dần vào Directus. status=draft. Sửa URL/ảnh ở đây trước khi đẩy CMS.",
+  "vehicles": [
+    {
+      "slug": "vinfast-vf2",
+      "name": "VinFast VF 2",
+      "category": "electric-car",
+      "segment": "Mini e-Car Đô Thị",
+      "status": "draft",
+      "sort": 0,
+      "files": {
+        "thumbnail": "/images/vehicles/vf2-1.jpg",
+        "banner_image": "/images/vehicles/vf2-1.jpg",
+        "legacy_thumbnail": "",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/vf2-1.jpg",
+        "/images/vehicles/vf2-brochure-1.jpg",
+        "/images/vehicles/vf2-brochure-2.jpg",
+        "/images/vehicles/vf2-card.jpg"
+      ],
+      "colors": [
+        {
+          "name": "Desat Silver",
+          "hex": "#c9ccd1",
+          "kind": "exterior",
+          "image": "/images/vehicles/vf2-1.jpg",
+          "sort": 0
+        },
+        {
+          "name": "Infinity Blanc",
+          "hex": "#f5f5f2",
+          "kind": "exterior",
+          "image": "/images/vehicles/vf2-1.jpg",
+          "sort": 1
+        },
+        {
+          "name": "Solar Ruby",
+          "hex": "#b4232f",
+          "kind": "exterior",
+          "image": "/images/vehicles/vf2-1.jpg",
+          "sort": 2
+        },
+        {
+          "name": "Pebble Beige",
+          "hex": "#d9c3a0",
+          "kind": "exterior",
+          "image": "/images/vehicles/vf2-1.jpg",
+          "sort": 3
+        },
+        {
+          "name": "Urban Mint",
+          "hex": "#9fd6c2",
+          "kind": "exterior",
+          "image": "/images/vehicles/vf2-1.jpg",
+          "sort": 4
+        },
+        {
+          "name": "Summer Yellow",
+          "hex": "#f2c94c",
+          "kind": "exterior",
+          "image": "/images/vehicles/vf2-1.jpg",
+          "sort": 5
+        },
+        {
+          "name": "Rose Pink",
+          "hex": "#f2a7bd",
+          "kind": "exterior",
+          "image": "/images/vehicles/vf2-1.jpg",
+          "sort": 6
+        },
+        {
+          "name": "Sky Blue",
+          "hex": "#8ec5ea",
+          "kind": "exterior",
+          "image": "/images/vehicles/vf2-1.jpg",
+          "sort": 7
+        }
+      ],
+      "sections": [],
+      "gallery": [
+        "/images/vehicles/vf2-1.jpg",
+        "/images/vehicles/vf2-brochure-1.jpg",
+        "/images/vehicles/vf2-brochure-2.jpg",
+        "/images/vehicles/vf2-card.jpg"
+      ]
+    },
+    {
+      "slug": "vinfast-vf3",
+      "name": "Vinfast VF3",
+      "category": "electric-car",
+      "segment": "Mini e-SUV",
+      "status": "draft",
+      "sort": 1,
+      "files": {
+        "thumbnail": "/images/vehicles/vf3-plus-1.jpg",
+        "banner_image": "/images/vehicles/vf3-plus-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf31.png",
+        "legacy_banner_image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2024/07/toyota-thai-hoa-tu-liem-car-detail-breadcum-all.webp"
+      },
+      "local_assets": [
+        "/images/vehicles/vf3-plus-1.jpg",
+        "/images/vehicles/vf3-plus-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Yellow",
+          "hex": "#eab308",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-600x375.jpg",
+          "sort": 0
+        },
+        {
+          "name": "Pink",
+          "hex": "#ec4899",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-1-600x375.jpg",
+          "sort": 1
+        },
+        {
+          "name": "Violet",
+          "hex": "#8b5cf6",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-1-600x375.jpg",
+          "sort": 2
+        },
+        {
+          "name": "Blue",
+          "hex": "#2563eb",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-1-600x375.jpg",
+          "sort": 3
+        },
+        {
+          "name": "White",
+          "hex": "#f8fafc",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-1-600x375.jpg",
+          "sort": 4
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE VINFAST VF3",
+          "subtitle": "VinFast VF3 – nhỏ gọn nhưng đầy cá tính, sinh ra để nổi bật giữa phố thị.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-53.jpg",
+          "description": "<p><strong>Ngoại thất VinFast VF3</strong> tạo dấu ấn ngay từ cái nhìn đầu tiên với <strong>kích thước nhỏ gọn</strong> nhưng lại sở hữu những <strong>đường gân dập nổi mạnh mẽ</strong>, toát lên phong cách rắn rỏi hiếm thấy trong phân khúc xe mini. Điểm nổi bật nhất chính là <strong>chất off-road phóng khoáng</strong> được lồng ghép tinh tế trong thiết kế, mang lại vẻ ngoài cá tính và đầy năng lượng.</p><p>Tổng thể chiếc xe được xây dựng theo ngôn ngữ <strong>đơn giản nhưng hiện đại</strong>, vừa trẻ trung vừa năng động, rất phù hợp với khách hàng trẻ yêu thích sự khác biệt và muốn thể hiện phong cách riêng.</p><p><strong>VF3</strong> sở hữu <strong>cụm lưới tản nhiệt dạng đóng kín</strong> đặc trưng, giúp tối ưu tính khí động học và tăng sự liền mạch cho phần đầu xe. Tất cả hòa quyện tạo nên một diện mạo độc đáo, gọn gàng nhưng vẫn đậm chất mạnh mẽ.</p><p><strong>VinFast VF3 – nhỏ gọn nhưng đầy cá tính, sinh ra để nổi bật giữa phố thị.</strong></p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE VINFAST VF3",
+          "subtitle": "VinFast VF3 – nhỏ gọn nhưng táo bạo, khác biệt trong từng đường nét.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-52.jpg",
+          "description": "<p><strong>Thân xe VinFast VF3</strong> linh hoạt, giúp người lái dễ dàng di chuyển qua các con hẻm, ngõ nhỏ hay những cung đường chật hẹp – đặc biệt phù hợp với điều kiện giao thông tại Việt Nam.</p><p>Vòm lốp được tạo hình <strong>thô – khỏe – vạm vỡ</strong>, đậm chất cơ bắp, kết hợp cùng <strong>mâm 16 inch dạng 5 chấu mạnh mẽ</strong>, <strong>VinFast VF3</strong> vận hành ổn định trên nhiều dạng địa hình.</p><p>Các chi tiết như <strong>ốp vòm lốp mở rộng</strong> sơn đen vuông vức, <strong>gương chiếu hậu</strong> và <strong>tay nắm cửa</strong> sơn đen tạo nên sự tương phản phá cách, trở thành điểm nhấn độc đáo trên tổng thể ngoại thất.</p><p>Để phù hợp với kích thước mini tối ưu, <strong>VF3</strong> được thiết kế <strong>mỗi bên chỉ một cửa</strong>, mang lại vẻ ngoài gọn gàng, hiện đại và đậm chất cá tính.</p><p><strong>VinFast VF3 – nhỏ gọn nhưng táo bạo, khác biệt trong từng đường nét.</strong></p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE VINFAST VF3",
+          "subtitle": "VinFast VF3 – mạnh mẽ trong dáng vẻ nhỏ gọn, nổi bật với dấu ấn thiết kế LED hiện đại.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-50.jpg",
+          "description": "<p>Cụm đèn hậu của <strong>VinFast VF3</strong> được thiết kế <strong>dạng LED gồm 4 ngăn đặt cạnh nhau</strong>, ôm sát hai bên thân xe, tạo hiệu ứng thị giác nổi bật và hiện đại khi quan sát từ phía sau.</p><p>Phần <strong>đuôi xe VF3</strong> trở nên ấn tượng hơn nhờ <strong>nắp capo phẳng, dựng đứng</strong>, kết hợp cùng <strong>gờ nổi phía sau</strong> giúp tổng thể chiếc xe trông bệ vệ và vững chãi hơn khi di chuyển.</p><p>Ở phía trước, <strong>VF3</strong> được trang bị <strong>hệ thống đèn pha LED hiện đại</strong>, đặt cao giúp tối ưu tầm chiếu sáng và tăng khả năng nhận diện. Toàn bộ hệ thống chiếu sáng trước – sau đều sử dụng <strong>LED</strong>, mang đến vẻ ngoài tinh gọn, sắc sảo và phù hợp với phong cách năng động của mẫu xe điện đô thị.</p><p><strong>VinFast VF3 – mạnh mẽ trong dáng vẻ nhỏ gọn, nổi bật với dấu ấn thiết kế LED hiện đại.</strong></p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf31-600x375.png",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-600x375.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-1-600x375.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-1-600x375.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-1-600x375.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-1-600x375.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf3-2024-7-1110x6241-1-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf3-3034-9-1110x624-1-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf3-2026-1110x624-1-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf3-1-1110x7401-1-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-31.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-39-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-43-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-45-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-45-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-18-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-21-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-27-1024x576.jpg",
+        "/images/vehicles/vf3-plus-1.jpg",
+        "/images/vehicles/vf3-plus-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-vf5",
+      "name": "VinFast VF 5 Plus",
+      "category": "electric-car",
+      "segment": "A-SUV Đô Thị",
+      "status": "draft",
+      "sort": 2,
+      "files": {
+        "thumbnail": "/images/vehicles/vf5-1.jpg",
+        "banner_image": "/images/vehicles/vf5-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf51.png",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/vf5-1.jpg",
+        "/images/vehicles/vf5-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Xanh VinFast Blue",
+          "hex": "#1863dc",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf51.png",
+          "sort": 0
+        },
+        {
+          "name": "Trắng Brahminy White",
+          "hex": "#ffffff",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf51.png",
+          "sort": 1
+        },
+        {
+          "name": "Đỏ Crimson Red",
+          "hex": "#c0392b",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf51.png",
+          "sort": 2
+        },
+        {
+          "name": "Cam Sunset Orange",
+          "hex": "#e67e22",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf51.png",
+          "sort": 3
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE",
+          "subtitle": "VinFast VF 5 Plus – Thiết kế đầu xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf5-2-bccnunz.webp",
+          "description": "<p>VinFast VF5 sở hữu vẻ ngoài nhỏ nhắn, gọn gàng nhưng không kém phần trẻ trung, hiện đại. Nhìn trực diện, chúng ta dễ dàng nhận thấy những điểm quen thuộc trên các mẫu xe của VinFast.</p><p>Đó là dải crom tạo hình chữ V lớn, trải rộng sang 2 bên, ôm trọn logo thương hiệu. Song dải crom trên VinFast VF5 không được tích hợp LED như “đàn anh” VF 8 hay VF 9.</p><p>Cũng giống như đa số các mẫu xe điện khác, VinFast VF 5 không có lưới tản nhiệt. Hệ thống đèn pha halogen kích thước lớn đặt thấp xuống dưới. Nắp ca-pô xuất hiện những đường gân dập nổi khỏe khoắn.</p><p>Cản trước được làm từ chất nhựa đen bóng, mang đến cái nhìn trẻ trung, thể thao cho “em út” của VinFast.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE",
+          "subtitle": "VinFast VF 5 Plus – Thiết kế thân xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf5-4-r8qwun2.webp",
+          "description": "<p>Thân xe có lẽ là khu vực “ăn điểm” nhất về tổng thể hình dáng bên ngoài của VinFast VF 5 khi được phối 2 tông màu trắng – cam vô cùng thời thượng. Đây cũng là điểm chung của một số mẫu SUV-A vừa ra mắt Việt Nam thời gian gần đây.</p><p>Dù được định vị tại phân khúc cỡ nhỏ nhưng sự xuất hiện của loạt đường gân dập nổi trên VF 5 mang đến cái nhìn khá cơ bắp và mạnh mẽ, đúng chất SUV.</p><p>Bộ la-zăng kích thước 18 inch, tạo hình 5 chấu lớn cũng là điểm rất đáng chú ý tại khu vực thân xe VinFast VF 5. Đi kèm với đó là bộ lốp Pirelli P-Zero kích thước 225/40R18.</p><p>Nắp gương chiếu hậu màu bạc giống nóc xe, trong khi tay nắm cửa đồng màu thân xe, tạo nên sự đồng nhất trong thiết kế cũng như mặt thẩm mỹ.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE",
+          "subtitle": "VinFast VF 5 Plus – Thiết kế đuôi xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf5-19-ryqeuog.webp",
+          "description": "<p>Tạo hình cánh chim tiếp tục xuất hiện ở khu vực đuôi xe VinFast VF 5 nhưng nó chỉ là dải màu đỏ và không phát sáng như những người anh lớn trong nhà. Điều này thể hiện rõ yếu tố tối giản trong thiết kế của Vin trên mẫu SUV điện cỡ nhỏ.</p><p>Cụm đèn xi-nhan, đèn lùi và đèn sau màu đỏ đặt thấp xuống dưới. Cánh gió, ăng-ten vây cá cùng màu nóc xe. Cản sau thiết kế khá hầm hố với màu đen bóng, càng nhấn mạnh vẻ khỏe khoắn trên VF 5.</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf51.png",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-5-240724-nt-22-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-5-240724-nt-24-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-5-240724-nt-25-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-5-240724-nt-26-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-5-240724-nt-23-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-5-240724-nt-21-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/11-12-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-17-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-18-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-20-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-23-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-29-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-33-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-41-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-45-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-47-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-47-1024x576.jpg",
+        "/images/vehicles/vf5-1.jpg",
+        "/images/vehicles/vf5-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-vf6",
+      "name": "VinFast VF 6",
+      "category": "electric-car",
+      "segment": "B-SUV Sang Trọng",
+      "status": "draft",
+      "sort": 3,
+      "files": {
+        "thumbnail": "/images/vehicles/vf6-1.jpg",
+        "banner_image": "/images/vehicles/vf6-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf61.png",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/vf6-1.jpg",
+        "/images/vehicles/vf6-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Xanh VinFast Blue",
+          "hex": "#1863dc",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf61.png",
+          "sort": 0
+        },
+        {
+          "name": "Bạc Desat Silver",
+          "hex": "#bdc3c7",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf61.png",
+          "sort": 1
+        },
+        {
+          "name": "Đen Jet Black",
+          "hex": "#1a1a1a",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf61.png",
+          "sort": 2
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE",
+          "subtitle": "",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf6-12-1024x615.jpg",
+          "description": "<p>Phần đầu xe gây ấn tượng cho chúng tôi bởi dải đèn ban ngày LED hình chữ V được thiết kế cong về 2 bên hơn so với các mẫu xe khác.</p><p>Là xe thuần điện nên VF6 không có lưới tản nhiệt nên mặt ca-lăng được làm kín và liền mạch với thân xe. Ngoại thất xe được tô điểm bởi dải đèn LED tạo hình cánh chim đặc trưng của VinFast.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE",
+          "subtitle": "",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf6-4-1024x615.jpg",
+          "description": "<p>Tay nắm cửa cùng màu với thân xe. Cột chữ C được làm kính đen. Kèm với đó gương chiếu hậu cũng được làm cùng màu với thân xe, tích hợp đèn LED báo rẽ, Camera 360 & Cảnh báo va chạm trên gương cũng được tích hợp trên mẫu xe điện VF6.</p><p>Mặt ca-lăng của VF 6 được làm kín và liền mạch với thân xe, giúp cho tổng thể xe trông liền lạc từ trước ra sau. Ở phiên bản Eco dùng bộ la-zăng 17 inch, còn bản Plus với kích thước 19 inch.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE",
+          "subtitle": "",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf6-3-1024x615.jpg",
+          "description": "<p>Đuôi xe thể thao, cụm đèn hậu gồm đèn phanh và đèn báo rẽ đều đặt tách biệt bên dưới. Cản sau được trang trí bởi ốp nhựa chia hai phần cùng màu với thân xe.</p><p>Ở mẫu xe điện VinFast VF6 trang bị cánh gió thể thao, ăng ten vây cá mập.</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf61.png",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF6-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF6-2-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF6-24-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF6-2023-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf6-2023-4-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-48-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-48-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-46-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-34-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-30-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-42-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-24-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-21-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-19-1024x576.jpg",
+        "/images/vehicles/vf6-1.jpg",
+        "/images/vehicles/vf6-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-vfe34",
+      "name": "VinFast VF e34",
+      "category": "electric-car",
+      "segment": "C-SUV Điện Thông Minh",
+      "status": "draft",
+      "sort": 4,
+      "files": {
+        "thumbnail": "/images/vehicles/vfe34-1.jpg",
+        "banner_image": "/images/vehicles/vfe34-1.jpg",
+        "legacy_thumbnail": "",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/vfe34-1.jpg",
+        "/images/vehicles/vfe34-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Xanh Deep Ocean",
+          "hex": "#1e3a8a",
+          "kind": "exterior",
+          "image": "/images/vehicles/vfe34-1.jpg",
+          "sort": 0
+        },
+        {
+          "name": "Trắng Brahminy White",
+          "hex": "#f8fafc",
+          "kind": "exterior",
+          "image": "/images/vehicles/vfe34-2.png",
+          "sort": 1
+        },
+        {
+          "name": "Đỏ Crimson Red",
+          "hex": "#dc2626",
+          "kind": "exterior",
+          "image": "/images/vehicles/vfe34-1.jpg",
+          "sort": 2
+        },
+        {
+          "name": "Xám Neptune Grey",
+          "hex": "#64748b",
+          "kind": "exterior",
+          "image": "/images/vehicles/vfe34-1.jpg",
+          "sort": 3
+        }
+      ],
+      "sections": [
+        {
+          "section": "exterior",
+          "title": "Thiết kế khí động học hiện đại",
+          "subtitle": "Dải đèn LED cánh chim VinFast nhận diện thương hiệu",
+          "image": "/images/vehicles/vfe34-1.jpg",
+          "description": "Được chắp bút bởi studio Pininfarina danh tiếng của Ý, VF e34 sở hữu những đường nét thanh thoát, tối ưu lực cản không khí.",
+          "sort": 0
+        },
+        {
+          "section": "interior",
+          "title": "Khoang lái thông minh và tối giản",
+          "subtitle": "Màn hình giải trí cảm ứng 10 inch đặt dọc",
+          "image": "/images/vehicles/vfe34-2.png",
+          "description": "Không gian nội thất rộng rãi nhờ động cơ điện nhỏ gọn đặt dưới gầm, ghế da cao cấp công thái học.",
+          "sort": 0
+        }
+      ],
+      "gallery": [
+        "/images/vehicles/vfe34-1.jpg",
+        "/images/vehicles/vfe34-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-vf7",
+      "name": "VinFast VF 7",
+      "category": "electric-car",
+      "segment": "C-SUV Đột Phá",
+      "status": "draft",
+      "sort": 5,
+      "files": {
+        "thumbnail": "/images/vehicles/vf7-1.jpg",
+        "banner_image": "/images/vehicles/vf7-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf71.png",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/vf7-1.jpg",
+        "/images/vehicles/vf7-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Đỏ Crimson Red",
+          "hex": "#c0392b",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf71.png",
+          "sort": 0
+        },
+        {
+          "name": "Trắng Brahminy White",
+          "hex": "#ffffff",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf71.png",
+          "sort": 1
+        },
+        {
+          "name": "Xám Desat Silver",
+          "hex": "#7f8c8d",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf71.png",
+          "sort": 2
+        },
+        {
+          "name": "Xanh VinFast Blue",
+          "hex": "#1863dc",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf71.png",
+          "sort": 3
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE VINFAST VF7",
+          "subtitle": "VinFast VF 7 – Thiết kế đầu xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf7-bv-4-o2jmvf6-1024x680.webp",
+          "description": "<p><strong>Đầu xe VinFast VF7</strong> thiết kế phần đầu xe thon gọn, dựa trên hình ảnh của chiếc phi thuyền không gian, với điểm nhấn là cụm đèn có 1 projector mỗi bên, sử dụng công nghệ LED.</p><p>Dải đèn LED định vị hình chữ V đặc trưng trên các mẫu xe sang của Vinfast. Ánh sáng được tỏa ra từ logo <strong>Vinfast</strong> vuốt ra các góc của xe, làm tăng lên sự nhận diện dù ở ban ngày hay ban đêm. Với thiết kế này, chắc chắn không thể nhầm lẫn mẫu xe thương hiệu Việt – <strong>Vinfast</strong> với bất kỳ thương hiệu xe hơi nào trên thế giới hiện nay.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE VINFAST VF7",
+          "subtitle": "VinFast VF 7 – Thiết kế thân xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf7-bv-6-bm70vf5-1024x680.webp",
+          "description": "<p><strong>Thân xe VinFast VF7</strong> với đường gân dập nổi nối liền bên hông xe, tạo sự liền mạch thể thao, phần đuôi xe cơ bắp và góc cạnh tô điểm cho chiếc xe thêm phần mạnh mẽ.</p><p><strong>Gương chiếu hậu</strong> <strong>VF7</strong> gập điện, chỉnh điện, đặt dưới cửa xe giúp hạn chế điểm mù, mở rộng tầm nhìn cho người lái.</p><p><strong>Tay nắm cửa Vinfast VF7</strong> ẩn trong thân xe, tạo ra sự liền mạch cho không khí đi qua. Mở cửa với thao tác ấn và kéo mang lại trải nghiệm mới lạ, khác biệt với tay nắm cửa truyền thống.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE VINFAST VF7",
+          "subtitle": "VinFast VF 7 – Thiết kế đuôi xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf7-bv-3-o3wtvf7-1024x680.webp",
+          "description": "<p><strong>Đuôi xe VinFast VF 7</strong> được thiết kế dải đèn LED hình chữ “V” quen thuộc, đặc trưng của thương hiệu<strong> VinFast.</strong> Bên cạnh đó, đèn lùi được trang bị hướng về hai bên viền xe. Chính giữa khu vực gắn biển số được sơn màu đen tạo sự tương phản, nổi bật, ấn tượng mạnh cho người nhìn.</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf71.png",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF7-9-1110x624-1-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf7-2023-5-1110x624-1-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf7-mau-trang-1110x624-1-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf7-2023-2-1110x624-1-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf7-mau-do-1110x657-1-1024x606.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-18.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-20-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-31-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-49-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-35-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-47-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-49-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-25-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-22-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-43-1024x576.jpg",
+        "/images/vehicles/vf7-1.jpg",
+        "/images/vehicles/vf7-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-vf8",
+      "name": "VinFast VF 8 All New",
+      "category": "electric-car",
+      "segment": "D-SUV Tiên Phong",
+      "status": "draft",
+      "sort": 6,
+      "files": {
+        "thumbnail": "/images/vehicles/vf8-1.jpg",
+        "banner_image": "/images/vehicles/vf8-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf81.png",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/gf-vf8-1.jpg",
+        "/images/vehicles/gf-vf8-2.jpg",
+        "/images/vehicles/gf-vf8-blue.jpg",
+        "/images/vehicles/gf-vf8-red-1.jpg",
+        "/images/vehicles/gf-vf8-red-2.jpg",
+        "/images/vehicles/vf8-1.jpg",
+        "/images/vehicles/vf8-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Đỏ Crimson Red",
+          "hex": "#c0392b",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf81.png",
+          "sort": 0
+        },
+        {
+          "name": "Trắng Brahminy White",
+          "hex": "#ffffff",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf81.png",
+          "sort": 1
+        },
+        {
+          "name": "Xanh VinFast Blue",
+          "hex": "#1863dc",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf81.png",
+          "sort": 2
+        },
+        {
+          "name": "Đen Jet Black",
+          "hex": "#111827",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf81.png",
+          "sort": 3
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE",
+          "subtitle": "",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf8123-1024x575.jpg",
+          "description": "<p>Thiết kế phần đầu xe nổi bật với dải đèn LED tạo hình chữ V lớn, có thể phát sáng dù là ban ngày hay ban đêm, ôm trọn logo nhận diện thương hiệu nằm ở vị trí trung tâm.</p><p>Thiết kế mặt ca-lăng của VinFast VF8 liền mạch với thân xe, đặc điểm chung của đa số các mẫu xe điện hiện hành. Hệ thống chiếu sáng trên VF8 sử dụng công nghệ LED hiện đại.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE",
+          "subtitle": "",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf81-1024x575.jpg",
+          "description": "<p>Tiến tới phần thân xe VinFast VF8 tạo nên sự đồng bộ lớn khi tay nắm cửa, đèn hậu cùng màu với tổng thể thân xe. Các chi tiết mạ crom như vè cửa kính, bệ bước chân trở thành chi tiết điểm tô giúp mẫu SUV điện Việt thêm phần sang trọng.</p><p>VinFast VF8 Plus được định vị là mẫu SUV phân khúc D. Xe có chiều kích thước tổng thể dài 4.750mm, rộng 1.934mm, cao 1.667mm và chiều dài cơ sở ở mức 2.950mm. Như vậy, kích thước của VF8 tương đồng với một số mẫu xe cùng phân khúc như Hyundai SantaFe, Mazda CX-8. Sử dụng động cơ điện đặt dưới sàn xe, nắp capo ngắn, thiết kế này giúp tối ưu và gia tăng không gian bên trong.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE",
+          "subtitle": "VinFast VF 8 All New – Thiết kế đuôi xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf812-1024x575.jpg",
+          "description": "<p>Thiết kế đuôi xe VinFast VF8 với những đường nét cứng cáp, nhấn mạnh sự khỏe khoắn thường thấy trên một mẫu SUV-D.</p><p>Vẫn là dải đèn LED kết hợp cùng logo tạo hình chữ V. Cụm đèn hậu gồm 4 thanh dọc ở hai bên. Cuối cùng là dòng chữ VINFAST cỡ lớn. Một điểm khác của phiên bản Eco là cốp sau của xe chỉnh cơ thay vì chỉnh điện như phiên bản Plus.</p><p>Trang bị đèn hậu LED thiết kế tương tự như những người đàn anh Lux A 2.0 và SA 2.0. Cùng với đó là tạo hình chữ V lớn, dạng LED, giúp VF8 trở nên nổi bật hơn hẳn.</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf81.png",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-8_0001_2.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-8_0005_6.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-8_0013_14.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-8_0008_9.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-8_0009_10.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf-8_0006_v-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-50-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-48-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-44-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-36-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-50-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-32.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-26-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-23-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-21-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-19-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/11-13-1024x576.jpg",
+        "/images/vehicles/gf-vf8-1.jpg",
+        "/images/vehicles/gf-vf8-2.jpg",
+        "/images/vehicles/gf-vf8-blue.jpg",
+        "/images/vehicles/gf-vf8-red-1.jpg",
+        "/images/vehicles/gf-vf8-red-2.jpg",
+        "/images/vehicles/vf8-1.jpg",
+        "/images/vehicles/vf8-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-vf9",
+      "name": "VinFast VF 9",
+      "category": "electric-car",
+      "segment": "E-SUV Full Size Hạng Sang",
+      "status": "draft",
+      "sort": 7,
+      "files": {
+        "thumbnail": "/images/vehicles/vf9-1.jpg",
+        "banner_image": "/images/vehicles/vf9-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf91.png",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/vf9-1.jpg",
+        "/images/vehicles/vf9-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Đen Jet Black",
+          "hex": "#111827",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf91.png",
+          "sort": 0
+        },
+        {
+          "name": "Trắng Brahminy White",
+          "hex": "#ffffff",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf91.png",
+          "sort": 1
+        },
+        {
+          "name": "Xanh Deep Ocean",
+          "hex": "#0f3a40",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf91.png",
+          "sort": 2
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE",
+          "subtitle": "",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf9-do-3-96ffsw2.webp",
+          "description": "<p>Phần đầu xe VinFast VF9 Eco tương tự như VFe34, mẫu SUV Full-Size phiên bản động cơ điện cũng đã lược bỏ bộ lưới tản nhiệt và có dải LED ban ngày hình chữ “V” đặc trưng.</p><p>Không chỉ vậy, để giúp VinFast VF9 xứng tầm là mẫu SUV đầu bảng, VinFast đã tích hợp công nghệ đèn pha LED Matrix hiện đại cho VF9 mang đến hiệu năng chiếu sáng tối ưu.</p><p>Trung tâm thu hút sự chú ý là dải đèn LED định vị mở rộng hình cánh chim, nâng đỡ logo chữ V nằm chễm chệ nằm ngay giữa. Cụm đèn pha sử dụng công nghệ full LED Matrix, tích hợp tính năng tự động bật/tắt và điều chỉnh góc chiếu pha thông minh.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE",
+          "subtitle": "",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf9-do-5-ofkhsw4.webp",
+          "description": "<p>Ở phần thân xe VinFast VF9 có la zăng khủng hơn các đối thủ khi sở hữu bộ vành lớn 21 inch. VF9 còn có 1 chi tiết đáng chú ý khác là phần kính ở hông xe được tách làm đôi ở cột C bởi logo chữ “V” của VinFast.</p><p>Tay nắm cửa, kính và đường viền phẳng với thân xe, đi kèm với phần mái dốc khí động học và kính bên thuôn. Logo VF e36 còn được đặt ở phần trung tâm của trụ C.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE",
+          "subtitle": "VinFast VF 9 – Thiết kế đuôi xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vinfast-vf9-do-6-2kw5sw7.webp",
+          "description": "<p>Đuôi xe VinFast VF9 nổi bật với đèn hậu LED có tạo hình dạng chữ “V” kéo dài rất quen thuộc khi đã xuất hiện trên Lux SA2.0.</p><p>Dải LED trên VF9 được làm dày bản hơn để phù hợp với ngoại hình đồ sộ của VF9.</p><p>Phía trên cao là cánh lướt gió cỡ lớn mang đến cái nhìn khoẻ khoắn, đồng thời góp phần cải thiện tính khí động học.</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/vf91.png",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF-9-Neptune-Grey-A7304227_1_11zon-1024x683.webp",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF-9-Neptune-Grey-A7304823-A2_2_11zon-1024x683.webp",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF-9-Neptune-Grey-Driver-A7305861_3_11zon-1024x683.webp",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF-9-Neptune-Grey-Front-A7305383-Copy_4_11zon-1024x683.webp",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/VF-9-Neptune-Grey-Passenger-Side-A7304451_5_11zon-1024x683.webp",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/13-9-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-33.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-51-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-45.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-22.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-27-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-24-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-51-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-49-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-37-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-20-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/11-14-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/12-12-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/14-9-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/15-6-1024x576.jpg",
+        "/images/vehicles/vf9-1.jpg",
+        "/images/vehicles/vf9-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-vf-wild",
+      "name": "VinFast VF Wild",
+      "category": "electric-car",
+      "segment": "Bán tải điện REEV",
+      "status": "draft",
+      "sort": 8,
+      "files": {
+        "thumbnail": "/images/vehicles/vf-wild-1.jpg",
+        "banner_image": "/images/vehicles/vf-wild-1.jpg",
+        "legacy_thumbnail": "",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/vf-wild-1.jpg",
+        "/images/vehicles/vf-wild-brochure-1.jpg",
+        "/images/vehicles/vf-wild-brochure-2.jpg",
+        "/images/vehicles/vf-wild-card.jpg"
+      ],
+      "colors": [
+        {
+          "name": "Xám",
+          "hex": "#6b7280",
+          "kind": "exterior",
+          "image": "/images/vehicles/vf-wild-1.jpg",
+          "sort": 0
+        }
+      ],
+      "sections": [],
+      "gallery": [
+        "/images/vehicles/vf-wild-1.jpg",
+        "/images/vehicles/vf-wild-brochure-1.jpg",
+        "/images/vehicles/vf-wild-brochure-2.jpg",
+        "/images/vehicles/vf-wild-card.jpg"
+      ]
+    },
+    {
+      "slug": "vinfast-minio-green",
+      "name": "VinFast Minio Green",
+      "category": "green-mobility",
+      "segment": "Green Mobility",
+      "status": "draft",
+      "sort": 9,
+      "files": {
+        "thumbnail": "/images/vehicles/minio-1.jpg",
+        "banner_image": "/images/vehicles/minio-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Minio-Green.png",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/minio-1.jpg",
+        "/images/vehicles/minio-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Xanh Cyan Green",
+          "hex": "#00d2ff",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Minio-Green.png",
+          "sort": 0
+        },
+        {
+          "name": "Trắng White",
+          "hex": "#ffffff",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Minio-Green.png",
+          "sort": 1
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE",
+          "subtitle": "VinFast Minio Green – Thiết kế đầu xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-7.jpg",
+          "description": "<p>VinFast Minio Green sở hữu thiết kế nhỏ gọn với những đường nét bo tròn, đậm chất xe đô thị mini. Đầu xe ngắn với biểu tượng Logo VinFast chính giữa và tạo hình cánh chim dạng chrome trải rộng sang hai bên biểu trưng quen thuộc của VinFast; Cụm đèn pha dạng hình bán nguyệt, tuy nhiên Hãng chưa công bố thông số có phải dạng Led hay không.</p><p>Hộc gió trung tâm hình thang khá rộng trên cản trước; Nhiều chi tiết trên xe như cản trước/sau, vỏ đèn pha, ốp gương chiếu hậu, vành thép, ăng ten vây cá mập và viền bao quanh kính chắn gió sau đều sơn màu đen bóng, giúp mang đến vẻ đẹp hiện đại cho Minio Green.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE",
+          "subtitle": "VinFast VF3 có thiết kế 1 cửa cho mỗi bên, phù hợp với kích thước hạn chế của dòng xe mini.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-5.jpg",
+          "description": "<p>Thân xe nhỏ gọn nhưng cao ráo, dễ dàng luồn lách ở những ngõ ngách hay những cung đường hẹp trên đường đặc biệt là Việt Nam. Vòm lốp dạng thô trông rất vạm vỡ hình cơ bắp. Bộ la zăng 16 inch bộ mâm 5 chấu mạnh mẽ, giúp xe dễ dàng di chuyển trên nhiều điều kiện địa hình.</p><p>Phần viền ốp lốp mở rộng sơn đen, tinh chỉnh vuông vức. Gương chiếu hậu và tay nắm cửa sơn đen không thống nhất về màu sắc so với tổng thể xe để phá cách, tạo điểm nhấn.</p><p>VinFast VF3 có thiết kế 1 cửa cho mỗi bên, phù hợp với kích thước hạn chế của dòng xe mini.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE",
+          "subtitle": "VinFast Minio Green – Thiết kế đuôi xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-4.jpg",
+          "description": "<p>Đuôi xe có thiết kế khá tương đồng các mẫu “Kei-car” của Nhật Bản, điều này giúp cho Kích thước chiều dài tổng thể của xe tiết kiệm và linh hoạt hơn trong nội đô đồng thời tạo không gian ngồi thoải mái hơn về chiều cao ở hàng ghế thứ 2. Tuy nhiên với thiết kế này không gian khoang hành lý sẽ không được tối ưu vì Minio Green đang tối ưu cho 4 chỗ thay vì đưa ra phiên bản Van 2 chỗ ngồi.</p><p>Các chi tiết tạo hình Logo, cụm đèn hậu và phần cản sau xe thiết kế khá hài hòa bắt mắt. Phù hợp cho cả đối tượng Nam giới và nữ giới sử dụng.</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Minio-Green.png",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-6-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-6-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-6-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-2-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-2-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-6-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-3-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-4-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-9-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-6-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-9-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-9-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-5-1024x576.jpg",
+        "/images/vehicles/minio-1.jpg",
+        "/images/vehicles/minio-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-herio-green",
+      "name": "VinFast Herio Green",
+      "category": "green-mobility",
+      "segment": "Green Mobility",
+      "status": "draft",
+      "sort": 10,
+      "files": {
+        "thumbnail": "/images/vehicles/herio-1.jpg",
+        "banner_image": "/images/vehicles/herio-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-10.jpg",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/herio-1.jpg",
+        "/images/vehicles/herio-2.jpg"
+      ],
+      "colors": [
+        {
+          "name": "Xanh Lục Green",
+          "hex": "#2ecc71",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-10.jpg",
+          "sort": 0
+        },
+        {
+          "name": "Trắng",
+          "hex": "#ffffff",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-10.jpg",
+          "sort": 1
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE",
+          "subtitle": "VinFast Herio Green – Thiết kế đầu xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-11.jpg",
+          "description": "<p>Phần đầu xe nổi bật với dải đèn LED định vị ban ngày hình chữ “V” – biểu tượng quen thuộc của VinFast, kết hợp cùng cụm đèn pha LED hiện đại, mang lại khả năng chiếu sáng tối ưu và tăng tính nhận diện thương hiệu.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE",
+          "subtitle": "VinFast Herio Green – Thiết kế thân xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-11.jpg",
+          "description": "<p>Thân xe được thiết kế với các đường nét khí động học, không chỉ tăng tính thẩm mỹ mà còn cải thiện hiệu suất vận hành. Phần đuôi xe gọn gàng, tích hợp đèn hậu LED sắc nét, tạo cảm giác mạnh mẽ và tinh tế.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE",
+          "subtitle": "",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-9.jpg",
+          "description": "<p>Một trong những đặc trưng nổi bật ở đuôi xe Herio Green là cụm đèn hậu LED được thiết kế theo phong cách tối tân. Tương tự VF 5, cụm đèn hậu có dạng hình chữ “V” nằm ngang, tạo sự liên kết chặt chẽ với ngôn ngữ thiết kế của VinFast. Đèn hậu sử dụng công nghệ LED toàn phần, mang lại khả năng chiếu sáng vượt trội, đồng thời tăng tính nhận diện thương hiệu khi xe di chuyển trong điều kiện thiếu sáng.</p><p>Thiết kế đèn hậu không chỉ đẹp mắt mà còn thực dụng: ánh sáng rõ ràng, giúp các phương tiện phía sau dễ dàng nhận biết tín hiệu phanh hoặc rẽ, đảm bảo an toàn trong môi trường giao thông đô thị đông đúc.</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-10.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-3-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-4-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/11-2-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/12-3-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-11-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-11-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-8-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-6-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-3-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-10-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-7-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-4-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-3-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-5-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-14-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-4-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-14-1024x576.jpg",
+        "/images/vehicles/herio-1.jpg",
+        "/images/vehicles/herio-2.jpg"
+      ]
+    },
+    {
+      "slug": "vinfast-nerio-green",
+      "name": "VinFast Nerio Green",
+      "category": "green-mobility",
+      "segment": "Green Mobility",
+      "status": "draft",
+      "sort": 11,
+      "files": {
+        "thumbnail": "/images/vehicles/nerio-1.jpg",
+        "banner_image": "/images/vehicles/nerio-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Nerio-Green.png",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/nerio-1.jpg",
+        "/images/vehicles/nerio-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Bạc Băng Desat Silver",
+          "hex": "#bdc3c7",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Nerio-Green.png",
+          "sort": 0
+        },
+        {
+          "name": "Xanh VinFast Blue",
+          "hex": "#1863dc",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Nerio-Green.png",
+          "sort": 1
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE",
+          "subtitle": "VinFast Nerio Green – Thiết kế đầu xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-16.jpg",
+          "description": "<p>Phần đầu xe thiết kế mang nét đặc trưng của hãng với logo chữ V ở chính giữa, tạo hình cánh chim theo dải led mở rộng sang hai bên.</p><p>Phần đầu xe nổi bật với dải đèn LED định vị ban ngày hình chữ “V” – biểu tượng đặc trưng của VinFast, kết hợp cùng cụm đèn pha LED sắc nét, mang lại khả năng chiếu sáng tối ưu và tăng tính nhận diện.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE",
+          "subtitle": "VinFast Nerio Green – Thiết kế thân xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Thiet-ke-ngoai-that-dau-than-duoi-1.jpg",
+          "description": "<p>Thân xe được thiết kế với các đường nét khí động học, không chỉ tăng tính thẩm mỹ mà còn cải thiện hiệu suất vận hành. Gương chiếu hậu chỉnh điện, tích hợp đèn báo rẽ, cùng cửa sổ điều chỉnh điện là những chi tiết nhỏ nhưng rất thực dụng cho xe vận tải.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE",
+          "subtitle": "",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Thiet-ke-ngoai-that-dau-than-duoi.png",
+          "description": "<p>Phần đuôi xe được trang bị dải đèn hậu LED hình chữ “V” nằm ngang, tạo sự liền mạch với tổng thể thiết kế, đồng thời đảm bảo an toàn khi di chuyển trong điều kiện thiếu sáng.</p><p>Đuôi xe của Nerio Green cũng được thiết kế một cách tinh tế, với đèn hậu LED hiện đại và ấn tượng. Cụm đèn hậu không chỉ làm tăng tính thẩm mỹ mà còn cải thiện khả năng nhận diện cho các phương tiện khác. Cốp sau chỉnh điện mang lại sự tiện lợi khi cần mở hoặc đóng mà không cần phải dùng tay.</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Nerio-Green.png",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-15-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-15-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-14-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-14-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-5-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-11-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-8-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-6-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-4-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-5-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-18-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-18-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-7-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-10-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-17-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-16-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-13-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-7-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-5-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-6-1024x576.jpg",
+        "/images/vehicles/nerio-1.jpg",
+        "/images/vehicles/nerio-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-limo-green",
+      "name": "VinFast Limo Green",
+      "category": "green-mobility",
+      "segment": "Green Mobility MPV",
+      "status": "draft",
+      "sort": 12,
+      "files": {
+        "thumbnail": "/images/vehicles/limo-1.jpg",
+        "banner_image": "/images/vehicles/limo-1.jpg",
+        "legacy_thumbnail": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Limo-Green.png",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/limo-1.jpg",
+        "/images/vehicles/limo-2.png"
+      ],
+      "colors": [
+        {
+          "name": "Trắng Ngọc Trai",
+          "hex": "#ffffff",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Limo-Green.png",
+          "sort": 0
+        },
+        {
+          "name": "Đen Sang Trọng",
+          "hex": "#111827",
+          "kind": "exterior",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Limo-Green.png",
+          "sort": 1
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE",
+          "subtitle": "VinFast Limo Green – Thiết kế đầu xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-20.jpg",
+          "description": "<p>Phần đầu xe thiết kế mang nét đặc trưng của hãng với logo chữ V ở chính giữa, tạo hình cánh chim theo dải led mở rộng sang hai bên.</p><p>Phần đầu xe nổi bật với dải đèn LED định vị ban ngày hình chữ “V” – biểu tượng đặc trưng của VinFast, kết hợp cùng cụm đèn pha LED sắc nét, mang lại khả năng chiếu sáng tối ưu và tăng tính nhận diện.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE",
+          "subtitle": "VinFast Limo Green – Thiết kế thân xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-19.jpg",
+          "description": "<p>Thân xe được thiết kế với các đường nét bo tròn tinh tế, tạo vẻ ngoài thanh lịch và cuốn hút, không chỉ tăng tính thẩm mỹ mà còn cải thiện hiệu suất vận hành. Gương chiếu hậu chỉnh điện, tích hợp đèn báo rẽ, cùng cửa sổ điều chỉnh điện là những chi tiết nhỏ nhưng rất thực dụng cho xe vận tải.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE",
+          "subtitle": "VinFast Limo Green – Thiết kế đuôi xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-18.jpg",
+          "description": "<p>Phần đuôi xe được trang bị dải đèn hậu LED hình chữ “V” nằm ngang, tạo sự liền mạch với tổng thể thiết kế, đồng thời đảm bảo an toàn khi di chuyển trong điều kiện thiếu sáng.</p><p>Đuôi xe của Nerio Green cũng được thiết kế một cách tinh tế, đèn hậu LED 3D hiệu ứng, và logo VinFast. Cụm đèn hậu không chỉ làm tăng tính thẩm mỹ mà còn cải thiện khả năng nhận diện cho các phương tiện khác. Cốp sau chỉnh điện mang lại sự tiện lợi khi cần mở hoặc đóng mà không cần phải dùng tay</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/Limo-Green.png",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-20-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-19-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-15-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-11-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-8-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-6-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-7-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-8-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/11-4-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/12-5-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/13-4-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-21-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/14-5-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/15-3-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/17-3-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-21-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/18-3-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/19-2-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/16-2-1024x576.jpg",
+        "/images/vehicles/limo-1.jpg",
+        "/images/vehicles/limo-2.png"
+      ]
+    },
+    {
+      "slug": "vinfast-epv7",
+      "name": "VinFast ePV 7 (VF MPV 7)",
+      "category": "green-mobility",
+      "segment": "MPV Điện Gia Đình & Dịch Vụ",
+      "status": "draft",
+      "sort": 13,
+      "files": {
+        "thumbnail": "/images/vehicles/epv7-1.jpg",
+        "banner_image": "/images/vehicles/epv7-1.jpg",
+        "legacy_thumbnail": "",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/epv7-1.jpg",
+        "/images/vehicles/epv7-2.png",
+        "/images/vehicles/vf-mpv7-pd.jpg"
+      ],
+      "colors": [
+        {
+          "name": "Trắng Ngọc Trai",
+          "hex": "#ffffff",
+          "kind": "exterior",
+          "image": "/images/vehicles/epv7-1.jpg",
+          "sort": 0
+        },
+        {
+          "name": "Bạc Sang Trọng",
+          "hex": "#e5e7eb",
+          "kind": "exterior",
+          "image": "/images/vehicles/epv7-2.png",
+          "sort": 1
+        },
+        {
+          "name": "Đen Quyền Lực",
+          "hex": "#111827",
+          "kind": "exterior",
+          "image": "/images/vehicles/epv7-1.jpg",
+          "sort": 2
+        }
+      ],
+      "sections": [
+        {
+          "section": "exterior",
+          "title": "Thiết kế hiện đại, vững chãi",
+          "subtitle": "Dải đèn LED nhận diện cánh chim VinFast thế hệ mới",
+          "image": "/images/vehicles/epv7-1.jpg",
+          "description": "Đường nét vuông vắn tối ưu hóa không gian nội thất, cửa trượt thông minh thuận tiện ra vào.",
+          "sort": 0
+        },
+        {
+          "section": "interior",
+          "title": "Không gian 7 chỗ cao cấp",
+          "subtitle": "Màn hình giải trí trung tâm 10.1 inch, điều hòa đa vùng",
+          "image": "/images/vehicles/epv7-2.png",
+          "description": "Các hàng ghế gập linh hoạt, cổng sạc USB tại từng vị trí, đem lại sự thoải mái trên mọi hành trình.",
+          "sort": 0
+        }
+      ],
+      "gallery": [
+        "/images/vehicles/epv7-1.jpg",
+        "/images/vehicles/epv7-2.png",
+        "/images/vehicles/vf-mpv7-pd.jpg"
+      ]
+    },
+    {
+      "slug": "xe-tai-van-dien-vinfast-ec-van",
+      "name": "VinFast EC Van",
+      "category": "commercial",
+      "segment": "Xe Tải Van Điện",
+      "status": "draft",
+      "sort": 14,
+      "files": {
+        "thumbnail": "/images/vehicles/ec-van-1.jpg",
+        "banner_image": "/images/vehicles/ec-van-1.jpg",
+        "legacy_thumbnail": "",
+        "legacy_banner_image": ""
+      },
+      "local_assets": [
+        "/images/vehicles/ec-van-1.jpg",
+        "/images/vehicles/ec-van-2.png",
+        "/images/vehicles/ec-van-pd.jpg"
+      ],
+      "colors": [
+        {
+          "name": "Trắng Tiêu Chuẩn",
+          "hex": "#ffffff",
+          "kind": "exterior",
+          "image": "/images/vehicles/ec-van-1.jpg",
+          "sort": 0
+        }
+      ],
+      "sections": [
+        {
+          "section": "safety",
+          "title": "ĐẦU XE",
+          "subtitle": "VinFast EC Van – Thiết kế đầu xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-25.jpg",
+          "description": "<p>Phần đầu xe EC Van có thiết kế đơn giản nhưng mang tính hiệu quả cao, với kính lái mở rộng tầm nhìn cỡ lớn và hệ thống đèn chiếu sáng halogen, cùng logo chữ V đặc trưng.</p>",
+          "sort": 0
+        },
+        {
+          "section": "safety",
+          "title": "THÂN XE",
+          "subtitle": "VinFast EC Van – Thiết kế thân xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-25.jpg",
+          "description": "<p>Thân xe EC Van được thiết kế nhỏ gọn nhưng có sức chứa lên tới 2.600 lít, phù hợp vận chuyển nội đô. Một số đường gân dập nổi làm tăng tính cứng cáp và khả năng khí động học cho xe.</p>",
+          "sort": 1
+        },
+        {
+          "section": "safety",
+          "title": "ĐUÔI XE",
+          "subtitle": "VinFast EC Van – Thiết kế đuôi xe tinh tế, khí động học vượt trội.",
+          "image": "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-24.jpg",
+          "description": "<p>Thiết kế đuôi xe vuông vắn với thùng xe cao được mở rộng, giúp tối ưu khả năng vận chuyển hàng. Cửa hậu thiết kế mở lên bên trên giúp tối ưu không gian và an toàn khi bốc xếp hàng hóa trong các con phố chật hẹp.</p>",
+          "sort": 2
+        }
+      ],
+      "gallery": [
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-23.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/1-24-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/2-24-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/3-23-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/4-22-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/5-16-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/6-12-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/7-9-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/8-7-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/9-8-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/10-9-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/11-5-1024x576.jpg",
+        "https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/12-6-1024x576.jpg",
+        "/images/vehicles/ec-van-1.jpg",
+        "/images/vehicles/ec-van-2.png",
+        "/images/vehicles/ec-van-pd.jpg"
+      ]
+    }
+  ],
+  "local_files": [
+    "/images/vehicles/ec-van-1.jpg",
+    "/images/vehicles/ec-van-2.png",
+    "/images/vehicles/ec-van-pd.jpg",
+    "/images/vehicles/epv7-1.jpg",
+    "/images/vehicles/epv7-2.png",
+    "/images/vehicles/gf-vf8-1.jpg",
+    "/images/vehicles/gf-vf8-2.jpg",
+    "/images/vehicles/gf-vf8-blue.jpg",
+    "/images/vehicles/gf-vf8-red-1.jpg",
+    "/images/vehicles/gf-vf8-red-2.jpg",
+    "/images/vehicles/herio-1.jpg",
+    "/images/vehicles/herio-2.jpg",
+    "/images/vehicles/limo-1.jpg",
+    "/images/vehicles/limo-2.png",
+    "/images/vehicles/minio-1.jpg",
+    "/images/vehicles/minio-2.png",
+    "/images/vehicles/nerio-1.jpg",
+    "/images/vehicles/nerio-2.png",
+    "/images/vehicles/vf-mpv7-pd.jpg",
+    "/images/vehicles/vf-wild-1.jpg",
+    "/images/vehicles/vf-wild-brochure-1.jpg",
+    "/images/vehicles/vf-wild-brochure-2.jpg",
+    "/images/vehicles/vf-wild-card.jpg",
+    "/images/vehicles/vf2-1.jpg",
+    "/images/vehicles/vf2-brochure-1.jpg",
+    "/images/vehicles/vf2-brochure-2.jpg",
+    "/images/vehicles/vf2-card.jpg",
+    "/images/vehicles/vf3-plus-1.jpg",
+    "/images/vehicles/vf3-plus-2.png",
+    "/images/vehicles/vf5-1.jpg",
+    "/images/vehicles/vf5-2.png",
+    "/images/vehicles/vf6-1.jpg",
+    "/images/vehicles/vf6-2.png",
+    "/images/vehicles/vf7-1.jpg",
+    "/images/vehicles/vf7-2.png",
+    "/images/vehicles/vf8-1.jpg",
+    "/images/vehicles/vf8-2.png",
+    "/images/vehicles/vf9-1.jpg",
+    "/images/vehicles/vf9-2.png",
+    "/images/vehicles/vfe34-1.jpg",
+    "/images/vehicles/vfe34-2.png"
+  ],
+  "unreferenced_local_files": []
+}
