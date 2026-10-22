@@ -67,12 +67,12 @@ export default function ShowroomCategorySlider({ showrooms }: ShowroomCategorySl
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
 
-  // Responsive items per view: desktop 5, tablet 4, mobile-landscape 3, mobile 2
+  // Desktop shows exactly 4 showrooms (no fifth clone in view)
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width >= 1100) {
-        setItemsPerView(5);
+        setItemsPerView(4);
       } else if (width >= 768) {
         setItemsPerView(4);
       } else if (width >= 540) {

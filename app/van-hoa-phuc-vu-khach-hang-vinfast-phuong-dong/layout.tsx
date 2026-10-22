@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: "Văn hóa Phục vụ Khách hàng tại Tập đoàn VinFast Phương Đông",
     description:
       "Chúng tôi luôn tâm niệm rằng: Sự chuyên nghiệp trong phục vụ khách hàng bắt đầu từ khoảnh khắc đầu tiên khách hàng quan tâm và tìm hiểu về đại lý, cho đến khi khách hàng quyết định lựa chọn và trở thành người đồng hành cùng thương hiệu.",
-    url: "https://vinfastthinhcuong.com.vn/van-hoa-phuc-vu-khach-hang-vinfast-thinh-cuong/",
+    url: "https://vinfastphuongdonghanoi.com/van-hoa-phuc-vu-khach-hang-vinfast-phuong-dong/",
     siteName: "Vinfast Phương Đông",
     images: [
       {

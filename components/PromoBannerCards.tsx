@@ -11,7 +11,8 @@ interface PromoBannerCardsProps {
 }
 
 export default function PromoBannerCards({ promoBanner, serviceBanner }: PromoBannerCardsProps) {
-  const promoImg = promoBanner?.image || getDirectusAssetUrl("4328f5f0-c9f9-4d0d-bab5-94b14b2cfc47");
+  const promoImg = "/images/ede0dd93-3065-4c1f-bacd-686030acb6e8.jpg";
+  const promoLabel = promoBanner?.title || "KHUYẾN MÃI XE VINFAST";
   const serviceImg = serviceBanner?.image || getDirectusAssetUrl("fceeb4bd-e264-45ea-952a-9e9ccab19798");
 
   return (
@@ -23,12 +24,12 @@ export default function PromoBannerCards({ promoBanner, serviceBanner }: PromoBa
             <Link
               href={promoBanner?.link || "/tin-tuc"}
               className="block w-full h-full relative"
-              aria-label="Khuyến mại xe VinFast"
+              aria-label={promoLabel}
             >
               {/* Banner Image */}
               <Image
                 src={promoImg}
-                alt={promoBanner?.title || "Khuyến mại xe VinFast - VinFast Phương Đông"}
+                alt={promoLabel}
                 fill
                 className="object-cover w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -40,7 +41,7 @@ export default function PromoBannerCards({ promoBanner, serviceBanner }: PromoBa
               {/* Centered Pill Button (.btn-banner-detail) */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
                 <span className="inline-block bg-[#292929]/40 backdrop-blur-xs border-2 border-white rounded-[50px] px-6 py-2.5 sm:px-8 sm:py-3 text-[13px] sm:text-[14px] font-bold text-white uppercase tracking-normal whitespace-nowrap shadow-md group-hover:bg-[#3AB3FF] group-hover:border-[#3AB3FF] transition-all duration-300">
-                  KHUYẾN MÃI XE VINFAST
+                  {promoLabel}
                 </span>
               </div>
             </Link>

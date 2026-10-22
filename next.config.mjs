@@ -27,6 +27,10 @@ const nextConfig = {
         hostname: 'vinfastauto.com',
       },
       {
+        protocol: 'https',
+        hostname: 'llama.trungnghia.space',
+      },
+      {
         protocol: 'http',
         hostname: 'localhost',
         port: '8055',
@@ -42,6 +46,16 @@ const nextConfig = {
   // Optimize production bundles
   experimental: {
     optimizePackageImports: ['lucide-react'],
+  },
+
+  async redirects() {
+    return [
+      {
+        source: "/van-hoa-phuc-vu-khach-hang-vinfast-thinh-cuong",
+        destination: "/van-hoa-phuc-vu-khach-hang-vinfast-phuong-dong",
+        permanent: true,
+      },
+    ];
   },
 };
 

@@ -16,9 +16,11 @@ async function directusFetch(path: string, options: RequestInit = {}): Promise<a
   const url = `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
 
   try {
+    const serverToken = typeof window === "undefined" ? DIRECTUS_STATIC_TOKEN : "";
     const res = await fetch(url, {
       ...options,
       headers: {
+        ...(serverToken ? { Authorization: `Bearer ${serverToken}` } : {}),
         ...(options.headers || {}),
       },
       next: { revalidate: 60 }, // Revalidate every 60s
@@ -290,7 +292,7 @@ export async function getChargers(): Promise<Charger[]> {
  * 5. FETCH POSTS
  */
 export async function getPosts(): Promise<Post[]> {
-  const res = await directusFetch('/items/posts?sort=-published_at');
+  const res = await directusFetch('/items/posts?sort=-published_at&limit=-1&fields=slug,title,category,excerpt,content,thumbnail,published_at,author_name,is_featured');
   if (res && Array.isArray(res.data) && res.data.length > 0) {
     return res.data.map((p: any) => ({
       id: p.slug,

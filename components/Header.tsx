@@ -81,7 +81,7 @@ export default function Header({ onOpenBookingModal }: HeaderProps) {
                   Giới thiệu về chúng tôi
                 </Link>
                 <Link
-                  href="/van-hoa-phuc-vu-khach-hang-vinfast-thinh-cuong"
+                  href="/van-hoa-phuc-vu-khach-hang-vinfast-phuong-dong"
                   className="block px-4 py-2.5 text-xs text-gray-800 hover:bg-blue-50 hover:text-[#3AB3FF]"
                 >
                   Triết lý phục vụ Khách hàng
@@ -346,7 +346,7 @@ export default function Header({ onOpenBookingModal }: HeaderProps) {
                   Giới thiệu về chúng tôi
                 </Link>
                 <Link
-                  href="/van-hoa-phuc-vu-khach-hang-vinfast-thinh-cuong"
+                  href="/van-hoa-phuc-vu-khach-hang-vinfast-phuong-dong"
                   onClick={() => setMobileMenuOpen(false)}
                   className="block py-1 hover:text-[#1863dc]"
                 >

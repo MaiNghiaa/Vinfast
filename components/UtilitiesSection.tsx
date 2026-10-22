@@ -16,25 +16,25 @@ const UTILITY_ITEMS: UtilityItem[] = [
   {
     id: "bao-duong",
     title: "SỬA CHỮA BẢO DƯỠNG",
-    image: "/images/services/bao-duong.png",
+    image: "/images/services/bao-duong-v4.png",
     modalType: "dich-vu",
   },
   {
     id: "lai-thu",
     title: "LÁI THỬ MIỄN PHÍ",
-    image: "/images/services/lai-thu.png",
+    image: "/images/services/lai-thu-v4.png",
     modalType: "lai-thu",
   },
   {
     id: "khuyen-mai",
     title: "KHUYẾN MẠI",
-    image: "/images/services/khuyen-mai.png",
+    image: "/images/services/khuyen-mai-v4.png",
     modalType: "bao-gia",
   },
   {
     id: "tram-sac",
     title: "TRẠM SẠC",
-    image: "/images/services/tram-sac.png",
+    image: "/images/services/tram-sac-v4.png",
     modalType: "dich-vu",
   },
 ];
@@ -65,7 +65,7 @@ export default function UtilitiesSection() {
             >
               {/* Circular 3D Metallic Blue Icon */}
               <div
-                className="w-28 h-28 sm:w-36 sm:h-36 relative cursor-pointer"
+                className="w-36 h-36 sm:w-44 sm:h-44 relative cursor-pointer"
                 onClick={() => openBooking("", item.modalType)}
               >
                 <Image
@@ -73,7 +73,7 @@ export default function UtilitiesSection() {
                   alt={item.title}
                   fill
                   className="object-contain transition-transform duration-500 ease-out group-hover:scale-108 drop-shadow-md"
-                  sizes="(max-width: 768px) 120px, 150px"
+                  sizes="(max-width: 768px) 144px, 176px"
                 />
               </div>
 

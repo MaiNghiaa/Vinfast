@@ -1,5 +1,4 @@
 import { Post } from "./types";
-import { getDirectusAssetUrl } from "@/lib/directus-url";
 
 export const POSTS: Post[] = [
   {
@@ -175,123 +174,311 @@ export const POSTS: Post[] = [
       <p>Khách hàng có thể <strong>đăng ký lái thử VinFast</strong> bằng cách để lại số điện thoại hoặc nhắn tin trực tiếp cho VinFast Phương Đông. Đội ngũ tư vấn sẽ liên hệ, hỗ trợ lựa chọn địa điểm phù hợp và cung cấp thông tin chi tiết về chương trình.</p>
       <p><strong>VinFast Phương Đông – Đồng hành cùng khách hàng trên hành trình trải nghiệm và sở hữu ô tô điện VinFast.</strong></p>
     `,
-    thumbnail: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026-1.jpg",
+    thumbnail: "/images/news/lich-lai-thu-vinfast-phuong-dong-v2.jpg",
     publishedDate: "31/08/2026",
     author: "VinFast Phương Đông",
     isFeatured: true,
   },
   {
-    id: "post-2",
-    slug: "adas-tren-vf-8-all-new-tinh-nang-nghe-rat-xin-nhung-ngoai-doi-co-thuc-su-dung-duoc",
-    title: "ADAS TRÊN VF 8 ALL NEW: TÍNH NĂNG NGHE RẤT “XỊN”, NHƯNG NGOÀI ĐỜI CÓ THỰC SỰ DÙNG ĐƯỢC?",
-    category: "danh-gia-xe",
-    categoryName: "Tin tức vinfast",
-    excerpt: "Trải nghiệm thực tế hệ thống trợ lái nâng cao ADAS Cấp độ 2 trên VinFast VF 8 All New trên cao tốc Hà Nội - Hải Phòng và cung đường nội đô đông đúc: Liệu công nghệ này có thực sự tin cậy?",
-    content: `
-      <p>ADAS (Advanced Driver Assistance Systems) là một trong những điểm nhấn công nghệ đáng giá nhất trên dòng xe <strong>VinFast VF 8 All New</strong>. Rất nhiều khách hàng đặt câu hỏi: <em>Hệ thống này hoạt động thế nào trong điều kiện giao thông thực tế tại Việt Nam?</em></p>
-      <h3>1. Trợ lái trên đường cao tốc (Highway Assist)</h3>
-      <p>Trên cung đường cao tốc Hà Nội – Hải Phòng, hệ thống kết hợp giữa Kiểm soát hành trình thích ứng (Adaptive Cruise Control) và Hỗ trợ giữ làn đường (Lane Keeping Assist) hoạt động vô cùng mượt mà. Xe tự động duy trì khoảng cách an toàn với xe phía trước và tự căn giữa làn đường chính xác.</p>
-      <h3>2. Phanh tự động khẩn cấp (AEB) & Cảnh báo điểm mù (BSW)</h3>
-      <p>Cảm biến radar và camera kép liên tục quét môi trường xung quanh, đưa ra cảnh báo sớm bằng hình ảnh trên màn hình trung tâm kết hợp âm thanh khi phát hiện phương tiện cắt ngang hoặc chướng ngại vật bất ngờ.</p>
-    `,
-    thumbnail: getDirectusAssetUrl("a159ae92-070d-4e7c-958d-17ce4f387174"),
-    publishedDate: "28/08/2026",
-    author: "Chuyên viên Kỹ thuật Phương Đông",
-    isFeatured: true,
-  },
-  {
-    id: "post-3",
-    slug: "co-1-ty-mua-suv-xang-hay-vf8-all-new-dung-nhin-moi-gia-xe",
-    title: "CÓ 1 TỶ: MUA SUV XĂNG HAY VF8 ALL NEW? ĐỪNG NHÌN MỖI GIÁ XE",
-    category: "danh-gia-xe",
-    categoryName: "Tin tức vinfast",
-    excerpt: "So sánh toàn diện chi phí 'nuôi xe', khả năng vận hành 402 mã lực và chi phí lăn bánh giữa xe xăng truyền thống và VinFast VF 8 trong vòng 5 năm.",
-    content: `
-      <p>Với ngân sách khoảng 1 tỷ đồng, đa số người dùng thường phân vân giữa các mẫu Crossover xăng hạng C/D và <strong>VinFast VF 8 All New</strong>. Hãy cùng phân tích các yếu tố cốt lõi ngoài giá niêm yết:</p>
-      <ul>
-        <li><strong>Lệ phí trước bạ:</strong> Xe điện VinFast được miễn 100% lệ phí trước bạ, giúp tiết kiệm ngay từ 90 – 120 triệu đồng so với xe xăng cùng tầm giá.</li>
-        <li><strong>Chi phí năng lượng:</strong> Chi phí sạc điện chỉ khoảng 500 – 600 đồng/km, trong khi xe xăng tiêu thụ 2.000 – 2.500 đồng/km. Sau 100.000 km, xe điện giúp tiết kiệm gần 150 triệu đồng tiền nhiên liệu.</li>
-        <li><strong>Bảo dưỡng:</strong> Xe điện không có bugi, dầu máy, lọc dầu, đai cam... chu kỳ bảo dưỡng lên tới 12.000 km giúp tiết kiệm tới 60% chi phí chăm sóc xe.</li>
-      </ul>
-    `,
-    thumbnail: getDirectusAssetUrl("5619ac7d-12ac-4bbb-8b4b-90dfb9c7d58e"),
-    publishedDate: "20/08/2026",
-    author: "Ban Biên Tập VinFast",
-    isFeatured: true,
-  },
-  {
-    id: "post-4",
-    slug: "vinfast-limo-green-thang-8-2026-gia-bao-nhieu-uu-dai-moi-nhat-va-thong-so-chi-tiet",
-    title: "VINFAST LIMO GREEN THÁNG 8/2026: GIÁ BAO NHIÊU? ƯU ĐÃI MỚI NHẤT VÀ THÔNG SỐ CHI TIẾT",
+    id: "post-uu-dai-chinh-hang",
+    slug: "uu-dai-chinh-hang-vinfast-phuong-dong",
+    title: "Ưu đãi chính hãng tại VinFast Phương Đông",
     category: "uu-dai",
     categoryName: "Tin khuyến mại",
-    excerpt: "Cập nhật bảng giá niêm yết và chính sách ưu đãi dòng xe MPV 7 chỗ thuần điện VinFast Limo Green dành cho khách hàng cá nhân và doanh nghiệp kinh doanh dịch vụ vận tải.",
+    excerpt: "Đại lý ủy quyền VinFast tại Hà Nội. Giá bán và ưu đãi theo chính sách hãng, tư vấn minh bạch tại 4 showroom.",
     content: `
-      <p><strong>VinFast Limo Green</strong> là mẫu MPV 7 chỗ thuần điện đang nhận được sự quan tâm rất lớn từ các công ty lữ hành, dịch vụ đón tiễn sân bay và gia đình đông người nhờ không gian rộng rãi và chi phí vận hành siêu kinh tế.</p>
+      <p>VinFast Phương Đông là đại lý được VinFast ủy quyền tại Hà Nội. Giá bán và chương trình ưu đãi áp dụng theo chính sách hãng, tư vấn trực tiếp tại showroom.</p>
+      <p>Khách có thể đến 4 điểm: Hoàng Quốc Việt (số 14 Hoàng Quốc Việt, Cầu Giấy), Bát Tràng (268 Đường Giáp Hải), Thường Tín (207 Quán Gánh) và Hòa Lạc (Tầng 1, Hòa Lạc Mall).</p>
+      <p>Hotline <strong>090 242 25 22</strong>. Giờ bán hàng 08:00–18:00, tất cả các ngày trong tuần.</p>
     `,
-    thumbnail: getDirectusAssetUrl("e0e79317-907f-4722-8421-08f5bbaa0b51"),
-    publishedDate: "15/08/2026",
-    author: "Phòng Kinh Doanh Phương Đông",
-    isFeatured: true,
-  },
-  {
-    id: "post-5",
-    slug: "vf-mpv7-thang-8-gia-bao-nhieu-cap-nhat-gia-ban-va-uu-dai-moi-nhat",
-    title: "VF MPV7 THÁNG 8 GIÁ BAO NHIÊU? CẬP NHẬT GIÁ BÁN VÀ ƯU ĐÃI MỚI NHẤT",
-    category: "uu-dai",
-    categoryName: "Tin khuyến mại",
-    excerpt: "Chi tiết giá lăn bánh và chính sách ưu đãi dòng xe MPV 7 chỗ thông minh của VinFast trong tháng 8/2026 tại hệ thống VinFast Phương Đông.",
-    content: `
-      <p>VinFast VF MPV7 sở hữu thiết kế hiện đại, nội thất tối ưu cho 7 người lớn cùng động cơ điện mạnh mẽ và tiết kiệm chi phí tối đa.</p>
-    `,
-    thumbnail: getDirectusAssetUrl("543ce5a7-952a-4ffe-8ab0-3fa6714d78a5"),
-    publishedDate: "12/08/2026",
-    author: "Phòng Kinh Doanh Phương Đông",
-    isFeatured: true,
-  },
-  {
-    id: "post-6",
-    slug: "tai-chinh-500-600-trieu-nen-mua-vinfast-limo-green-hay-vf-mpv-7-thang-8-2026",
-    title: "TÀI CHÍNH 500–600 TRIỆU NÊN MUA VINFAST LIMO GREEN HAY VF MPV 7 THÁNG 8/2026?",
-    category: "danh-gia-xe",
-    categoryName: "Tin tức vinfast",
-    excerpt: "Bài toán so sánh chi tiết giữa hai lựa chọn xe điện 7 chỗ hàng đầu phân khúc với ngân sách từ 500 đến 600 triệu đồng.",
-    content: `
-      <p>Với mức tài chính khoảng 500 - 600 triệu, khách hàng có thể dễ dàng tiếp cận các dòng xe điện 7 chỗ của VinFast thông qua các gói hỗ trợ trả góp lãi suất thấp độc quyền từ VinFast Phương Đông.</p>
-    `,
-    thumbnail: getDirectusAssetUrl("37a00ec5-bd8b-4b96-bfad-c44cac066860"),
-    publishedDate: "05/08/2026",
-    author: "Ban Tư Vấn Phương Đông",
-    isFeatured: true,
-  },
-  {
-    id: "post-7",
-    slug: "tong-ket-quy-ii-2026-tap-doan-thinh-cuong-ghi-nhan-thanh-tuu-san-sang-but-pha-quy-iii",
-    title: "TỔNG KẾT QUÝ II/2026: TẬP ĐOÀN PHƯƠNG ĐÔNG GHI NHẬN THÀNH TỰU, SẴN SÀNG BỨT PHÁ QUÝ III",
-    category: "tin-noi-bo",
-    categoryName: "Tin nội bộ",
-    excerpt: "Tập đoàn Phương Đông tiếp tục giữ vững vị trí Nhà phân phối xe ô tô điện VinFast Số 1 Việt Nam với hơn 5.000 xe được bàn giao trong nửa đầu năm 2026.",
-    content: `
-      <p>Tại buổi lễ sơ kết hoạt động kinh doanh Quý II/2026, Ban Lãnh đạo <strong>Tập đoàn Phương Đông</strong> đã tuyên dương các tập thể Showroom Long Biên, Ocean Park và Hạ Long đạt thành tích xuất sắc trong công tác bán hàng và chăm sóc khách hàng.</p>
-    `,
-    thumbnail: "/images/awards/vinh-danh-long-bien.png",
-    publishedDate: "10/08/2026",
-    author: "Phòng Truyền Thông",
+    thumbnail: "/images/news/uu-dai-chinh-hang-vinfast-phuong-dong-v2.jpg",
+    publishedDate: "01/10/2026",
+    author: "VinFast Phương Đông",
     isFeatured: false,
   },
   {
-    id: "post-8",
-    slug: "vinfast-thinh-cuong-dao-tao-ky-thuat-vien-dat-chuan-dich-vu-5-sao-toan-dien",
-    title: "VINFAST PHƯƠNG ĐÔNG ĐÀO TẠO KỸ THUẬT VIÊN ĐẠT CHUẨN DỊCH VỤ 5 SAO TOÀN DIỆN",
+    id: "post-ho-tro-tai-chinh",
+    slug: "ho-tro-tai-chinh-va-phuong-an-pin",
+    title: "Hỗ trợ tài chính và phương án pin tại Phương Đông",
+    category: "uu-dai",
+    categoryName: "Tin khuyến mại",
+    excerpt: "Tư vấn trả góp qua ngân hàng liên kết, gói thuê pin hoặc mua pin, kèm hỗ trợ giao xe và thủ tục đăng ký, đăng kiểm.",
+    content: `
+      <p>VinFast Phương Đông hỗ trợ khách chọn phương án tài chính qua ngân hàng liên kết, cùng gói thuê pin hoặc mua pin phù hợp nhu cầu sử dụng.</p>
+      <p>Đội ngũ tư vấn đồng thời hỗ trợ giao xe tận nơi và thủ tục đăng ký, đăng kiểm.</p>
+      <p>Liên hệ hotline <strong>090 242 25 22</strong> hoặc đến showroom gần nhất để được báo phương án cụ thể theo chính sách đang áp dụng.</p>
+    `,
+    thumbnail: "/images/news/ho-tro-tai-chinh-va-phuong-an-pin-v2.jpg",
+    publishedDate: "08/10/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-vinh-danh-hqv",
+    slug: "vinh-danh-tu-van-hoang-quoc-viet",
+    title: "Vinh danh tư vấn bán hàng Showroom Hoàng Quốc Việt",
     category: "tin-noi-bo",
     categoryName: "Tin nội bộ",
-    excerpt: "Chương trình nâng cao tay nghề và chứng chỉ chuyên sâu về sửa chữa Pin và Động cơ điện công nghệ cao dành cho đội ngũ kỹ sư 13 Xưởng dịch vụ.",
+    excerpt: "Showroom VinFast Phương Đông Hoàng Quốc Việt được ghi nhận tư vấn bán hàng xuất sắc năm 2025, tháng 12/2025 và tháng 05/2026.",
     content: `
-      <p>Nhằm đảm bảo chất lượng dịch vụ đồng bộ tại 13 Xưởng dịch vụ chuẩn quốc tế, VinFast Phương Đông tổ chức khóa huấn luyện định kỳ với các chuyên gia kỹ thuật hàng đầu của VinFast.</p>
+      <p>Showroom VinFast Phương Đông Hoàng Quốc Việt, số 14 Hoàng Quốc Việt, Cầu Giấy, Hà Nội, được ghi nhận ở hạng mục tư vấn bán hàng xuất sắc năm 2025, xuất sắc nhất tháng 12/2025 và xuất sắc tháng 05/2026.</p>
+      <p>Đây là điểm 3S, vừa bán hàng vừa có xưởng dịch vụ. Giờ bán hàng 08:00–18:00, giờ xưởng 08:00–17:30.</p>
     `,
-    thumbnail: "/images/awards/vinh-danh-xuong-son-tay.jpg",
-    publishedDate: "02/08/2026",
-    author: "Khối Kỹ Thuật & Dịch Vụ",
+    thumbnail: "/images/news/vinh-danh-tu-van-hoang-quoc-viet-v2.jpg",
+    publishedDate: "20/05/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-ky-thuat-3s",
+    slug: "ky-thuat-vien-xuong-dich-vu-3s",
+    title: "Kỹ thuật viên xưởng dịch vụ chuẩn 3S",
+    category: "tin-noi-bo",
+    categoryName: "Tin nội bộ",
+    excerpt: "Kỹ thuật viên được VinFast đào tạo. Ba xưởng chuẩn 3S tại Hoàng Quốc Việt, Bát Tràng và Thường Tín. Giờ xưởng 08:00–17:30.",
+    content: `
+      <p>Kỹ thuật viên tại VinFast Phương Đông được VinFast đào tạo, làm việc trên trang thiết bị theo tiêu chuẩn hãng.</p>
+      <p>Ba xưởng dịch vụ chuẩn 3S đặt tại Hoàng Quốc Việt, Bát Tràng và Thường Tín, nhận bảo hành, bảo dưỡng, sửa chữa và đồng sơn. Phụ tùng, phụ kiện là hàng chính hãng.</p>
+      <p>Giờ xưởng 08:00–17:30. Hotline <strong>090 242 25 22</strong>.</p>
+    `,
+    thumbnail: "/images/news/ky-thuat-vien-xuong-dich-vu-3s-v2.jpg",
+    publishedDate: "15/09/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-bon-showroom",
+    slug: "trai-nghiem-xe-tai-bon-showroom-ha-noi",
+    title: "Trải nghiệm xe tại 4 showroom Hà Nội",
+    category: "su-kien",
+    categoryName: "Tin sự kiện",
+    excerpt: "Bốn điểm VinFast Phương Đông: Hoàng Quốc Việt, Bát Tràng, Thường Tín và Hòa Lạc. Hotline 090 242 25 22, giờ bán hàng 08:00–18:00.",
+    content: `
+      <p>VinFast Phương Đông có 4 showroom tại Hà Nội để khách xem xe và lái thử:</p>
+      <ul>
+        <li>Hoàng Quốc Việt — 3S, số 14 Hoàng Quốc Việt, Cầu Giấy</li>
+        <li>Bát Tràng — 3S, 268 Đường Giáp Hải, Gia Lâm</li>
+        <li>Thường Tín — 3S, 207 Quán Gánh</li>
+        <li>Hòa Lạc — Showroom, tầng 1 Hòa Lạc Mall</li>
+      </ul>
+      <p>Giờ bán hàng 08:00–18:00 cả tuần. Hotline <strong>090 242 25 22</strong>.</p>
+    `,
+    thumbnail: "/images/news/trai-nghiem-xe-tai-bon-showroom-ha-noi-v2.jpg",
+    publishedDate: "15/10/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: true,
+  },
+  {
+    id: "post-giao-xe",
+    slug: "giao-xe-tan-noi-dang-ky-dang-kiem",
+    title: "Giao xe tận nơi và hỗ trợ đăng ký, đăng kiểm",
+    category: "uu-dai",
+    categoryName: "Tin khuyến mại",
+    excerpt: "VinFast Phương Đông giao xe tận nhà và hỗ trợ thủ tục đăng ký, đăng kiểm cho khách tại Hà Nội.",
+    content: `
+      <p>Khi nhận xe tại VinFast Phương Đông, khách được hỗ trợ giao xe tận nơi cùng thủ tục đăng ký và đăng kiểm.</p>
+      <p>Đội ngũ tư vấn sắp lịch giao theo địa chỉ khách chọn và hướng dẫn hồ sơ cần chuẩn bị.</p>
+      <p>Hotline <strong>090 242 25 22</strong>. Giờ bán hàng 08:00–18:00, tất cả các ngày trong tuần.</p>
+    `,
+    thumbnail: "/images/news/giao-xe-tan-noi-dang-ky-dang-kiem-v2.jpg",
+    publishedDate: "18/10/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-phu-tung",
+    slug: "phu-tung-phu-kien-chinh-hang",
+    title: "Phụ tùng và phụ kiện chính hãng VinFast",
+    category: "uu-dai",
+    categoryName: "Tin khuyến mại",
+    excerpt: "Phụ tùng, phụ kiện chính hãng tại 3 xưởng 3S. Lắp đặt đúng tiêu chuẩn để giữ trọn bảo hành.",
+    content: `
+      <p>VinFast Phương Đông cung cấp phụ tùng và phụ kiện chính hãng VinFast tại các xưởng dịch vụ chuẩn 3S.</p>
+      <p>Linh kiện được lắp bởi kỹ thuật viên VinFast đào tạo, giúp xe giữ điều kiện bảo hành.</p>
+      <p>Ba xưởng nhận phụ tùng: Hoàng Quốc Việt, Bát Tràng và Thường Tín. Giờ xưởng 08:00–17:30. Hotline <strong>090 242 25 22</strong>.</p>
+    `,
+    thumbnail: "/images/news/phu-tung-phu-kien-chinh-hang-v2.jpg",
+    publishedDate: "20/10/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-tru-so",
+    slug: "tru-so-cong-ty-co-phan-phuong-dong",
+    title: "Trụ sở Công ty Cổ phần Phương Đông",
+    category: "tin-noi-bo",
+    categoryName: "Tin nội bộ",
+    excerpt: "Trụ sở tại G2 Vinhomes Green Bay, Mễ Trì, Nam Từ Liêm, Hà Nội. Email cskh@vinfastphuongdong.com.vn.",
+    content: `
+      <p>Công ty Cổ phần Phương Đông đặt trụ sở tại G2 Vinhomes Green Bay, Mễ Trì, Nam Từ Liêm, Hà Nội.</p>
+      <p>Khách liên hệ chăm sóc qua hotline <strong>090 242 25 22</strong> hoặc email <strong>cskh@vinfastphuongdong.com.vn</strong>.</p>
+      <p>Giờ bán hàng 08:00–18:00. Giờ xưởng dịch vụ 08:00–17:30. Giám định viên bảo hiểm trực tại xưởng, khách gọi hotline dịch vụ để được hướng dẫn.</p>
+    `,
+    thumbnail: "/images/news/tru-so-cong-ty-co-phan-phuong-dong-v2.jpg",
+    publishedDate: "01/09/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-tu-van",
+    slug: "tu-van-chon-xe-den-nhan-xe",
+    title: "Đồng hành từ lúc chọn xe đến khi nhận xe",
+    category: "tin-noi-bo",
+    categoryName: "Tin nội bộ",
+    excerpt: "Tư vấn viên VinFast Phương Đông đi cùng khách từ chọn xe, lái thử, tài chính cho tới lúc giao xe.",
+    content: `
+      <p>Đội ngũ tư vấn VinFast Phương Đông được đào tạo bài bản, am hiểu từng dòng xe điện đang phân phối.</p>
+      <p>Khách được hỗ trợ xuyên suốt: chọn xe, đặt lịch lái thử, phương án tài chính, rồi nhận xe và thủ tục đăng ký.</p>
+      <p>Có thể gặp tư vấn tại Hoàng Quốc Việt, Bát Tràng, Thường Tín hoặc Hòa Lạc. Hotline <strong>090 242 25 22</strong>.</p>
+    `,
+    thumbnail: "/images/news/tu-van-chon-xe-den-nhan-xe-v2.jpg",
+    publishedDate: "20/09/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-cuoi-tuan",
+    slug: "xem-xe-cuoi-tuan-tai-showroom",
+    title: "Xem xe cuối tuần tại showroom Phương Đông",
+    category: "su-kien",
+    categoryName: "Tin sự kiện",
+    excerpt: "Showroom mở cửa cả thứ Bảy và Chủ nhật, 08:00–18:00, để khách xem xe và đặt lịch lái thử.",
+    content: `
+      <p>Bốn showroom VinFast Phương Đông mở cửa cuối tuần, khung giờ bán hàng 08:00–18:00.</p>
+      <p>Khách có thể xem xe trưng bày và đăng ký lái thử các dòng đang có tại điểm gần nhà, trong đó có VF 3, VF 6, VF 7 và VF 8.</p>
+      <p>Nên gọi trước hotline <strong>090 242 25 22</strong> để showroom giữ xe lái thử đúng mẫu.</p>
+    `,
+    thumbnail: "/images/news/xem-xe-cuoi-tuan-tai-showroom-v2.jpg",
+    publishedDate: "12/10/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-tham-quan-xuong",
+    slug: "tham-quan-xuong-dich-vu-3s",
+    title: "Tham quan xưởng dịch vụ chuẩn 3S",
+    category: "su-kien",
+    categoryName: "Tin sự kiện",
+    excerpt: "Khách có thể ghé xưởng 3S tại Hoàng Quốc Việt, Bát Tràng và Thường Tín trong giờ 08:00–17:30.",
+    content: `
+      <p>Ba xưởng dịch vụ chuẩn 3S của VinFast Phương Đông nhận khách tham quan khu vực tiếp nhận xe, bảo dưỡng và khu phụ tùng.</p>
+      <ul>
+        <li>Hoàng Quốc Việt — số 14 Hoàng Quốc Việt, Cầu Giấy</li>
+        <li>Bát Tràng — 268 Đường Giáp Hải, Gia Lâm</li>
+        <li>Thường Tín — 207 Quán Gánh</li>
+      </ul>
+      <p>Giờ xưởng 08:00–17:30. Liên hệ <strong>090 242 25 22</strong> trước khi đến.</p>
+    `,
+    thumbnail: "/images/news/tham-quan-xuong-dich-vu-3s-v2.jpg",
+    publishedDate: "05/10/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-bao-hanh",
+    slug: "bao-hanh-chinh-hang-7-nam",
+    title: "Bảo hành chính hãng lên đến 7 năm",
+    category: "uu-dai",
+    categoryName: "Tin khuyến mại",
+    excerpt: "Xe điện phân phối tại VinFast Phương Đông được bảo hành theo chính sách hãng, thời hạn lên đến 7 năm.",
+    content: `
+      <p>VinFast Phương Đông là đại lý ủy quyền, nên chế độ bảo hành áp dụng theo chính sách hãng. Thời hạn bảo hành xe lên đến 7 năm.</p>
+      <p>Khách bảo dưỡng, sửa chữa tại 3 xưởng chuẩn 3S: Hoàng Quốc Việt, Bát Tràng và Thường Tín. Kỹ thuật viên được VinFast đào tạo, phụ tùng chính hãng.</p>
+      <p>Giờ xưởng 08:00–17:30. Hotline <strong>090 242 25 22</strong>.</p>
+    `,
+    thumbnail: "/images/news/bao-hanh-chinh-hang-7-nam-v2.jpg",
+    publishedDate: "22/10/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-giam-dinh",
+    slug: "giam-dinh-bao-hiem-tai-xuong",
+    title: "Giám định bảo hiểm ngay tại xưởng dịch vụ",
+    category: "uu-dai",
+    categoryName: "Tin khuyến mại",
+    excerpt: "Giám định viên bảo hiểm trực tại xưởng dịch vụ VinFast Phương Đông. Khách gọi hotline để được hướng dẫn.",
+    content: `
+      <p>Giám định viên bảo hiểm trực tại xưởng dịch vụ của VinFast Phương Đông, giúp khách xử lý hồ sơ ngay tại điểm sửa chữa.</p>
+      <p>Xưởng nhận giám định thuộc các điểm 3S: Hoàng Quốc Việt, Bát Tràng và Thường Tín.</p>
+      <p>Quý khách vui lòng liên hệ hotline dịch vụ <strong>090 242 25 22</strong> trước khi đến. Giờ xưởng 08:00–17:30.</p>
+    `,
+    thumbnail: "/images/news/giam-dinh-bao-hiem-tai-xuong-v2.jpg",
+    publishedDate: "21/10/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-doi-ngu",
+    slug: "doi-ngu-tu-van-bon-showroom",
+    title: "Đội ngũ tư vấn tại 4 showroom Hà Nội",
+    category: "tin-noi-bo",
+    categoryName: "Tin nội bộ",
+    excerpt: "Tư vấn viên VinFast Phương Đông có mặt tại Hoàng Quốc Việt, Bát Tràng, Thường Tín và Hòa Lạc.",
+    content: `
+      <p>Mỗi showroom VinFast Phương Đông có đội ngũ tư vấn được đào tạo, am hiểu các dòng xe điện đang phân phối.</p>
+      <ul>
+        <li>Hoàng Quốc Việt — số 14 Hoàng Quốc Việt, Cầu Giấy</li>
+        <li>Bát Tràng — 268 Đường Giáp Hải, Gia Lâm</li>
+        <li>Thường Tín — 207 Quán Gánh</li>
+        <li>Hòa Lạc — tầng 1 Hòa Lạc Mall</li>
+      </ul>
+      <p>Hotline <strong>090 242 25 22</strong>.</p>
+    `,
+    thumbnail: "/images/news/doi-ngu-tu-van-bon-showroom-v2.jpg",
+    publishedDate: "10/09/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-gio-phuc-vu",
+    slug: "gio-phuc-vu-showroom-va-xuong",
+    title: "Giờ phục vụ showroom và xưởng dịch vụ",
+    category: "tin-noi-bo",
+    categoryName: "Tin nội bộ",
+    excerpt: "Bán hàng 08:00–18:00 cả tuần. Xưởng dịch vụ 08:00–17:30. Hotline 090 242 25 22.",
+    content: `
+      <p>Showroom VinFast Phương Đông mở cửa bán hàng từ 08:00 đến 18:00, tất cả các ngày trong tuần.</p>
+      <p>Xưởng dịch vụ chuẩn 3S làm việc từ 08:00 đến 17:30. Khách đặt lịch bảo dưỡng hoặc lái thử qua hotline <strong>090 242 25 22</strong>.</p>
+      <p>Email chăm sóc khách hàng: <strong>cskh@vinfastphuongdong.com.vn</strong>.</p>
+    `,
+    thumbnail: "/images/news/gio-phuc-vu-showroom-va-xuong-v2.jpg",
+    publishedDate: "02/09/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-lai-thu-dong-xe",
+    slug: "lai-thu-cac-dong-xe-dien",
+    title: "Lái thử các dòng xe điện tại Phương Đông",
+    category: "su-kien",
+    categoryName: "Tin sự kiện",
+    excerpt: "Khách đăng ký lái thử VF 3, VF 6, VF 7 và VF 8 tại showroom gần nhất.",
+    content: `
+      <p>VinFast Phương Đông sắp xe lái thử các dòng VF 3, VF 6, VF 7 và VF 8 tại showroom.</p>
+      <p>Khách chọn điểm gần nhất trong 4 showroom Hà Nội và gọi trước để giữ đúng mẫu xe.</p>
+      <p>Hotline <strong>090 242 25 22</strong>. Giờ bán hàng 08:00–18:00.</p>
+    `,
+    thumbnail: "/images/news/lai-thu-cac-dong-xe-dien-v2.jpg",
+    publishedDate: "11/10/2026",
+    author: "VinFast Phương Đông",
+    isFeatured: false,
+  },
+  {
+    id: "post-ban-giao",
+    slug: "le-ban-giao-xe-tai-showroom",
+    title: "Bàn giao xe tại showroom Phương Đông",
+    category: "su-kien",
+    categoryName: "Tin sự kiện",
+    excerpt: "Khách nhận xe tại showroom, được hướng dẫn vận hành và hoàn tất thủ tục trước khi rời điểm giao.",
+    content: `
+      <p>Khi bàn giao xe tại showroom, tư vấn viên VinFast Phương Đông hướng dẫn các thao tác cơ bản trên xe và kiểm tra hồ sơ cùng khách.</p>
+      <p>Khách có thể nhận xe tại Hoàng Quốc Việt, Bát Tràng, Thường Tín hoặc Hòa Lạc. Nếu cần giao tận nơi, showroom sắp lịch riêng.</p>
+      <p>Hotline <strong>090 242 25 22</strong>.</p>
+    `,
+    thumbnail: "/images/news/le-ban-giao-xe-tai-showroom-v2.jpg",
+    publishedDate: "19/10/2026",
+    author: "VinFast Phương Đông",
     isFeatured: false,
   },
 ];

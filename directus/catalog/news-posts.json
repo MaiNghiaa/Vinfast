@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "note": "5 tin nháp trong 3 chuyên mục menu. Gen ảnh 1600x900, lưu đúng thumbnail, rồi import Directus. Không ghi số tiền hay % giảm giá.",
+  "image": {
+    "width": 1600,
+    "height": 900,
+    "folder": "public/images/news",
+    "brand": "VinFast Phương Đông",
+    "hotline": "090 242 25 22"
+  },
+  "categories": [
+    { "value": "uu-dai", "label": "Tin khuyến mại" },
+    { "value": "tin-noi-bo", "label": "Tin nội bộ" },
+    { "value": "su-kien", "label": "Tin sự kiện" }
+  ],
+  "posts": [
+    {
+      "slug": "uu-dai-chinh-hang-vinfast-phuong-dong",
+      "title": "Ưu đãi chính hãng tại VinFast Phương Đông",
+      "category": "uu-dai",
+      "categoryName": "Tin khuyến mại",
+      "excerpt": "Đại lý ủy quyền VinFast tại Hà Nội. Giá bán và ưu đãi theo chính sách hãng, tư vấn minh bạch tại 4 showroom.",
+      "thumbnail": "/images/news/uu-dai-chinh-hang-vinfast-phuong-dong.jpg",
+      "published_at": "2026-10-01T08:00:00.000Z",
+      "author_name": "VinFast Phương Đông",
+      "is_featured": false,
+      "status": "published",
+      "image_prompt": "Ảnh ngang showroom VinFast Phương Đông, dàn xe điện VF 3 VF 6 VF 7 VF 8 phía trước cửa kính, biển chữ ƯU ĐÃI CHÍNH HÃNG và VINFAST PHƯƠNG ĐÔNG. Không ghi số tiền, không ghi phần trăm."
+    },
+    {
+      "slug": "ho-tro-tai-chinh-va-phuong-an-pin",
+      "title": "Hỗ trợ tài chính và phương án pin tại Phương Đông",
+      "category": "uu-dai",
+      "categoryName": "Tin khuyến mại",
+      "excerpt": "Tư vấn trả góp qua ngân hàng liên kết, gói thuê pin hoặc mua pin, kèm hỗ trợ giao xe và thủ tục đăng ký, đăng kiểm.",
+      "thumbnail": "/images/news/ho-tro-tai-chinh-va-phuong-an-pin.jpg",
+      "published_at": "2026-10-08T08:00:00.000Z",
+      "author_name": "VinFast Phương Đông",
+      "is_featured": false,
+      "status": "published",
+      "image_prompt": "Khách ngồi bàn tư vấn trong showroom VinFast Phương Đông, cố vấn chỉ phương án trả góp và pin trên màn hình, xe điện phía sau kính. Chữ HỖ TRỢ TÀI CHÍNH và PHƯƠNG ÁN PIN. Không ghi lãi suất hay số tiền."
+    },
+    {
+      "slug": "vinh-danh-tu-van-hoang-quoc-viet",
+      "title": "Vinh danh tư vấn bán hàng Showroom Hoàng Quốc Việt",
+      "category": "tin-noi-bo",
+      "categoryName": "Tin nội bộ",
+      "excerpt": "Showroom VinFast Phương Đông Hoàng Quốc Việt, số 14 Hoàng Quốc Việt, Cầu Giấy, được ghi nhận tư vấn bán hàng xuất sắc năm 2025, tháng 12/2025 và tháng 05/2026.",
+      "thumbnail": "/images/news/vinh-danh-tu-van-hoang-quoc-viet.jpg",
+      "published_at": "2026-05-20T08:00:00.000Z",
+      "author_name": "VinFast Phương Đông",
+      "is_featured": false,
+      "status": "published",
+      "image_prompt": "Đội ngũ tư vấn VinFast Phương Đông đứng trước showroom Hoàng Quốc Việt, số 14 Hoàng Quốc Việt, Cầu Giấy, Hà Nội. Chữ VINH DANH TƯ VẤN BÁN HÀNG và VINFAST PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT."
+    },
+    {
+      "slug": "ky-thuat-vien-xuong-dich-vu-3s",
+      "title": "Kỹ thuật viên xưởng dịch vụ chuẩn 3S",
+      "category": "tin-noi-bo",
+      "categoryName": "Tin nội bộ",
+      "excerpt": "Kỹ thuật viên được VinFast đào tạo. Ba xưởng chuẩn 3S tại Hoàng Quốc Việt, Bát Tràng và Thường Tín. Giờ xưởng 08:00–17:30, phụ tùng chính hãng.",
+      "thumbnail": "/images/news/ky-thuat-vien-xuong-dich-vu-3s.jpg",
+      "published_at": "2026-09-15T08:00:00.000Z",
+      "author_name": "VinFast Phương Đông",
+      "is_featured": false,
+      "status": "published",
+      "image_prompt": "Kỹ thuật viên VinFast trong xưởng dịch vụ 3S, đang kiểm tra xe điện, dụng cụ và phụ tùng chính hãng. Chữ XƯỞNG DỊCH VỤ 3S và VINFAST PHƯƠNG ĐÔNG. Không logo hãng khác."
+    },
+    {
+      "slug": "trai-nghiem-xe-tai-bon-showroom-ha-noi",
+      "title": "Trải nghiệm xe tại 4 showroom Hà Nội",
+      "category": "su-kien",
+      "categoryName": "Tin sự kiện",
+      "excerpt": "Bốn điểm VinFast Phương Đông: Hoàng Quốc Việt (3S), Bát Tràng (3S), Thường Tín (3S) và Hòa Lạc. Hotline 090 242 25 22, mở cửa bán hàng 08:00–18:00 cả tuần.",
+      "thumbnail": "/images/news/trai-nghiem-xe-tai-bon-showroom-ha-noi.jpg",
+      "published_at": "2026-10-15T08:00:00.000Z",
+      "author_name": "VinFast Phương Đông",
+      "is_featured": true,
+      "status": "published",
+      "image_prompt": "Bốn mặt tiền showroom VinFast Phương Đông ghép một khung ngang: Hoàng Quốc Việt, Bát Tràng, Thường Tín, Hòa Lạc, mỗi điểm có xe điện phía trước. Chữ 4 SHOWROOM HÀ NỘI và TRẢI NGHIỆM XE. Hotline 090 242 25 22 nhỏ ở góc."
+    }
+  ]
+}
