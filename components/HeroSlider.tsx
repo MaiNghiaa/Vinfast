@@ -3,59 +3,68 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Banner, getDirectusAssetUrl } from "@/lib/directus";
 
-const HERO_SLIDES = [
+const DEFAULT_HERO_SLIDES = [
   {
     id: 1,
-    image: "/images/banners/banner-he-thong-phuong-dong.jpg",
-    alt: "VinFast Phương Đông - Hệ thống 4 Showroom 3 Xưởng dịch vụ chính hãng Hà Nội",
+    image: getDirectusAssetUrl("a98e3eba-2bd8-46a5-a84d-106016894ea1"),
+    alt: "Lịch lái thử VinFast Phương Đông tháng 9/2026",
   },
   {
     id: 2,
-    image: "/images/banners/banner-lai-thu-phuong-dong.jpg",
-    alt: "Lái thử và trải nghiệm xe điện VinFast tại VinFast Phương Đông",
+    image: getDirectusAssetUrl("4bca56e3-14dc-4fb4-8715-4f42e3dd2ab0"),
+    alt: "VinFast Phương Đông Đại Lý Số 1 Miền Bắc",
   },
   {
     id: 3,
-    image: "/images/banners/banner-phuong-dong-giai-phap-xanh.jpg",
-    alt: "VinFast Phương Đông - Giải pháp di chuyển xanh bền vững",
+    image: getDirectusAssetUrl("6a6510a8-00b2-4ce4-8316-866132332324"),
+    alt: "VinFast Ưu Đãi Tiên Phong Chuyển Đổi Xanh",
   },
   {
     id: 4,
-    image: "/images/banners/banner-phuong-dong-len-doi-xe.jpg",
-    alt: "VinFast Phương Đông - Lên đời xe xanh, tối ưu chi phí",
+    image: getDirectusAssetUrl("56752840-bc26-4848-97b2-71cac5bad22d"),
+    alt: "Vinh danh VinFast Phương Đông Club 1000",
   },
   {
     id: 5,
-    image: "/images/banners/banner-phuong-dong-vf-mpv7.jpg",
-    alt: "VinFast VF MPV 7 - Bạn đồng hành đại gia đình",
+    image: getDirectusAssetUrl("a94f1dfd-7bf8-43c2-9e7f-3ba95214f233"),
+    alt: "Showroom VinFast Phương Đông Chuẩn 3S",
   },
   {
     id: 6,
-    image: "/images/banners/banner-phuong-dong-vf-wild.jpg",
-    alt: "VinFast VF Wild - Bán tải điện tương lai",
+    image: getDirectusAssetUrl("4f59fbe3-b8e5-4d62-aaea-3b5cd65ee9be"),
+    alt: "VinFast Phương Đông Banner",
   },
 ];
 
-export default function HeroSlider() {
+interface HeroSliderProps {
+  banners?: Banner[];
+}
+
+export default function HeroSlider({ banners }: HeroSliderProps) {
+  const slides = (banners && banners.length > 0)
+    ? banners.map((b) => ({ id: b.id, image: b.image, alt: b.title }))
+    : DEFAULT_HERO_SLIDES;
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
   const nextSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-  }, []);
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  }, [slides.length]);
 
   const prevSlide = useCallback(() => {
-    setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
-  }, []);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  }, [slides.length]);
 
   useEffect(() => {
-    if (isHovered) return;
+    if (isHovered || slides.length <= 1) return;
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 3000);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 3500);
     return () => clearInterval(interval);
-  }, [isHovered]);
+  }, [isHovered, slides.length]);
 
   return (
     <section
@@ -67,7 +76,7 @@ export default function HeroSlider() {
         className="flex w-full h-full transition-transform duration-500 ease-out will-change-transform"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
-        {HERO_SLIDES.map((slide, index) => (
+        {slides.map((slide, index) => (
           <div key={slide.id} className="relative w-full h-full shrink-0">
             <Image
               src={slide.image}

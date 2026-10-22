@@ -12,10 +12,6 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'vinfastphuongdonghanoi.com',
-      },
-      {
-        protocol: 'https',
         hostname: 'vinfastthinhcuong.com.vn',
       },
       {
@@ -30,12 +26,36 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'vinfastauto.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'llama.trungnghia.space',
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '8055',
+      },
+      {
+        protocol: 'http',
+        hostname: '127.0.0.1',
+        port: '8055',
+      },
     ],
   },
 
   // Optimize production bundles
   experimental: {
     optimizePackageImports: ['lucide-react'],
+  },
+
+  async redirects() {
+    return [
+      {
+        source: "/van-hoa-phuc-vu-khach-hang-vinfast-thinh-cuong",
+        destination: "/van-hoa-phuc-vu-khach-hang-vinfast-phuong-dong",
+        permanent: true,
+      },
+    ];
   },
 };
 

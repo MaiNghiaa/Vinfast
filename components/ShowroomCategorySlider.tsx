@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Showroom, getDirectusAssetUrl } from "@/lib/directus";
 
 export interface ShowroomCategory {
   id: string;
@@ -13,50 +14,66 @@ export interface ShowroomCategory {
   link: string;
 }
 
-export const SHOWROOM_CATEGORIES: ShowroomCategory[] = [
-  {
-    id: "thuong-tin",
-    name: "SHOWROOM VINFAST",
-    subName: "PHƯƠNG ĐÔNG THƯỜNG TÍN",
-    image: "/4_logo_cuacaccuahang/logo_phuong_dong_thuong_tin.png",
-    link: "/contact",
-  },
+export const DEFAULT_SHOWROOM_CATEGORIES: ShowroomCategory[] = [
   {
     id: "hoang-quoc-viet",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG HOÀNG QUỐC VIỆT",
-    image: "/4_logo_cuacaccuahang/logo_phuong_dong_hoang_quoc_viet.png",
-    link: "/contact",
-  },
-  {
-    id: "hoa-lac",
-    name: "SHOWROOM VINFAST",
-    subName: "PHƯƠNG ĐÔNG HÒA LẠC",
-    image: "/4_logo_cuacaccuahang/logo_phuong_dong_hoa_lac.png",
+    image: getDirectusAssetUrl("a94f1dfd-7bf8-43c2-9e7f-3ba95214f233"),
     link: "/contact",
   },
   {
     id: "bat-trang",
     name: "SHOWROOM VINFAST",
     subName: "PHƯƠNG ĐÔNG BÁT TRÀNG",
-    image: "/4_logo_cuacaccuahang/logo_phuong_dong_bat_trang.png",
+    image: getDirectusAssetUrl("4f59fbe3-b8e5-4d62-aaea-3b5cd65ee9be"),
+    link: "/contact",
+  },
+  {
+    id: "thuong-tin",
+    name: "SHOWROOM VINFAST",
+    subName: "PHƯƠNG ĐÔNG THƯỜNG TÍN",
+    image: getDirectusAssetUrl("d9cfeee4-7d83-4289-a1c5-c40eda977fb9"),
+    link: "/contact",
+  },
+  {
+    id: "hoa-lac",
+    name: "SHOWROOM VINFAST",
+    subName: "PHƯƠNG ĐÔNG HÒA LẠC",
+    image: getDirectusAssetUrl("585f74f2-93b7-457b-9fc1-cbd491a3d508"),
     link: "/contact",
   },
 ];
 
-export default function ShowroomCategorySlider() {
-  const totalItems = SHOWROOM_CATEGORIES.length;
+interface ShowroomCategorySliderProps {
+  showrooms?: Showroom[];
+}
+
+export default function ShowroomCategorySlider({ showrooms }: ShowroomCategorySliderProps) {
+  const categories: ShowroomCategory[] = (showrooms && showrooms.length > 0)
+    ? showrooms.map((sr) => ({
+        id: sr.id,
+        name: "SHOWROOM VINFAST",
+        subName: sr.name.toUpperCase().replace(/^SHOWROOM\s+VINFAST\s+/i, ""),
+        image: sr.image || getDirectusAssetUrl("a94f1dfd-7bf8-43c2-9e7f-3ba95214f233"),
+        link: "/contact",
+      }))
+    : DEFAULT_SHOWROOM_CATEGORIES;
+
+  const totalItems = categories.length;
   const [currentIndex, setCurrentIndex] = useState(totalItems);
   const [withTransition, setWithTransition] = useState(true);
-  const [itemsPerView, setItemsPerView] = useState(4);
+  const [itemsPerView, setItemsPerView] = useState(5);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
 
-  // Responsive items per view: desktop/tablet 4, mobile-landscape 3, mobile 2
+  // Desktop shows exactly 4 showrooms (no fifth clone in view)
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width >= 768) {
+      if (width >= 1100) {
+        setItemsPerView(4);
+      } else if (width >= 768) {
         setItemsPerView(4);
       } else if (width >= 540) {
         setItemsPerView(3);
@@ -69,9 +86,6 @@ export default function ShowroomCategorySlider() {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-  // Khi số showroom vừa đủ hiển thị trên 1 hàng (desktop: 4/4) thì đứng yên, không lặp lại logo
-  const isStatic = totalItems <= itemsPerView;
 
   const nextSlide = useCallback(() => {
     setWithTransition(true);
@@ -96,12 +110,12 @@ export default function ShowroomCategorySlider() {
 
   // Autoplay matching slick-carousel data-autoplay="true"
   useEffect(() => {
-    if (isPaused || isStatic) return;
+    if (isPaused) return;
     const timer = setInterval(() => {
       nextSlide();
     }, 3500);
     return () => clearInterval(timer);
-  }, [isPaused, isStatic, nextSlide]);
+  }, [isPaused, nextSlide]);
 
   // Touch swipe support
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -123,9 +137,11 @@ export default function ShowroomCategorySlider() {
   };
 
   // Extended 3x array for seamless infinite looping
-  const extendedItems = isStatic
-    ? SHOWROOM_CATEGORIES
-    : [...SHOWROOM_CATEGORIES, ...SHOWROOM_CATEGORIES, ...SHOWROOM_CATEGORIES];
+  const extendedItems = [
+    ...categories,
+    ...categories,
+    ...categories,
+  ];
 
   const itemWidthPercent = 100 / itemsPerView;
 
@@ -133,7 +149,6 @@ export default function ShowroomCategorySlider() {
     <section className="bg-white py-8 md:py-14 border-b border-gray-100 overflow-hidden relative group/section">
       <div className="max-w-[1300px] mx-auto px-4 sm:px-6 relative">
         {/* Navigation Arrow - Left */}
-        {!isStatic && (
         <button
           type="button"
           onClick={prevSlide}
@@ -142,10 +157,8 @@ export default function ShowroomCategorySlider() {
         >
           <ChevronLeft className="w-5 h-5 stroke-[2.5]" />
         </button>
-        )}
 
         {/* Navigation Arrow - Right */}
-        {!isStatic && (
         <button
           type="button"
           onClick={nextSlide}
@@ -154,22 +167,21 @@ export default function ShowroomCategorySlider() {
         >
           <ChevronRight className="w-5 h-5 stroke-[2.5]" />
         </button>
-        )}
 
         {/* Carousel Viewport */}
         <div
           className="overflow-hidden py-4"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={isStatic ? undefined : handleTouchStart}
-          onTouchEnd={isStatic ? undefined : handleTouchEnd}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           <div
-            className={`flex ${isStatic ? "justify-center" : ""} ${
-              withTransition && !isStatic ? "transition-transform duration-500 ease-in-out" : ""
+            className={`flex ${
+              withTransition ? "transition-transform duration-500 ease-in-out" : ""
             }`}
             style={{
-              transform: isStatic ? "none" : `translateX(-${currentIndex * itemWidthPercent}%)`,
+              transform: `translateX(-${currentIndex * itemWidthPercent}%)`,
             }}
             onTransitionEnd={handleTransitionEnd}
           >
@@ -185,9 +197,9 @@ export default function ShowroomCategorySlider() {
                     <div className="relative w-full h-full rounded-full overflow-hidden">
                       <Image
                         src={item.image}
-                        alt={`Logo ${item.name} ${item.subName}`}
+                        alt={item.name}
                         fill
-                        className="object-contain rounded-full transition-transform duration-500 ease-out group-hover:scale-105"
+                        className="object-contain rounded-full transition-transform duration-500 ease-out group-hover:scale-95"
                         sizes="(max-width: 768px) 135px, 160px"
                         draggable={false}
                       />

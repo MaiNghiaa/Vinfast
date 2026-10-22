@@ -1,0 +1,215 @@
+openapi: 3.0.3
+info:
+  title: VinFast Phương Đông — Vehicle media catalog
+  version: 1.0.0
+  description: |
+    Kho dữ liệu tạm trước khi ghi vào Directus.
+    File chỉnh sửa: `directus/catalog/vehicles.media.json`.
+    Mọi xe đang `status: draft` để cập nhật dần, chưa public.
+
+    Ảnh local nằm ở `public/images/vehicles/` (41 file).
+    Trường `files.thumbnail` và `files.banner_image` ưu tiên ảnh local mới.
+    URL WordPress cũ (nếu còn) nằm ở `legacy_thumbnail` / `legacy_banner_image`.
+
+    Map sang Directus (schema nhánh feat/directus-cms):
+    - vehicles.slug, name, category, segment, status, sort
+    - vehicles.thumbnail, vehicles.banner_image -> directus_files
+    - vehicle_colors.image -> directus_files
+    - vehicle_sections.image -> directus_files
+    - gallery[] chưa có collection riêng: giữ trong vehicles.additional_attributes.gallery
+
+    Import khi Directus đang chạy:
+    `node scripts/import-vehicle-media.mjs` (xem trước)
+    `node scripts/import-vehicle-media.mjs --apply` (upload + gắn file, không ghi đè text đã sửa)
+servers:
+  - url: http://localhost:8055
+    description: Directus local
+paths:
+  /files:
+    post:
+      summary: Upload một ảnh xe vào Directus Files
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file:
+                  type: string
+                  format: binary
+                folder:
+                  type: string
+                  description: Folder id, ví dụ folder vehicles
+                title:
+                  type: string
+      responses:
+        "200":
+          description: File id dùng cho thumbnail, banner, color, section
+  /items/vehicles:
+    get:
+      summary: Đọc xe theo slug trước khi patch
+      parameters:
+        - in: query
+          name: filter[slug][_eq]
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Danh sách xe
+    post:
+      summary: Tạo xe draft nếu slug chưa có
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DirectusVehicleWrite"
+      responses:
+        "200":
+          description: Xe đã tạo
+  /items/vehicles/{id}:
+    patch:
+      summary: Gắn thumbnail / banner. Không ghi đè name hay mô tả nếu field đã có nội dung.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DirectusVehicleWrite"
+      responses:
+        "200":
+          description: Xe đã cập nhật
+components:
+  schemas:
+    VehicleMediaCatalog:
+      type: object
+      required: [version, vehicles]
+      properties:
+        version:
+          type: integer
+          example: 1
+        source:
+          type: string
+        note:
+          type: string
+        vehicles:
+          type: array
+          items:
+            $ref: "#/components/schemas/VehicleMediaRecord"
+        local_files:
+          type: array
+          items:
+            type: string
+    VehicleMediaRecord:
+      type: object
+      required: [slug, name, category, status, files]
+      properties:
+        slug:
+          type: string
+          example: vinfast-vf8
+        name:
+          type: string
+        category:
+          type: string
+          enum: [electric-car, green-mobility, commercial]
+        segment:
+          type: string
+        status:
+          type: string
+          enum: [draft, published, archived]
+        sort:
+          type: integer
+        files:
+          type: object
+          properties:
+            thumbnail:
+              type: string
+              description: Path local `/images/vehicles/...` hoặc URL
+            banner_image:
+              type: string
+            legacy_thumbnail:
+              type: string
+            legacy_banner_image:
+              type: string
+        local_assets:
+          type: array
+          items:
+            type: string
+        colors:
+          type: array
+          items:
+            $ref: "#/components/schemas/VehicleColorMedia"
+        sections:
+          type: array
+          items:
+            $ref: "#/components/schemas/VehicleSectionMedia"
+        gallery:
+          type: array
+          items:
+            type: string
+    VehicleColorMedia:
+      type: object
+      required: [name, hex, image]
+      properties:
+        name:
+          type: string
+        hex:
+          type: string
+        kind:
+          type: string
+          enum: [exterior, interior]
+        image:
+          type: string
+        sort:
+          type: integer
+    VehicleSectionMedia:
+      type: object
+      required: [section, title, image]
+      properties:
+        section:
+          type: string
+          enum: [exterior, interior, safety]
+        title:
+          type: string
+        subtitle:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        sort:
+          type: integer
+    DirectusVehicleWrite:
+      type: object
+      properties:
+        slug:
+          type: string
+        name:
+          type: string
+        category:
+          type: string
+        segment:
+          type: string
+        status:
+          type: string
+          enum: [draft, published, archived]
+        sort:
+          type: integer
+        thumbnail:
+          type: string
+          format: uuid
+          description: directus_files.id
+        banner_image:
+          type: string
+          format: uuid
+        additional_attributes:
+          type: object
+          description: gallery paths cho đến khi có collection gallery

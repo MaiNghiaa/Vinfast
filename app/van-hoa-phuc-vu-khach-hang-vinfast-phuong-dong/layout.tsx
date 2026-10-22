@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "Vinfast Phương Đông",
     images: [
       {
-        url: "/images/banners/banner-he-thong-phuong-dong.jpg",
+        url: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/03/web-TVBH-web-o-duoi1-1.jpg",
         width: 768,
         height: 816,
         alt: "Văn hóa phục vụ khách hàng VinFast Phương Đông",

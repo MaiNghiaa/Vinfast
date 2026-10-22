@@ -1,47 +1,44 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
 
-const beVietnam = Be_Vietnam_Pro({
+const manrope = Manrope({
   subsets: ["latin", "vietnamese"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-sans",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-manrope",
   display: "swap",
   preload: true,
 });
 
 export const metadata: Metadata = {
-  title: "VinFast Phương Đông | Hệ thống 4 Showroom & 3 Xưởng dịch vụ chính hãng Hà Nội",
+  title: "VinFast Phương Đông | Hệ thống 09 Showroom & 13 Xưởng dịch vụ chuẩn VinFast",
   description:
-    "VinFast Phương Đông – Nhà phân phối xe ô tô điện VinFast chính hãng tại Hà Nội. Hệ thống 04 Showroom và 03 Xưởng Dịch vụ (Thường Tín, Hoàng Quốc Việt, Hòa Lạc, Bát Tràng), dịch vụ chuyên nghiệp, tận tâm phục vụ.",
+    "VinFast Phương Đông – Nhà phân phối xe ô tô điện VinFast chính hãng VinFast Việt Nam, 09 Showroom quy mô và 13 Xưởng Dịch vụ tại: Hà Nội - Quảng Ninh - Phú Thọ (Vĩnh Phúc) - Hồ Chí Minh (Độc quyền sửa chữa Pin và Động cơ), dịch vụ chuyên nghiệp, nhân viên tận tâm.",
   keywords: [
     "VinFast Phương Đông",
     "giá xe VinFast",
     "VF 3",
     "VF 5",
     "VF 6",
-    "VF e34",
     "VF 7",
     "VF 8",
     "VF 9",
-    "ePV 7",
-    "EC Van",
-    "showroom vinfast phương đông",
-    "vinfast hoàng quốc việt",
-    "vinfast phương đông thường tín",
-    "vinfast hòa lạc",
-    "vinfast bát tràng",
+    "Minio Green",
+    "Limo Green",
+    "trạm sạc vinfast",
+    "showroom vinfast hà nội",
+    "showroom vinfast quảng ninh",
   ],
   openGraph: {
-    title: "VinFast Phương Đông | Hệ thống 4 Showroom & 3 Xưởng dịch vụ chính hãng Hà Nội",
+    title: "VinFast Phương Đông | Hệ thống 09 Showroom & 13 Xưởng dịch vụ chuẩn VinFast",
     description:
-      "Nhà phân phối xe ô tô điện VinFast chính hãng - Hệ thống 4 Showroom & 3 Xưởng dịch vụ tại Hà Nội.",
-    url: "https://vinfastphuongdonghanoi.com/",
+      "Nhà phân phối xe ô tô điện VinFast chính hãng VinFast Việt Nam số 1 miền Bắc.",
+    url: "https://vinfastthinhcuong.com.vn/",
     siteName: "VinFast Phương Đông",
     images: [
       {
-        url: "/images/banners/banner-he-thong-phuong-dong.jpg",
+        url: "https://vinfastthinhcuong.com.vn/wp-content/uploads/2026/08/lich-lai-thu-vinfast-thinh-cuong-thang-9-2026.jpg",
         width: 1200,
         height: 630,
         alt: "VinFast Phương Đông",
@@ -58,8 +55,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="vi" className={beVietnam.variable}>
-      <body className={`${beVietnam.className} antialiased selection:bg-[#1863dc] selection:text-white`}>
+    <html lang="vi" className={manrope.variable}>
+      <body className={`${manrope.className} antialiased selection:bg-[#1863dc] selection:text-white`}>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

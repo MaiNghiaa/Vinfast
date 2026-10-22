@@ -17,9 +17,10 @@ import {
   Layers,
   Sparkles,
   Loader2,
-  Send,
+  CheckCircle2,
 } from "lucide-react";
 import { USED_CARS, GREEN_FUTURE_COMMITMENTS, USED_CARS_NEWS } from "@/data/usedCars";
+import { getDirectusAssetUrl } from "@/lib/directus";
 import GsapReveal from "@/components/animation/GsapReveal";
 import StaggerContainer from "@/components/animation/StaggerContainer";
 
@@ -161,7 +162,7 @@ export default function UsedCarsPage() {
          ============================================================ */}
       <section className="relative w-full h-[460px] sm:h-[540px] md:h-[620px] lg:h-[680px] xl:h-[720px] overflow-hidden bg-[#eef2f6]">
         <Image
-          src="/images/banners/banner-he-thong-phuong-dong.jpg"
+          src="/images/thinhcuong-vinfast.jpg"
           alt="VinFast Phương Đông - Xe cũ Green Future"
           fill
           priority
@@ -193,7 +194,7 @@ export default function UsedCarsPage() {
             >
               <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
                 <Image
-                  src="/images/used-cars/car1.jpg"
+                  src={getDirectusAssetUrl("97668b62-ca80-46a4-97e3-a1e1aabbcb68")}
                   alt="Tất cả các loại"
                   fill
                   className="object-contain"
@@ -216,7 +217,7 @@ export default function UsedCarsPage() {
             >
               <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
                 <Image
-                  src="/images/used-cars/car2.jpg"
+                  src={getDirectusAssetUrl("7d504fe9-e510-4f1f-81a5-578c11723e95")}
                   alt="Xe động cơ điện"
                   fill
                   className="object-contain"
@@ -239,7 +240,7 @@ export default function UsedCarsPage() {
             >
               <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
                 <Image
-                  src="/images/used-cars/car3.jpg"
+                  src={getDirectusAssetUrl("b022c5a0-16f8-4879-8204-62743762e95d")}
                   alt="Xe động cơ xăng"
                   fill
                   className="object-contain"
@@ -262,7 +263,7 @@ export default function UsedCarsPage() {
             >
               <div className="relative w-[110px] sm:w-[130px] md:w-[145px] h-[45px] sm:h-[52px] mb-2 flex items-center justify-center">
                 <Image
-                  src="/images/used-cars/car4.jpg"
+                  src={getDirectusAssetUrl("52773c33-63d2-46af-aa23-df4fb7878b9c")}
                   alt="Xe dịch vụ"
                   fill
                   className="object-contain"
@@ -609,7 +610,7 @@ export default function UsedCarsPage() {
         <div
           className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat lg:bg-fixed"
           style={{
-            backgroundImage: `url('/images/banners/banner-he-thong-phuong-dong.jpg')`,
+            backgroundImage: `url('https://vinfastthinhcuong.com.vn/wp-content/uploads/2025/07/thinhcuong-vinfast.jpg')`,
           }}
         />
         <div className="absolute inset-0 bg-black/75 z-0" />
@@ -762,20 +763,9 @@ export default function UsedCarsPage() {
                 <div className="text-center pt-4">
                   <button
                     type="submit"
-                    disabled={valLoading}
-                    className="bg-[#3AB3FF] hover:bg-[#1863dc] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-[900] py-3 sm:py-3.5 px-14 rounded-lg text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-md flex items-center justify-center gap-2 mx-auto cursor-pointer"
+                    className="bg-[#3AB3FF] hover:bg-[#1863dc] text-white font-[900] py-3 px-14 rounded text-xs sm:text-sm uppercase tracking-wider transition-all duration-200 shadow-md cursor-pointer"
                   >
-                    {valLoading ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin" />
-                        <span>ĐANG GỬI...</span>
-                      </>
-                    ) : (
-                      <>
-                        <span>GỬI YÊU CẦU</span>
-                        <Send className="w-4 h-4" />
-                      </>
-                    )}
+                    Gửi
                   </button>
                 </div>
               </form>

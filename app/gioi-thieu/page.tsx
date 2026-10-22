@@ -17,7 +17,6 @@ import {
   MapPin,
   Phone,
   ArrowRight,
-  Play,
   ChevronLeft,
   ChevronRight,
   Award,
@@ -142,7 +141,6 @@ function SectionHeading({
 }
 
 export default function AboutPage() {
-  const [videoOpen, setVideoOpen] = useState(false);
   const [lightbox, setLightbox] = useState<number | null>(null);
 
   const lightboxPrev = () =>
@@ -261,7 +259,7 @@ export default function AboutPage() {
 
       {/* 3. HỆ THỐNG SHOWROOM */}
       <section className="py-16 sm:py-20 bg-[#f4f6fa]">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
           <GsapReveal animation="fade-up">
             <SectionHeading
               eyebrow="Hệ thống showroom"
@@ -269,49 +267,50 @@ export default function AboutPage() {
               desc="Mỗi showroom đều sẵn xe trưng bày, xe lái thử và đội ngũ tư vấn tận tâm. Chọn điểm gần bạn nhất để trải nghiệm."
             />
           </GsapReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-7">
             {SHOWROOMS.map((s, i) => (
               <GsapReveal key={s.id} animation="fade-up" delay={i * 0.08}>
-                <article className="group bg-white h-full flex flex-col shadow-sm hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative aspect-[4/3] overflow-hidden">
+                <article className="group bg-white h-full flex flex-col border border-[#e6ebf2] shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                  <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
                       src={SHOWROOM_PHOTOS[s.id] || s.image || "/images/showrooms/thuong-tin.jpg"}
                       alt={s.name}
                       fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 340px"
                     />
                     <span className={`absolute top-3 left-3 text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-1 ${s.type === "3S" ? "bg-[#1863dc] text-white" : "bg-white text-[#0c0c0c]"}`}>
                       {s.type === "3S" ? "Showroom 3S" : "Showroom 1S"}
                     </span>
                   </div>
-                  <div className="p-5 flex-1 flex flex-col">
-                    <div className="flex items-center gap-3 mb-3">
+                  <div className="p-5 sm:p-6 flex-1 flex flex-col">
+                    <div className="flex items-start gap-3 mb-4 min-h-[52px]">
                       {SHOWROOM_LOGOS[s.id] && (
-                        <Image src={SHOWROOM_LOGOS[s.id]} alt="" width={36} height={36} className="rounded-full shrink-0" />
+                        <Image src={SHOWROOM_LOGOS[s.id]} alt="" width={40} height={40} className="rounded-full shrink-0" />
                       )}
-                      <h3 className="text-base font-extrabold text-[#0c0c0c] leading-snug">
+                      <h3 className="text-[15px] sm:text-base font-extrabold text-[#0c0c0c] leading-snug">
                         {s.name.replace("Showroom VinFast Phương Đông ", "Phương Đông ")}
                       </h3>
                     </div>
-                    <p className="flex items-start gap-2 text-[13px] text-[#555] leading-relaxed">
+                    <p className="flex items-start gap-2 text-[13px] text-[#444] leading-relaxed min-h-[44px]">
                       <MapPin className="w-4 h-4 mt-0.5 text-[#1863dc] shrink-0" /> {s.address}
                     </p>
-                    <p className="mt-1.5 text-[12px] text-[#777]">
-                      {s.type === "3S" ? "Bán hàng · Dịch vụ · Phụ tùng" : "Trưng bày & bán hàng"} · {s.workingHoursSales}
+                    <p className="mt-3 text-[12px] text-[#777] leading-relaxed">
+                      {s.type === "3S" ? "Bán hàng · Dịch vụ · Phụ tùng" : "Trưng bày & bán hàng"}
+                      <span className="block mt-0.5">{s.workingHoursSales}</span>
                     </p>
-                    <div className="mt-auto pt-4 grid grid-cols-2 gap-2">
+                    <div className="mt-auto pt-5 grid grid-cols-2 gap-2.5">
                       <a
                         href={s.mapUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(s.name + ", " + s.address)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-1.5 border border-[#d5dbe5] hover:border-[#1863dc] hover:text-[#1863dc] text-[12px] font-bold uppercase py-2 transition-colors"
+                        className="inline-flex items-center justify-center gap-1.5 border border-[#d5dbe5] hover:border-[#1863dc] hover:text-[#1863dc] text-[12px] font-bold uppercase py-2.5 transition-colors"
                       >
                         <MapPin className="w-3.5 h-3.5" /> Chỉ đường
                       </a>
                       <a
                         href={"tel:" + s.hotlineSales.replace(/\s/g, "")}
-                        className="inline-flex items-center justify-center gap-1.5 bg-[#0c0c0c] hover:bg-[#1863dc] text-white text-[12px] font-bold uppercase py-2 transition-colors"
+                        className="inline-flex items-center justify-center gap-1.5 bg-[#0c0c0c] hover:bg-[#1863dc] text-white text-[12px] font-bold uppercase py-2.5 transition-colors"
                       >
                         <Phone className="w-3.5 h-3.5" /> Gọi ngay
                       </a>
@@ -325,11 +324,21 @@ export default function AboutPage() {
       </section>
 
       {/* 4. VÌ SAO CHỌN PHƯƠNG ĐÔNG — nền tối */}
-      <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden bg-[#0a1428]">
-        <div className="absolute inset-0 opacity-25">
-          <Image src="/images/banners/banner-phuong-dong-giai-phap-xanh.jpg" alt="" fill className="object-cover" sizes="100vw" />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a1428] via-[#0a1428]/90 to-[#0a1428]" />
+      <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden bg-[#07111f]">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(24,99,220,0.35),transparent_58%)]" />
+        <div className="pointer-events-none absolute -left-24 bottom-0 h-[420px] w-[420px] rounded-full bg-[#1863dc]/20 blur-3xl" />
+        <div className="pointer-events-none absolute -right-16 top-10 h-[280px] w-[280px] rounded-full bg-[#3AB3FF]/10 blur-3xl" />
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.22]"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.16) 1px, transparent 1px)",
+            backgroundSize: "80px 80px",
+            maskImage: "radial-gradient(ellipse at center, black 20%, transparent 72%)",
+            WebkitMaskImage: "radial-gradient(ellipse at center, black 20%, transparent 72%)",
+          }}
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#07111f]/30 via-transparent to-[#07111f]" />
         <div className="relative max-w-[1180px] mx-auto px-4 sm:px-6">
           <GsapReveal animation="fade-up">
             <SectionHeading
@@ -339,20 +348,20 @@ export default function AboutPage() {
               desc="Đồng hành cùng khách hàng từ lúc chọn xe, lái thử, nhận xe cho tới suốt vòng đời sử dụng."
             />
           </GsapReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
             {WHY_US.map((w, i) => {
               const Icon = w.icon;
               return (
                 <GsapReveal key={w.title} animation="fade-up" delay={i * 0.06} className="h-full">
-                  <div className="group h-full bg-[#0a1428] hover:bg-[#10224a] p-7 sm:p-8 transition-colors duration-300">
+                  <div className="group h-full bg-[#0c1a33]/95 hover:bg-[#1863dc] border border-white/10 hover:border-[#3AB3FF] p-7 sm:p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(24,99,220,0.35)]">
                     <div className="flex items-start justify-between">
-                      <div className="w-12 h-12 flex items-center justify-center bg-[#1863dc]/15 text-[#3AB3FF] group-hover:bg-[#1863dc] group-hover:text-white transition-colors">
+                      <div className="w-12 h-12 flex items-center justify-center bg-[#1863dc]/15 text-[#3AB3FF] group-hover:bg-white group-hover:text-[#1863dc] transition-colors">
                         <Icon className="w-6 h-6" />
                       </div>
-                      <span className="text-white/10 text-4xl font-extrabold leading-none">0{i + 1}</span>
+                      <span className="text-white/10 group-hover:text-white/40 text-4xl font-extrabold leading-none transition-colors">0{i + 1}</span>
                     </div>
                     <h3 className="mt-5 text-white text-lg font-extrabold uppercase tracking-tight">{w.title}</h3>
-                    <p className="mt-2.5 text-white/65 text-sm leading-relaxed">{w.desc}</p>
+                    <p className="mt-2.5 text-white/65 group-hover:text-white/90 text-sm leading-relaxed transition-colors">{w.desc}</p>
                   </div>
                 </GsapReveal>
               );
@@ -371,13 +380,14 @@ export default function AboutPage() {
               desc="VinFast – Việt Nam · Phong cách · An toàn · Sáng tạo · Tiên phong. Thành viên Tập đoàn Vingroup, nhà sản xuất xe điện thông minh hàng đầu Việt Nam."
             />
           </GsapReveal>
+        </div>
 
-          <div className="relative">
+        <div className="relative max-w-[1560px] mx-auto px-4 sm:px-8 lg:px-10">
             {/* đường kẻ dọc (mobile) / ngang (desktop) */}
-            <div className="absolute left-[15px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-[#1863dc] to-[#3AB3FF]/20 lg:hidden" />
-            <div className="hidden lg:block absolute left-0 right-0 top-[15px] h-[2px] bg-gradient-to-r from-[#1863dc] via-[#3AB3FF] to-[#1863dc]/20" />
+            <div className="absolute left-[31px] top-2 bottom-2 w-[2px] bg-gradient-to-b from-[#1863dc] to-[#3AB3FF]/20 lg:hidden" />
+            <div className="hidden lg:block absolute left-10 right-10 top-[15px] h-[2px] bg-gradient-to-r from-[#1863dc] via-[#3AB3FF] to-[#1863dc]/20" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-7 gap-7 lg:gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-7 gap-8 lg:gap-8 xl:gap-10">
               {TIMELINE.map((t, i) => (
                 <GsapReveal key={t.year} animation="fade-up" delay={i * 0.07}>
                   <div className="relative pl-12 lg:pl-0 lg:pt-12">
@@ -391,7 +401,6 @@ export default function AboutPage() {
                 </GsapReveal>
               ))}
             </div>
-          </div>
         </div>
       </section>
 
@@ -508,16 +517,7 @@ export default function AboutPage() {
           <Image src="/images/about/vinfast14.jpg" alt="VinFast – tương lai xanh" fill className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#0b2a66]/90 via-black/60 to-black/70" />
         </div>
-        <div className="relative z-10 text-center px-4 py-14">
-          <button
-            type="button"
-            onClick={() => setVideoOpen(true)}
-            className="group mx-auto mb-6 w-[72px] h-[72px] rounded-full bg-white/15 border border-white/40 flex items-center justify-center hover:bg-[#1863dc] hover:border-[#1863dc] transition-colors relative"
-            aria-label="Xem video thương hiệu"
-          >
-            <span className="absolute inset-0 rounded-full border border-white/40 animate-ping" />
-            <Play className="w-7 h-7 text-white fill-white ml-1" />
-          </button>
+        <div className="relative z-10 text-center px-4 py-16 sm:py-20">
           <h2 className="text-white text-2xl sm:text-3xl md:text-[34px] font-extrabold uppercase tracking-wide mb-3">
             Sẵn sàng trải nghiệm xe điện VinFast?
           </h2>
@@ -534,18 +534,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Video modal */}
-      {videoOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4" onClick={() => setVideoOpen(false)}>
-          <div className="relative w-full max-w-4xl aspect-video bg-black overflow-hidden shadow-2xl" onClick={(e) => e.stopPropagation()}>
-            <button type="button" onClick={() => setVideoOpen(false)} className="absolute top-3 right-3 z-20 w-10 h-10 rounded-full bg-black/60 hover:bg-black text-white flex items-center justify-center" aria-label="Đóng video">
-              <X className="w-6 h-6" />
-            </button>
-            <video src={VINFAST_BRAND_VIDEO_URL} title="The company behind VinFast electric cars" controls autoPlay playsInline className="w-full h-full object-contain bg-black" />
-          </div>
-        </div>
-      )}
 
       {/* Lightbox ảnh bàn giao */}
       {lightbox !== null && (

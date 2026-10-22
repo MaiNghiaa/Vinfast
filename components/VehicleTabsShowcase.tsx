@@ -5,12 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import { Vehicle, UsedCar } from "@/data/types";
+import { getDirectusAssetUrl } from "@/lib/directus";
+
 export interface VehicleShowcaseItem {
   id: string;
   name: string;
   category: string;
   slug: string;
-  href?: string; // link riêng (vd: xe GF cũ -> /xe-cu/...)
   image: string;
   imageHover: string;
 }
@@ -29,191 +31,180 @@ export const SHOWCASE_TABS: ShowcaseTab[] = [
     categoryLabel: "Xe mới",
     vehicles: [
       {
-        id: "vf2",
-        name: "VinFast VF 2",
-        category: "Xe mới",
-        slug: "vinfast-vf2",
-        image: "/images/vehicles/vf2-card.jpg",
-        imageHover: "/images/vehicles/vf2-1.jpg",
-      },
-      {
         id: "vf3",
         name: "Vinfast VF3",
         category: "Xe mới",
-        slug: "vinfast-vf3",
-        image: "/images/vehicles/vf3-plus-1.jpg",
-        imageHover: "/images/vehicles/vf3-plus-2.png",
+        slug: "vinfast-vf-3",
+        image: getDirectusAssetUrl("4da5442a-b849-4783-a1e9-50f254468fc9"),
+        imageHover: getDirectusAssetUrl("4da5442a-b849-4783-a1e9-50f254468fc9"),
       },
       {
         id: "vf5",
         name: "Vinfast VF5",
         category: "Xe mới",
-        slug: "vinfast-vf5",
-        image: "/images/vehicles/vf5-1.jpg",
-        imageHover: "/images/vehicles/vf5-2.png",
+        slug: "vinfast-vf-5-plus",
+        image: getDirectusAssetUrl("f465245a-40fd-44a3-b3c6-2a4e2272fcbf"),
+        imageHover: getDirectusAssetUrl("f465245a-40fd-44a3-b3c6-2a4e2272fcbf"),
       },
       {
         id: "vf6",
         name: "Vinfast VF6",
         category: "Xe mới",
-        slug: "vinfast-vf6",
-        image: "/images/vehicles/vf6-1.jpg",
-        imageHover: "/images/vehicles/vf6-2.png",
-      },
-      {
-        id: "vfe34",
-        name: "Vinfast VF e34",
-        category: "Xe mới",
-        slug: "vinfast-vfe34",
-        image: "/images/vehicles/vfe34-1.jpg",
-        imageHover: "/images/vehicles/vfe34-2.png",
+        slug: "vinfast-vf-6",
+        image: getDirectusAssetUrl("996954fd-fb53-4e72-8ca1-ded564f3ddaf"),
+        imageHover: getDirectusAssetUrl("996954fd-fb53-4e72-8ca1-ded564f3ddaf"),
       },
       {
         id: "vf7",
         name: "Vinfast VF7",
         category: "Xe mới",
-        slug: "vinfast-vf7",
-        image: "/images/vehicles/vf7-1.jpg",
-        imageHover: "/images/vehicles/vf7-2.png",
+        slug: "vinfast-vf-7",
+        image: getDirectusAssetUrl("853c5170-7589-4308-ac0d-5e85a367e947"),
+        imageHover: getDirectusAssetUrl("853c5170-7589-4308-ac0d-5e85a367e947"),
       },
       {
         id: "vf8",
         name: "Vinfast VF8",
         category: "Xe mới",
-        slug: "vinfast-vf8",
-        image: "/images/vehicles/vf8-1.jpg",
-        imageHover: "/images/vehicles/vf8-2.png",
+        slug: "vinfast-vf-8",
+        image: getDirectusAssetUrl("eac68c91-f663-46f1-a68d-f90c721ee02a"),
+        imageHover: getDirectusAssetUrl("eac68c91-f663-46f1-a68d-f90c721ee02a"),
       },
       {
         id: "vf9",
         name: "Vinfast VF9",
         category: "Xe mới",
-        slug: "vinfast-vf9",
-        image: "/images/vehicles/vf9-1.jpg",
-        imageHover: "/images/vehicles/vf9-2.png",
-      },
-      {
-        id: "vf-wild",
-        name: "VinFast VF Wild",
-        category: "Xe mới",
-        slug: "vinfast-vf-wild",
-        image: "/images/vehicles/vf-wild-card.jpg",
-        imageHover: "/images/vehicles/vf-wild-1.jpg",
+        slug: "vinfast-vf-9",
+        image: getDirectusAssetUrl("feea0061-5a36-4eb0-aa94-81dbfcaaf608"),
+        imageHover: getDirectusAssetUrl("feea0061-5a36-4eb0-aa94-81dbfcaaf608"),
       },
     ],
   },
   {
-    id: "service",
-    title: "XE DỊCH VỤ",
-    categoryLabel: "Xe dịch vụ",
+    id: "commercial",
+    title: "XE DỊCH VỤ & THƯƠNG MẠI",
+    categoryLabel: "Xe mới",
     vehicles: [
       {
-        id: "epv7",
-        name: "VinFast ePV 7 (VF MPV 7)",
-        category: "Xe dịch vụ",
-        slug: "vinfast-epv7",
-        image: "/images/vehicles/epv7-1.jpg",
-        imageHover: "/images/vehicles/epv7-2.png",
-      },
-      {
-        id: "limo-green",
-        name: "VinFast Limo Green",
-        category: "Xe dịch vụ",
-        slug: "vinfast-limo-green",
-        image: "/images/vehicles/limo-1.jpg",
-        imageHover: "/images/vehicles/limo-2.png",
-      },
-      {
-        id: "herio-green",
+        id: "herio",
         name: "VinFast Herio Green",
-        category: "Xe dịch vụ",
+        category: "Xe mới",
         slug: "vinfast-herio-green",
-        image: "/images/vehicles/herio-1.jpg",
-        imageHover: "/images/vehicles/herio-2.jpg",
+        image: getDirectusAssetUrl("37540cb3-d2c7-4dc8-a7cb-712b2ff4c44b"),
+        imageHover: getDirectusAssetUrl("37540cb3-d2c7-4dc8-a7cb-712b2ff4c44b"),
       },
       {
-        id: "nerio-green",
-        name: "VinFast Nerio Green",
-        category: "Xe dịch vụ",
-        slug: "vinfast-nerio-green",
-        image: "/images/vehicles/nerio-1.jpg",
-        imageHover: "/images/vehicles/nerio-2.png",
+        id: "limo",
+        name: "VinFast Limo Green",
+        category: "Xe mới",
+        slug: "vinfast-limo-green",
+        image: getDirectusAssetUrl("23f48db1-f149-4227-8e9b-d2097bcef932"),
+        imageHover: getDirectusAssetUrl("23f48db1-f149-4227-8e9b-d2097bcef932"),
       },
       {
-        id: "minio-green",
+        id: "minio",
         name: "VinFast Minio Green",
-        category: "Xe dịch vụ",
+        category: "Xe mới",
         slug: "vinfast-minio-green",
-        image: "/images/vehicles/minio-1.jpg",
-        imageHover: "/images/vehicles/minio-2.png",
+        image: getDirectusAssetUrl("41489e4c-1c10-484b-98ea-0049d921835e"),
+        imageHover: getDirectusAssetUrl("41489e4c-1c10-484b-98ea-0049d921835e"),
       },
-    ],
-  },
-  {
-    id: "ec-van",
-    title: "EC VAN",
-    categoryLabel: "Xe tải van điện",
-    vehicles: [
       {
-        id: "ec-van",
-        name: "VinFast EC Van",
-        category: "Xe tải van điện",
-        slug: "xe-tai-van-dien-vinfast-ec-van",
-        image: "/images/vehicles/ec-van-1.jpg",
-        imageHover: "/images/vehicles/ec-van-2.png",
+        id: "nerio",
+        name: "VinFast Nerio Green",
+        category: "Xe mới",
+        slug: "vinfast-nerio-green",
+        image: getDirectusAssetUrl("ce4a65c2-22bd-483d-9a3e-b197c349b671"),
+        imageHover: getDirectusAssetUrl("ce4a65c2-22bd-483d-9a3e-b197c349b671"),
       },
     ],
   },
   {
-    id: "gf",
-    title: "VINFAST GF",
-    categoryLabel: "VinFast GF",
+    id: "used",
+    title: "XE ĐÃ QUA SỬ DỤNG",
+    categoryLabel: "Xe GF cũ",
     vehicles: [
       {
         id: "gf-vf8-1",
-        name: "VINFAST VF8 ECO 2023 – ĐEN – ĐEN",
+        name: "VINFAST VF8 PLUS 2023 – TRẮNG",
         category: "VinFast GF",
-        slug: "vinfast-vf8-eco-2023-den-den",
-        href: "/xe-cu/vinfast-vf8-eco-2023-den-den",
-        image: "/images/vehicles/gf-vf8-1.jpg",
-        imageHover: "/images/vehicles/gf-vf8-2.jpg",
+        slug: "vinfast-vf-8",
+        image: getDirectusAssetUrl("b068cc61-b55c-430f-83eb-53adcd42790b"),
+        imageHover: getDirectusAssetUrl("b068cc61-b55c-430f-83eb-53adcd42790b"),
       },
       {
         id: "gf-vf8-2",
         name: "VINFAST VF8 ECO 2023 – XANH DƯƠNG",
         category: "VinFast GF",
-        slug: "vinfast-vf8-eco-2023-xanh-duong",
-        href: "/xe-cu/vinfast-vf8-eco-2023-xanh-duong",
-        image: "/images/vehicles/gf-vf8-blue.jpg",
-        imageHover: "/images/vehicles/gf-vf8-blue.jpg",
+        slug: "vinfast-vf-8",
+        image: getDirectusAssetUrl("b068cc61-b55c-430f-83eb-53adcd42790b"),
+        imageHover: getDirectusAssetUrl("b068cc61-b55c-430f-83eb-53adcd42790b"),
       },
       {
         id: "gf-vf8-3",
         name: "VINFAST VF8 PLUS 2023 – ĐỎ – ĐEN",
         category: "VinFast GF",
-        slug: "vinfast-vf8-plus-2023-do-den",
-        href: "/xe-cu/vinfast-vf8-plus-2023-do-den",
-        image: "/images/vehicles/gf-vf8-red-1.jpg",
-        imageHover: "/images/vehicles/gf-vf8-red-2.jpg",
-      },
-      {
-        id: "gf-vf8-4",
-        name: "VINFAST VF8 PLUS 2023 – ĐỎ – NÂU",
-        category: "VinFast GF",
-        slug: "vinfast-vf8-plus-2023-do-nau",
-        href: "/xe-cu/vinfast-vf8-plus-2023-do-nau",
-        image: "/images/vehicles/gf-vf8-red-1.jpg",
-        imageHover: "/images/vehicles/gf-vf8-red-2.jpg",
+        slug: "vinfast-vf-8",
+        image: getDirectusAssetUrl("b068cc61-b55c-430f-83eb-53adcd42790b"),
+        imageHover: getDirectusAssetUrl("b068cc61-b55c-430f-83eb-53adcd42790b"),
       },
     ],
   },
 ];
 
-export default function VehicleTabsShowcase() {
+interface VehicleTabsShowcaseProps {
+  vehicles?: Vehicle[];
+  usedCars?: UsedCar[];
+}
+
+export default function VehicleTabsShowcase({ vehicles, usedCars }: VehicleTabsShowcaseProps) {
   const [activeTabId, setActiveTabId] = useState<string>("electric");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerView, setItemsPerView] = useState(4);
   const touchStartX = useRef<number | null>(null);
+
+  const tabs: ShowcaseTab[] = React.useMemo(() => {
+    if (!vehicles || vehicles.length === 0) return SHOWCASE_TABS;
+
+    const electricVehicles: VehicleShowcaseItem[] = vehicles
+      .filter((v) => v.category === "electric-car")
+      .map((v) => ({
+        id: v.slug,
+        name: v.name,
+        category: "Xe mới",
+        slug: v.slug,
+        image: v.thumbnail || getDirectusAssetUrl("4da5442a-b849-4783-a1e9-50f254468fc9"),
+        imageHover: v.colors?.[0]?.imageUrl || v.thumbnail || getDirectusAssetUrl("4da5442a-b849-4783-a1e9-50f254468fc9"),
+      }));
+
+    const commercialVehicles: VehicleShowcaseItem[] = vehicles
+      .filter((v) => v.category !== "electric-car")
+      .map((v) => ({
+        id: v.slug,
+        name: v.name,
+        category: "Xe mới",
+        slug: v.slug,
+        image: v.thumbnail || getDirectusAssetUrl("37540cb3-d2c7-4dc8-a7cb-712b2ff4c44b"),
+        imageHover: v.colors?.[0]?.imageUrl || v.thumbnail || getDirectusAssetUrl("37540cb3-d2c7-4dc8-a7cb-712b2ff4c44b"),
+      }));
+
+    const usedList: VehicleShowcaseItem[] = (usedCars && usedCars.length > 0)
+      ? usedCars.map((uc) => ({
+          id: uc.slug,
+          name: uc.name,
+          category: "VinFast GF",
+          slug: uc.slug,
+          image: uc.image || getDirectusAssetUrl("b068cc61-b55c-430f-83eb-53adcd42790b"),
+          imageHover: uc.galleryImages?.[0] || uc.image || getDirectusAssetUrl("b068cc61-b55c-430f-83eb-53adcd42790b"),
+        }))
+      : SHOWCASE_TABS[2]?.vehicles || [];
+
+    return [
+      { id: "electric", title: "XE ĐIỆN", categoryLabel: "Xe mới", vehicles: electricVehicles },
+      { id: "commercial", title: "XE DỊCH VỤ & THƯƠNG MẠI", categoryLabel: "Xe mới", vehicles: commercialVehicles },
+      { id: "used", title: "XE ĐÃ QUA SỬ DỤNG", categoryLabel: "Xe GF cũ", vehicles: usedList },
+    ];
+  }, [vehicles, usedCars]);
 
   // Responsive items per view: desktop 4, tablet 3, mobile-landscape 2, mobile 1
   useEffect(() => {
@@ -235,7 +226,7 @@ export default function VehicleTabsShowcase() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const activeTab = SHOWCASE_TABS.find((t) => t.id === activeTabId) || SHOWCASE_TABS[0];
+  const activeTab = tabs.find((t) => t.id === activeTabId) || tabs[0];
   const totalVehicles = activeTab.vehicles.length;
   const maxIndex = Math.max(0, totalVehicles - itemsPerView);
 
@@ -287,7 +278,7 @@ export default function VehicleTabsShowcase() {
 
         {/* 2. Clean Text Tabs matching Phương Đông */}
         <div className="flex justify-center items-center gap-6 sm:gap-10 mb-8 border-b border-transparent">
-          {SHOWCASE_TABS.map((tab) => {
+          {tabs.map((tab) => {
             const isActive = tab.id === activeTabId;
             return (
               <button
@@ -354,7 +345,7 @@ export default function VehicleTabsShowcase() {
                 >
                   {/* Product Card matching .product-block .grid-v3 */}
                   <div className="group/card bg-white border border-[#ededed] hover:border-gray-300 transition-all duration-400 flex flex-col h-full overflow-hidden">
-                    <Link href={v.href || `/san-pham/${v.slug}`} className="block">
+                    <Link href={`/san-pham/${v.slug}`} className="block">
                       {/* Image Frame with Primary & Hover Swap */}
                       <div className="relative w-full aspect-[1000/625] bg-white flex items-center justify-center p-3 overflow-hidden">
                         {/* 1. Primary Default Image */}

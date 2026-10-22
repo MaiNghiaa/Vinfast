@@ -32,8 +32,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# webarchive & large raw archives
+*.webarchive
+
 # directus local data & uploads
-directus/data/
-directus/uploads/
-directus/.env
-directus/extensions/
+/directus/data/
+/directus/uploads/
+/directus/.env
+/directus/catalog/.upload-map.json
+
+# packaged Directus archive contains local secrets
+/vinfast-directus.tar.gz
+
