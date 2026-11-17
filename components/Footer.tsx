@@ -1,6 +1,23 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { VEHICLES } from "@/data/vehicles";
+
+function getCarShortName(v: (typeof VEHICLES)[number]) {
+  if (v.watermarkText) {
+    if (v.watermarkText.startsWith("VF")) return v.watermarkText.replace(/\s+/g, "");
+    if (["MINIO", "HERIO", "NERIO", "LIMO"].includes(v.watermarkText)) {
+      return `${v.watermarkText} GREEN`;
+    }
+    return v.watermarkText;
+  }
+  return v.name
+    .replace(/^Vin[fF]ast\s+/i, "")
+    .replace(/\s+Plus.*$/i, "")
+    .replace(/\s+All\s+New.*$/i, "")
+    .trim()
+    .toUpperCase();
+}
 
 export default function Footer() {
   return (
@@ -28,7 +45,7 @@ export default function Footer() {
                   </Link>
                 </div>
                 <h2 className="text-[17px] lg:text-[18px] font-bold text-black uppercase mb-3.5 leading-snug">
-                  CÔNG TY CỔ PHẦN PHƯƠNG ĐÔNG
+                  CÔNG TY TNHH PHƯƠNG ĐÔNG HÀ NỘI
                 </h2>
                 <div className="space-y-3 text-[14px] font-medium text-black leading-[1.7]">
                   <p>
@@ -49,17 +66,17 @@ export default function Footer() {
                     Mail CSKH:{" "}
                     <strong className="font-bold">
                       <a
-                        href="mailto:cskh@vinfastphuongdong.com.vn"
+                        href="mailto:cskh@vinfastphuongdong.vn"
                         className="text-black hover:text-[#f20000] transition-colors"
                       >
-                        cskh@vinfastphuongdong.com.vn
+                        cskh@vinfastphuongdong.vn
                       </a>
                     </strong>
                   </p>
                   <p>
                     Trụ sở chính:{" "}
                     <strong className="font-bold">
-                      G2, Green Bay, Mễ Trì, Nam Từ Liêm, Hà Nội
+                      207 Quán Gánh, Thường Tín, Hà Nội
                     </strong>
                   </p>
                 </div>
@@ -191,72 +208,22 @@ export default function Footer() {
       <div className="w-full bg-[#dadada] py-[55px]">
         <div className="max-w-[1300px] mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 items-start">
-            {/* Cột 1: Dòng xe HOT (col-span-4) */}
+            {/* Cột 1: Dòng xe HOT (col-span-4) - Dynamic */}
             <div className="lg:col-span-4">
               <h2 className="text-[18px] lg:text-[19px] font-bold text-black uppercase mb-4 leading-snug">
                 DÒNG XE HOT
               </h2>
               <div className="grid grid-cols-3 gap-x-4 sm:gap-x-6 gap-y-2.5 text-[13.5px] text-black">
-                <div className="space-y-2.5">
+                {VEHICLES.map((vehicle) => (
                   <Link
-                    href="/san-pham/vinfast-vf3"
-                    className="block hover:text-[#f20000] transition-colors"
+                    key={vehicle.id}
+                    href={`/san-pham/${vehicle.slug}`}
+                    className="block hover:text-[#f20000] transition-colors whitespace-nowrap overflow-hidden text-ellipsis"
+                    title={vehicle.name}
                   >
-                    VF3
+                    {getCarShortName(vehicle)}
                   </Link>
-                  <Link
-                    href="/san-pham/vinfast-vf7"
-                    className="block hover:text-[#f20000] transition-colors"
-                  >
-                    VF7
-                  </Link>
-                  <Link
-                    href="/san-pham/vinfast-nerio-green"
-                    className="block hover:text-[#f20000] transition-colors whitespace-nowrap"
-                  >
-                    NERIO GREEN
-                  </Link>
-                </div>
-                <div className="space-y-2.5">
-                  <Link
-                    href="/san-pham/vinfast-vf5"
-                    className="block hover:text-[#f20000] transition-colors"
-                  >
-                    VF5
-                  </Link>
-                  <Link
-                    href="/san-pham/vinfast-vf8"
-                    className="block hover:text-[#f20000] transition-colors"
-                  >
-                    VF8
-                  </Link>
-                  <Link
-                    href="/san-pham/vinfast-minio-green"
-                    className="block hover:text-[#f20000] transition-colors whitespace-nowrap"
-                  >
-                    MINIOGREEN
-                  </Link>
-                </div>
-                <div className="space-y-2.5">
-                  <Link
-                    href="/san-pham/vinfast-vf6"
-                    className="block hover:text-[#f20000] transition-colors"
-                  >
-                    VF6
-                  </Link>
-                  <Link
-                    href="/san-pham/vinfast-vf9"
-                    className="block hover:text-[#f20000] transition-colors"
-                  >
-                    VF9
-                  </Link>
-                  <Link
-                    href="/san-pham/vinfast-limo-green"
-                    className="block hover:text-[#f20000] transition-colors whitespace-nowrap"
-                  >
-                    LIMOGREEN
-                  </Link>
-                </div>
+                ))}
               </div>
             </div>
 

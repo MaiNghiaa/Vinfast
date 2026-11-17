@@ -305,13 +305,13 @@ export const POSTS: Post[] = [
   {
     id: "post-tru-so",
     slug: "tru-so-cong-ty-co-phan-phuong-dong",
-    title: "Trụ sở Công ty Cổ phần Phương Đông",
+    title: "Trụ sở Công ty TNHH Phương Đông Hà Nội",
     category: "tin-noi-bo",
     categoryName: "Tin nội bộ",
-    excerpt: "Trụ sở tại G2 Vinhomes Green Bay, Mễ Trì, Nam Từ Liêm, Hà Nội. Email cskh@vinfastphuongdong.com.vn.",
+    excerpt: "Trụ sở tại 207 Quán Gánh, Thường Tín, Hà Nội. Email cskh@vinfastphuongdong.vn.",
     content: `
-      <p>Công ty Cổ phần Phương Đông đặt trụ sở tại G2 Vinhomes Green Bay, Mễ Trì, Nam Từ Liêm, Hà Nội.</p>
-      <p>Khách liên hệ chăm sóc qua hotline <strong>090 242 25 22</strong> hoặc email <strong>cskh@vinfastphuongdong.com.vn</strong>.</p>
+      <p>Công ty TNHH Phương Đông Hà Nội đặt trụ sở chính tại 207 Quán Gánh, Thường Tín, Hà Nội.</p>
+      <p>Khách liên hệ chăm sóc qua hotline <strong>090 242 25 22</strong> hoặc email <strong>cskh@vinfastphuongdong.vn</strong>.</p>
       <p>Giờ bán hàng 08:00–18:00. Giờ xưởng dịch vụ 08:00–17:30. Giám định viên bảo hiểm trực tại xưởng, khách gọi hotline dịch vụ để được hướng dẫn.</p>
     `,
     thumbnail: "/images/news/tru-so-cong-ty-co-phan-phuong-dong-v2.jpg",
@@ -440,7 +440,7 @@ export const POSTS: Post[] = [
     content: `
       <p>Showroom VinFast Phương Đông mở cửa bán hàng từ 08:00 đến 18:00, tất cả các ngày trong tuần.</p>
       <p>Xưởng dịch vụ chuẩn 3S làm việc từ 08:00 đến 17:30. Khách đặt lịch bảo dưỡng hoặc lái thử qua hotline <strong>090 242 25 22</strong>.</p>
-      <p>Email chăm sóc khách hàng: <strong>cskh@vinfastphuongdong.com.vn</strong>.</p>
+      <p>Email chăm sóc khách hàng: <strong>cskh@vinfastphuongdong.vn</strong>.</p>
     `,
     thumbnail: "/images/news/gio-phuc-vu-showroom-va-xuong-v2.jpg",
     publishedDate: "02/09/2026",

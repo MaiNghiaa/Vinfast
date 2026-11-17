@@ -798,7 +798,7 @@ export default function CustomerCulturePage() {
                             s.type === "3S" ? "bg-[#1863dc] text-white" : "bg-[#e9edf3] text-[#444]"
                           }`}
                         >
-                          {s.type === "3S" ? "3S" : "1S"}
+                          {s.type === "3S" ? "3S" : "Showroom"}
                         </span>
                       </span>
                       <span className="mt-1 block text-[13px] text-[#666] truncate">{s.address}</span>

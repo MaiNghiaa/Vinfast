@@ -47,8 +47,8 @@ async function findOrInsert(collection: string, uniqueField: string, uniqueValue
 async function migrateSiteSettings() {
   console.log('\n--- 1. MIGRATE SITE SETTINGS ---');
   const payload = {
-    company_name: HEADQUARTERS.name || 'Công Ty Cổ Phần Phương Đông',
-    company_name_en: 'Phuong Dong Joint Stock Company - Official VinFast Dealer',
+    company_name: HEADQUARTERS.name || 'Công Ty TNHH Phương Đông Hà Nội',
+    company_name_en: 'Phuong Dong Hanoi Co., Ltd - Official VinFast Dealer',
     hq_address: HEADQUARTERS.address || 'Hà Nội, Việt Nam',
     hq_address_en: 'Hanoi, Vietnam',
     hotline: HEADQUARTERS.hotline || '090 242 25 22',

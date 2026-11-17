@@ -41,6 +41,8 @@ next-env.d.ts
 /directus/.env
 /directus/catalog/.upload-map.json
 
-# packaged Directus archive contains local secrets
+# packaged archives
 /vinfast-directus.tar.gz
+*.tar.gz
+*.zip
 

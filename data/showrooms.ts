@@ -1,10 +1,10 @@
 import { Showroom } from "./types";
 
 export const HEADQUARTERS = {
-  name: "Công Ty Cổ Phần Phương Đông",
-  address: "G2 Vinhomes Green Bay, Mễ Trì, Nam Từ Liêm, Hà Nội, Vietnam",
+  name: "Công Ty TNHH Phương Đông Hà Nội",
+  address: "207 Quán Gánh, Thường Tín, Hà Nội",
   hotline: "090 242 25 22",
-  email: "cskh@vinfastphuongdong.com.vn",
+  email: "cskh@vinfastphuongdong.vn",
   salesHours: "Thứ 2 – Chủ nhật: 08:00 AM – 18:00 PM",
   serviceHours: "Thứ 2 – Chủ nhật: 08:00 AM – 17:30 PM",
   insuranceNote: "Giám định viên trực tại xưởng Dịch vụ. Quý khách vui lòng liên hệ Hotline Dịch vụ.",
@@ -15,7 +15,7 @@ export const SHOWROOMS: Showroom[] = [
     id: "hoang-quoc-viet",
     code: "N00802",
     name: "Showroom VinFast Phương Đông Hoàng Quốc Việt",
-    type: "3S",
+    type: "Showroom",
     province: "Hà Nội",
     address: "Số 14 Hoàng Quốc Việt, Cầu Giấy, Hà Nội",
     hotlineSales: "090 242 25 22",
@@ -54,7 +54,7 @@ export const SHOWROOMS: Showroom[] = [
     id: "hoa-lac",
     code: "N00803",
     name: "Showroom VinFast Phương Đông Hòa Lạc",
-    type: "Showroom",
+    type: "3S",
     province: "Hà Nội",
     address: "Tầng 1, Tòa nhà Hòa Lạc Mall, Thôn 2, Hoà Lạc, Hà Nội",
     hotlineSales: "090 242 25 22",

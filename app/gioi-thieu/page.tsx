@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import GsapReveal from "@/components/animation/GsapReveal";
 import AnimatedNumber from "@/components/animation/AnimatedNumber";
+import AwardsShowcase from "@/components/AwardsShowcase";
 import { VEHICLES } from "@/data/vehicles";
 import { SHOWROOMS, HEADQUARTERS } from "@/data/showrooms";
 
@@ -99,17 +100,11 @@ const TIMELINE = [
 ];
 
 const DELIVERY_PHOTOS = [
-  "/images/about/pd-delivery-2.jpg",
   "/images/about/pd-delivery-1.jpg",
+  "/images/about/pd-delivery-2.jpg",
   "/images/about/pd-delivery-3.jpg",
   "/images/about/pd-delivery-4.jpg",
   "/images/about/pd-delivery-5.jpg",
-];
-
-const RECOGNITIONS = [
-  { img: "/images/about/pd-showroom-1.jpg", title: "Tư vấn bán hàng xuất sắc năm 2025", place: "VinFast Phương Đông Hoàng Quốc Việt" },
-  { img: "/images/about/pd-showroom-2.jpg", title: "Tư vấn bán hàng xuất sắc nhất tháng 12/2025", place: "VinFast Phương Đông Hoàng Quốc Việt" },
-  { img: "/images/about/pd-showroom-3.jpg", title: "Tư vấn bán hàng xuất sắc tháng 05/2026", place: "VinFast Phương Đông Hoàng Quốc Việt" },
 ];
 
 function SectionHeading({
@@ -219,7 +214,7 @@ export default function AboutPage() {
                 <Award className="w-8 h-8 text-[#1863dc] shrink-0" />
                 <div>
                   <div className="text-[11px] uppercase tracking-wider text-[#666] font-semibold">Pháp nhân</div>
-                  <div className="text-sm font-extrabold text-[#0c0c0c]">Công ty TNHH Phương Đông</div>
+                  <div className="text-sm font-extrabold text-[#0c0c0c]">Công ty TNHH Phương Đông Hà Nội</div>
                 </div>
               </div>
             </div>
@@ -232,14 +227,14 @@ export default function AboutPage() {
             </h2>
             <div className="mt-5 space-y-4 text-sm sm:text-[15px] md:text-base text-[#333] leading-[1.8]">
               <p>
-                <strong>VinFast Phương Đông</strong> là nhà phân phối được VinFast ủy quyền chính hãng, sở hữu hệ thống showroom <strong>3S</strong> và <strong>1S</strong> được đầu tư bài bản theo tiêu chuẩn nhận diện mới nhất của VinFast, cùng xưởng dịch vụ trang thiết bị hiện đại.
+                <strong>VinFast Phương Đông</strong> là nhà phân phối được VinFast ủy quyền chính hãng, sở hữu hệ thống showroom <strong>3S</strong> được đầu tư bài bản theo tiêu chuẩn nhận diện mới nhất của VinFast, cùng xưởng dịch vụ trang thiết bị hiện đại.
               </p>
               <p>
-                Chúng tôi cung cấp toàn bộ dải sản phẩm ô tô điện VinFast; dịch vụ bảo hành, bảo dưỡng, sửa chữa, đồng sơn; và phụ tùng chính hiệu theo tiêu chuẩn của hãng. Pháp nhân là <strong>Công ty TNHH Phương Đông</strong> – công ty đồng chủ sở hữu với <strong>Đông Hải Auto</strong>.
+                Chúng tôi cung cấp toàn bộ dải sản phẩm ô tô điện VinFast; dịch vụ bảo hành, bảo dưỡng, sửa chữa, đồng sơn; và phụ tùng chính hiệu theo tiêu chuẩn của hãng. Pháp nhân là <strong>Công ty TNHH Phương Đông Hà Nội</strong> – công ty đồng chủ sở hữu với <strong>Đông Hải Auto</strong>.
               </p>
             </div>
             <div className="mt-7 flex flex-wrap gap-2.5">
-              {["Ủy quyền chính hãng", "Showroom 3S & 1S", "Xưởng dịch vụ hiện đại", "Phụ tùng chính hiệu"].map((t) => (
+              {["Ủy quyền chính hãng", "Showroom chuẩn 3S", "Xưởng dịch vụ hiện đại", "Phụ tùng chính hiệu"].map((t) => (
                 <span key={t} className="inline-flex items-center gap-1.5 bg-[#eef4ff] text-[#1863dc] text-xs font-bold px-3 py-1.5">
                   <ShieldCheck className="w-3.5 h-3.5" /> {t}
                 </span>
@@ -280,7 +275,7 @@ export default function AboutPage() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 340px"
                     />
                     <span className={`absolute top-3 left-3 text-[11px] font-extrabold uppercase tracking-wider px-2.5 py-1 ${s.type === "3S" ? "bg-[#1863dc] text-white" : "bg-white text-[#0c0c0c]"}`}>
-                      {s.type === "3S" ? "Showroom 3S" : "Showroom 1S"}
+                      {s.type === "3S" ? "Showroom 3S" : "Showroom"}
                     </span>
                   </div>
                   <div className="p-5 sm:p-6 flex-1 flex flex-col">
@@ -474,42 +469,7 @@ export default function AboutPage() {
       </section>
 
       {/* 8. GHI NHẬN & VINH DANH */}
-      <section className="py-16 sm:py-20 bg-gradient-to-b from-[#f7f3ea] to-white">
-        <div className="max-w-[1180px] mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-14 items-center">
-          <GsapReveal animation="slide-right">
-            <div className="relative aspect-square max-w-[420px] mx-auto w-full">
-              <div className="absolute inset-[12%] rounded-full bg-[#d4a640]/25 blur-3xl" />
-              <Image src="/images/awards/award-pd-doanhso.jpg" alt="Cúp vinh danh VinFast Phương Đông" fill className="object-contain mix-blend-multiply" sizes="420px" />
-            </div>
-          </GsapReveal>
-          <div>
-            <GsapReveal animation="fade-up">
-              <p className="text-xs sm:text-sm font-bold tracking-[0.22em] uppercase mb-3 text-[#b8862b]">Ghi nhận & vinh danh</p>
-              <h2 className="text-2xl sm:text-3xl md:text-[36px] font-extrabold uppercase tracking-tight leading-tight text-[#0c0c0c]">
-                Con người làm nên <span className="text-[#b8862b]">chất lượng dịch vụ</span>
-              </h2>
-              <p className="mt-4 text-sm sm:text-base text-[#555] leading-relaxed">
-                Những thành tích của đội ngũ tư vấn là minh chứng cho cam kết phục vụ tận tâm mà VinFast Phương Đông theo đuổi mỗi ngày.
-              </p>
-            </GsapReveal>
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
-              {RECOGNITIONS.map((r, i) => (
-                <GsapReveal key={r.img} animation="fade-up" delay={i * 0.08}>
-                  <figure className="bg-white p-3 shadow-sm hover:shadow-lg transition-shadow h-full">
-                    <div className="relative aspect-[4/3] overflow-hidden">
-                      <Image src={r.img} alt={r.title} fill className="object-cover" sizes="(max-width: 640px) 100vw, 230px" />
-                    </div>
-                    <figcaption className="pt-3">
-                      <div className="text-[13px] font-extrabold text-[#0c0c0c] leading-snug">{r.title}</div>
-                      <div className="mt-1 text-[11px] text-[#777]">{r.place}</div>
-                    </figcaption>
-                  </figure>
-                </GsapReveal>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <AwardsShowcase />
 
       {/* 9. CTA — video thương hiệu + liên hệ */}
       <section className="relative w-full min-h-[320px] sm:min-h-[380px] flex items-center justify-center overflow-hidden">
