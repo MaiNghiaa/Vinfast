@@ -143,7 +143,7 @@ export default function ContactPage() {
                   TRỤ SỞ CHÍNH
                 </h2>
                 <div className="space-y-2 text-sm text-[#333333] leading-relaxed">
-                  <p>– G2 Vinhomes Green Bay, Mễ Trì, Nam Từ Liêm, Hanoi, Vietnam</p>
+                  <p>– 207 Quán Gánh, Thường Tín, Hà Nội</p>
                   <p>
                     – Tổng đài 24/7:{" "}
                     <a
@@ -156,10 +156,10 @@ export default function ContactPage() {
                   <p>
                     – Email:{" "}
                     <a
-                      href="mailto:cskh@vinfastphuongdong.com.vn"
+                      href="mailto:cskh@vinfastphuongdong.vn"
                       className="text-[#333333] hover:text-[#1863dc] transition-colors"
                     >
-                      cskh@vinfastphuongdong.com.vn
+                      cskh@vinfastphuongdong.vn
                     </a>
                   </p>
                 </div>
