@@ -12,6 +12,6 @@ export function getDirectusAssetUrl(fileIdOrUrl?: string | null): string {
     return fileIdOrUrl;
   }
   // Remove trailing slashes
-  const baseUrl = (typeof window === 'undefined' ? DIRECTUS_SERVER_URL : DIRECTUS_PUBLIC_URL).replace(/\/+$/, '');
+  const baseUrl = DIRECTUS_PUBLIC_URL.replace(/\/+$/, '');
   return `${baseUrl}/assets/${fileIdOrUrl}`;
 }

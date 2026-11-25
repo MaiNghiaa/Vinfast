@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Banner, getDirectusAssetUrl } from "@/lib/directus";
 
@@ -44,8 +45,8 @@ interface HeroSliderProps {
 
 export default function HeroSlider({ banners }: HeroSliderProps) {
   const slides = (banners && banners.length > 0)
-    ? banners.map((b) => ({ id: b.id, image: b.image, alt: b.title }))
-    : DEFAULT_HERO_SLIDES;
+    ? banners.map((b) => ({ id: b.id, image: b.image, alt: b.title, href: b.link || "" }))
+    : DEFAULT_HERO_SLIDES.map((slide) => ({ ...slide, href: "" }));
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -68,7 +69,7 @@ export default function HeroSlider({ banners }: HeroSliderProps) {
 
   return (
     <section
-      className="relative w-full aspect-[2560/1200] overflow-hidden bg-black select-none"
+      className="relative w-full aspect-video overflow-hidden bg-[#061426] select-none"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -76,20 +77,30 @@ export default function HeroSlider({ banners }: HeroSliderProps) {
         className="flex w-full h-full transition-transform duration-500 ease-out will-change-transform"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
-        {slides.map((slide, index) => (
-          <div key={slide.id} className="relative w-full h-full shrink-0">
+        {slides.map((slide, index) => {
+          const frame = (
             <Image
               src={slide.image}
               alt={slide.alt}
               fill
               priority={index === 0}
               loading={index === 0 ? "eager" : "lazy"}
-              className="w-full h-full object-cover pointer-events-none"
+              className="w-full h-full object-contain pointer-events-none"
               sizes="100vw"
               quality={index === 0 ? 80 : 70}
             />
-          </div>
-        ))}
+          );
+          const className = "relative block w-full h-full shrink-0";
+          return slide.href ? (
+            <Link key={slide.id} href={slide.href} className={className}>
+              {frame}
+            </Link>
+          ) : (
+            <div key={slide.id} className={className}>
+              {frame}
+            </div>
+          );
+        })}
       </div>
 
       <button

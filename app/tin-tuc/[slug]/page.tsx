@@ -1,26 +1,28 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound, useParams } from "next/navigation";
+import { notFound } from "next/navigation";
 import { MessageSquare } from "lucide-react";
 import { POSTS } from "@/data/news";
+import { getPosts } from "@/lib/directus";
 
-export default function SingleArticlePage() {
-  const params = useParams();
-  const slug = params?.slug as string;
-  const post = POSTS.find((p) => p.slug === slug);
+export default async function SingleArticlePage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const slug = params.slug;
+  const remote = await getPosts();
+  const posts = remote.some((item) => item.slug === slug) ? remote : POSTS;
+  const post = posts.find((item) => item.slug === slug);
 
   if (!post) {
     return notFound();
   }
 
-  const currentIndex = POSTS.findIndex((p) => p.slug === slug);
-  const prevPost =
-    currentIndex > 0 ? POSTS[currentIndex - 1] : POSTS[POSTS.length - 1];
-  const nextPost =
-    currentIndex < POSTS.length - 1 ? POSTS[currentIndex + 1] : POSTS[0];
+  const currentIndex = posts.findIndex((item) => item.slug === slug);
+  const prevPost = currentIndex > 0 ? posts[currentIndex - 1] : posts[posts.length - 1];
+  const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : posts[0];
 
   // Parse date for Phương Đông date badge (e.g. 31/08/2026 -> TH8 / 31)
   const dateParts = post.publishedDate?.split("/") || ["31", "08", "2026"];
@@ -210,7 +212,7 @@ export default function SingleArticlePage() {
         </article>
       </div>
 
-      <style jsx global>{`
+      <style>{`
         .news-content h2 {
           font-size: 1.15rem;
           font-weight: 700;
